@@ -1,0 +1,22 @@
+header {
+    position: fixed;
+    width: 100vw;
+    height: 100px;
+    background-color: #141D2F;
+    padding: 0 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    a {
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.nav_bar {
+    display: flex;
+    gap: 29px;
+}
