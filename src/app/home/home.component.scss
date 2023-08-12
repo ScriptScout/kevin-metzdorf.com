@@ -1,6 +1,5 @@
 .home_container {
     height: 100vh;
-    position: relative;
     
     .blue_shape_desktop {
         z-index: 3;
@@ -118,7 +117,7 @@
 
 .line {
     height: 4px;
-    width: 110px;
+    width: 175px;
     background-color: #4b47ff;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;

@@ -1,1 +1,18 @@
-<section></section>
+<section id="skills">
+    <div class="skills_icon_container">
+        <div *ngFor="let icon of icons; let i = index" class="icon_box">
+            <img src="assets/img/icons/{{ icon }}" alt="logo of {{ icons_text[i] }}">
+            <span>{{ icons_text[i] }}</span>
+        </div>
+    </div>
+    <div class="my_skills_container">
+        <div class="headline">
+            <h2>My skills</h2>
+            <div class="line"></div>
+        </div>
+        <p>I have grown my frontend developments skillst that have allowed me to create different real projects.</p>
+        <div class="btn_box">
+            <a href="#">Get in touch</a>
+        </div>
+    </div>
+</section>
