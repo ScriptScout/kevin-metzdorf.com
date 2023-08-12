@@ -1,8 +1,8 @@
 <section id="skills">
     <div class="skills_icon_container">
-        <div *ngFor="let icon of icons; let i = index" class="icon_box">
-            <img src="assets/img/icons/{{ icon }}" alt="logo of {{ icons_text[i] }}">
-            <span>{{ icons_text[i] }}</span>
+        <div *ngFor="let icon of iconsArray" class="icon_box">
+            <img src="assets/img/icons/{{ icon.icon }}" alt="logo of {{ icon.name }}">
+            <span>{{ icon.name }}</span>
         </div>
     </div>
     <div class="my_skills_container">

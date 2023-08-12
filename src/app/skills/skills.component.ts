@@ -7,6 +7,46 @@ import { Component } from '@angular/core';
 })
 export class SkillsComponent {
 
-  icons: string[] = ['angular.png', 'typescript.png', 'javascript.png', 'html.png', 'firebase.png', 'git.png', 'css.png', 'rest_api.png', 'scrum.png', 'material_design.png'];
-  icons_text: string[] = ['Angular', 'Typescript', 'Javascript', 'Html', 'Firebase', 'Git', 'Css', 'Rest_api', 'Scrum', 'Material design'];
+  iconsArray = [
+    {
+      name: 'Angular',
+      icon: 'angular.png'
+    },
+    {
+      name: 'Typescript',
+      icon: 'typescript.png'
+    },
+    {
+      name: 'Javascript',
+      icon: 'javascript.png'
+    },
+    {
+      name: 'Html',
+      icon: 'html.png'
+    },
+    {
+      name: 'Firebase',
+      icon: 'firebase.png'
+    },
+    {
+      name: 'Git',
+      icon: 'git.png'
+    },
+    {
+      name: 'Css',
+      icon: 'css.png'
+    },
+    {
+      name: 'Rest_api',
+      icon: 'rest_api.png'
+    },
+    {
+      name: 'Scrum',
+      icon: 'scrum.png'
+    },
+    {
+      name: 'Material design',
+      icon: 'material_design.png'
+    }
+  ];
 }
