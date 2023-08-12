@@ -6,11 +6,19 @@ section {
     position: relative;
 }
 
+.shadow_position {
+    position: absolute;
+    transform: rotate(45deg);
+    left: -324px;
+    bottom: 0;
+}
+
 .skills_icon_container {
     width: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 60px;
+    z-index: 2;
 }
 
 .icon_box {
