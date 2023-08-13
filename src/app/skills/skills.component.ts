@@ -10,43 +10,53 @@ export class SkillsComponent {
   iconsArray = [
     {
       name: 'Angular',
-      icon: 'angular.png'
+      icon: 'angular.png',
+      animation: 'fade-right'
     },
     {
       name: 'Typescript',
-      icon: 'typescript.png'
+      icon: 'typescript.png',
+      animation: 'fade-right'
     },
     {
       name: 'Javascript',
-      icon: 'javascript.png'
+      icon: 'javascript.png',
+      animation: 'fade-right'
     },
     {
       name: 'Html',
-      icon: 'html.png'
+      icon: 'html.png',
+      animation: 'fade-left'
     },
     {
       name: 'Firebase',
-      icon: 'firebase.png'
+      icon: 'firebase.png',
+      animation: 'fade-left'
     },
     {
       name: 'Git',
-      icon: 'git.png'
+      icon: 'git.png',
+      animation: 'fade-left'
     },
     {
       name: 'Css',
-      icon: 'css.png'
+      icon: 'css.png',
+      animation: 'fade-right'
     },
     {
       name: 'Rest_api',
-      icon: 'rest_api.png'
+      icon: 'rest_api.png',
+      animation: 'fade-right'
     },
     {
       name: 'Scrum',
-      icon: 'scrum.png'
+      icon: 'scrum.png',
+      animation: 'fade-right'
     },
     {
       name: 'Material design',
-      icon: 'material_design.png'
+      icon: 'material_design.png',
+      animation: 'fade-left'
     }
   ];
 }

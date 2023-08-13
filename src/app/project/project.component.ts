@@ -11,8 +11,8 @@ export class ProjectComponent {
     {
       name: 'Join',
       technologies: 'JavaScript | HTML | CSS | Backend',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
-      image:
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      image: 'join_dummy.png'
     }
   ]
 }
