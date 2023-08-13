@@ -1,14 +1,21 @@
-<div class="project_container">
+<div *ngFor="let project of projects; let i = index" [ngClass]="{
+    'right_aligned': i % 2 !== 0,
+    'left_aligned': i % 2 === 0
+  }" class="project_container" [attr.data-aos]="project.animation" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">
     <div class="img_box">
-        <img src="" alt="">
+        <img src="assets/img/project_img/{{ project.image }}" alt="image of a laptop presenting a software">
     </div>
     <div class="info_box">
-        <h3></h3>
-        <p></p>
-        <p></p>
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.technologies }}</p>
+        <p>{{ project.description}}</p>
         <div class="button_container">
-            <a href=""></a>
-            <a href=""></a>
+            <div class="live_test_btn">
+                <a href="#">Live test</a>
+            </div>
+            <div class="github_btn">
+                <a href="#">Github</a>
+            </div>
         </div>
     </div>
 </div>

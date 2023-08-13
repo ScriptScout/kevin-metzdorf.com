@@ -1,0 +1,92 @@
+.project_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    max-width: 1168px;
+    margin: 32px 0 32px 0;
+}
+
+.right_aligned {
+    align-self: flex-start;
+}
+
+.left_aligned {
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}
+
+.info_box {
+    // min-width: 60%;
+    
+    h3 {
+        color: #4b47ff;
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    p:first-of-type {
+        color: #00BEE8;
+        font-size: 1.4rem;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    p:nth-of-type(2) {
+        color: white;
+        margin-top: 12px;
+        margin-bottom: 32px;
+    }
+}
+
+.button_container {
+    display: flex;
+    gap: 50px;
+}
+
+.live_test_btn {
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: #4b47ff;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 4px 4px 4px 0px #00000040;
+    cursor: pointer;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    &:hover {
+        animation: scale_color_transition 225ms ease-in forwards;
+    }
+}
+
+@keyframes scale_color_transition {
+    0% {
+        background-color: #4b47ff;
+    }
+
+    100% {
+        background-color: #00BEE8;
+    }
+}
+
+.github_btn {
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 0 0 10px #00BEE8;
+    transition: background-color 225ms ease-in;
+    cursor: pointer;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: #00BEE8;
+    }
+}

@@ -12,7 +12,22 @@ export class ProjectComponent {
       name: 'Join',
       technologies: 'JavaScript | HTML | CSS | Backend',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      image: 'join_dummy.png'
+      image: 'join_dummy.png',
+      animation: 'fade-right'
+    },
+    {
+      name: 'El Polo Locco',
+      technologies: 'JavaScript | HTML | CSS | OOP',
+      description: 'Object orientated 2d jump and run game with unuiqe style and humour',
+      image: 'el_polo_locco_dummy.png',
+      animation: 'fade-left'
+    },
+    {
+      name: 'Simple CRM',
+      technologies: 'Angular | Firebase',
+      description: 'A very simple customer relationship management system working with CRUD functionality',
+      image: 'crm_dummy.png',
+      animation: 'fade-right'
     }
   ]
 }
