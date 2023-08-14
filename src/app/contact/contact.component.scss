@@ -1,7 +1,6 @@
 section {
     display: flex;
     flex-direction: column;
-    // align-items: center;
     padding: 60px 150px;
     overflow-x: hidden;
 }
@@ -106,4 +105,8 @@ form {
     100% {
         background-color: #4b47ff;
     }
+}
+
+.back_home_btn {
+    position: absolute;
 }
