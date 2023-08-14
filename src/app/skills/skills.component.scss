@@ -4,7 +4,6 @@ section {
     display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden;
 }
 
 .shadow_position {
@@ -79,6 +78,7 @@ section {
     align-items: flex-end;
     color: white;
     height: 560px;
+    position: relative;
 
     h2 {
         font-size: 4rem;
@@ -93,11 +93,11 @@ section {
 
 .line {
     height: 4px;
-    width: 110px;
+    width: 112px;
     background-color: #4b47ff;
     position: absolute;
-    top: 293px;
-    right: 0;
+    top: 102px;
+    right: -155px;
 }
 
 .btn_box {
