@@ -1,0 +1,109 @@
+section {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    padding: 60px 150px;
+    overflow-x: hidden;
+}
+
+.headline_container {
+    position: relative;
+
+    h2 {
+        color: white;
+        font-size: 4rem;
+    }
+}
+
+.contact_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_contant {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 50%;
+
+    span:first-child {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+}
+
+.line {
+    height: 4px;
+    width: 112px;
+    background-color: #4b47ff;
+    position: absolute;
+    top: 102px;
+    left: -150px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 40%;
+
+    input, textarea {
+        border: 2px solid #4B47FF;
+        border-radius: 10px;
+        background-color: transparent;
+        padding: 15px 25px 15px 25px;
+        color: white;
+        font-family: 'Poppins';
+        width: 100%;
+        &::placeholder {
+            color: white;
+        }
+
+        &:hover {
+            border: 2px solid #00BEE8;
+            box-shadow: 0 0 5px #00bee8;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 5px #00bee8;
+        }
+    }
+}
+
+.btn_box {
+    transition: transform 225ms;
+    width: max-content;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    button {
+        font-size: 1.5rem;
+        border-radius: 10px;
+        background-color: #00BEE8;
+        padding: 15px 30px 15px 30px;
+        color: white;
+        text-decoration: none;
+        box-shadow: 4px 4px 4px 0px #00000040;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            animation: scale_color_transition 225ms ease-in forwards;
+        }
+    }
+}
+
+@keyframes scale_color_transition {
+    0% {
+        background-color: #00BEE8;
+    }
+
+    100% {
+        background-color: #4b47ff;
+    }
+}
