@@ -5,6 +5,14 @@
     position: relative;
     padding: 0 150px;
     overflow-x: hidden;
+
+    @media (max-width: 1150px) {
+        padding: 0 75px;
+    }
+
+    @media (max-width: 950px) {
+        padding: 0 25px;
+    }
 }
 
 app-project {

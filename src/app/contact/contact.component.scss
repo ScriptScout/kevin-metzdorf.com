@@ -3,6 +3,14 @@ section {
     flex-direction: column;
     padding: 60px 150px;
     overflow-x: hidden;
+
+    @media (max-width: 1150px) {
+        padding: 60px 75px;
+    }
+
+    @media (max-width: 950px) {
+        padding: 60px 25px;
+    }
 }
 
 .headline_container {

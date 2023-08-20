@@ -2,13 +2,21 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 291px;
+    height: 150px;
     padding: 0 150px;
     border-top: 4px solid #00BEE8;
 
     span {
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 1150px) {
+        padding: 0 75px;
+    }
+
+    @media (max-width: 950px) {
+        padding: 0 25px;
     }
 }
 
