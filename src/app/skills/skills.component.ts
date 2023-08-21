@@ -14,12 +14,12 @@ export class SkillsComponent {
       animation: 'fade-right'
     },
     {
-      name: 'Typescript',
+      name: 'TypeScript',
       icon: 'typescript.png',
       animation: 'fade-right'
     },
     {
-      name: 'Javascript',
+      name: 'JavaScript',
       icon: 'javascript.png',
       animation: 'fade-right'
     },
@@ -44,7 +44,7 @@ export class SkillsComponent {
       animation: 'fade-right'
     },
     {
-      name: 'Rest_api',
+      name: 'Rest-Api',
       icon: 'rest_api.png',
       animation: 'fade-right'
     },

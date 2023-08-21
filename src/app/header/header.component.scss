@@ -31,6 +31,15 @@ header {
   }
 }
 
+.logo {
+  height: 50px;
+  padding-top: 10px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
 .hover_underline_animation {
   display: inline-block;
   position: relative;

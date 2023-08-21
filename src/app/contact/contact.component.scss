@@ -4,6 +4,7 @@ section {
     padding: 0 150px 120px;
     overflow-x: hidden;
     position: relative;
+    overflow: hidden;
 
     @media (max-width: 1150px) {
         padding: 60px 75px 120px;
@@ -27,6 +28,7 @@ section {
 .contact_container {
     display: flex;
     justify-content: space-between;
+    z-index: 10;
 
     @media (max-width: 1150px) {
         flex-direction: column;
@@ -67,6 +69,21 @@ section {
     @media (max-width: 560px) {
         top: 36px;
     }
+}
+
+.blue_shadow {
+    position: absolute;
+    left: -380px;
+    bottom: -394px;
+    transform: rotate(250deg);
+    width: calc(550px + 15vw);
+}
+
+.green_shadow {
+    position: absolute;
+    right: -424px;
+    top: -55px;
+    transform: rotate(281deg);
 }
 
 form {
