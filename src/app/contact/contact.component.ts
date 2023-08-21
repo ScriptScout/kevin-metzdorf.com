@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -6,5 +6,48 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+
+  @ViewChild('myform') myForm!: ElementRef;
+  @ViewChild('nameField') nameField!: ElementRef;
+  @ViewChild('emailField') emailField!: ElementRef;
+  @ViewChild('messageField') messageField!: ElementRef;
+  @ViewChild('submitBtn') submitBtn!: ElementRef;
+
+  async sendEmail() {
+    let nameField = this.nameField.nativeElement;
+    let emailField = this.emailField.nativeElement;
+    let messageField = this.messageField.nativeElement;
+    let submitBtn = this.submitBtn.nativeElement;
+
+    this.toggleDisabled(nameField, emailField, messageField, submitBtn);
+    let fd = new FormData();
+    fd.append('name', nameField.value);
+    fd.append('email', emailField.value);
+    fd.append('message', messageField.value);
+
+    await fetch('https://kevin-ammerman.com/send_mail/send_mail.php', 
+      {
+        method: 'POST',
+        body: fd
+      }
+    );
+    setTimeout(() => {
+      this.resetForm(nameField, emailField, messageField);
+      this.toggleDisabled(nameField, emailField, messageField, submitBtn);
+    }, 5000);
+  }
+
+  resetForm(nameField: any, emailField: any, messageField: any) {
+    nameField.value = '';
+    emailField.value = '';
+    messageField.value = '';
+  }
+
+  toggleDisabled(nameField: any, emailField: any, messageField: any, submitBtn: any) {
+    nameField.disabled = !nameField.disabled;
+    emailField.disabled = !emailField.disabled;
+    messageField.disabled = !messageField.disabled;
+    submitBtn.disabled = !submitBtn.disabled;
+  }
 
 }

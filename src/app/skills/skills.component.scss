@@ -31,8 +31,10 @@ section {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 60px;
     z-index: 2;
+    justify-items: start;
 
     @media (max-width: 1150px) {
+        justify-items: center;
         width: 100%;
         grid-template-columns: repeat(auto-fit,minmax(25%,1fr));
     }
@@ -56,6 +58,9 @@ section {
     span {
         color: white;
         text-align: center;
+        width: min-content;
+
+
     }
 }
 

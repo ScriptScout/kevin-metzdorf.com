@@ -14,12 +14,24 @@
             <span>Need a Frontend developer?<b>Contact me!</b></span>
             <span>k.ammerman@pm.me</span>
         </div>
-        <form onsubmit="">
-            <input data-aos="flip-down" data-aos-duration="800" data-aos-delay="200" data-aos-once="true" type="text" placeholder="Your name">
-            <input data-aos="flip-down" data-aos-duration="800" data-aos-delay="300" data-aos-once="true" type="email" placeholder="Your email">
-            <textarea data-aos="flip-down" data-aos-duration="800" data-aos-delay="400" data-aos-once="true" placeholder="Your message" name="message" id="message" cols="30" rows="10"></textarea>
+        <form (submit)="sendEmail()" ngNativeValidate #myForm>
+            <input [class.disabled]="nameField.disabled" #nameField name="name" required data-aos="flip-down" data-aos-duration="800" data-aos-delay="200" data-aos-once="true" type="text" placeholder="Your name">
+            <input [class.disabled]="emailField.disabled" #emailField name="email" required data-aos="flip-down" data-aos-duration="800" data-aos-delay="300" data-aos-once="true" type="email" placeholder="Your email">
+            <textarea [class.disabled]="messageField.disabled" #messageField required data-aos="flip-down" data-aos-duration="800" data-aos-delay="400" data-aos-once="true" placeholder="Your message" name="message" id="message" cols="30" rows="10"></textarea>
             <div class="btn_box">
-                <button data-aos="flip-down" data-aos-duration="800" data-aos-delay="500" data-aos-once="true">Send message :)</button>
+                <button [class.dNone]="submitBtn.disabled" #submitBtn data-aos="flip-down" data-aos-duration="800" data-aos-delay="500" data-aos-once="true">Send message :)</button>
+            </div>
+            <div [class.dNone]="!submitBtn.disabled" class="container_animation">
+                <div class="box">
+                    <div class="border one"></div>
+                    <div class="border two"></div>
+                    <div class="border three"></div>
+                    <div class="border four"></div>
+            
+                    <div class="line one"></div>
+                    <div class="line two"></div>
+                    <div class="line three"></div>
+                </div>
             </div>
         </form>
     </div>
