@@ -47,6 +47,10 @@
         color: white;
         margin-top: 12px;
         margin-bottom: 32px;
+
+        @media (max-width: 950px) {
+            text-align: center;
+        }
     }
 
     @media (max-width: 950px) {

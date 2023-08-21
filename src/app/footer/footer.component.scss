@@ -18,6 +18,13 @@ section {
     @media (max-width: 950px) {
         padding: 0 25px;
     }
+
+    @media (max-width: 650px) {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        height: auto;
+    }
 }
 
 .logo_imprint_box {
@@ -67,6 +74,6 @@ section {
     transition: transform 150ms ease-out;
 
     &:hover {
-       transform: scale(1.2); 
+        transform: scale(1.2);
     }
 }

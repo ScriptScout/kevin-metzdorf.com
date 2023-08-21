@@ -1,5 +1,6 @@
 .home_container {
     height: 100vh;
+    overflow-x: hidden;
 
     .blue_shape_desktop {
         z-index: 3;
@@ -12,6 +13,10 @@
             object-fit: cover;
             bottom: -28%;
         }
+
+        @media (max-width: 413px) {
+            bottom: -25%;
+        }
     }
 }
 
@@ -21,6 +26,19 @@
     bottom: -250px;
     width: 100%;
     height: 1000px;
+
+    @media (max-width: 950px) {
+        left: 0;
+        bottom: 0;
+        object-fit: contain;
+    }
+
+    @media (max-width: 413px) {
+        bottom: auto;
+        left: 0;
+        width: 100%;
+        height: 665px;
+    }
 }
 
 .picture_me {
@@ -38,6 +56,10 @@
         max-height: 500px;
         max-width: 100%;
         width: auto;
+    }
+
+    @media (max-width: 413px) {
+        height: 320px;
     }
 }
 
@@ -59,6 +81,10 @@
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
+    }
+
+    @media (max-width: 413px) {
+        top: 65%;
     }
 }
 
@@ -114,6 +140,10 @@
     &:hover {
         transform: scale(1.1);
     }
+
+    @media (max-width: 413px) {
+        margin-top: 2.3rem;
+    }
 }
 
 .home_contact_btn {
@@ -131,6 +161,10 @@
 
     @media (max-width: 950px) {
         font-size: clamp(0.5rem, 6vw, 1.5rem);
+    }
+
+    @media (max-width: 413px) {
+        padding: 10px 20px 10px 20px;
     }
 }
 
