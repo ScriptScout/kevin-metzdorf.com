@@ -55,6 +55,11 @@ header {
   transform-origin: bottom left;
 }
 
+.active {
+  color: #00BEE8;
+  border-bottom: 1px solid #4b47ff;
+}
+
 .nav_bar_desktop {
   display: flex;
   gap: 29px;
