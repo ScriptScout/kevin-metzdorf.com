@@ -1,16 +1,16 @@
 <header>
     <a href="#home">Kevin Ammerman</a>
     <div class="nav_bar_desktop">
-        <a class="hover_underline_animation" href="#about_me">About me</a>
-        <a class="hover_underline_animation" href="#skills">Skills</a>
-        <a class="hover_underline_animation" href="#portfolio">Portfolio</a>
-        <a class="hover_underline_animation" href="#contact">Contact</a>
+        <a [class.active]="activeSection === 'about'" class="nav_link hover_underline_animation" href="#about_me">About me</a>
+        <a [class.active]="activeSection === 'skills'" class="nav_link hover_underline_animation" href="#skills">Skills</a>
+        <a [class.active]="activeSection === 'portfolio'" class="nav_link hover_underline_animation" href="#portfolio">Portfolio</a>
+        <a [class.active]="activeSection === 'contact'" class="nav_link hover_underline_animation" href="#contact">Contact</a>
     </div>
     <div (click)="openMenu()" [class.active]="menuOpen" class="menu_toggler"><span></span></div>
     <div [class.active]="menuOpen" class="nav_bar_mobil">
-        <a class="hover_underline_animation" href="#about_me">About me</a>
-        <a class="hover_underline_animation" href="#skills">Skills</a>
-        <a class="hover_underline_animation" href="#portfolio">Portfolio</a>
-        <a class="hover_underline_animation" href="#contact">Contact</a>
+        <a [class.active]="activeSection === 'about'" class="nav_link hover_underline_animation" href="#about_me">About me</a>
+        <a [class.active]="activeSection === 'skills'" class="nav_link hover_underline_animation" href="#skills">Skills</a>
+        <a [class.active]="activeSection === 'portfolio'" class="nav_link hover_underline_animation" href="#portfolio">Portfolio</a>
+        <a [class.active]="activeSection === 'contact'" class="nav_link hover_underline_animation" href="#contact">Contact</a>
     </div>
 </header>
