@@ -35,10 +35,6 @@ app-project {
     }
 }
 
-// .top_part {
-//     display: flex;
-// }
-
 .container {
     color: white;
     width: 100%;
@@ -95,10 +91,18 @@ app-project {
     position: absolute;
     left: -420px;
     bottom: 45px;
+
+    @media (max-width: 600px) {
+        bottom: 250px;
+    }
 }
 
 .shadow_right {
     position: absolute;
     right: 0;
     top: -180px;
+
+    @media (max-width: 600px) {
+        right: -100px;
+    }
 }

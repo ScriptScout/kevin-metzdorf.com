@@ -13,21 +13,25 @@ export class ProjectComponent {
       technologies: 'JavaScript | HTML | CSS | Backend',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       image: 'join.png',
-      animation: 'fade-right'
+      animation: 'fade-right',
+      github: 'https://github.com/KevinAmmerman/Join',
+      live: ''
     },
     {
       name: 'El Polo Locco',
       technologies: 'JavaScript | HTML | CSS | OOP',
       description: 'Object orientated 2d jump and run game with unuiqe style and humour',
       image: 'el_pollo_loco.png',
-      animation: 'fade-left'
+      animation: 'fade-left',
+      github: 'https://github.com/KevinAmmerman/el_pollo_locco'
     },
     {
-      name: 'Simple CRM',
-      technologies: 'Angular | Firebase',
-      description: 'A very simple customer relationship management system working with CRUD functionality',
+      name: 'Ring of fire',
+      technologies: 'Angular | TypeScript | Firebase | HTML | SCSS',
+      description: 'Fantastic drink game for private or public Partys which pushing the Players to their limits.',
       image: 'ring_of_fire.png',
-      animation: 'fade-right'
+      animation: 'fade-right',
+      github: 'https://github.com/KevinAmmerman/ring_of_fire'
     }
   ]
 }
