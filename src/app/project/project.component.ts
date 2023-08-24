@@ -15,7 +15,7 @@ export class ProjectComponent {
       image: 'join.png',
       animation: 'fade-right',
       github: 'https://github.com/KevinAmmerman/Join',
-      live: ''
+      live: 'https://join.kevin-ammerman.com/'
     },
     {
       name: 'El Polo Locco',
@@ -23,7 +23,8 @@ export class ProjectComponent {
       description: 'Object orientated 2d jump and run game with unuiqe style and humour',
       image: 'el_pollo_loco.png',
       animation: 'fade-left',
-      github: 'https://github.com/KevinAmmerman/el_pollo_locco'
+      github: 'https://github.com/KevinAmmerman/el_pollo_locco',
+      live: 'https://el-pollo-loco.kevin-ammerman.com/'
     },
     {
       name: 'Ring of fire',
@@ -31,7 +32,8 @@ export class ProjectComponent {
       description: 'Fantastic drink game for private or public Partys which pushing the Players to their limits.',
       image: 'ring_of_fire.png',
       animation: 'fade-right',
-      github: 'https://github.com/KevinAmmerman/ring_of_fire'
+      github: 'https://github.com/KevinAmmerman/ring_of_fire',
+      live: 'https://ring-of-fire.kevin-ammerman.com/'
     }
   ]
 }
