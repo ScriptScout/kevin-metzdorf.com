@@ -1,23 +1,26 @@
 <section id="skills">
-    <div class="btn_mobile_container">
-        <div class="btn_box_mobile btn_box">
-            <a href="#contact">Get in touch</a>
+    <div class="max-width_container">
+        <div class="btn_mobile_container">
+            <div class="btn_box_mobile btn_box">
+                <a href="#contact">Get in touch</a>
+            </div>
         </div>
-    </div>
-    <div class="skills_icon_container">
-        <div *ngFor="let icon of iconsArray" class="icon_box" [attr.data-aos]="icon.animation" data-aos-delay="300" data-aos-once="true">
-            <img src="assets/img/icons/{{ icon.icon }}" alt="logo of {{ icon.name }}">
-            <span>{{ icon.name }}</span>
+        <div class="skills_icon_container">
+            <div *ngFor="let icon of iconsArray" class="icon_box" [attr.data-aos]="icon.animation" data-aos-delay="300"
+                data-aos-once="true">
+                <img src="assets/img/icons/{{ icon.icon }}" alt="logo of {{ icon.name }}">
+                <span>{{ icon.name }}</span>
+            </div>
         </div>
-    </div>
-    <div class="my_skills_container">
-        <div class="headline">
-            <h2>My skills</h2>
-            <div data-aos="fade-left" data-aos-once="true" class="line"></div>
-        </div>
-        <p>I have grown my frontend developments skillst that have allowed me to create different real projects.</p>
-        <div class="btn_box">
-            <a href="#contact">Get in touch</a>
+        <div class="my_skills_container">
+            <div class="headline">
+                <h2>My skills</h2>
+                <div data-aos="fade-left" data-aos-once="true" class="line"></div>
+            </div>
+            <p>I have grown my frontend developments skillst that have allowed me to create different real projects.</p>
+            <div class="btn_box">
+                <a href="#contact">Get in touch</a>
+            </div>
         </div>
     </div>
     <img class="shadow_position" src="assets/img/green_shadow.png" alt="green shadow">

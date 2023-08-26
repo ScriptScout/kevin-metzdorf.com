@@ -1,10 +1,10 @@
 section {
-    height: fit-content;
+    // height: fit-content;
     z-index: 10;
     position: relative;
     padding: 85px 150px;
     display: flex;
-    align-items: center;
+    justify-content: center;
     overflow: hidden;
 
     @media (max-width: 1150px) {
@@ -19,6 +19,13 @@ section {
     @media (max-width: 461px) {
         height: auto;
     }
+}
+
+.max-width_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
 }
 
 .shadow_position {
@@ -73,11 +80,11 @@ section {
 
 .line {
     height: 4px;
-    width: 153px;
+    width: 760px;
     background-color: #00BEE8;
     position: absolute;
     top: 50%;
-    right: -150px;
+    right: -760px;
 }
 
 .about_me_personal_box {

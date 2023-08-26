@@ -32,11 +32,10 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/aos/dist/aos.css"
+              "node_modules/aos/dist/aos.css",
+              "node_modules/aos/src/sass/aos.scss"
             ],
-            "scripts": [
-              "node_modules/aos/src/js/aos.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {

@@ -1,41 +1,52 @@
 <section id="contact">
-    <div class="headline_container">
-        <div class="headline">
-            <div data-aos="fade-right" data-aos-once="true" class="line_headline"></div>
-            <h2>Contact</h2>
-        </div>
-    </div>
-    <div class="contact_container">
-        <div class="contact_contant">
-            <span>Got a problem to solve?</span>
-            <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
-                projects with my work.
-            </p>
-            <span>Need a Frontend developer?<b>Contact me!</b></span>
-            <span>k.ammerman@pm.me</span>
-        </div>
-        <form (submit)="sendEmail()" ngNativeValidate #myForm>
-            <input [class.disabled]="nameField.disabled" #nameField name="name" required data-aos="flip-down" data-aos-duration="800" data-aos-delay="200" data-aos-once="true" type="text" placeholder="Your name">
-            <input [class.disabled]="emailField.disabled" #emailField name="email" required data-aos="flip-down" data-aos-duration="800" data-aos-delay="300" data-aos-once="true" type="email" placeholder="Your email">
-            <textarea [class.disabled]="messageField.disabled" #messageField required data-aos="flip-down" data-aos-duration="800" data-aos-delay="400" data-aos-once="true" placeholder="Your message" name="message" id="message" cols="30" rows="10"></textarea>
-            <div class="btn_box">
-                <button [class.dNone]="submitBtn.disabled" #submitBtn data-aos="flip-down" data-aos-duration="800" data-aos-delay="500" data-aos-once="true">Send message :)</button>
+    <div class="max-width_container">
+        <div class="headline_container">
+            <div class="headline">
+                <div data-aos="fade-right" data-aos-once="true" class="line_headline"></div>
+                <h2>Contact</h2>
             </div>
-            <div [class.dNone]="!submitBtn.disabled" class="container_animation">
-                <div class="box">
-                    <div class="border one"></div>
-                    <div class="border two"></div>
-                    <div class="border three"></div>
-                    <div class="border four"></div>
-            
-                    <div class="line one"></div>
-                    <div class="line two"></div>
-                    <div class="line three"></div>
+        </div>
+        <div class="contact_container">
+            <div class="contact_contant">
+                <span>Got a problem to solve?</span>
+                <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to
+                    your
+                    projects with my work.
+                </p>
+                <span>Need a Frontend developer?<b>Contact me!</b></span>
+                <span>k.ammerman@pm.me</span>
+            </div>
+            <form (submit)="sendEmail()" ngNativeValidate #myForm>
+                <input [class.disabled]="nameField.disabled" #nameField name="name" required data-aos="flip-down"
+                    data-aos-duration="800" data-aos-delay="200" data-aos-once="true" type="text"
+                    placeholder="Your name">
+                <input [class.disabled]="emailField.disabled" #emailField name="email" required data-aos="flip-down"
+                    data-aos-duration="800" data-aos-delay="300" data-aos-once="true" type="email"
+                    placeholder="Your email">
+                <textarea [class.disabled]="messageField.disabled" #messageField required data-aos="flip-down"
+                    data-aos-duration="800" data-aos-delay="400" data-aos-once="true" placeholder="Your message"
+                    name="message" id="message" cols="30" rows="10"></textarea>
+                <div class="btn_box">
+                    <button [class.dNone]="submitBtn.disabled" #submitBtn data-aos="flip-down" data-aos-duration="800"
+                        data-aos-delay="500" data-aos-once="true">Send message :)</button>
                 </div>
-            </div>
-        </form>
+                <div [class.dNone]="!submitBtn.disabled" class="container_animation">
+                    <div class="box">
+                        <div class="border one"></div>
+                        <div class="border two"></div>
+                        <div class="border three"></div>
+                        <div class="border four"></div>
+
+                        <div class="line one"></div>
+                        <div class="line two"></div>
+                        <div class="line three"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
     <img class="blue_shadow" src="assets/img/blue_shadow.png" alt="blue shadow">
     <img class="green_shadow" src="assets/img/green_shadow.png" alt="light blue shadow">
-    <a class="back_home_btn" href="#home"><img src="assets/img/go_up_button.png" alt="logo of a arrow showing upwards"></a>
+    <a class="back_home_btn" href="#home"><img src="assets/img/go_up_button.png"
+            alt="logo of a arrow showing upwards"></a>
 </section>

@@ -2,7 +2,7 @@ section {
     height: fit-content;
     padding: 85px 150px;
     display: flex;
-    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
 
@@ -15,6 +15,20 @@ section {
 
     @media (max-width: 950px) {
         padding: 0 25px;
+    }
+}
+
+.max-width_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1920px;
+
+    @media (max-width: 1150px) {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 100px;
     }
 }
 
@@ -120,14 +134,14 @@ section {
 
 .line {
     height: 4px;
-    width: 112px;
+    width: 720px;
     background-color: #4b47ff;
     position: absolute;
     top: 102px;
-    right: -155px;
+    right: -760px;
 
     @media (max-width: 950px) {
-        right: -115px;
+        right: -725px;
     }
 
     @media (max-width: 560px) {
@@ -174,6 +188,11 @@ section {
 
 .btn_mobile_container {
     margin-bottom: 50px;
+    display: none;
+
+    @media (max-width: 1151px) {
+        display: block;
+    }
 }
 
 .btn_box_mobile {

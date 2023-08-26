@@ -7,8 +7,7 @@ header {
   background-color: #141D2F;
   padding: 0 150px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   box-sizing: border-box;
   box-shadow: #00000040 0 4px 4px;
 
@@ -29,6 +28,14 @@ header {
   @media (max-width: 950px) {
     padding: 0 25px;
   }
+}
+
+.max-width_container {
+  display: flex;
+  max-width: 1920px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -64,7 +71,7 @@ header {
   transform-origin: bottom left;
 }
 
-.active {
+.active_link {
   color: #00BEE8 !important;
   border-bottom: 2.5px solid #4b47ff;
 }

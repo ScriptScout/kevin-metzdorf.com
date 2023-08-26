@@ -16,6 +16,11 @@
     }
 }
 
+.max-width_container {
+    width: 100%;
+    max-width: 1920px;
+}
+
 app-project {
     width: 100%;
     display: flex;
@@ -75,7 +80,7 @@ app-project {
     width: 80vw;
     background-color: #4b47ff;
     position: absolute;
-    right: -15vw;
+    right: -20vw;
     margin-right: -75px;
 
     @media (max-width: 1150px) {

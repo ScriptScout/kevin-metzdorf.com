@@ -1,6 +1,7 @@
 section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 0 150px 120px;
     overflow-x: hidden;
     position: relative;
@@ -13,6 +14,12 @@ section {
     @media (max-width: 950px) {
         padding: 60px 25px 120px;
     }
+}
+
+.max-width_container {
+    width: 100%;
+    max-width: 1920px;
+    z-index: 1;
 }
 
 .headline_container {
@@ -56,14 +63,14 @@ section {
 
 .line_headline {
     height: 4px;
-    width: 112px;
+    width: 720px;
     background-color: #4b47ff;
     position: absolute;
     top: 47px;
-    left: -150px;
+    left: -760px;
 
     @media (max-width: 950px) {
-        left: -118px;
+        left: -725px;
     }
 
     @media (max-width: 560px) {

@@ -1,7 +1,6 @@
 section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 150px;
     padding: 0 150px;
     border-top: 4px solid #00BEE8;
@@ -20,9 +19,21 @@ section {
     }
 
     @media (max-width: 650px) {
+        padding: 20px;
+        height: auto;
+    }
+}
+
+.max-width_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1920px;
+
+    @media (max-width: 650px) {
         flex-direction: column;
         gap: 20px;
-        padding: 20px;
         height: auto;
     }
 }
