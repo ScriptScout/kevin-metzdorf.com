@@ -47,6 +47,10 @@
         font-size: 1.4rem;
         margin-top: 12px;
         margin-bottom: 12px;
+
+        @media (max-width: 950px) {
+            text-align: center;
+        }
     }
 
     p:nth-of-type(2) {

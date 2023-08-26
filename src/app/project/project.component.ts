@@ -10,7 +10,7 @@ export class ProjectComponent {
   projects: any = [
     {
       name: 'Join',
-      technologies: 'JavaScript | HTML | CSS | Backend',
+      technologies: 'JavaScript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       image: 'join.png',
       animation: 'fade-right',

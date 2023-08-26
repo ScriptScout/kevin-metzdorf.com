@@ -66,8 +66,8 @@
 .picture_me {
     position: absolute;
     bottom: 50px;
-    left: -10vw;
-    width: clamp(600px, 45vw, 850px);
+    left: -7vw;
+    width: clamp(600px, 45vw, 750px);
     height: auto;
 
     @media (max-width: 950px) {

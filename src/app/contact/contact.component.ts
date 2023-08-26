@@ -43,7 +43,7 @@ export class ContactComponent {
       this.toggleDisabled(nameField, emailField, messageField, submitBtn);
     }, 5000);
 
-    setTimeout(() => this.message = 'Send message :)', 8000);
+    setTimeout(() => this.message = 'Send message :)', 12000);
   }
 
   resetForm(nameField: any, emailField: any, messageField: any) {
