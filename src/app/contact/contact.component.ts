@@ -12,6 +12,7 @@ export class ContactComponent {
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('submitBtn') submitBtn!: ElementRef;
+  message: string = 'Send message :)';
 
   async sendEmail() {
     let nameField = this.nameField.nativeElement;
@@ -25,16 +26,24 @@ export class ContactComponent {
     fd.append('email', emailField.value);
     fd.append('message', messageField.value);
 
-    await fetch('https://kevin-ammerman.com/send_mail/send_mail.php', 
-      {
-        method: 'POST',
-        body: fd
-      }
-    );
+    try {
+      await fetch('https://kevin-ammerman.com/send_mail/send_mail.php',
+        {
+          method: 'POST',
+          body: fd
+        }
+      );
+      this.message = 'Success! :)'
+    } catch (error) {
+      this.message = 'Oops! Something went wrong'
+    }
+
     setTimeout(() => {
       this.resetForm(nameField, emailField, messageField);
       this.toggleDisabled(nameField, emailField, messageField, submitBtn);
     }, 5000);
+
+    setTimeout(() => this.message = 'Send message :)', 8000);
   }
 
   resetForm(nameField: any, emailField: any, messageField: any) {

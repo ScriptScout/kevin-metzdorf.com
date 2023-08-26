@@ -28,7 +28,7 @@
                     name="message" id="message" cols="30" rows="10"></textarea>
                 <div class="btn_box">
                     <button [class.dNone]="submitBtn.disabled" #submitBtn data-aos="flip-down" data-aos-duration="800"
-                        data-aos-delay="500" data-aos-once="true">Send message :)</button>
+                        data-aos-delay="500" data-aos-once="true">{{ message }}</button>
                 </div>
                 <div [class.dNone]="!submitBtn.disabled" class="container_animation">
                     <div class="box">
