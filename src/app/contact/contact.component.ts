@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,56 +8,70 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class ContactComponent {
 
-  @ViewChild('myform') myForm!: ElementRef;
-  @ViewChild('nameField') nameField!: ElementRef;
-  @ViewChild('emailField') emailField!: ElementRef;
-  @ViewChild('messageField') messageField!: ElementRef;
-  @ViewChild('submitBtn') submitBtn!: ElementRef;
   message: string = 'Send message :)';
+  contactForm: FormGroup;
+  isSending: boolean = false;
 
-  async sendEmail() {
-    let nameField = this.nameField.nativeElement;
-    let emailField = this.emailField.nativeElement;
-    let messageField = this.messageField.nativeElement;
-    let submitBtn = this.submitBtn.nativeElement;
+  constructor() {
+    this.contactForm = new FormGroup({
+      name: new FormControl({ value: '', disabled: false }, Validators.required),
+      email: new FormControl({ value: '', disabled: false }, [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
+      text: new FormControl({ value: '', disabled: false }, Validators.required)
+    });
+  }
 
-    this.toggleDisabled(nameField, emailField, messageField, submitBtn);
+  async onSubmit() {
+    const nameField = this.contactForm.value.name;
+    const emailField = this.contactForm.value.email;
+    const messageField = this.contactForm.value.text;
+
+    this.disableForm();
+    this.isSending = true;
+
     let fd = new FormData();
-    fd.append('name', nameField.value);
-    fd.append('email', emailField.value);
-    fd.append('message', messageField.value);
+    fd.append('name', nameField);
+    fd.append('email', emailField);
+    fd.append('message', messageField);
 
     try {
-      await fetch('https://kevin-ammerman.com/send_mail/send_mail.php',
-        {
-          method: 'POST',
-          body: fd
-        }
-      );
-      this.message = 'Success! :)'
+      const response = await fetch('https://kevin-ammerman.com/send_mail/send_mail.php', {
+        method: 'POST',
+        body: fd
+      });
+
+      if (!response.ok) throw new Error(`Server responded with status: ${response.status}`);
+      this.message = 'Success! :)';
+
     } catch (error) {
-      this.message = 'Oops! Something went wrong'
+      console.error('Error sending message:', error);
+      this.message = `Oops! Something went wrong`;
     }
 
     setTimeout(() => {
-      this.resetForm(nameField, emailField, messageField);
-      this.toggleDisabled(nameField, emailField, messageField, submitBtn);
+      this.resetForm();
+      this.enableForm();
+      this.isSending = false;
     }, 5000);
 
     setTimeout(() => this.message = 'Send message :)', 12000);
   }
 
-  resetForm(nameField: any, emailField: any, messageField: any) {
-    nameField.value = '';
-    emailField.value = '';
-    messageField.value = '';
+
+  resetForm() {
+    this.contactForm.reset({
+      name: '',
+      email: '',
+      text: ''
+    })
   }
 
-  toggleDisabled(nameField: any, emailField: any, messageField: any, submitBtn: any) {
-    nameField.disabled = !nameField.disabled;
-    emailField.disabled = !emailField.disabled;
-    messageField.disabled = !messageField.disabled;
-    submitBtn.disabled = !submitBtn.disabled;
+
+  disableForm() {
+    this.contactForm.disable();
   }
 
+
+  enableForm() {
+    this.contactForm.enable();
+  }
 }

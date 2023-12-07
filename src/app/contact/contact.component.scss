@@ -131,6 +131,25 @@ form {
     }
 }
 
+.form_row {
+    width: 100%;
+}
+
+.error_box {
+    height: 16px;
+    width: 100%;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border: 2px solid transparent;
+    box-shadow: 0 0 5px red;
+}
+
+small {
+    color: red;
+}
+
 .disabled {
     background-color: #4d4d4d !important;
 }
