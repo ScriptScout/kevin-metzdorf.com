@@ -21,17 +21,13 @@ export class ContactComponent {
   }
 
   async onSubmit() {
-    const nameField = this.contactForm.value.name;
-    const emailField = this.contactForm.value.email;
-    const messageField = this.contactForm.value.text;
-
     this.disableForm();
     this.isSending = true;
 
     let fd = new FormData();
-    fd.append('name', nameField);
-    fd.append('email', emailField);
-    fd.append('message', messageField);
+    fd.append('name', this.contactForm.value.name);
+    fd.append('email', this.contactForm.value.email);
+    fd.append('message', this.contactForm.value.text);
 
     try {
       const response = await fetch('https://kevin-ammerman.com/send_mail/send_mail.php', {

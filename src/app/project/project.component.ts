@@ -20,20 +20,20 @@ export class ProjectComponent {
     {
       name: 'El Polo Locco',
       technologies: 'JavaScript | HTML | CSS | OOP',
-      description: 'Object orientated 2d jump and run game with unuiqe style and humour',
+      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       image: 'el_pollo_loco.png',
       animation: 'fade-left',
       github: 'https://github.com/KevinAmmerman/el_pollo_locco',
       live: 'https://el-pollo-loco.kevin-ammerman.com/'
     },
     {
-      name: 'Ring of fire',
+      name: 'DA-Bubble',
       technologies: 'Angular | TypeScript | Firebase | HTML | SCSS',
-      description: 'Fantastic drink game for private or public Partys which pushing the Players to their limits.',
-      image: 'ring_of_fire.png',
+      description: 'Chat messanger inspired by Slack. Contact your colleagues and exchange ideas with them.',
+      image: 'da-bubble.png',
       animation: 'fade-right',
       github: 'https://github.com/KevinAmmerman/ring_of_fire',
-      live: 'https://ring-of-fire.kevin-ammerman.com/'
+      live: 'https://da-bubble.kevin-ammerman.com/'
     }
   ]
 }
