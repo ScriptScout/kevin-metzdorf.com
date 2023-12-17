@@ -1,5 +1,5 @@
 .home_container {
-    height: 100vh;
+    height: 100svh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -98,7 +98,7 @@
     }
 
     @media (max-width: 414px) {
-        top: 65%;
+        top: 57%;
     }
 }
 
