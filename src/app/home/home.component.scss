@@ -65,19 +65,21 @@
 
 .picture_me {
     position: absolute;
-    bottom: 50px;
+    bottom: 70px;
     left: -7vw;
-    width: clamp(600px, 45vw, 750px);
+    width: clamp(600px, 50vw, 850px);
     height: auto;
 
     @media (max-width: 950px) {
         left: 50%;
         transform: translateX(-50%);
-        bottom: 32%;
+        // bottom: 32%;
+        bottom: 37%;
         height: auto;
-        max-height: 500px;
-        max-width: 100%;
-        width: auto;
+        // max-height: 500px;
+        // max-width: 100%;
+        // width: auto;
+        width: clamp(400px, 70vw, 800px);
     }
 }
 
@@ -98,7 +100,7 @@
     }
 
     @media (max-width: 414px) {
-        top: 57%;
+        top: 64%;
     }
 }
 
