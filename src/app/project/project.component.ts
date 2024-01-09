@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class ProjectComponent {
 
   projects: any = [
-    {
+   /* {
       name: 'Join',
       technologies: 'JavaScript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
@@ -16,16 +16,16 @@ export class ProjectComponent {
       animation: 'fade-right',
       github: 'https://github.com/KevinAmmerman/Join',
       live: 'https://join.kevin-ammerman.com/'
-    },
+    },*/
     {
       name: 'El Polo Locco',
       technologies: 'JavaScript | HTML | CSS | OOP',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       image: 'el_pollo_loco.png',
       animation: 'fade-left',
-      github: 'https://github.com/KevinAmmerman/el_pollo_locco',
-      live: 'https://el-pollo-loco.kevin-ammerman.com/'
-    },
+      github: 'https://github.com/ScriptScout',
+      live: 'https://kevin-metzdorf.de/el_pollo_locco'
+    }/*,
     {
       name: 'DA-Bubble',
       technologies: 'Angular | TypeScript | Firebase | HTML | SCSS',
@@ -34,6 +34,6 @@ export class ProjectComponent {
       animation: 'fade-right',
       github: 'https://github.com/KevinAmmerman/DA-Bubble',
       live: 'https://da-bubble.kevin-ammerman.com/'
-    }
+    }*/
   ]
 }
