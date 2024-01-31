@@ -1,27 +1,41 @@
-## Portfolio Website
+# Kevin Metzdorf's Portfolio
 
-This is a portfolio website built with Angular 16.1.5. It showcases the skills and experience of a Junior Java Developer and E-Commerce Designer.
+Welcome to the portfolio of Kevin Metzdorf. This project serves as a showcase for my personal and professional achievements and experiences in software development, including my skills, the projects I've worked on, and more. 
 
-### Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Before running the software, you need to install:
 
-### Build
+- [Node.js](https://nodejs.org)
+- [Angular CLI](https://angular.io/cli)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Installing and Running
 
-### Running unit tests
+Here's a step-by-step guide on how to get the development environment running:
 
-Run `ng test` to execute the unit tests via Karma.
+1. Clone or download the repository.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Run the project using `ng serve`.
+5. Open your browser and navigate to `localhost:4200`.
 
-### Running end-to-end tests
+## Built With
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- [Angular](https://angular.io) - Web Framework
+- [TypeScript](https://www.typescriptlang.org) - Programming Language
 
-### Further help
+## Authors
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Kevin Metzdorf** - Initial work and development
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+This README template was adapted from a template provided by the assistant AI.
