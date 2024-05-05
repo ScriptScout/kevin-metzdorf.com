@@ -21,7 +21,7 @@ export class ProjectComponent {
       name: 'El Polo Locco',
       technologies: 'JavaScript | HTML | CSS | OOP',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      image: 'el_pollo_loco.png',
+      image: 'el_pollo_loco.webp',
       animation: 'fade-left',
       github: 'https://github.com/ScriptScout',
       live: 'https://kevin-metzdorf.de/el_pollo_locco'
