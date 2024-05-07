@@ -8,15 +8,13 @@ import { Component } from '@angular/core';
 export class ProjectComponent {
 
   projects: any = [
-   /* {
-      name: 'Join',
+    {
+      name: 'Senior Shopify-Entwickler',
       technologies: 'JavaScript | HTML | CSS',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      image: 'join.png',
+      description: 'Optimierung der Performance, Sicherheit und Stabilität durch Analyse, Fehlerbehebung, Code-Review und Implementierung von Best Practices. Anpassung und Erweiterung des Shops nach Kundenwunsch, Implementierung neuer Funktionen und Integration von Drittanbieter-Apps.',
+      image: 'decocino.jpeg',
       animation: 'fade-right',
-      github: 'https://github.com/KevinAmmerman/Join',
-      live: 'https://join.kevin-ammerman.com/'
-    },*/
+    },
     {
       name: 'El Polo Locco',
       technologies: 'JavaScript | HTML | CSS | OOP',
@@ -25,15 +23,15 @@ export class ProjectComponent {
       animation: 'fade-left',
       github: 'https://github.com/ScriptScout',
       live: 'https://kevin-metzdorf.de/el_pollo_locco'
-    }/*,
+    },
     {
-      name: 'DA-Bubble',
-      technologies: 'Angular | TypeScript | Firebase | HTML | SCSS',
-      description: 'Chat messanger inspired by Slack. Contact your colleagues and exchange ideas with them.',
-      image: 'da-bubble.png',
+      name: 'E-Shop Manager',
+      technologies: 'ITIL | Scrum | Shopify | Xentral',
+      description: 'Sicherstellung der Warenverfügbarkeit durch permanente Bestandskontrolle, Optimierung der Lagerhaltung durch MHD-Prüfung und -management, sowie proaktive Warennachbestellung und -anmeldung. Kommunikation und Klärung von Lieferfragen mit Logistikpartnern zur reibungslosen Warenanlieferung und Sicherstellung eines hohen Kundenzufriedenheitsniveaus.',
+      image: 'ready2drink.jpeg',
       animation: 'fade-right',
-      github: 'https://github.com/KevinAmmerman/DA-Bubble',
-      live: 'https://da-bubble.kevin-ammerman.com/'
-    }*/
+      github: '',
+      live: 'https://ready2drink.de'
+    }
   ]
 }
