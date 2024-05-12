@@ -9,7 +9,7 @@ export class ProjectComponent {
 
   projects: any = [
     {
-      name: 'Senior Shopify-Entwickler',
+      name: ' Shopify-Entwickler',
       technologies: 'JavaScript | HTML | CSS',
       description: 'Optimierung der Performance, Sicherheit und Stabilität durch Analyse, Fehlerbehebung, Code-Review und Implementierung von Best Practices. Anpassung und Erweiterung des Shops nach Kundenwunsch, Implementierung neuer Funktionen und Integration von Drittanbieter-Apps.',
       image: 'decocino.jpeg',
@@ -24,7 +24,7 @@ export class ProjectComponent {
       image: 'el_pollo_loco.webp',
       animation: 'fade-left',
       github: 'https://github.com/ScriptScout',
-      live: 'https://kevin-metzdorf.de/el_pollo_locco'
+      live: 'https://kevin-metzdorf.de/'
     },
     {
       name: 'E-Shop Manager',
@@ -36,7 +36,7 @@ export class ProjectComponent {
       live: 'https://ready2drink.de'
     },
     {
-      name: ' JTL-Wawi-Experte für die Optimierung von Importprozessen: JTL Wawi Experte ',
+      name: ' JTL Wawi Experte ',
       technologies: 'JTL | Shopify | Windows Server',
       description: 'Durch die Entwicklung eines PowerShell-Skripts, die Integration mit dem Windows Task Scheduler, die Verwendung der JTL-Ameise und die Einrichtung der Shopify-Integration wurde ein umfassender und automatisierter Datenimport- und Synchronisierungsprozess implementiert.',
       image: 'suppotheke.jpeg',
