@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-contact',
@@ -10,62 +11,66 @@ export class ContactComponent {
 
   message: string = 'Send message :)';
   contactForm: FormGroup;
-  isSending: boolean = false;
+  isSubmited: boolean = false;
+  isSent: boolean = false;
+  checkboxValue: boolean = false;
 
-  constructor() {
+  constructor(private firestore: AngularFirestore) {
     this.contactForm = new FormGroup({
       name: new FormControl({ value: '', disabled: false }, Validators.required),
       email: new FormControl({ value: '', disabled: false }, [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
-      text: new FormControl({ value: '', disabled: false }, Validators.required)
+      text: new FormControl({ value: '', disabled: false }, Validators.required),
+      privacy: new FormControl(false)
     });
   }
 
   async onSubmit() {
-    this.disableForm();
-    this.isSending = true;
+    if (this.contactForm.valid && this.contactForm.get('privacy')?.value) {
+      this.disableForm();
+      const formData = this.contactForm.value;
 
-    let fd = new FormData();
-    fd.append('name', this.contactForm.value.name);
-    fd.append('email', this.contactForm.value.email);
-    fd.append('message', this.contactForm.value.text);
-
-    try {
-      const response = await fetch('https://kevin-ammerman.com/send_mail/send_mail.php', {
-        method: 'POST',
-        body: fd
-      });
-
-      if (!response.ok) throw new Error(`Server responded with status: ${response.status}`);
-      this.message = 'Success! :)';
-
-    } catch (error) {
-      console.error('Error sending message:', error);
-      this.message = `Oops! Something went wrong`;
+      try {
+        // Change PHP mail sending function to Firestore
+        await this.firestore.collection('contacts').add(formData);
+        this.resetAndNotify();
+        this.message = 'Success!';
+        this.isSent = true;
+      } catch (error) {
+        console.error('Error sending message:', error);
+        this.message = `Oops! Something went wrong`;
+      }
+    } else {
+      this.showValidationErrorMsg()
     }
+  }
 
+  showValidationErrorMsg() {
+    this.isSubmited = true;
+    setTimeout(() => this.isSubmited = false, 2000);
+  }
+
+  resetAndNotify() {
     setTimeout(() => {
       this.resetForm();
       this.enableForm();
-      this.isSending = false;
+      this.isSent = false;
     }, 5000);
 
     setTimeout(() => this.message = 'Send message :)', 12000);
   }
 
-
   resetForm() {
     this.contactForm.reset({
       name: '',
       email: '',
-      text: ''
+      text: '',
+      privacy: false
     })
   }
-
 
   disableForm() {
     this.contactForm.disable();
   }
-
 
   enableForm() {
     this.contactForm.enable();

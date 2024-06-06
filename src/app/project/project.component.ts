@@ -8,32 +8,41 @@ import { Component } from '@angular/core';
 export class ProjectComponent {
 
   projects: any = [
-   /* {
-      name: 'Join',
+    {
+      name: ' Shopify-Entwickler',
       technologies: 'JavaScript | HTML | CSS',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      image: 'join.png',
+      description: 'Optimierung der Performance, Sicherheit und Stabilität durch Analyse, Fehlerbehebung, Code-Review und Implementierung von Best Practices. Anpassung und Erweiterung des Shops nach Kundenwunsch, Implementierung neuer Funktionen und Integration von Drittanbieter-Apps.',
+      image: 'decocino.jpeg',
       animation: 'fade-right',
-      github: 'https://github.com/KevinAmmerman/Join',
-      live: 'https://join.kevin-ammerman.com/'
-    },*/
+      github: 'https://github.com/ScriptScout',
+      live: 'https://decocino.com',
+    },
     {
       name: 'El Polo Locco',
       technologies: 'JavaScript | HTML | CSS | OOP',
-      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      image: 'el_pollo_loco.png',
+      description: 'Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.',
+      image: 'el_pollo_loco.webp',
       animation: 'fade-left',
       github: 'https://github.com/ScriptScout',
-      live: 'https://kevin-metzdorf.de/el_pollo_locco'
-    }/*,
+      live: 'https://kevin-metzdorf.de/'
+    },
     {
-      name: 'DA-Bubble',
-      technologies: 'Angular | TypeScript | Firebase | HTML | SCSS',
-      description: 'Chat messanger inspired by Slack. Contact your colleagues and exchange ideas with them.',
-      image: 'da-bubble.png',
+      name: 'E-Shop Manager',
+      technologies: 'ITIL | Scrum | Shopify | Xentral',
+      description: 'Sicherstellung der Warenverfügbarkeit durch permanente Bestandskontrolle, Optimierung der Lagerhaltung durch MHD-Prüfung und -management, sowie proaktive Warennachbestellung und -anmeldung. Kommunikation und Klärung von Lieferfragen mit Logistikpartnern zur reibungslosen Warenanlieferung und Sicherstellung eines hohen Kundenzufriedenheitsniveaus.',
+      image: 'ready2drink.jpeg',
       animation: 'fade-right',
-      github: 'https://github.com/KevinAmmerman/DA-Bubble',
-      live: 'https://da-bubble.kevin-ammerman.com/'
-    }*/
+      github: 'https://github.com/ScriptScout',
+      live: 'https://ready2drink.de'
+    },
+    {
+      name: ' JTL Wawi Experte ',
+      technologies: 'JTL | Shopify | Windows Server',
+      description: 'Durch die Entwicklung eines PowerShell-Skripts, die Integration mit dem Windows Task Scheduler, die Verwendung der JTL-Ameise und die Einrichtung der Shopify-Integration wurde ein umfassender und automatisierter Datenimport- und Synchronisierungsprozess implementiert.',
+      image: 'suppotheke.jpeg',
+      animation: 'fade-left',
+      github: 'https://github.com/ScriptScout',
+      live: 'https://suppotheke.de'
+    },
   ]
 }
