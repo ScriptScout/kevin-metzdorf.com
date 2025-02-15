@@ -9,40 +9,112 @@ export class ProjectComponent {
 
   projects: any = [
     {
-      name: ' Shopify-Entwickler',
-      technologies: 'JavaScript | HTML | CSS',
-      description: 'Optimierung der Performance, Sicherheit und Stabilität durch Analyse, Fehlerbehebung, Code-Review und Implementierung von Best Practices. Anpassung und Erweiterung des Shops nach Kundenwunsch, Implementierung neuer Funktionen und Integration von Drittanbieter-Apps.',
-      image: 'decocino.jpeg',
+      name: 'Happylamps',
+      technologies: 'Shopify | Liquid | JavaScript | HTML | CSS',
+      description: 'Technische Betreuung und Entwicklung des Shopify-Shops Happylamps. Optimierung des Designs, Performance und Integration von Drittanbieter-Apps.',
+      image: 'happylamps.png',
       animation: 'fade-right',
       github: 'https://github.com/ScriptScout',
-      live: 'https://decocino.com',
+      live: 'https://happylamps.com/'
     },
     {
-      name: 'El Polo Locco',
-      technologies: 'JavaScript | HTML | CSS | OOP',
-      description: 'Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.',
-      image: 'el_pollo_loco.webp',
+      name: 'NolaTea',
+      technologies: 'Shopify | Liquid | JavaScript | HTML | CSS',
+      description: 'Technische Umsetzung und Weiterentwicklung des NolaTea Shopify-Shops. Implementierung neuer Features und Conversion-Optimierung.',
+      image: 'nolatealogo.avif',
       animation: 'fade-left',
       github: 'https://github.com/ScriptScout',
-      live: 'https://kevin-metzdorf.de/'
+      live: 'https://nolatea.com'
     },
     {
-      name: 'E-Shop Manager',
-      technologies: 'ITIL | Scrum | Shopify | Xentral',
-      description: 'Sicherstellung der Warenverfügbarkeit durch permanente Bestandskontrolle, Optimierung der Lagerhaltung durch MHD-Prüfung und -management, sowie proaktive Warennachbestellung und -anmeldung. Kommunikation und Klärung von Lieferfragen mit Logistikpartnern zur reibungslosen Warenanlieferung und Sicherstellung eines hohen Kundenzufriedenheitsniveaus.',
-      image: 'ready2drink.jpeg',
+      name: 'Glytter',
+      technologies: 'Shopify | Liquid | JavaScript | HTML | CSS',
+      description: 'Entwicklung und kontinuierliche Optimierung des Glytter Shopify-Shops mit Fokus auf Benutzerfreundlichkeit und Performance.',
+      image: 'glytter-logo.png',
+      animation: 'fade-right',
+      github: 'https://github.com/ScriptScout',
+      live: 'https://glytter.eu'
+    },
+    {
+      name: 'Decocino',
+      technologies: 'Shopify | Liquid | JavaScript | HTML | CSS',
+      description: 'Technische Betreuung und Weiterentwicklung des Decocino Shopify-Shops. Integration neuer Apps und Optimierung der Customer Journey.',
+      image: 'decocino-logo.png',
+      animation: 'fade-left',
+      github: 'https://github.com/ScriptScout',
+      live: 'https://decocino.com'
+    },
+    {
+      name: 'Einfach Lecker',
+      technologies: 'Shopify | Liquid | JavaScript | HTML | CSS',
+      description: 'Shopify-Optimierung für den Einfach Lecker Shop. Performance-Steigerung, UI-Design-Anpassungen und technische Betreuung.',
+      image: 'einfach-lecker-logo.webp',
+      animation: 'fade-right',
+      github: 'https://github.com/ScriptScout',
+      live: 'https://einfach-lecker.com'
+    },
+    {
+      name: 'Einfach Backen',
+      technologies: 'Shopify | Liquid | JavaScript | HTML | CSS',
+      description: 'Shopify-Entwicklung für den Backshop von Einfach Backen. Skalierung, Ladezeiten-Optimierung und Conversion-Verbesserung.',
+      image: 'einfach-backen.webp',
+      animation: 'fade-left',
+      github: 'https://github.com/ScriptScout',
+      live: 'https://shop.einfachbacken.de'
+    },
+    {
+      name: 'Food.netz – E-Commerce Plattform für den Food-Sektor',
+      technologies: 'Shopify | Liquid | WordPress | WooCommerce',
+      description: 'Entwicklung und Optimierung der Food.netz-Plattform zur besseren Vernetzung im Food-Sektor. Technische Betreuung und Skalierung.',
+      image: 'food.netz.png',
+      animation: 'fade-right',
+      github: 'https://github.com/ScriptScout',
+      live: 'https://foodnetz.de/'
+    },
+    {
+      name: 'Power System Shopify-Store',
+      technologies: 'Shopify | Liquid | JavaScript',
+      description: 'Technische Umsetzung des Power System Shopify-Shops. Verbesserte Benutzerführung, Performance-Optimierung und Implementierung individueller Features.',
+      image: 'power-system-shop.webp',
+      animation: 'fade-left',
+      github: 'https://github.com/ScriptScout',
+      live: 'https://power-system-shop.com'
+    },
+    {
+      name: 'WinAtFashion - Affiliate Marketing Integration',
+      technologies: 'Shopify | Liquid | JavaScript | API',
+      description: 'Integration einer Affiliate-Marketing-App in den Shopify-Store von WinAtFashion. Anpassung des Trackings und Optimierung der Partner-Programme.',
+      image: 'winatfashion.jpg',
+      animation: 'fade-right',
+      github: 'https://github.com/ScriptScout',
+      live: 'https://winatfashion.de/'
+    },
+    {
+      name: 'Giavinci – Personalisierte Wandbilder',
+      technologies: 'Shopify | Liquid | JavaScript | Design-Optimierung',
+      description: 'Konzeption, Redesign und Implementierung des Shopify-Shops für personalisierte Wandbilder. Fokus auf UI/UX, Conversion-Optimierung und technischer Umsetzung.',
+      image: 'giavinci.webp',
+      animation: 'fade-left',
+      github: 'https://github.com/ScriptScout',
+      live: 'https://giavinci.com'
+    },
+    {
+      name: 'Knabemalz Online-Shop (Krombacher)',
+      technologies: 'Shopify | IT-Projektmanagement | Performance-Optimierung',
+      description: 'Technische Umsetzung des Knabemalz Online-Shops für Krombacher. Performance-Optimierung, Anbindung an externe Systeme und Management des Releases.',
+      image: 'krombacher.svg',
       animation: 'fade-right',
       github: 'https://github.com/ScriptScout',
       live: 'https://ready2drink.de'
     },
     {
-      name: ' JTL Wawi Experte ',
-      technologies: 'JTL | Shopify | Windows Server',
-      description: 'Durch die Entwicklung eines PowerShell-Skripts, die Integration mit dem Windows Task Scheduler, die Verwendung der JTL-Ameise und die Einrichtung der Shopify-Integration wurde ein umfassender und automatisierter Datenimport- und Synchronisierungsprozess implementiert.',
-      image: 'suppotheke.jpeg',
+      name: 'Travel-Tiger',
+      technologies: 'Shopify | Liquid | JavaScript | UX',
+      description: 'Beteiligung an der Entwicklung und Optimierung des Travel-Tiger Shopify-Stores. UI/UX-Optimierung und Performance-Verbesserungen.',
+      image: 'travel-tiger.svg',
       animation: 'fade-left',
       github: 'https://github.com/ScriptScout',
-      live: 'https://suppotheke.de'
+      live: 'https://travel-tiger.com'
     },
   ]
 }
