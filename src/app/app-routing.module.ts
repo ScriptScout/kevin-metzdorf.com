@@ -6,8 +6,8 @@ import { PrivacyComponent } from './privacy/privacy.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'imprint', component: ImprintComponent },
-  { path: 'privacy-policy', component: PrivacyComponent }
+  { path: 'imprint', redirectTo: '', pathMatch: 'full' },
+  { path: 'privacy-policy', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
