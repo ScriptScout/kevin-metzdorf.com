@@ -39,11 +39,25 @@ export class HeaderComponent {
 
   @HostListener('window:scroll')
   onWindowScroll() {
-    const home = document.getElementById('home')!.getBoundingClientRect().top;
-    const about = document.getElementById('about_me')!.getBoundingClientRect().top;
-    const skills = document.getElementById('skills')!.getBoundingClientRect().top;
-    const portfolio = document.getElementById('portfolio')!.getBoundingClientRect().top;
-    const contact = document.getElementById('contact')!.getBoundingClientRect().top;
+    // Sichere Null-Checks - KEIN ! Operator
+    const homeElement = document.getElementById('home');
+    const aboutElement = document.getElementById('about_me');
+    const skillsElement = document.getElementById('skills');
+    const portfolioElement = document.getElementById('portfolio');
+    const contactElement = document.getElementById('contact');
+
+    // Früh beenden wenn Elemente nicht existieren
+    if (!homeElement || !aboutElement || !skillsElement || !portfolioElement || !contactElement) {
+      return; // Stoppe Ausführung wenn Elemente fehlen
+    }
+
+    // Jetzt sicher getBoundingClientRect() aufrufen
+    const home = homeElement.getBoundingClientRect().top;
+    const about = aboutElement.getBoundingClientRect().top;
+    const skills = skillsElement.getBoundingClientRect().top;
+    const portfolio = portfolioElement.getBoundingClientRect().top;
+    const contact = contactElement.getBoundingClientRect().top;
+
     if (home <= 0 && home > -164) this.activeSection = '';
     if (about < 663 && about > -53) this.activeSection = 'about';
     if (skills < 585 && skills > 86) this.activeSection = 'skills';

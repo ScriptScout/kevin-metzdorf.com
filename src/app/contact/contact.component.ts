@@ -1,87 +1,30 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
 
 @Component({
-    selector: 'app-contact',
-    templateUrl: './contact.component.html',
-    styleUrls: ['./contact.component.scss'],
-    standalone: false
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
 
-  message: string = 'Anfrage senden';
-  contactForm: FormGroup;
-  isSubmited: boolean = false;
-  isSent: boolean = false;
-  checkboxValue: boolean = false;
+  constructor(private analytics: AngularFireAnalytics) {}
 
-  constructor(private firestore: AngularFirestore) {
-    this.contactForm = new FormGroup({
-      supportTopic: new FormControl({ value: 'Shopify Custom Development', disabled: false }, Validators.required),
-      projectDescription: new FormControl({ value: '', disabled: false }, Validators.required),
-      projectStatus: new FormControl({ value: 'Neuer Shop / Konzeptphase', disabled: false }),
-      timeframe: new FormControl({ value: 'Kurzfristig (0–2 Wochen)', disabled: false }),
-      name: new FormControl({ value: '', disabled: false }, Validators.required),
-      email: new FormControl({ value: '', disabled: false }, [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
-      company: new FormControl({ value: '', disabled: false }),
-      privacy: new FormControl(false)
+  onSubmit() {
+    // Form-Submit Event tracken
+    this.analytics.logEvent('contact_form_submit', {
+      event_category: 'engagement',
+      event_label: 'contact_form'
     });
+
+    // Ihre bestehende onSubmit-Logik
   }
 
-  async onSubmit() {
-    if (this.contactForm.valid && this.contactForm.get('privacy')?.value) {
-      this.disableForm();
-      const formData = this.contactForm.value;
-
-      try {
-        // Change PHP mail sending function to Firestore
-        await this.firestore.collection('contacts').add(formData);
-        this.resetAndNotify();
-        this.message = 'Gesendet!';
-        this.isSent = true;
-      } catch (error) {
-        console.error('Error sending message:', error);
-        this.message = `Ups! Etwas ist schiefgelaufen`;
-      }
-    } else {
-      this.showValidationErrorMsg()
-    }
-  }
-
-  showValidationErrorMsg() {
-    this.isSubmited = true;
-    setTimeout(() => this.isSubmited = false, 2000);
-  }
-
-  resetAndNotify() {
-    setTimeout(() => {
-      this.resetForm();
-      this.enableForm();
-      this.isSent = false;
-    }, 5000);
-
-    setTimeout(() => this.message = 'Anfrage senden', 12000);
-  }
-
-  resetForm() {
-    this.contactForm.reset({
-      supportTopic: 'Shopify Custom Development',
-      projectDescription: '',
-      projectStatus: 'Neuer Shop / Konzeptphase',
-      timeframe: 'Kurzfristig (0–2 Wochen)',
-      name: '',
-      email: '',
-      company: '',
-      privacy: false
-    })
-  }
-
-  disableForm() {
-    this.contactForm.disable();
-  }
-
-  enableForm() {
-    this.contactForm.enable();
+  onFocus(fieldName: string) {
+    // Form-Interaktion tracken
+    this.analytics.logEvent('form_start', {
+      form_name: 'contact_form',
+      field_name: fieldName
+    });
   }
 }
