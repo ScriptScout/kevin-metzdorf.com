@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 
 import { AboutMeComponent } from './about-me/about-me.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,10 +27,10 @@ const firebaseConfig = {
   authDomain: "kevin-metzdorf.firebaseapp.com",
   databaseURL: "https://kevin-metzdorf-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "kevin-metzdorf",
-  storageBucket: "kevin-metzdorf.appspot.com",
+  storageBucket: "kevin-metzdorf.firebasestorage.app",
   messagingSenderId: "462291329115",
-  appId: "1:462291329115:web:d72955cd8b4cfc38615f7e",
-  measurementId: "G-44E14PD32Z"
+  appId: "1:462291329115:web:899143275d4f8f0c615f7e",
+  measurementId: "G-NRS0MBHYKK"
 };
 
 @NgModule({
@@ -56,7 +57,8 @@ const firebaseConfig = {
     ReactiveFormsModule,
     // Initialize Firebase
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAnalyticsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
