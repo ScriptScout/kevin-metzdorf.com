@@ -17,6 +17,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ProjectComponent } from './project/project.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { AiPolicyComponent } from './ai-policy/ai-policy.component';
+import { TermsComponent } from './terms/terms.component';
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -43,7 +45,9 @@ const firebaseConfig = {
     ContactComponent,
     FooterComponent,
     ImprintComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    AiPolicyComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,

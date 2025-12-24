@@ -65,17 +65,21 @@ app-project {
         font-size: 4rem;
         margin: 25px 0 35px;
         position: absolute;
-        padding: 0 42px;
+        padding: 10px 32px;
         z-index: 2;
-        background-color: #141D2F;
+        background: linear-gradient(120deg, rgba(154, 107, 255, 0.22), rgba(30, 227, 255, 0.12), rgba(11, 18, 32, 0.85));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        box-shadow: var(--shadow-lift);
 
         @media (max-width: 950px) {
-            padding: 0 8px;
+            padding: 8px 18px;
         }
     }
 }
 
 .line {
+    display: none;
     height: 4px;
     width: 80vw;
     background-color: #4b47ff;
@@ -96,6 +100,7 @@ app-project {
     position: absolute;
     left: -420px;
     bottom: 45px;
+    z-index: -1;
 
     @media (max-width: 600px) {
         bottom: 250px;

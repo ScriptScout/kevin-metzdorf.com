@@ -1,20 +1,68 @@
-<div *ngFor="let project of projects; let i = index" [ngClass]="{
+<div *ngFor="let caseStudy of featuredCases; let i = index" [ngClass]="{
     'right_aligned': i % 2 !== 0,
     'left_aligned': i % 2 === 0
-  }" class="project_container" [attr.data-aos]="project.animation" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">
-    <div class="img_box">
-        <img src="assets/img/project_img/{{ project.image }}" alt="image of a website presenting the project expierence.">
-    </div>
+  }" class="project_container" [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">
     <div class="info_box">
-        <h3>{{ project.name }}</h3>
-        <p>{{ project.technologies }}</p>
-        <p>{{ project.description}}</p>
-        <div class="button_container">
-            <div class="live_test_btn">
-                <a href="{{ project.live }}" target="_blank" rel="noopener noreferrer" aria-label="Projekt live in neuem Tab öffnen">Live test</a>
+        <h3>{{ caseStudy.title }}</h3>
+        <p class="role_line"><span class="label">Rolle:</span> {{ caseStudy.role }}</p>
+        <p class="context_line"><span class="label">Kontext:</span> {{ caseStudy.context }}</p>
+        <div class="case_details" [attr.id]="caseStudy.detailsId">
+            <div class="case_section">
+                <h4>Ausgangslage</h4>
+                <ul>
+                    <li *ngFor="let item of caseStudy.situation">{{ item }}</li>
+                </ul>
             </div>
-            <div class="github_btn">
-                <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" aria-label="Projekt bei GitHub in neuem Tab öffnen">GitHub</a>
+            <div class="case_section">
+                <h4>Meine Verantwortung</h4>
+                <ul>
+                    <li *ngFor="let item of caseStudy.responsibility">{{ item }}</li>
+                </ul>
+            </div>
+            <div class="case_section">
+                <h4>Technischer Fokus</h4>
+                <div class="tech_badges">
+                    <span class="tech_badge" *ngFor="let badge of caseStudy.focus">{{ badge }}</span>
+                </div>
+            </div>
+            <div class="case_section">
+                <h4>Ergebnis & Mehrwert</h4>
+                <ul>
+                    <li *ngFor="let item of caseStudy.outcome">{{ item }}</li>
+                </ul>
+            </div>
+        </div>
+        <p *ngIf="caseStudy.testimonial?.type === 'note'" class="testimonial_note">{{ caseStudy.testimonial.text }}</p>
+        <blockquote *ngIf="caseStudy.testimonial?.type === 'quote'" class="testimonial_quote">
+            <p>{{ caseStudy.testimonial.text }}</p>
+            <footer>{{ caseStudy.testimonial.author }}</footer>
+        </blockquote>
+        <div class="button_container">
+            <a class="btn btn--primary" href="#{{ caseStudy.detailsId }}" aria-label="Case ansehen">Case ansehen</a>
+            <a class="btn btn--secondary" href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink" aria-label="Kontakt aufnehmen" target="_blank" rel="noopener noreferrer">Kontakt</a>
+        </div>
+    </div>
+</div>
+
+<div class="additional_projects">
+    <h2>Weitere Projekte (Auswahl)</h2>
+    <p class="section_subtitle">Weitere ausgewählte Projekte aus Enterprise-, Agentur- und Beratungsumfeld.</p>
+    <div *ngFor="let project of additionalProjects" class="additional_project">
+        <div class="additional_content">
+            <h3>{{ project.title }}</h3>
+            <p class="role_line"><span class="label">Rolle:</span> {{ project.role }}</p>
+            <p class="project_description">{{ project.description }}</p>
+            <div class="tech_badges">
+                <span class="tech_badge" *ngFor="let badge of project.tech">{{ badge }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="additional_project portfolio_cta">
+        <div class="additional_content">
+            <h3>Interesse an einer Zusammenarbeit?</h3>
+            <p class="project_description">Ich unterstütze Agenturen und Unternehmen bei komplexen Shopify-Setups, Performance-Problemen und Technical Rescue.</p>
+            <div class="button_container">
+                <a class="btn btn--primary" href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink" aria-label="Projekt besprechen" target="_blank" rel="noopener noreferrer">Projekt besprechen</a>
             </div>
         </div>
     </div>

@@ -10,13 +10,73 @@
       <div class="contact_contant">
         <span>Ready to Create?</span>
         <p>
-          Nutzen Sie <a href="mailto:info@kevin-metzdorf.com?subject=Kontaktanfrage&body=Hallo,%0D%0A%0D%0AIch möchte Sie bezüglich folgender Angelegenheit kontaktieren:">
+          Nutzen Sie <a href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink">
           E-Mail senden</a>, um unsere Zusammenarbeit zu starten!
           Egal, ob Sie ein konkretes Projekt im Sinn haben, Ideen besprechen oder einfach eine Frage stellen möchten – ich helfe Ihnen gerne weiter.
           Ich freue mich auf Ihre Nachricht!
         </p>
       </div>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="form_row">
+          <label for="supportTopic">Wobei kann ich dich unterstützen?</label>
+          <select id="supportTopic" formControlName="supportTopic" required>
+            <option value="Shopify Custom Development">Shopify Custom Development</option>
+            <option value="Performance / Stabilitätsprobleme">Performance / Stabilitätsprobleme</option>
+            <option value="Technical Rescue (bestehendes Projekt)">Technical Rescue (bestehendes Projekt)</option>
+            <option value="Beratung / Zweitmeinung">Beratung / Zweitmeinung</option>
+            <option value="Laufende Zusammenarbeit (Agentur / Unternehmen)">Laufende Zusammenarbeit (Agentur / Unternehmen)</option>
+          </select>
+        </div>
+        <div class="form_row">
+          <label for="projectDescription">Kurzbeschreibung des Projekts oder Problems</label>
+          <textarea id="projectDescription" formControlName="projectDescription" required placeholder="z. B. bestehender Shopify-Shop mit Performance-Problemen, komplexe Produktlogik, Agenturprojekt mit engem Zeitplan …"></textarea>
+        </div>
+        <div class="form_row">
+          <label for="projectStatus">Aktueller Stand</label>
+          <select id="projectStatus" formControlName="projectStatus">
+            <option value="Neuer Shop / Konzeptphase">Neuer Shop / Konzeptphase</option>
+            <option value="Bestehender Shop">Bestehender Shop</option>
+            <option value="Projekt in Umsetzung">Projekt in Umsetzung</option>
+            <option value="Projekt in Schieflage / Übergabe">Projekt in Schieflage / Übergabe</option>
+          </select>
+        </div>
+        <div class="form_row">
+          <label for="timeframe">Zeitrahmen</label>
+          <select id="timeframe" formControlName="timeframe">
+            <option value="Kurzfristig (0–2 Wochen)">Kurzfristig (0–2 Wochen)</option>
+            <option value="Mittelfristig (2–6 Wochen)">Mittelfristig (2–6 Wochen)</option>
+            <option value="Langfristig / laufend">Langfristig / laufend</option>
+            <option value="Noch offen">Noch offen</option>
+          </select>
+        </div>
+        <div class="form_row">
+          <label for="name">Name</label>
+          <input id="name" type="text" formControlName="name" required>
+        </div>
+        <div class="form_row">
+          <label for="email">E-Mail</label>
+          <input id="email" type="email" formControlName="email" required>
+        </div>
+        <div class="form_row">
+          <label for="company">Firma / Agentur (optional)</label>
+          <input id="company" type="text" formControlName="company">
+        </div>
+        <div class="privacy-box form_row">
+          <div class="cbx">
+            <input id="privacy" type="checkbox" formControlName="privacy">
+            <label for="privacy"></label>
+            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <path d="M4 10.5l4 4 8-9"></path>
+            </svg>
+          </div>
+          <span>Ich habe die <a routerLink="/privacy-policy">Datenschutzerklärung</a> gelesen.</span>
+        </div>
+        <div class="btn_box">
+          <button class="btn btn--primary" type="submit">{{ message }}</button>
+        </div>
+      </form>
     </div>
+    <p class="form_helper">Ich melde mich in der Regel innerhalb von 1–2 Werktagen zurück.</p>
   </div>
   <img class="blue_shadow" src="assets/img/blue_shadow.png" alt="blue shadow">
   <img class="green_shadow" src="assets/img/green_shadow.png" alt="light blue shadow">

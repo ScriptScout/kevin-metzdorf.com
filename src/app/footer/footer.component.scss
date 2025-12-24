@@ -103,5 +103,8 @@ section {
 
 .info-box {
     display: flex;
-    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 14px;
+    text-align: center;
 }
