@@ -18,6 +18,12 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/portfolio",
+            "sourceMap": false,
+            "optimization": true,
+            "namedChunks": false,
+            "extractLicenses": true,
+            "vendorChunk": false,
+            "buildOptimizer": true,
             "resourcesOutputPath": "assets",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -35,8 +41,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/aos/dist/aos.css",
-              "node_modules/aos/src/sass/aos.scss"
+              "node_modules/aos/dist/aos.css"
             ],
             "scripts": []
           },
@@ -45,16 +50,17 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1200kb",
-                  "maximumError": "1500kb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "256kb",
-                  "maximumError": "512kb"
+                  "maximumWarning": "8kb",
+                  "maximumError": "10kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "sourceMap": false
             },
             "development": {
               "buildOptimizer": false,

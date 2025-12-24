@@ -39,16 +39,16 @@ export class HeaderComponent {
 
   @HostListener('window:scroll')
   onWindowScroll() {
-    // Sichere Null-Checks - KEIN ! Operator
+    // ✅ SICHERE NULL-CHECKS - KEINE ! Operatoren
     const homeElement = document.getElementById('home');
     const aboutElement = document.getElementById('about_me');
     const skillsElement = document.getElementById('skills');
     const portfolioElement = document.getElementById('portfolio');
     const contactElement = document.getElementById('contact');
 
-    // Früh beenden wenn Elemente nicht existieren
+    // Früh beenden wenn Elemente nicht existieren (z. B. auf Unterseiten)
     if (!homeElement || !aboutElement || !skillsElement || !portfolioElement || !contactElement) {
-      return; // Stoppe Ausführung wenn Elemente fehlen
+      return;
     }
 
     // Jetzt sicher getBoundingClientRect() aufrufen

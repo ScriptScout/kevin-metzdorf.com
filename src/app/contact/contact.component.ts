@@ -1,16 +1,39 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  standalone: false
 })
 export class ContactComponent {
+  contactForm: FormGroup;
+  message = 'Senden';
 
-  constructor(private analytics: AngularFireAnalytics) {}
+  constructor(
+    private analytics: AngularFireAnalytics,
+    private formBuilder: FormBuilder
+  ) {
+    this.contactForm = this.formBuilder.group({
+      supportTopic: ['', Validators.required],
+      projectDescription: ['', Validators.required],
+      projectStatus: [''],
+      timeframe: [''],
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      company: [''],
+      privacy: [false, Validators.requiredTrue]
+    });
+  }
 
   onSubmit() {
+    if (this.contactForm.invalid) {
+      this.contactForm.markAllAsTouched();
+      return;
+    }
+
     // Form-Submit Event tracken
     this.analytics.logEvent('contact_form_submit', {
       event_category: 'engagement',
