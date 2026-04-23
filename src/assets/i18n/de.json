@@ -1,0 +1,186 @@
+{
+  "LANG": {
+    "DE": "DE",
+    "EN": "EN"
+  },
+  "NAV": {
+    "ABOUT": "Über mich",
+    "SKILLS": "Skills",
+    "PORTFOLIO": "Portfolio",
+    "WORK": "Arbeiten",
+    "BLOG": "Blog",
+    "CONTACT": "Kontakt"
+  },
+  "ANNOUNCEMENT": "Technical Rescue · Performance · Custom Development · Enterprise Shopify · Agenturen · High-Traffic Shops · Multi-Store Setups · → Portfolio ansehen",
+  "HOME": {
+    "I_AM": "Ich bin",
+    "CTA": "Projekt anfragen",
+    "SCROLL": "Runterscrollen"
+  },
+  "ABOUT": {
+    "HEADING": "Über mich",
+    "TEXT": "Ich bin Kevin Metzdorf – Senior Shopify Developer, spezialisiert auf Technical Rescue Missions, Performance-Optimierung und saubere, skalierbare Theme-Architekturen. Ich unterstütze Agenturen und Brands, wenn Shopify-Projekte komplex werden, Stabilität zählt oder schnelle, belastbare Lösungen gefragt sind. Mein Anspruch: klare Kommunikation, strukturierte Umsetzung und Code, der auch in sechs Monaten noch wartbar ist. Von gezielten Fixes bis zu langfristigen Partnerschaften – immer pragmatisch, verlässlich und ohne Drama.",
+    "RESCUE_TEXT": "Technical Rescue – Wenn ein Projekt feststeckt: Analyse, Debugging und Stabilisierung – schnell und effizient.",
+    "PERFORMANCE_TEXT": "Performance & Wartbarkeit – Ladezeiten, Codequalität und skalierbare Theme-Strukturen für wachsende Brands."
+  },
+  "SKILLS": {
+    "HEADING": "Skills",
+    "TEXT": "Ich bin ein erfahrener Webentwickler mit klarem Fokus auf E-Commerce und maßgeschneiderte Shopify-Lösungen. Über die Jahre habe ich zahlreiche Online-Shops optimiert und skaliert – stets mit Fokus auf hohe Codequalität, maximale Performance und nahtlose User Experiences. Mein Ansatz verbindet agile Methodik mit pragmatischen Lösungen, die echten Mehrwert schaffen.",
+    "CONTACT_BTN": "Kontakt",
+    "CTA_BTN": "Lass uns reden!"
+  },
+  "PORTFOLIO": {
+    "HEADING": "Portfolio",
+    "SUBTITLE": "Ausgewählte Projekte & Berufserfahrung"
+  },
+  "PROJECT": {
+    "ROLE_LABEL": "Rolle:",
+    "CONTEXT_LABEL": "Kontext:",
+    "SITUATION_HEADING": "Ausgangssituation",
+    "RESPONSIBILITY_HEADING": "Meine Verantwortung",
+    "FOCUS_HEADING": "Technischer Fokus",
+    "OUTCOME_HEADING": "Ergebnis & Mehrwert",
+    "VIEW_CASE": "Case ansehen",
+    "GET_IN_TOUCH": "Kontakt aufnehmen",
+    "FURTHER_HEADING": "Weitere Projekte (Auswahl)",
+    "FURTHER_SUBTITLE": "Weitere ausgewählte Projekte aus Enterprise-, Agentur- und Beratungsumgebungen.",
+    "CTA_HEADING": "Interesse an einer Zusammenarbeit?",
+    "CTA_TEXT": "Ich unterstütze Agenturen und Brands bei komplexen Shopify-Setups, Performance-Problemen und Technical Rescue Missionen.",
+    "DISCUSS": "Projekt besprechen",
+    "REFERENCES": "Referenzen auf Anfrage verfügbar.",
+    "CASES": {
+      "LATORI": {
+        "TITLE": "Latori GmbH – Enterprise Shopify Development & Technical Rescue",
+        "ROLE": "Senior Shopify Developer & Technical Consultant",
+        "CONTEXT": "Zusammenarbeit mit einer der wenigen Shopify Platinum Partner Agenturen im DACH-Raum. Ich unterstütze das Team als externer Senior Developer bei der Umsetzung anspruchsvoller Enterprise-Features und in kritischen Projektphasen, in denen Codequalität, Performance und saubere Deployments höchste Priorität haben.",
+        "SITUATION": [
+          "Hochkomplexe Enterprise-Shopify-Projekte (PDP, PLP und Warenkorb-Logik)",
+          "Anspruchsvolle Datenstrukturen und hochgradig wiederverwendbare Theme-Komponenten",
+          "Strenge GitHub-Workflows (Feature Branches, Code Reviews) und kontrollierte Staging/Production-Deployments",
+          "Hohe Anforderungen an Performance, Stabilität und Wartbarkeit"
+        ],
+        "RESPONSIBILITY": [
+          "Entwicklung komplexer Shopify-Frontend-Features (PDP/PLP/Warenkorb)",
+          "Architektur wiederverwendbarer Custom Sections und sauberer Theme-Strukturen",
+          "Integration externer APIs und Apps in bestehende Store-Umgebungen",
+          "Refactoring für Skalierbarkeit und Wartbarkeit von Legacy-Komponenten",
+          "Technical Rescue: Analyse, Debugging und Stabilisierung in kritischen Projektphasen"
+        ],
+        "OUTCOME": [
+          "Stabilere, wartbare Theme-Strukturen für die langfristige Entwicklung",
+          "Bibliothek wiederverwendbarer Komponenten für schnellere Umsetzung neuer Anforderungen",
+          "Saubere Integrationen und zuverlässige Releases in kontrollierten Deployment-Umgebungen",
+          "Technische Stabilisierung in Hochdruckphasen ohne unnötigen Overhead"
+        ],
+        "TESTIMONIAL": "Referenzen auf Anfrage verfügbar."
+      },
+      "HSN": {
+        "TITLE": "hsn – die Agentur – Shopify Consulting & Custom Development",
+        "ROLE": "Senior Shopify Developer & Technical Consultant",
+        "CONTEXT": "Langjährige Partnerschaft mit einer E-Commerce-Agentur, die zahlreiche Shopify-Projekte für verschiedene Kunden betreut. Ich fungiere als technischer Partner für Analyse, Umsetzung und Übergabe – einschließlich direkter Abstimmung mit Endkunden.",
+        "SITUATION": [
+          "Vielfältige Kunden-Setups und unterschiedliche Projektanforderungen",
+          "Bedarf an schnellen, sauberen Lösungen statt teurem Over-Engineering",
+          "Kombination aus Entwicklung, App-Integrationen und Beratung/Schulungen",
+          "Hohe Ansprüche an Kommunikation, Verlässlichkeit und professionelles Auftreten"
+        ],
+        "RESPONSIBILITY": [
+          "Technische Analyse bestehender Shopify-Setups zur Ableitung umsetzbarer Roadmaps",
+          "Implementierung individueller Theme-Features (Liquid/JS) und gezielter Bugfixes",
+          "Integration und Konfiguration relevanter Apps (z.B. Affiliate-/Marketing-Lösungen)",
+          "Technische Beratung mit klaren Einschätzungen und realistischen Umsetzungsvorschlägen",
+          "Schulungen, strukturierte Übergaben und direkte Stakeholder-Kommunikation"
+        ],
+        "OUTCOME": [
+          "Zuverlässige Umsetzung technischer Anforderungen innerhalb enger Deadlines",
+          "Erhöhte Shop-Stabilität durch saubere Fixes und wartbare Anpassungen",
+          "Effiziente App-Integrationen ohne redundante Eigenentwicklung",
+          "Hohe Kundenzufriedenheit durch transparente Kommunikation und strukturierte Übergaben"
+        ],
+        "TESTIMONIAL": "Kevin ist ein sehr professioneller und kompetenter Entwickler, der aktiv mitdenkt und proaktiv arbeitet. Die Zusammenarbeit ist stets freundlich, zielorientiert und fachlich hervorragend. Deadlines werden eingehalten, die Kommunikation ist umsichtig und sein professionelles Auftreten hinterlässt bei Kunden einen sehr positiven Eindruck.",
+        "TESTIMONIAL_AUTHOR": "— René Rasmußen, Key Account Manager, hsn – die Agentur"
+      },
+      "DEKOBACK": {
+        "TITLE": "Dekoback GmbH – Multi-Store Shopify Architektur (7 Stores)",
+        "ROLE": "Senior Shopify Developer & Technical Consultant",
+        "CONTEXT": "Technische Betreuung und kontinuierliche Weiterentwicklung eines High-Traffic Multi-Store-Systems mit sieben Shopify-Shops. Fokus auf stabile Theme-Architektur, robuste Features, Performance und zuverlässige operative Prozesse über mehrere Storefronts hinweg.",
+        "SITUATION": [
+          "Multi-Store-Setup mit sieben Shopify-Shops und unterschiedlichen Anforderungen",
+          "Gewachsene Theme-Strukturen, die Skalierbarkeit und langfristige Wartbarkeit erfordern",
+          "Hohe Anforderungen an Performance und Stabilität bei Spitzenlast",
+          "Laufende Feature-Anfragen, Debugging und Tool-/App-Integrationen",
+          "Bedarf an transparenten Prozessen und verlässlichem Zeittracking"
+        ],
+        "RESPONSIBILITY": [
+          "Kontinuierliche Weiterentwicklung und Stabilisierung bestehender Theme-Architekturen (Refactoring)",
+          "Entwicklung neuer Features mit Liquid/JavaScript und sauberen Datenstrukturen",
+          "Performance-Optimierung, Debugging und technische Qualitätssicherung",
+          "Verantwortung für Tracking-Setups und Integrationen (GA4, GTM)",
+          "App-Integrationen und technische Beratung zur kontinuierlichen Optimierung"
+        ],
+        "OUTCOME": [
+          "Stabiler Betrieb und zuverlässige Weiterentwicklung über mehrere Stores hinweg",
+          "Wartbare Theme-Strukturen für langfristige Skalierung und schnelle Anpassungen",
+          "Verbesserte Performance und reduzierte Fehlerquote durch gezielte Optimierung",
+          "Saubere Tracking- und Integrations-Grundlage für datengetriebene Entscheidungen"
+        ],
+        "TESTIMONIAL": "Zuverlässiger Shopify-Experte & Webpartner. Kevin Metzdorf betreut verlässlich unsere sieben Shopify-Stores, darunter High-Traffic Influencer-Shops. Die Zusammenarbeit ist effizient, transparent und lösungsorientiert. Besonders schätzen wir sein proaktives Vorgehen, schnelle Reaktionszeiten und die saubere technische Umsetzung.",
+        "TESTIMONIAL_AUTHOR": "— Ralf Pressler, Director Marketing & Digital, Dekoback GmbH"
+      }
+    },
+    "ADDITIONAL": {
+      "BURDA": {
+        "TITLE": "Hubert Burda Media – EinfachBacken",
+        "ROLE": "Shopify Frontend Developer",
+        "DESC": "Frontend-Entwicklung eines individuellen Shopify-Themes für einen der reichweitenstärksten Food-Publisher im DACH-Raum. Technische Umsetzung responsiver Designs, HTML/CSS/Liquid-Template-Anpassungen und Integration externer Schnittstellen."
+      },
+      "ROCKETCOMMERCE": {
+        "TITLE": "Rocketcommerce.io – Custom Shopify Solutions",
+        "ROLE": "Senior Shopify Developer",
+        "DESC": "Entwicklung maßgeschneiderter Shopify-Features, darunter Produktkonfiguratoren mit komplexer Preis-/Variantenlogik und performanter Liquid/JavaScript-Architektur."
+      },
+      "GIAVINCI": {
+        "TITLE": "Giavinci",
+        "ROLE": "Shopify Developer & Consultant",
+        "DESC": "Neuentwicklung eines Shopify-Stores inklusive Theme-Anpassungen, Beratung zur App-Integration und technischem Support nach dem Launch."
+      },
+      "WINAT": {
+        "TITLE": "Winat Fashion",
+        "ROLE": "Shopify Developer",
+        "DESC": "Integration einer Affiliate-Marketing-Lösung und Umsetzung von Shop the Look-Funktionalitäten im bestehenden Shopify-Theme."
+      },
+      "POWERSYSTEM": {
+        "TITLE": "Power System Shop",
+        "ROLE": "Shopify Developer & Technical Consultant",
+        "DESC": "Technische Analyse des bestehenden Stores, Bugfixing und gezielte Feature-Erweiterungen zur Stabilisierung und Weiterentwicklung."
+      },
+      "RIMOCO": {
+        "TITLE": "Rimoco – Gewürzmanufaktur",
+        "ROLE": "Shopify Consultant",
+        "DESC": "Beratung zur Migration von Shopware zu Shopify, technische Anpassungen sowie Setup von Tracking- und Marketing-Tools."
+      },
+      "GOLF24": {
+        "TITLE": "Golf24",
+        "ROLE": "Technical Consultant",
+        "DESC": "Beratung und technischer Support bei der Integration von Xentral ERP in eine bestehende E-Commerce-Infrastruktur."
+      }
+    }
+  },
+  "FOOTER": {
+    "IMPRINT": "Impressum",
+    "PRIVACY": "Datenschutz",
+    "AI_POLICY": "KI-Richtlinie",
+    "TERMS": "AGB"
+  },
+  "BLOG": {
+    "EYEBROW": "Wissen & Insights",
+    "SUBTITLE": "Praxisnahe Artikel zu Shopify Development, Performance und Technical Rescue.",
+    "EMPTY": "Noch keine Artikel vorhanden.",
+    "READ_TIME": "Min. Lesezeit",
+    "BACK": "← Alle Artikel",
+    "NOT_FOUND_TITLE": "Artikel nicht gefunden",
+    "NOT_FOUND_TEXT": "Dieser Artikel existiert leider nicht (mehr).",
+    "DISCUSS": "Projekt besprechen",
+    "TIP_LABEL": "💡 Tipp"
+  }
+}

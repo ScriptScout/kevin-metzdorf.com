@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
@@ -20,6 +24,12 @@ import { SkillsComponent } from './skills/skills.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { AiPolicyComponent } from './ai-policy/ai-policy.component';
 import { TermsComponent } from './terms/terms.component';
+import { BlogOverviewComponent } from './blog/blog-overview/blog-overview.component';
+import { BlogPostComponent } from './blog/blog-post/blog-post.component';
+import { StickyCtaComponent } from './sticky-cta/sticky-cta.component';
+import { RevealDirective } from './shared/reveal.directive';
+import { WorkListComponent } from './work/work-list/work-list.component';
+import { WorkDetailComponent } from './work/work-detail/work-detail.component';
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -48,19 +58,28 @@ const firebaseConfig = {
     ImprintComponent,
     PrivacyComponent,
     AiPolicyComponent,
-    TermsComponent
+    TermsComponent,
+    BlogOverviewComponent,
+    BlogPostComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot(),
     // Initialize Firebase
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
-    AngularFireAnalyticsModule
+    AngularFireAnalyticsModule,
+    RevealDirective,
+    StickyCtaComponent
   ],
-  providers: [],
+  providers: [
+    ...provideTranslateHttpLoader()  // provides TRANSLATE_HTTP_LOADER_CONFIG token + TranslateLoader
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

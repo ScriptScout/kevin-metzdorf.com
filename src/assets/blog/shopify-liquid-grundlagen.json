@@ -1,0 +1,239 @@
+{
+  "slug": "shopify-liquid-grundlagen",
+  "title": "Shopify Liquid Grundlagen: Der Einstieg für Entwickler",
+  "description": "Liquid ist Shopifys Template-Sprache – einfach zu lernen, mächtig im Einsatz. Dieser Guide erklärt die wichtigsten Konzepte mit praktischen Beispielen.",
+  "date": "2025-04-01",
+  "readTime": 12,
+  "tags": [
+    "Liquid",
+    "Shopify",
+    "Entwickler",
+    "Tutorial"
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Liquid ist eine serverseitige Template-Sprache, die Shopify für die Darstellung von Shop-Inhalten verwendet. Sie wurde von Shopify selbst entwickelt und ist bewusst einfach gehalten – keine komplexen Datenstrukturen, kein imperatives Programmieren. Wer die Grundprinzipien versteht, kann innerhalb weniger Stunden produktiv entwickeln."
+    },
+    {
+      "type": "heading",
+      "text": "Die drei Grundbausteine von Liquid"
+    },
+    {
+      "type": "subheading",
+      "text": "1. Objekte – Daten ausgeben"
+    },
+    {
+      "type": "paragraph",
+      "text": "Objekte geben Inhalte aus. Sie werden mit doppelten geschweiften Klammern geschrieben:"
+    },
+    {
+      "type": "code",
+      "language": "liquid",
+      "text": "{{ product.title }}\n{{ product.price | money }}\n{{ shop.name }}\n{{ customer.first_name }}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Pipe-Symbol (|) leitet einen Filter ein, der den Wert transformiert. money formatiert den Preis nach der Shop-Währung, upcase macht Text großgeschrieben, escape schützt vor HTML-Injection."
+    },
+    {
+      "type": "subheading",
+      "text": "2. Tags – Logik und Struktur"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tags steuern die Logik – sie geben nichts direkt aus. Sie werden mit einfachen geschweiften Klammern und Prozentzeichen geschrieben:"
+    },
+    {
+      "type": "code",
+      "language": "liquid",
+      "text": "{% if product.available %}\n  <button>In den Warenkorb</button>\n{% else %}\n  <button disabled>Ausverkauft</button>\n{% endif %}\n\n{% for variant in product.variants %}\n  <option value=\"{{ variant.id }}\">{{ variant.title }}</option>\n{% endfor %}"
+    },
+    {
+      "type": "subheading",
+      "text": "3. Filter – Werte transformieren"
+    },
+    {
+      "type": "paragraph",
+      "text": "Filter transformieren Ausgaben. Sie können verkettet werden:"
+    },
+    {
+      "type": "code",
+      "language": "liquid",
+      "text": "{{ product.title | upcase }}\n{{ product.description | strip_html | truncate: 150 }}\n{{ product.price | money_with_currency }}\n{{ 'my-style.css' | asset_url | stylesheet_tag }}"
+    },
+    {
+      "type": "heading",
+      "text": "Die wichtigsten Shopify-Objekte"
+    },
+    {
+      "type": "list",
+      "items": [
+        "product – Das aktuelle Produkt mit allen Varianten, Bildern, Metafields",
+        "collection – Eine Produktkollektion mit Filtermöglichkeiten",
+        "cart – Der aktuelle Warenkorb (Items, Gesamtpreis, Attribute)",
+        "customer – Der eingeloggte Kunde (Name, E-Mail, Bestellhistorie)",
+        "shop – Shop-Einstellungen (Name, Währung, Kontaktdaten)",
+        "settings – Theme-Customizer-Einstellungen aus dem schema",
+        "request – Informationen zur aktuellen Anfrage (URL, Locale, Seite)"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Sections und Schemas – der OS 2.0 Kern"
+    },
+    {
+      "type": "paragraph",
+      "text": "In Shopify Online Store 2.0 sind Sections die zentralen Bausteine. Jede Section hat ein {% schema %}-Block, der die konfigurierbaren Einstellungen definiert. Diese erscheinen dann im Theme-Customizer."
+    },
+    {
+      "type": "code",
+      "language": "liquid",
+      "text": "<div class=\"hero\" style=\"background-color: {{ section.settings.bg_color }}\">\n  <h2>{{ section.settings.heading }}</h2>\n  <p>{{ section.settings.subtext }}</p>\n</div>\n\n{% schema %}\n{\n  \"name\": \"Hero Banner\",\n  \"settings\": [\n    {\n      \"type\": \"text\",\n      \"id\": \"heading\",\n      \"label\": \"Überschrift\",\n      \"default\": \"Willkommen\"\n    },\n    {\n      \"type\": \"textarea\",\n      \"id\": \"subtext\",\n      \"label\": \"Untertext\"\n    },\n    {\n      \"type\": \"color\",\n      \"id\": \"bg_color\",\n      \"label\": \"Hintergrundfarbe\",\n      \"default\": \"#ffffff\"\n    }\n  ],\n  \"presets\": [\n    { \"name\": \"Hero Banner\" }\n  ]\n}\n{% endschema %}"
+    },
+    {
+      "type": "heading",
+      "text": "Snippets: Wiederverwendbarer Code"
+    },
+    {
+      "type": "paragraph",
+      "text": "Snippets sind Liquid-Dateien im /snippets-Verzeichnis, die mit dem render-Tag eingebunden werden. Sie sind der primäre Mechanismus für Wiederverwendbarkeit in Shopify-Themes."
+    },
+    {
+      "type": "code",
+      "language": "liquid",
+      "text": "{% comment %} snippets/product-card.liquid {% endcomment %}\n<div class=\"product-card\">\n  <a href=\"{{ product.url }}\">\n    {{ product.featured_image | image_url: width: 400 | image_tag: loading: 'lazy' }}\n    <h3>{{ product.title }}</h3>\n    <span>{{ product.price | money }}</span>\n  </a>\n</div>\n\n{% comment %} Einbinden in einer Section: {% endcomment %}\n{% render 'product-card', product: product %}"
+    },
+    {
+      "type": "tip",
+      "text": "Nutze render statt include für Snippets. render isoliert den Scope – Variablen aus dem übergeordneten Template sind im Snippet nicht automatisch verfügbar. Das verhindert ungewollte Nebeneffekte und ist die aktuelle Best Practice."
+    },
+    {
+      "type": "heading",
+      "text": "Liquid-Performance: Was du vermeiden solltest"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Verschachtelte for-Schleifen über Collections: Erhöht die Server-Renderzeit exponentiell",
+        "include statt render: include ist deprecated und hat schlechtere Performance",
+        "Zu viele Liquid-Berechnungen Above the Fold: Alles, was den TTFB erhöht, schadet LCP",
+        "Doppelte Objektzugriffe: Weise häufig genutzte Werte einer Variable zu (assign title = product.title)",
+        "Unnötige unless-Blöcke: unless condition ist gleichbedeutend mit if NOT condition – kann verwirrend sein"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Metafields in Liquid nutzen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Seit Shopify 2.0 können Metafields direkt in Liquid ausgegeben werden – ohne App, direkt über den Admin konfigurierbar:"
+    },
+    {
+      "type": "code",
+      "language": "liquid",
+      "text": "{% comment %} Metafield mit Namespace 'custom' und Key 'material' {% endcomment %}\n{{ product.metafields.custom.material }}\n\n{% comment %} Typisierter Zugriff für komplexe Typen {% endcomment %}\n{{ product.metafields.custom.related_products.value | map: 'title' | join: ', ' }}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Liquid ist eine bewusst eingeschränkte Sprache – und das ist eine Stärke. Wer die Grundbausteine beherrscht, kann damit jede Shopify-Anforderung umsetzen. Wenn du tiefer einsteigen willst oder Unterstützung bei einem konkreten Theme-Projekt brauchst, stehe ich gerne zur Verfügung."
+    }
+  ],
+  "title_en": "Shopify Liquid Basics: The Developer's Introduction",
+  "description_en": "Liquid is Shopify's template language – easy to learn, powerful in practice. This guide explains the most important concepts with practical examples.",
+  "content_en": [
+    {
+      "type": "paragraph",
+      "text": "Liquid is the backbone of every Shopify storefront. Whether you're customizing a theme, building sections, or rendering dynamic content, you'll work with Liquid constantly. This guide covers the fundamentals you need to get productive fast."
+    },
+    {
+      "type": "heading",
+      "text": "What Is Liquid?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Liquid is an open-source template language created by Shopify and written in Ruby. It uses a simple syntax with three types of tags: output tags ({{ }}), logic tags ({% %}), and comment tags ({# #}). Templates are rendered server-side, with Liquid replaced by the values it evaluates to before the HTML is sent to the browser."
+    },
+    {
+      "type": "heading",
+      "text": "Output Tags"
+    },
+    {
+      "type": "paragraph",
+      "text": "Output tags display the value of a variable or expression. The most common example is displaying a product's title:"
+    },
+    {
+      "type": "code",
+      "text": "{{ product.title }}\n{{ product.price | money }}\n{{ 'main.css' | asset_url | stylesheet_tag }}"
+    },
+    {
+      "type": "heading",
+      "text": "Logic Tags"
+    },
+    {
+      "type": "paragraph",
+      "text": "Logic tags control the flow of your templates. They never produce visible output themselves – they control what gets rendered."
+    },
+    {
+      "type": "code",
+      "text": "{% if product.available %}\n  <button>Add to Cart</button>\n{% else %}\n  <p>Sold out</p>\n{% endif %}"
+    },
+    {
+      "type": "heading",
+      "text": "Loops"
+    },
+    {
+      "type": "paragraph",
+      "text": "The for loop lets you iterate over arrays and objects – one of the most common patterns in Shopify templates:"
+    },
+    {
+      "type": "code",
+      "text": "{% for product in collection.products %}\n  <div class=\"product-card\">\n    <h2>{{ product.title }}</h2>\n    <p>{{ product.price | money }}</p>\n  </div>\n{% endfor %}"
+    },
+    {
+      "type": "heading",
+      "text": "Filters"
+    },
+    {
+      "type": "paragraph",
+      "text": "Filters transform the output of variables. They're called with the pipe character (|) and can be chained:"
+    },
+    {
+      "type": "code",
+      "text": "{{ product.title | upcase }}\n{{ product.price | money_with_currency }}\n{{ product.description | strip_html | truncate: 150 }}"
+    },
+    {
+      "type": "heading",
+      "text": "Accessing Objects"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify's Liquid environment gives you access to a rich set of global objects: product, collection, cart, customer, shop, and more. Each has documented properties available via the Shopify Liquid reference. Always check the Shopify docs for the object you're working with – the available properties vary by template context."
+    },
+    {
+      "type": "tip",
+      "text": "Use the Shopify Liquid Cheat Sheet (available at cheat.markdunkley.com) as a quick reference while developing. It lists all objects, properties, and filters in one searchable page."
+    },
+    {
+      "type": "heading",
+      "text": "Sections and Schemas"
+    },
+    {
+      "type": "paragraph",
+      "text": "In OS 2.0, sections are the primary building block. Each section has a schema block that defines its settings – making them configurable in the theme editor without touching code:"
+    },
+    {
+      "type": "code",
+      "text": "{% schema %}\n{\n  \"name\": \"Hero Banner\",\n  \"settings\": [\n    {\n      \"type\": \"text\",\n      \"id\": \"heading\",\n      \"label\": \"Heading\",\n      \"default\": \"Welcome\"\n    }\n  ]\n}\n{% endschema %}"
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Liquid is a deliberately constrained language – it can't make HTTP requests, run arbitrary code, or access the filesystem. These constraints make it secure and fast, but they also mean you need to think carefully about what logic belongs in Liquid vs. JavaScript vs. backend apps. Master the basics here, and you'll have a solid foundation for any Shopify development work."
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "slug": "shopify-plus-lohnt-sich-das",
+  "title": "Shopify Plus: Wann lohnt sich das Upgrade wirklich?",
+  "description": "Shopify Plus kostet ab 2.300 $/Monat. Wann ist der Schritt sinnvoll, welche Features bekommst du – und wann ist er schlicht zu teuer?",
+  "date": "2025-04-15",
+  "readTime": 8,
+  "tags": [
+    "Shopify Plus",
+    "Enterprise",
+    "Kosten",
+    "Features"
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Shopify Plus ist das Enterprise-Angebot von Shopify – und mit einem Einstiegspreis von 2.300 $/Monat kein kleiner Schritt. Für die richtige Art von Shop ist es jedoch eine der besten Investitionen, die man tätigen kann. Für den falschen Shop ist es schlicht zu teuer. Dieser Artikel hilft dir, die Entscheidung fundiert zu treffen."
+    },
+    {
+      "type": "heading",
+      "text": "Was kostet Shopify Plus wirklich?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Einstiegspreis liegt bei 2.300 $/Monat (Stand 2025) für Shops bis zu einer Million Dollar monatlichem Umsatz. Darüber hinaus gilt ein Revenue-Share-Modell von 0,25 % des Umsatzes, gedeckelt bei 40.000 $/Monat. Hinzu kommen Kosten für Apps, Theme-Entwicklung und laufende Wartung."
+    },
+    {
+      "type": "tip",
+      "text": "Faustregel: Shopify Plus rechnet sich ab einem Jahresumsatz von ca. 1,5–2 Millionen Euro – wenn du die gebotenen Features auch wirklich nutzt."
+    },
+    {
+      "type": "heading",
+      "text": "Die wichtigsten Shopify Plus Features"
+    },
+    {
+      "type": "subheading",
+      "text": "Checkout Extensibility"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify Plus erlaubt die vollständige Anpassung des Checkouts über Checkout Extensibility – dem Nachfolger von checkout.liquid. Eigene UI-Elemente, Custom-Validierungen, Upsells direkt im Checkout. Das ist einer der stärksten Conversion-Hebel, den Plus bietet."
+    },
+    {
+      "type": "subheading",
+      "text": "Shopify Flow: Automation ohne Code"
+    },
+    {
+      "type": "paragraph",
+      "text": "Flow ist Shopifys internes Automatisierungstool. Trigger (Bestellung eingegangen), Conditions (Bestellwert > 500 €) und Actions (Tag setzen, E-Mail senden, Fulfillment priorisieren) lassen sich visuell verknüpfen – ohne Entwickleraufwand."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Automatisches Taggen von Kunden nach Kaufverhalten",
+        "VIP-Kunden-Workflows (ab X Bestellungen bekommt der Kunde einen Tag und anderen Preis)",
+        "Fraud-Detection-Workflows (verdächtige Bestellungen pausieren und prüfen)",
+        "Lagerbestand-Automationen (bei niedrigem Bestand automatisch E-Mail an Einkauf)"
+      ]
+    },
+    {
+      "type": "subheading",
+      "text": "Multistore / Expansion Stores"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify Plus beinhaltet bis zu 9 Expansion Stores ohne Aufpreis. Ideal für internationale Shops mit unterschiedlichen Währungen, Sprachen und Produktkatalogen – oder für B2B/B2C-Trennung unter einem Dach."
+    },
+    {
+      "type": "subheading",
+      "text": "Shopify Audiences und B2B"
+    },
+    {
+      "type": "paragraph",
+      "text": "Seit 2022 bietet Shopify Plus native B2B-Funktionen: Kundenspezifische Preislisten, Netto-Zahlungsbedingungen (Net 30/60), Company-Accounts mit mehreren Käufern und Rollen. Das ersetzt in vielen Fällen teure Custom-Lösungen."
+    },
+    {
+      "type": "subheading",
+      "text": "Launchpad und Scripts"
+    },
+    {
+      "type": "paragraph",
+      "text": "Launchpad ermöglicht geplante Aktionen: Theme-Wechsel, Sale-Preise, Produktveröffentlichungen – alles terminiert und automatisch. Shopify Scripts (werden 2025 durch Checkout Extensibility abgelöst) ermöglichten bisher Custom-Rabattlogik direkt im Checkout."
+    },
+    {
+      "type": "heading",
+      "text": "Shopify Plus vs. Advanced Shopify: Die konkreten Unterschiede"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Checkout-Anpassung: Nur Plus – Advanced hat keine Checkout Extensibility",
+        "Flow Automation: Nur Plus",
+        "Expansion Stores: Nur Plus (bis zu 9 ohne Aufpreis)",
+        "B2B Native: Nur Plus",
+        "API-Rate-Limits: Plus hat deutlich höhere Limits (wichtig für ERP-Integrationen)",
+        "Dedicated Account Manager: Nur Plus",
+        "Transaktionsgebühren: Beide 0 % bei Shopify Payments",
+        "Preis: Advanced 399 $/Monat, Plus ab 2.300 $/Monat"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Wann lohnt sich Shopify Plus?"
+    },
+    {
+      "type": "ordered-list",
+      "items": [
+        "Du machst über 1,5 Mio. € Jahresumsatz und brauchst einen skalierbaren, stabilen Unterbau",
+        "Du brauchst eine angepasste Checkout-Experience (Upsells, Custom-Validierungen, eigene UI)",
+        "Du betreibst mehrere Stores (international, B2B/B2C, verschiedene Marken)",
+        "Du brauchst native B2B-Funktionen ohne teure Custom-App",
+        "Deine ERP- oder 3PL-Integration kommt an die API-Limits von Advanced",
+        "Du planst Flash-Sales oder Produktdrops, bei denen koordinierte Launches (Launchpad) entscheidend sind"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Wann ist Shopify Plus zu viel?"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Dein Umsatz liegt unter 1 Mio. € pro Jahr – Advanced reicht in den meisten Fällen",
+        "Du nutzt keine der Plus-exklusiven Features – dann zahlst du für Features, die du nicht nutzt",
+        "Du hast keine Kapazität, die Features zu implementieren und zu nutzen – Plus ist kein Selbstläufer"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Entscheidung für oder gegen Shopify Plus sollte nie nur an den Kosten hängen, sondern an den konkreten Business-Anforderungen. Ich helfe dir gerne dabei, diese Anforderungen zu strukturieren und die richtige Entscheidung zu treffen – ob das Shopify Plus, Advanced oder eine ganz andere Lösung ist."
+    }
+  ],
+  "title_en": "Shopify Plus: When Is the Upgrade Actually Worth It?",
+  "description_en": "Shopify Plus starts at $2,300/month. When does the move make sense, what features do you get – and when is it simply too expensive?",
+  "content_en": [
+    {
+      "type": "paragraph",
+      "text": "Shopify Plus is the enterprise tier of Shopify – significantly more expensive than standard plans, but with a feature set that can justify the cost for the right business. The question isn't whether Shopify Plus is good. It is. The question is whether it's the right investment for your specific situation."
+    },
+    {
+      "type": "heading",
+      "text": "What Shopify Plus Actually Offers"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Up to 10 expansion stores (for multi-region, multi-brand setups)",
+        "Shopify Checkout extensibility (checkout UI extensions, checkout.liquid replacement)",
+        "Shopify Flow for no-code automation workflows",
+        "B2B features including company accounts, custom price lists, and draft orders",
+        "Dedicated launch engineer support during onboarding",
+        "Lower transaction fees (0% on Shopify Payments)",
+        "Custom SLAs and priority support",
+        "Launchpad for sales and campaign automation"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "When Shopify Plus Makes Financial Sense"
+    },
+    {
+      "type": "paragraph",
+      "text": "The standard analysis: at what revenue does the transaction fee savings justify the Plus premium? On standard Advanced plan (0.5% transaction fee), you'd save $2,300/month at around $460,000/month in GMV processed through Shopify Payments. That's roughly $5.5M annual revenue on Shopify Payments – a reasonable threshold."
+    },
+    {
+      "type": "tip",
+      "text": "Transaction fee math only applies if you're using Shopify Payments. If you're using a third-party gateway on Plus, you pay 0% transaction fees – but on Advanced you'd pay 0.5%. Run the numbers for your specific payment method mix."
+    },
+    {
+      "type": "heading",
+      "text": "When Plus Is Worth It Beyond Transaction Fees"
+    },
+    {
+      "type": "list",
+      "items": [
+        "You need custom checkout logic (Shopify Functions are available on all plans, but checkout UI extensions require Plus)",
+        "You're running B2B alongside DTC and need the native B2B features",
+        "You're managing multiple stores and Shopify's multi-store tools matter to you",
+        "You need Shopify Flow for complex automation without custom app development",
+        "You're doing high-volume flash sales and need Launchpad"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "When Plus Is NOT Worth It"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Revenue under $1–2M/year – the economics rarely justify it",
+        "You're on a standard plan and just want more design flexibility (it's the same theme system)",
+        "You're hoping Plus solves performance problems (it won't – performance is a theme issue)",
+        "You're being upsold by a Shopify partner without a clear business case for the features you'd actually use"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "The Real Decision Factors"
+    },
+    {
+      "type": "paragraph",
+      "text": "Beyond transaction fees, Plus is really about operational scale. When you're managing teams across multiple regions, running complex promotional logic, or need enterprise-grade support SLAs, the platform investment becomes justifiable. For most stores under $5M GMV, the Advanced plan is the better choice."
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify Plus is excellent – for the right business. Don't upgrade because it sounds impressive or because an agency recommended it without clear justification. Upgrade when specific Plus-exclusive features directly solve problems you have at your current scale."
+    }
+  ]
+}

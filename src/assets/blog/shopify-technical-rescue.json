@@ -1,0 +1,195 @@
+{
+  "slug": "shopify-technical-rescue",
+  "title": "Shopify Technical Rescue: Was tun wenn ein Shopify-Projekt feststeckt?",
+  "description": "Ein Shopify-Projekt brennt – Bugs, Deadlines, überforderte Entwickler. Was Technical Rescue bedeutet, wann es sinnvoll ist und wie die Übergabe funktioniert.",
+  "date": "2025-03-01",
+  "readTime": 7,
+  "tags": [
+    "Technical Rescue",
+    "Shopify",
+    "Debugging",
+    "Projektrettung"
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Es gibt Projekte, die laufen. Und dann gibt es Projekte, die nicht mehr laufen – oder nie richtig gelaufen sind. Ein Checkout, der auf bestimmten Geräten abbricht. Eine Migration, die seit Wochen im Staging feststeckt. Ein Entwickler, der nicht mehr erreichbar ist. Wenn in solchen Situationen Druck von oben kommt, braucht es jemanden, der das Ruder übernimmt. Das ist Technical Rescue."
+    },
+    {
+      "type": "heading",
+      "text": "Was ist Shopify Technical Rescue?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Technical Rescue ist kein Buzzword – es beschreibt eine sehr konkrete Situation: Ein Shopify-Projekt hat ein kritisches Problem, das das Team nicht selbst lösen kann oder für das keine Zeit bleibt. Ein externer Spezialist wird hinzugezogen, analysiert das Problem und behebt es so schnell und sauber wie möglich."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Checkout-Bugs, die Umsatz kosten (und sofort behoben werden müssen)",
+        "Nach einem Theme-Update bricht das Shop-Layout zusammen",
+        "App-Konflikte führen zu unerklärlichem Verhalten im Warenkorb oder der Produktseite",
+        "Eine Shopify-Migration läuft über Wochen und kommt nicht zum Abschluss",
+        "Ein Entwickler ist ausgefallen oder nicht mehr verfügbar – das Projekt muss übernommen werden",
+        "Performance-Einbruch nach einer Änderung – der Shopify Speed Score ist auf 20 gefallen"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Die 4 Phasen einer Technical Rescue"
+    },
+    {
+      "type": "subheading",
+      "text": "1. Sofortanalyse (< 24 Stunden)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Im ersten Schritt geht es darum, das Problem klar zu verstehen. Nicht raten – analysieren. Das bedeutet: Zugriff auf Theme-Code, Admin und wenn nötig App-Logs. Reproduktion des Problems in einer kontrollierten Umgebung. Identifikation der Ursache (nicht nur des Symptoms)."
+    },
+    {
+      "type": "subheading",
+      "text": "2. Sofortmaßnahmen (Bleeding stoppen)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wenn ein Bug aktiv Umsatz kostet, hat die Behebung absolute Priorität – auch wenn die Lösung nicht perfekt ist. Ein temporärer Fix, der das Bluten stoppt, ist besser als eine elegante Lösung, die drei Tage braucht. Das wird transparent kommuniziert: Was ist der Notfall-Fix, was ist die nachhaltige Lösung."
+    },
+    {
+      "type": "subheading",
+      "text": "3. Nachhaltige Lösung und Dokumentation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nach dem Notfall-Fix folgt die saubere Implementierung. Und mindestens genauso wichtig: die Dokumentation. Warum ist das Problem entstanden? Was wurde geändert? Was muss das Team künftig beachten? Ohne Dokumentation ist die Chance hoch, dass dasselbe Problem in drei Monaten wieder auftritt."
+    },
+    {
+      "type": "subheading",
+      "text": "4. Übergabe und Wissenstransfer"
+    },
+    {
+      "type": "paragraph",
+      "text": "Eine gute Technical Rescue endet damit, dass das Team die Situation versteht und in der Lage ist, eigenständig weiterzumachen. Das ist keine Selbstverständlichkeit – viele externe Spezialisten haben wenig Interesse daran, ihr Wissen zu teilen. Ich sehe das anders."
+    },
+    {
+      "type": "heading",
+      "text": "Wann sollte man eine Technical Rescue beauftragen?"
+    },
+    {
+      "type": "tip",
+      "text": "Faustregel: Wenn das Problem mehr als einen Arbeitstag dauert, aktiv Umsatz kostet oder das interne Team nach 4 Stunden Debugging keine klare Hypothese hat, ist es Zeit für externe Unterstützung."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Der Checkout hat eine nachweisliche Fehlerrate – jeder abgebrochene Checkout kostet Geld",
+        "Ein Launch-Termin ist gefährdet und das Team kommt nicht weiter",
+        "Das Problem tritt nur in der Produktion auf und lässt sich in Staging nicht reproduzieren",
+        "Der Entwickler, der das System gebaut hat, ist nicht mehr verfügbar",
+        "Das Team ist nicht sicher, ob ein Fix weitere Probleme auslösen könnte"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was Technical Rescue nicht ist"
+    },
+    {
+      "type": "paragraph",
+      "text": "Technical Rescue ist keine Wunderwaffe. Sie funktioniert nur, wenn die Ursache im Code liegt – nicht in organisatorischen Problemen, fehlenden Inhalten oder einer grundlegend falschen Produktstrategie. Und sie erfordert Zugang zu den relevanten Systemen sowie eine ehrliche Kommunikation über den Zustand des Projekts."
+    },
+    {
+      "type": "paragraph",
+      "text": "Wenn du gerade in einer solchen Situation steckst – meld dich. Ich analysiere das Problem, schätze den Aufwand realistisch ein und gebe dir eine ehrliche Einschätzung, ob und wie ich helfen kann."
+    }
+  ],
+  "title_en": "Shopify Technical Rescue: What to Do When a Shopify Project Is Stuck",
+  "description_en": "A Shopify project is on fire – bugs, deadlines, overwhelmed developers. What Technical Rescue means, when it makes sense, and how the handover works.",
+  "content_en": [
+    {
+      "type": "paragraph",
+      "text": "Some projects run smoothly. Others don't – or never did. A checkout that breaks on certain devices. A migration stuck in staging for weeks. A developer who's gone dark. When pressure mounts in situations like these, you need someone who can take the wheel. That's Technical Rescue."
+    },
+    {
+      "type": "heading",
+      "text": "What Is Shopify Technical Rescue?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Technical Rescue isn't a buzzword – it describes a very specific situation: a Shopify project has a critical problem the team can't solve on their own, or doesn't have time to tackle. An external specialist steps in, analyzes the problem, and resolves it as quickly and cleanly as possible."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Checkout bugs costing revenue (requiring immediate resolution)",
+        "A theme update breaks the shop layout",
+        "App conflicts cause inexplicable behavior in the cart or product pages",
+        "A Shopify migration has been running for weeks without completion",
+        "A developer has dropped out – the project needs to be taken over",
+        "Performance crash after a change – Shopify Speed Score dropped to 20"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "The 4 Phases of a Technical Rescue"
+    },
+    {
+      "type": "subheading",
+      "text": "1. Immediate Analysis (< 24 hours)"
+    },
+    {
+      "type": "paragraph",
+      "text": "The first step is clearly understanding the problem. No guessing – analysis. This means: access to theme code, admin, and if necessary app logs. Reproducing the problem in a controlled environment. Identifying the root cause (not just the symptom)."
+    },
+    {
+      "type": "subheading",
+      "text": "2. Immediate Measures (Stopping the Bleeding)"
+    },
+    {
+      "type": "paragraph",
+      "text": "When a bug is actively costing revenue, fixing it takes absolute priority – even if the solution isn't perfect. A temporary fix that stops the bleeding is better than an elegant solution that takes three days. This is communicated transparently: what's the emergency fix, what's the sustainable solution."
+    },
+    {
+      "type": "subheading",
+      "text": "3. Sustainable Solution and Documentation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Once the immediate problem is resolved, the focus shifts to a clean, long-term solution. This includes proper documentation: what was the problem, what was the cause, what was done to fix it – so the client's team can maintain and extend it going forward."
+    },
+    {
+      "type": "subheading",
+      "text": "4. Handover and Knowledge Transfer"
+    },
+    {
+      "type": "paragraph",
+      "text": "A successful rescue ends with a structured handover. Not just a fixed repo – but a clear understanding of what was changed, why, and how to prevent similar issues. Only then is the project truly stable."
+    },
+    {
+      "type": "heading",
+      "text": "When Does Technical Rescue Make Sense?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Technical Rescue makes sense when the internal team has hit a wall – whether due to lack of expertise, time pressure, or personnel shortages. The key indicators: a problem exists that costs money or blocks a launch, the team can't solve it within 48–72 hours, an external perspective is needed."
+    },
+    {
+      "type": "tip",
+      "text": "Technical Rescue isn't a sign of failure – it's a sign of professionalism. Recognizing when external help is needed and acting quickly is more valuable than struggling on with a broken setup."
+    },
+    {
+      "type": "heading",
+      "text": "What to Expect from a Shopify Technical Rescue"
+    },
+    {
+      "type": "paragraph",
+      "text": "A good Shopify Technical Rescue developer doesn't just fix the immediate bug. They document what they find, explain what caused the problem, and provide actionable recommendations to prevent recurrence. Transparent communication throughout is non-negotiable."
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Technical Rescue is one of the most demanding disciplines in Shopify development – it requires experience, speed, and the ability to navigate unfamiliar codebases under pressure. If your project is stuck, don't wait. The sooner an expert takes a look, the cheaper and cleaner the solution."
+    }
+  ]
+}

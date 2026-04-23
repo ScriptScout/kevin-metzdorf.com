@@ -1,34 +1,30 @@
 <header>
-    <a class="announcement_bar" href="#portfolio" aria-label="Zum Portfolio springen">
-        <div class="announcement_inner">
-            <div class="announcement_track">
-                <span>Technical Rescue · Performance · Custom Development · Enterprise Shopify · Agentur-Projekte · High-Traffic Shops · Multi-Store Setups · → Portfolio ansehen</span>
-                <span>Technical Rescue · Performance · Custom Development · Enterprise Shopify · Agentur-Projekte · High-Traffic Shops · Multi-Store Setups · → Portfolio ansehen</span>
-            </div>
-        </div>
+  <div class="header_main max-width_container">
+    <nav class="nav_bar_desktop nav_left" aria-label="Hauptnavigation links">
+
+    </nav>
+
+    <a class="logo_link" [routerLink]="'/'" [fragment]="'home'" aria-label="Zur Startseite">
+      <img class="logo" src="assets/img/logo_website.png" alt="Kevin Metzdorf Ltd Logo">
     </a>
-    <div class="header_main max-width_container">
-        <a href="#home"><img class="logo" src="assets/img/logo_website.png" alt="logo of the website"></a>
-        <div class="nav_bar_desktop">
-            <a [class.active_link]="activeSection === 'über'" class="nav_link hover_underline_animation"
-                href="#about_me">Über mich</a>
-            <a [class.active_link]="activeSection === 'skills'" class="nav_link hover_underline_animation"
-                href="#skills">Skills</a>
-           <a [class.active_link]="activeSection === 'portfolio'" class="nav_link hover_underline_animation"
-                href="#portfolio">Portfolio</a>
-            <a [class.active_link]="activeSection === 'kontakt'" class="nav_link hover_underline_animation"
-                href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink">Kontakt</a>
-        </div>
-        <div (click)="openMenu()" [class.active]="menuOpen" class="menu_toggler"><span></span></div>
-        <div [class.active]="menuOpen" class="nav_bar_mobil">
-            <a [class.active_link]="activeSection === 'über'" class="nav_link hover_underline_animation"
-                href="#about_me">Über mich</a>
-            <a [class.active_link]="activeSection === 'skills'" class="nav_link hover_underline_animation"
-                href="#skills">Skills</a>
-            <a [class.active_link]="activeSection === 'portfolio'" class="nav_link hover_underline_animation"
-                href="#portfolio">Portfolio</a>
-            <a [class.active_link]="activeSection === 'kontakt'" class="nav_link hover_underline_animation"
-                href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink">Kontakt</a>
-        </div>
+
+    <div class="nav_bar_desktop nav_right">
+      <a class="nav_link hover_underline_animation" routerLink="/blog" routerLinkActive="active_link">{{ 'NAV.BLOG' | translate }}</a>
+      <a class="nav_link hover_underline_animation" routerLink="/kontakt" routerLinkActive="active_link">{{ 'NAV.CONTACT' | translate }}</a>
+      <a class="btn btn--primary nav_cta" routerLink="/kontakt" aria-label="Jetzt Termin buchen">Jetzt Termin buchen</a>
+      <button class="lang_switcher" (click)="langService.toggle()" [attr.aria-label]="'Sprache wechseln'">
+        <span [class.active]="langService.currentLang === 'de'">DE</span>
+        <span class="lang_divider">|</span>
+        <span [class.active]="langService.currentLang === 'en'">EN</span>
+      </button>
     </div>
+
+    <div class="header_right_mobile">
+      <button class="lang_switcher lang_switcher--mobile" (click)="langService.toggle()" [attr.aria-label]="'Sprache wechseln'">
+        <span [class.active]="langService.currentLang === 'de'">DE</span>
+        <span class="lang_divider">|</span>
+        <span [class.active]="langService.currentLang === 'en'">EN</span>
+      </button>
+    </div>
+  </div>
 </header>

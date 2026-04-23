@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { LanguageService } from '../language.service';
 
 @Component({
     selector: 'app-header',
@@ -9,33 +10,8 @@ import { Component, HostListener } from '@angular/core';
 export class HeaderComponent {
 
   activeSection: string = '';
-  menuOpen: boolean = false;
 
-  ngOnInit() {
-    this.menuEventListener();
-  }
-
-  openMenu() {
-    this.menuOpen = !this.menuOpen;
-  }
-
-  menuEventListener() {
-    const menu = document.querySelectorAll('a.nav_link');
-    menu.forEach(link => {
-      link.addEventListener('click', (event) => {
-        this.openMenu();
-        this.resetMenuActive();
-        link.classList.add('active');
-      });
-    });
-  }
-
-  resetMenuActive() {
-    const menu = document.querySelectorAll('a.nav_link');
-    menu.forEach(link => {
-      link.classList.remove('active');
-    });
-  }
+  constructor(public langService: LanguageService) {}
 
   @HostListener('window:scroll')
   onWindowScroll() {

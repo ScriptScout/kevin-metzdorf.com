@@ -1,0 +1,27 @@
+<section class="work-list" aria-labelledby="work-title">
+  <div class="work-list__container">
+    <header class="work-list__header">
+      <h1 id="work-title" class="work-list__title">Arbeiten</h1>
+      <p class="work-list__sub">Ausgewählte Projekte – Zahlen & Entscheidungen. (Platzhalter)</p>
+    </header>
+
+    <div class="work-grid" #listRef>
+      <article class="work-card reveal" appReveal *ngFor="let c of cases">
+        <header class="work-card__header">
+          <h2 class="work-card__title">{{ c.title }}</h2>
+          <p class="work-card__summary">{{ c.summary }}</p>
+        </header>
+        <ul class="work-card__kpis" *ngIf="c.kpis?.length">
+          <li *ngFor="let k of c.kpis"><span class="badge badge--neutral">{{ k }}</span></li>
+        </ul>
+        <div class="work-card__meta" *ngIf="c.industry || c.region">
+          <span class="meta">{{ c.industry }}</span>
+          <span class="meta" *ngIf="c.region">• {{ c.region }}</span>
+        </div>
+        <div class="work-card__actions">
+          <button class="btn btn--secondary" (click)="openCase(c.slug)" aria-label="Fallstudie öffnen">Fallstudie lesen</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,210 @@
+{
+  "slug": "shopify-markets-international-2026",
+  "title": "Shopify Markets 2026: International verkaufen ohne Overhead – der komplette Guide",
+  "description": "Mit Shopify Markets kannst du mehrere Märkte aus einem einzigen Shop heraus betreiben – mit eigenen Preisen, Währungen, Domains und Sprachen. Was funktioniert, was noch fehlt.",
+  "date": "2026-02-17",
+  "readTime": 9,
+  "tags": [
+    "Shopify Markets",
+    "International",
+    "Multiwährung",
+    "Shopify 2026"
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Internationales Wachstum war früher mit Shopify aufwendig – separate Stores für jedes Land, inkonsistente Datenpflege, Pricing-Chaos. Shopify Markets hat das 2022 grundlegend verändert. In 2026 ist die Plattform ausgereift genug, um damit echte Enterprise-Setups abzubilden. Was möglich ist, wo die Grenzen liegen – dieser Guide gibt dir den vollständigen Überblick."
+    },
+    {
+      "type": "heading",
+      "text": "Was ist Shopify Markets?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Markets ist Shopifys Framework für das Betreiben mehrerer Märkte aus einem einzigen Store. Du definierst Märkte (z.B. DACH, UK, USA, FR) und konfigurierst pro Markt: Währung, Sprache, Domain oder Subfolder, Preise, Steuern und den verfügbaren Produktkatalog."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Primärer Markt: Dein Heimatmarkt mit der Basis-Konfiguration",
+        "Expansion Markets: Zusätzliche Märkte mit eigenen Einstellungen",
+        "Automatische Markt-Erkennung: Shopify leitet Kunden anhand von IP und Browser-Sprache zum richtigen Markt",
+        "Preisregeln pro Markt: Fester Preis, Prozentaufschlag oder automatische Währungsumrechnung mit Rundungsregeln"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Domain-Strategie: ccTLD, Subfolder oder Subdomain?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für die Markt-Domains bietet Shopify drei Optionen – mit unterschiedlichen SEO-Implikationen:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "ccTLD (shop.de, shop.co.uk): Stärkste geografische Signalwirkung für Google, höchster Aufwand bei Domain-Verwaltung",
+        "Subfolder (shop.com/de, shop.com/en-gb): Empfohlen für die meisten Setups – Domain-Autorität wird geteilt, geringerer Aufwand",
+        "Subdomain (de.shop.com): Technisch einfach, aber SEO-technisch werden Subdomains von Google als eigene Domains behandelt – gespaltene Autorität"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "SEO-Empfehlung 2026: Subfolder-Strategie für die meisten internationalen Shops. Die Domain-Autorität der Hauptdomain stärkt alle Märkte gleichzeitig – und der Verwaltungsaufwand ist minimal."
+    },
+    {
+      "type": "heading",
+      "text": "Marktspezifische Preise: Die drei Modelle"
+    },
+    {
+      "type": "subheading",
+      "text": "1. Automatische Währungsumrechnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify rechnet Preise automatisch anhand von Echtzeit-Wechselkursen um und rundet nach konfigurierbaren Regeln (z.B. auf .99 oder .00 enden). Schnell eingerichtet, aber Preise schwanken mit dem Kurs – für physische Produkte mit fixen Margen problematisch."
+    },
+    {
+      "type": "subheading",
+      "text": "2. Prozentuale Preisanpassung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pro Markt wird ein Prozentaufschlag oder -abschlag auf alle Preise angewendet. Einfach zu verwalten, deckt aber keine variantenspezifischen Preisunterschiede ab."
+    },
+    {
+      "type": "subheading",
+      "text": "3. Explizite Marktpreise (Price Lists)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Seit 2024 können für Märkte explizite Preislisten angelegt werden – Produkt für Produkt oder per Bulk-Import. Das gibt volle Kontrolle, erfordert aber Pflege bei Sortimentänderungen. Ideal für Shops mit strengen regionalen Pricing-Strategien."
+    },
+    {
+      "type": "heading",
+      "text": "Hreflang-Tags: Was Shopify automatisch setzt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify setzt hreflang-Attribute automatisch für alle konfigurierten Märkte – eine der wichtigsten technischen SEO-Voraussetzungen für internationale Shops. Google verwendet diese Tags, um zu verstehen, welche Version einer Seite für welchen Markt und welche Sprache bestimmt ist."
+    },
+    {
+      "type": "code",
+      "language": "html",
+      "text": "<!-- Shopify setzt diese Tags automatisch im Head -->\n<link rel=\"alternate\" hreflang=\"de\" href=\"https://shop.com/de/products/mein-produkt\">\n<link rel=\"alternate\" hreflang=\"en-gb\" href=\"https://shop.com/en-gb/products/my-product\">\n<link rel=\"alternate\" hreflang=\"en-us\" href=\"https://shop.com/products/my-product\">\n<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://shop.com/products/my-product\">"
+    },
+    {
+      "type": "heading",
+      "text": "Shopify Markets Pro: Was ist der Unterschied?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Markets Pro ist eine kostenpflichtige Erweiterung (verfügbar über Shopify Managed Markets), die zusätzliche Funktionen für komplexes Cross-Border-Commerce bietet:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Zölle und Einfuhrsteuern: Automatische Berechnung und Darstellung im Checkout (Duties & Taxes)",
+        "Lokale Zahlungsmethoden: Automatische Aktivierung marktrelevanter Zahlungsmethoden",
+        "Compliance-Automatisierung: Steuerregistrierungen und -abführungen in bestimmten Märkten",
+        "Garantierte Landed Cost: Kunden sehen den Endpreis inkl. Zoll – keine Nachzahlungen bei der Lieferung"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Wann reicht Markets, wann braucht man Expansion Stores?"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Markets reicht für: Unterschiedliche Preise, Währungen, Sprachen, Domains pro Region – gleicher Produktkatalog",
+        "Expansion Stores braucht man für: Komplett unterschiedliche Produktkataloge, getrennte Marken-Identitäten, separate operative Teams oder stark unterschiedliche Fulfillment-Prozesse"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify Markets ist für die meisten internationalen Wachstumsszenarien die effizienteste Lösung. Wenn du gerade einen internationalen Rollout planst, eine bestehende Multi-Store-Architektur auf Markets migrieren möchtest oder Fragen zur Pricing-Strategie hast – ich berate gerne."
+    }
+  ],
+  "title_en": "Shopify Markets 2026: Sell Internationally Without Overhead – The Complete Guide",
+  "description_en": "With Shopify Markets you can run multiple markets from a single store – with custom prices, currencies, domains, and languages. What works, what's still missing.",
+  "content_en": [
+    {
+      "type": "paragraph",
+      "text": "International expansion used to mean separate Shopify stores per region – separate inventories, separate admin, separate everything. Shopify Markets changes that. Since 2022 it's been evolving rapidly, and in 2026 it's mature enough to power serious cross-border commerce from a single store setup."
+    },
+    {
+      "type": "heading",
+      "text": "What Shopify Markets Can Do"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Create separate markets with custom pricing per currency",
+        "Assign custom domains or subpaths per market (e.g. /de/, /fr/)",
+        "Translate storefront content via Translate & Adapt or third-party apps",
+        "Apply market-specific duties and import taxes at checkout",
+        "Set market-specific product availability",
+        "Define geo-based redirects and IP detection"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "What's Different in 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "The biggest 2026 update: Shopify Markets now supports B2B market contexts, meaning you can serve business customers with market-specific pricing alongside your DTC storefront. Markets Pro (available in selected countries) handles cross-border taxes and duties as a merchant of record – removing the compliance burden entirely."
+    },
+    {
+      "type": "tip",
+      "text": "Markets Pro is a game-changer for cross-border DTC – Shopify collects and remits VAT/duties on your behalf. If it's available in your target markets, the compliance savings alone can justify the fee."
+    },
+    {
+      "type": "heading",
+      "text": "Pricing Strategy with Markets"
+    },
+    {
+      "type": "paragraph",
+      "text": "You have three options for market pricing: automatic currency conversion (using Shopify's real-time exchange rates), manual market-specific prices per product, or price adjustments (percentage over/under base price). For serious international operations, manual market prices are usually the right choice – rounding rules, psychological pricing, and competitive positioning vary by market."
+    },
+    {
+      "type": "heading",
+      "text": "Translation and Localization"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify Markets handles the technical routing, but translation is separate. Use the Translate & Adapt app (free, native) for basic translation management, or a more robust solution like Weglot or Langify for professional workflows. Note: product metafields and metaobject fields can also be translated through the Translate & Adapt API."
+    },
+    {
+      "type": "heading",
+      "text": "What Still Doesn't Work Well"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Complex tax rules for physical products in non-EU markets still require workarounds",
+        "Market-specific checkout customizations have limitations",
+        "Some third-party apps don't respect market context – test thoroughly",
+        "B2B + DTC in the same market context can create unexpected pricing conflicts",
+        "Large-scale product catalog translation is still slow and manual without significant app investment"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Is One Store Right for You?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify Markets works best when your products, branding, and operations are consistent across markets – just with localized pricing, language, and currency. If your different regions have fundamentally different product catalogs, brands, or operational structures, separate stores may still be the right architecture."
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify Markets in 2026 is a compelling solution for international expansion without the overhead of multi-store management. Start with 2–3 key markets, get the setup right, then expand. The single-admin, unified inventory model is a genuine operational advantage at scale."
+    }
+  ]
+}

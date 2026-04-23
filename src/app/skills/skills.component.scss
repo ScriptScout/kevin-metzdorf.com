@@ -31,6 +31,10 @@ section {
         height: auto;
         gap: 100px;
     }
+
+    @media (max-width: 750px) {
+        gap: 50px;
+    }
 }
 
 .shadow_position {

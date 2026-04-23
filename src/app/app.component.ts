@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
 import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
+import { LanguageService } from './language.service';
 
 @Component({
     selector: 'app-root',
@@ -10,7 +11,10 @@ import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private analytics: AngularFireAnalytics) {}
+  constructor(
+    private analytics: AngularFireAnalytics,
+    private langService: LanguageService  // eager init ensures translate.use() runs before any child ngOnInit
+  ) {}
 
   ngOnInit() {
     AOS.init();

@@ -3,10 +3,11 @@ section {
     justify-content: center;
     height: 150px;
     padding: 0 150px;
-    border-top: 4px solid #00BEE8;
+    border-top: 1px solid var(--c-border);
+    background: var(--c-bg);
 
     span {
-        color: white;
+        color: var(--c-text);
         font-size: 1.1rem;
     }
 
@@ -45,11 +46,12 @@ section {
     gap: 20px;
 
     a {
-        color: white;
+        color: var(--c-text);
         text-decoration: none;
 
         &:hover {
-            color: #00BEE8;
+            text-decoration: underline;
+            text-underline-offset: 3px;
         }
     }
 }
@@ -65,26 +67,11 @@ section {
 .hover_underline_animation {
     display: inline-block;
     position: relative;
-    color: #00BEE8;
+    color: inherit;
 }
-
-.hover_underline_animation::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #4b47ff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.hover_underline_animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
+/* Neutralize legacy animated underline; rely on global a:hover underline */
+.hover_underline_animation::after { content: none; }
+.hover_underline_animation:hover::after { content: none; }
 
 .social_icons_container {
     display: flex;
@@ -107,4 +94,36 @@ section {
     justify-content: center;
     gap: 10px 14px;
     text-align: center;
+
+    @media (max-width: 650px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+
+        a {
+            display: block;
+            padding: 12px 0;
+            min-height: 48px; /* Tap-Target */
+            line-height: 1.2;
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--c-text);
+            outline-offset: 2px;
+        }
+    }
+}
+
+
+/* Editorial: ensure footer social icons match text color (monochrome) */
+.social_icons_container img {
+  /* turn white PNGs into monochrome dark, close to var(--c-text) */
+  filter: brightness(0) saturate(100%);
+  opacity: 0.9;
+  transition: opacity 150ms ease-out, transform 150ms ease-out;
+}
+
+.link_hover:hover img,
+.link_hover:focus-visible img {
+  opacity: 1;
 }

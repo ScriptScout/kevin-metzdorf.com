@@ -1,0 +1,200 @@
+{
+  "slug": "shopify-freelancer-beauftragen",
+  "title": "Shopify Freelancer beauftragen: Worauf du 2025 unbedingt achten solltest",
+  "description": "Nicht jeder, der sich Shopify-Experte nennt, ist einer. Hier erfährst du, welche Fragen du stellen solltest, welche Red Flags es gibt – und was ein guter Shopify Freelancer kostet.",
+  "date": "2025-03-10",
+  "readTime": 9,
+  "tags": [
+    "Shopify Freelancer",
+    "Auftraggeber",
+    "Tipps",
+    "Kosten"
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Der Markt für Shopify-Freelancer ist groß – und unübersichtlich. Auf Plattformen wie Upwork oder Fiverr findest du Entwickler für 15 € die Stunde. Auf anderen Kanälen für 150 €. Beide können theoretisch dasselbe Problem lösen. Meistens tun sie es aber nicht – und die billige Option kostet am Ende mehr, weil der Code nachgebessert werden muss. Dieser Guide hilft dir, die richtige Wahl zu treffen."
+    },
+    {
+      "type": "heading",
+      "text": "Was kann ein Shopify Freelancer für dich tun?"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Custom Theme Development: Ein maßgeschneidertes Theme nach deinem Designkonzept",
+        "Theme-Anpassungen: Änderungen an einem bestehenden Theme (Dawn, Impulse, Debut, etc.)",
+        "App-Entwicklung: Custom Apps für Anforderungen, die keine Standard-App abdeckt",
+        "Performance-Optimierung: Core Web Vitals verbessern, Ladezeiten senken",
+        "Migration: Von einem anderen System (WooCommerce, Magento) zu Shopify wechseln",
+        "Technical Rescue: Übernahme und Stabilisierung feststeckender Projekte",
+        "Ongoing Support: Regelmäßige Betreuung und Weiterentwicklung des Shops"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Die richtigen Fragen im ersten Gespräch"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein seriöser Shopify Freelancer wird dir im ersten Gespräch genauso viele Fragen stellen wie du ihm. Wer nur nickt und einen Preis nennt, ohne das Problem zu verstehen, ist ein Warnsignal. Hier sind die Fragen, die du stellen solltest:"
+    },
+    {
+      "type": "ordered-list",
+      "items": [
+        "Zeig mir 3 Shopify-Projekte, die du in den letzten 12 Monaten abgeschlossen hast – mit Live-URLs.",
+        "Wie gehst du vor, wenn du in ein laufendes Projekt einsteigst, das du nicht selbst gebaut hast?",
+        "Welche Shopify-Version (Legacy oder OS 2.0) überwiegt in deinen aktuellen Projekten?",
+        "Wie dokumentierst du deinen Code und wie übergibst du am Ende des Projekts?",
+        "Was passiert, wenn nach dem Go-Live Bugs auftreten? Wie ist deine Verfügbarkeit?",
+        "Hast du Erfahrung mit der spezifischen Anforderung, die ich habe? (z.B. Multistore, Headless, Shopify Plus)"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Lass dir den Code aus einem abgeschlossenen Projekt zeigen – nicht live, sondern wirklich den Liquid/JavaScript-Code. Sauber strukturierter, kommentierter Code ist ein verlässliches Qualitätssignal."
+    },
+    {
+      "type": "heading",
+      "text": "Red Flags, die du kennen solltest"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Kein Portfolio mit Live-Shops: Behauptungen ohne Belege sind wertlos",
+        "Zu niedrige Stundensätze für komplexe Aufgaben: Unter 60 €/h für Custom Development ist ein Warnsignal",
+        "Kein Staging-Workflow: Wer direkt im Live-Shop entwickelt, ist ein Sicherheitsrisiko",
+        "Keine Fragen zu deinen Anforderungen: Wer versteht, bevor er loslegt – und nicht umgekehrt",
+        "Unklare Kommunikation über Kosten: Seriöse Freelancer schätzen transparent und erklären, was im Preis enthalten ist",
+        "Kein schriftlicher Vertrag: Alles Wichtige gehört schriftlich fixiert"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was kostet ein guter Shopify Freelancer?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Preisspanne ist enorm. Hier eine realistische Orientierung für den DACH-Raum in 2025:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Einsteigerbereich (1–2 Jahre Erfahrung): 40–70 €/h – für einfache Anpassungen geeignet",
+        "Mid-Level (3–5 Jahre Erfahrung): 80–120 €/h – solider Allrounder für die meisten Projekte",
+        "Senior (5+ Jahre, Spezialisierung): 130–180 €/h – für komplexe Setups, Migrationen, Shopify Plus",
+        "Projektpauschalen: Je nach Scope 2.000–80.000 € – immer auf klare Spezifikation bestehen"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Ein Freelancer mit höherem Stundensatz, der sauber und schnell arbeitet, ist fast immer günstiger als einer mit niedrigem Satz, der langsam ist oder nachgebessert werden muss."
+    },
+    {
+      "type": "heading",
+      "text": "Freelancer vs. Agentur: Was passt besser?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Eine Agentur hat mehr Kapazität und kann parallele Workstreams (Design, Development, QA) koordinieren. Ein erfahrener Freelancer ist schneller, direkter und oft günstiger – dafür gibt es keine Redundanz, wenn der Freelancer krank oder in einem anderen Projekt gebunden ist."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Freelancer empfiehlt sich für: Klar definierte Projekte, Technical Rescue, laufende Betreuung, spezifische Expertise",
+        "Agentur empfiehlt sich für: Großprojekte mit mehreren parallelen Disziplinen, wenn interne Projektmanagement-Kapazität fehlt"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ich bin seit über 6 Jahren als Shopify-Freelancer tätig – spezialisiert auf technisch anspruchsvolle Projekte, Performance und Technical Rescue. Wenn du Fragen zu einem konkreten Projekt hast, stehe ich gerne für ein erstes Gespräch zur Verfügung."
+    }
+  ],
+  "title_en": "Hiring a Shopify Freelancer: What to Watch Out for in 2025",
+  "description_en": "Not everyone who calls themselves a Shopify expert is one. Find out which questions to ask, what red flags to watch for – and what a good Shopify freelancer costs.",
+  "content_en": [
+    {
+      "type": "paragraph",
+      "text": "The Shopify freelancer market has exploded. Platforms like Upwork, Fiverr, and Toptal list thousands of developers claiming Shopify expertise. But the quality gap between a real Shopify expert and someone who took a weekend course is enormous – and the wrong hire can cost you months and thousands of euros."
+    },
+    {
+      "type": "heading",
+      "text": "What a Good Shopify Freelancer Actually Does"
+    },
+    {
+      "type": "paragraph",
+      "text": "A skilled Shopify developer is not just someone who can copy-paste Liquid snippets. They understand the Shopify data model, can reason about performance implications, know when to build custom vs. use an app, and communicate clearly when something is technically infeasible or unnecessarily complex."
+    },
+    {
+      "type": "heading",
+      "text": "Questions to Ask Before Hiring"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Can you show me Shopify stores you've built or significantly contributed to?",
+        "How do you handle version control and staging for theme development?",
+        "What's your process for testing changes before going live?",
+        "How do you approach performance optimization?",
+        "Have you worked with Shopify Plus or Enterprise setups?",
+        "What would you NOT build in Liquid vs. a custom app?"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Red Flags to Watch For"
+    },
+    {
+      "type": "list",
+      "items": [
+        "No portfolio of actual live Shopify stores",
+        "Vague answers about their development workflow",
+        "Can't explain the difference between OS 1.0 and OS 2.0 themes",
+        "Promises unrealistic delivery timelines for complex projects",
+        "No mention of testing, staging, or QA processes",
+        "Very low hourly rate without a credible explanation"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Ask to see the theme code of a previous project (with client permission). How it's organized, commented, and structured tells you more about a developer's skill than any portfolio screenshot."
+    },
+    {
+      "type": "heading",
+      "text": "What Does a Good Shopify Freelancer Cost?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Rates vary significantly by experience and geography, but for DACH-region freelancers:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Junior (1–2 years): €50–70/hour – suitable for small customizations and simple tasks",
+        "Mid-level (3–5 years): €70–100/hour – can handle most standard Shopify projects",
+        "Senior (5+ years): €100–150/hour – complex Enterprise projects, Technical Rescue, architecture decisions",
+        "Shopify Plus specialist: €120–180/hour – Shopify Functions, Hydrogen, multi-store setups"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Very cheap rates (< €30/hour from European freelancers) should be treated with skepticism. The time you \"save\" is often spent fixing their work later."
+    },
+    {
+      "type": "heading",
+      "text": "Fixed Price vs. Time & Materials"
+    },
+    {
+      "type": "paragraph",
+      "text": "For well-defined, scoped projects (specific feature builds, theme customizations), fixed-price works well – it gives both sides certainty. For ongoing support, complex projects with unclear scope, or Technical Rescue situations, Time & Materials is more appropriate. Never let a freelancer start significant work without a clear contract."
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hiring the right Shopify freelancer is worth the time investment in due diligence. Ask hard questions, review real work, and don't optimize purely for price. The best hires understand their craft, communicate clearly, and make your life easier – not harder."
+    }
+  ]
+}

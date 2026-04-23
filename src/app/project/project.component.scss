@@ -6,10 +6,20 @@
     max-width: 1168px;
     margin: 80px 0 80px 0;
     z-index: 10;
+
+    @media (max-width: 1150px) {
+        gap: 50px;
+    }
+
+    @media (max-width: 950px) {
+        margin: 120px 0;
+        gap: 40px;
+    }
 }
 
 .right_aligned {
     align-self: flex-start;
+
     @media (max-width: 950px) {
         flex-direction: column;
         align-self: center;

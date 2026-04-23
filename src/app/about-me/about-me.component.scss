@@ -37,6 +37,7 @@ section {
 .about_me_container {
     color: var(--text);
     width: 50vw;
+    max-width: 800px;
     z-index: 1;
     background: var(--panel);
     border: 1px solid rgba(255, 255, 255, 0.08);

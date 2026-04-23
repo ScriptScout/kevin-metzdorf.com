@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { SeoService } from '../seo.service';
 
 @Component({
     selector: 'app-main',
@@ -8,13 +8,13 @@ import { Meta, Title } from '@angular/platform-browser';
     standalone: false
 })
 export class MainComponent implements OnInit {
-    constructor(private title: Title, private meta: Meta) {}
+    constructor(private seo: SeoService) {}
 
     ngOnInit(): void {
-        this.title.setTitle('Kevin Metzdorf – Senior Shopify Freelancer & Developer Deutschland');
-        this.meta.updateTag({
-            name: 'description',
-            content: 'Senior Shopify Freelancer mit 6+ Jahren Erfahrung. Custom Development, Performance & Technical Rescue für Brands & Agenturen in Deutschland.'
+        this.seo.update({
+            title: 'Kevin Metzdorf – Senior Shopify Freelancer & Developer',
+            description: 'Senior Shopify Developer mit 6+ Jahren Erfahrung. Custom Development, Performance-Optimierung & Technical Rescue für Brands und Agenturen weltweit.',
+            canonical: 'https://kevin-metzdorf.com/'
         });
     }
 }

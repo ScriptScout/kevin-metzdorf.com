@@ -1,33 +1,25 @@
 <section id="about_me">
-    <div class="max-width_container">
-        <div class="about_me_container">
-            <h2>Über mich</h2>
-            <div class="about_me_box">
-                <p>
-                  Ich bin Kevin Metzdorf – Senior Shopify Developer mit Fokus auf technische Rettungseinsätze, Performance-Optimierung und saubere, skalierbare Theme-Architekturen. Ich unterstütze Agenturen und Unternehmen, wenn Shopify-Projekte komplex werden, Stabilität zählt oder schnelle, belastbare Lösungen gefragt sind. Mein Anspruch: klare Kommunikation, strukturierte Umsetzung und Code, der auch in sechs Monaten noch wartbar ist. Von punktuellen Fixes bis zur langfristigen Zusammenarbeit – immer pragmatisch, zuverlässig und ohne Drama.
-                </p>
-            </div>
-            <div class="about_me_personal_box">
-                <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-once="true"
-                    src="assets/img/bulb_desktop.png" alt="blue bulb logo">
-                <p>
-                  Technical Rescue – Wenn ein Projekt feststeckt: Analyse, Debugging und Stabilisierung – schnell und sauber.
-                </p>
-            </div>
-            <div class="about_me_personal_box">
-                <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-once="true"
-                    src="assets/img/puzzle_desktop.png" alt="blue puzzle logo">
-                <p>
-                  Performance & Wartbarkeit – Ladezeiten, Codequalität und skalierbare Theme-Strukturen – für Shops, die wachsen.
-                </p>
-            </div>
-        </div>
-        <div class="picture_container">
-            <div class="picture_frame">
-                <img src="assets/img/Mittel%20(Profilbild-Kevin-Metzdorf).png" alt="Picture of Kevin Metzdorf">
-            </div>
-            <div class="line"></div>
-        </div>
+  <div class="max-width_container">
+    <div class="about_me_container">
+      <h2>{{ 'ABOUT.HEADING' | translate }}</h2>
+      <div class="about_me_box">
+        <p>{{ 'ABOUT.TEXT' | translate }}</p>
+      </div>
+      <div class="about_me_personal_box reveal" appReveal>
+        <img src="assets/img/bulb_desktop.png" alt="Icon technical expertise">
+        <p>{{ 'ABOUT.RESCUE_TEXT' | translate }}</p>
+      </div>
+      <div class="about_me_personal_box reveal" appReveal>
+        <img src="assets/img/puzzle_desktop.png" alt="Icon scalability">
+        <p>{{ 'ABOUT.PERFORMANCE_TEXT' | translate }}</p>
+      </div>
     </div>
-    <img class="shadow_position" src="assets/img/purple_shadow.png" alt="purple shadows">
+    <div class="picture_container">
+      <div class="picture_frame">
+        <img src="assets/img/Mittel%20(Profilbild-Kevin-Metzdorf).png" alt="Kevin Metzdorf - Senior Shopify Specialist">
+      </div>
+      <div class="line"></div>
+    </div>
+  </div>
+  <img class="shadow_position" src="assets/img/purple_shadow.png" alt="decorative shadow">
 </section>

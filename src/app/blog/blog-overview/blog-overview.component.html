@@ -1,0 +1,37 @@
+<section class="blog_section">
+  <div class="max-width_container">
+
+    <div class="blog_header">
+      <span class="blog_eyebrow">{{ 'BLOG.EYEBROW' | translate }}</span>
+      <h1>Blog</h1>
+      <p class="blog_subtitle">{{ 'BLOG.SUBTITLE' | translate }}</p>
+    </div>
+
+    <div *ngIf="loading" class="loading_state">
+      <div class="loading_spinner"></div>
+    </div>
+
+    <div *ngIf="!loading && posts.length === 0" class="empty_state">
+      <p>{{ 'BLOG.EMPTY' | translate }}</p>
+    </div>
+
+    <div *ngIf="!loading && posts.length > 0" class="posts_grid">
+      <a *ngFor="let post of posts" [routerLink]="['/blog', post.slug]" class="post_card">
+        <div class="post_card_inner">
+          <div class="post_tags">
+            <span *ngFor="let tag of post.tags.slice(0, 3)" class="tag">{{ tag }}</span>
+          </div>
+          <h2 class="post_title">{{ loc(post.title, post.title_en) }}</h2>
+          <p class="post_description">{{ loc(post.description, post.description_en) }}</p>
+          <div class="post_meta">
+            <span class="post_date">{{ formatDate(post.date) }}</span>
+            <span class="post_dot">·</span>
+            <span class="post_read_time">{{ post.readTime }} {{ 'BLOG.READ_TIME' | translate }}</span>
+          </div>
+        </div>
+        <div class="post_card_arrow">→</div>
+      </a>
+    </div>
+
+  </div>
+</section>

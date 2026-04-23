@@ -24,12 +24,19 @@ section {
 
 .headline_container {
   position: relative;
+}
 
-  h2 {
-    color: white;
-    font-size: 4rem;
-    margin-top: 0;
-  }
+.headline {
+  display: grid;
+  gap: 6px;
+}
+.headline h1 {
+  margin: 0;
+  color: var(--c-text);
+}
+.headline .sub {
+  margin: 0;
+  color: var(--c-text-muted);
 }
 
 .contact_container {
@@ -45,31 +52,25 @@ section {
 }
 
 .contact_contant {
-  color: white;
+  color: var(--c-text);
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  width: 50%;
-
-  span:first-child {
-    font-weight: bold;
-    font-size: 2rem;
-  }
-
-  @media (max-width: 1150px) {
-    width: 100%;
-  }
-
-  a {
-    color: white;
-    width: max-content;
-    text-decoration: none;
-    font-weight: bold;
-
-    &:hover {
-      color: #00BEE8;
-    }
-  }
+  gap: 12px;
+  width: 45%;
+}
+.contact_contant span:first-child {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+@media (max-width: 1150px) {
+  .contact_contant { width: 100%; }
+}
+.contact_contant a {
+  color: inherit;
+  width: max-content;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
 }
 
 .line_headline {
@@ -105,42 +106,17 @@ section {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  width: 40%;
+  display: grid;
+  gap: 12px;
+  width: 55%;
+}
 
-  input,
-  textarea,
-  select {
-    border: 2px solid #4B47FF;
-    border-radius: 10px;
-    background-color: transparent;
-    padding: 15px 25px 15px 25px;
-    color: white;
-    font-family: 'Poppins';
-    width: 100%;
-    box-sizing: border-box;
+@media (max-width: 1150px) {
+  form { width: 80%; }
+}
 
-    &::placeholder {
-      color: white;
-    }
-
-    &:hover {
-      border: 2px solid #00BEE8;
-      box-shadow: 0 0 5px #00bee8;
-    }
-
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 5px #00bee8;
-    }
-  }
-
-  @media (max-width: 1150px) {
-    width: 80%;
-  }
+@media (max-width: 650px) {
+  form { width: 100%; }
 }
 
 .form_row {
@@ -162,8 +138,8 @@ form {
 input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched,
 select.ng-invalid.ng-touched {
-  border: 2px solid transparent;
-  box-shadow: 0 0 5px red;
+  border: 1px solid #b91c1c;
+  box-shadow: none;
 }
 
 .error-border {
@@ -684,3 +660,22 @@ small {
     opacity: 0;
   }
 }
+
+/* Editorial overrides: neutralize legacy custom checkbox and decorative elements */
+/* Keep this at the end to win specificity/order */
+.cbx, .cbx + svg { display: none !important; }
+
+/* Restore classic native checkbox appearance */
+input[type="checkbox"] {
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  accent-color: var(--c-primary);
+}
+
+/* Hide legacy decorative elements if present */
+.line_headline, .blue_shadow, .green_shadow, .back_home_btn { display: none !important; }

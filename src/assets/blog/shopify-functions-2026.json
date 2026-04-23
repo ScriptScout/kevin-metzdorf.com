@@ -1,0 +1,185 @@
+{
+  "slug": "shopify-functions-2026",
+  "title": "Shopify Functions 2026: Custom Business-Logik – Scripts sind Geschichte",
+  "description": "Shopify Scripts sind seit 2025 offiziell abgekündigt. Der Nachfolger sind Shopify Functions – mächtiger, flexibler und zukunftssicher. Was du wissen musst.",
+  "date": "2026-01-28",
+  "readTime": 9,
+  "tags": [
+    "Shopify Functions",
+    "Checkout",
+    "Shopify 2026",
+    "Development"
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Shopify Scripts waren lange der einzige Weg, um Checkout-Logik zu customisieren – Rabatte, Versandoptionen, Zahlungsmethoden. Seit 2025 sind sie offiziell deprecated und werden vollständig durch Shopify Functions ersetzt. Wer noch Scripts nutzt, muss jetzt handeln."
+    },
+    {
+      "type": "heading",
+      "text": "Was sind Shopify Functions?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify Functions sind serverseitige Erweiterungen, die auf Shopifys Infrastruktur laufen – kompiliert zu WebAssembly (Wasm). Sie werden als Teil einer Shopify App deployed (auch als Private App über den Partner-Account) und können die Core-Commerce-Logik von Shopify erweitern: Discounts, Shipping, Payment, Cart Transforms, Order Routing und mehr."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Discount Functions: Custom-Rabattlogik (Mengenrabatte, Bundle-Discounts, Kundengruppen-Preise)",
+        "Shipping Functions: Eigene Versandoptionen, dynamische Versandkosten, Carrier-Mapping",
+        "Payment Functions: Zahlungsmethoden ein-/ausblenden basierend auf Cart-Inhalt oder Kundenattributen",
+        "Cart Transform Functions: Cart-Items transformieren (Bundles aufsplitten, Pflichtartikel hinzufügen)",
+        "Order Routing Functions: Fulfillment-Location basierend auf Bestellinhalt steuern",
+        "Validation Functions: Checkout-Validierungen (Mindestbestellwert, geografische Einschränkungen)"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Wie werden Functions entwickelt?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify Functions werden in JavaScript oder TypeScript geschrieben und über die Shopify CLI zu WebAssembly kompiliert. Das Deployment läuft über eine Shopify App – auch als Private App, wenn keine öffentliche Distribution geplant ist. Shopify stellt für jede Function-Kategorie TypeScript-Typen und Input/Output-Schemas bereit."
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "text": "// Beispiel: Discount Function (10% ab 3 Artikeln)\nimport type { RunInput, FunctionRunResult } from '../generated/api';\n\nexport function run(input: RunInput): FunctionRunResult {\n  const totalQuantity = input.cart.lines\n    .reduce((sum, line) => sum + line.quantity, 0);\n\n  if (totalQuantity < 3) {\n    return { discounts: [], discountApplicationStrategy: 'FIRST' };\n  }\n\n  return {\n    discounts: [{\n      targets: [{ orderSubtotal: { excludedVariantIds: [] } }],\n      value: { percentage: { value: '10.0' } },\n      message: '10% Mengenrabatt ab 3 Artikeln'\n    }],\n    discountApplicationStrategy: 'FIRST'\n  };\n}"
+    },
+    {
+      "type": "heading",
+      "text": "Scripts vs. Functions: Die wichtigsten Unterschiede"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Deployment: Scripts waren in der Shopify-Admin-UI konfigurierbar, Functions werden als App deployed",
+        "Sprache: Scripts waren Ruby, Functions sind JavaScript/TypeScript (zu Wasm kompiliert)",
+        "Scope: Functions bieten mehr Kategorien und tiefere Integration als Scripts je hatten",
+        "Rate Limits: Functions haben strikte Ausführungs-Limits (5ms CPU-Zeit) – Logik muss effizient sein",
+        "Shopify Plus Requirement: Discount und Shipping Functions benötigen weiterhin Shopify Plus",
+        "Zukunftssicherheit: Functions sind die offizielle, langfristige Lösung"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Migration von Scripts zu Functions: Der Fahrplan"
+    },
+    {
+      "type": "ordered-list",
+      "items": [
+        "Inventar: Alle aktiven Scripts dokumentieren (Discount Scripts, Shipping Scripts, Payment Scripts)",
+        "Private App erstellen: Im Shopify Partner Dashboard eine neue App anlegen (Private App für einen einzelnen Shop)",
+        "Shopify CLI installieren und Function-Extension hinzufügen: shopify app generate extension --type=discount",
+        "Script-Logik in Function übersetzen: Ruby-Logik nach TypeScript portieren",
+        "Testing: Functions lokal mit shopify app dev testen, dann im Staging-Shop deployen",
+        "Migration Day: Function aktivieren, altes Script deaktivieren – mit Monitoring"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Wichtig: Functions haben ein CPU-Zeitlimit von 5 Millisekunden. Komplexe Schleifen über große Carts können dieses Limit erreichen. Teste mit repräsentativen Cart-Größen aus deinen echten Bestelldaten."
+    },
+    {
+      "type": "heading",
+      "text": "Was Functions noch nicht können (Stand 2026)"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Externe API-Calls: Functions dürfen keine HTTP-Requests machen – alle Entscheidungsdaten müssen im Input-Schema vorhanden sein",
+        "Persistenter State: Jede Function-Ausführung ist stateless",
+        "Unbegrenzte Laufzeit: Das 5ms-Limit ist eine harte Grenze – kein Workaround möglich"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Wenn du noch aktive Shopify Scripts im Einsatz hast, ist jetzt der richtige Zeitpunkt für die Migration. Ich unterstütze bei der Analyse bestehender Scripts, der Architektur der Function-Lösung und der technischen Umsetzung – auch als kurzfristiger Einsatz."
+    }
+  ],
+  "title_en": "Shopify Functions 2026: Custom Business Logic – Scripts Are History",
+  "description_en": "Shopify Scripts were officially deprecated in 2025. The successor is Shopify Functions – more powerful, more flexible, and future-proof. Here's what you need to know.",
+  "content_en": [
+    {
+      "type": "paragraph",
+      "text": "For years, Shopify Scripts were the way to customize checkout logic: discount rules, line item modifications, payment method filtering. But Scripts had serious limitations – they required Shopify Plus, ran in a proprietary Ruby-like sandbox, and had strict performance budgets. Shopify Functions solve all of these problems."
+    },
+    {
+      "type": "heading",
+      "text": "What Are Shopify Functions?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify Functions are custom logic blocks that run inside Shopify's infrastructure, written in any language that compiles to WebAssembly (most commonly Rust or JavaScript/TypeScript via the Javy runtime). They intercept and modify Shopify's core operations – discounts, shipping methods, payment methods, cart transforms, order routing – with your custom business logic."
+    },
+    {
+      "type": "heading",
+      "text": "Available Function APIs in 2026"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Discount Functions – custom discount logic (percentage, fixed, tiered, BXGY, B2B pricing)",
+        "Delivery Customization – show/hide/reorder shipping methods",
+        "Payment Customization – show/hide/reorder payment methods",
+        "Cart Transform – modify cart line items before checkout",
+        "Order Routing – custom fulfillment location logic",
+        "Validation – custom cart validation rules",
+        "Fulfillment Constraints – custom fulfillment constraints"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Shopify Plus vs. Standard Plans"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is a critical point: many Shopify Functions APIs are available on all plans, not just Plus. Discount Functions, Delivery Customization, and Payment Customization work on standard plans. Only checkout UI extensions (the visual customization layer) require Plus. Check the Shopify docs for each function type – the availability has expanded significantly in 2025–2026."
+    },
+    {
+      "type": "tip",
+      "text": "If a previous developer told you that you need Shopify Plus to implement custom discount logic, double-check with the current Shopify Functions documentation. As of 2026, many discount use cases are achievable on Advanced plan."
+    },
+    {
+      "type": "heading",
+      "text": "Building a Shopify Function"
+    },
+    {
+      "type": "paragraph",
+      "text": "The development workflow uses Shopify CLI 3.x:"
+    },
+    {
+      "type": "code",
+      "text": "# Create a new function extension\nshopify app generate extension --template discount\n\n# Run locally for testing\nshopify app function run\n\n# Deploy\nshopify app deploy"
+    },
+    {
+      "type": "paragraph",
+      "text": "Functions are part of a Shopify app – either a custom private app or a public app. For merchant-specific logic, a custom app is the standard approach."
+    },
+    {
+      "type": "heading",
+      "text": "WebAssembly Performance Constraints"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify Functions run in a sandboxed WebAssembly environment with strict time budgets (typically 5ms for most function types). This means no HTTP calls, no database queries, no complex computation. Functions receive input via a defined GraphQL schema and return a structured output – pure transformation logic only."
+    },
+    {
+      "type": "heading",
+      "text": "Migrating from Shopify Scripts"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you're still running Shopify Scripts (deprecated in 2025, sunset date TBD), now is the time to migrate. The logic translation is usually straightforward – the main adjustment is the language shift (from Ruby-like scripts to JavaScript/TypeScript) and the input/output schema model."
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify Functions are a major architectural improvement over Scripts. They're faster, more powerful, available to more merchants, and built on open standards (WebAssembly). If you're building complex e-commerce logic in Shopify, Functions are the foundation to build on."
+    }
+  ]
+}

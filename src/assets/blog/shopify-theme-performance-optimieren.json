@@ -1,0 +1,216 @@
+{
+  "slug": "shopify-theme-performance-optimieren",
+  "title": "Shopify Theme Performance optimieren – 7 Maßnahmen die sofort wirken",
+  "description": "Ladezeiten unter 3 Sekunden sind heute kein Luxus, sondern Pflicht. Hier sind 7 konkrete Maßnahmen, mit denen du die Performance deines Shopify Themes messbar verbesserst.",
+  "date": "2025-02-15",
+  "readTime": 8,
+  "tags": [
+    "Performance",
+    "Shopify",
+    "Core Web Vitals",
+    "Liquid"
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Google PageSpeed, Core Web Vitals, LCP unter 2,5 Sekunden – Performance ist heute ein entscheidender Rankingfaktor und gleichzeitig ein direkter Umsatzhebel. Studien zeigen: Jede Sekunde längere Ladezeit kostet im Schnitt 7 % Conversion Rate. Bei Shopify-Shops gibt es dafür typische Muster und ebenso typische Lösungen."
+    },
+    {
+      "type": "heading",
+      "text": "1. Unnötige Apps deinstallieren – nicht nur deaktivieren"
+    },
+    {
+      "type": "paragraph",
+      "text": "Viele Shopify-Apps hinterlassen ihren JavaScript- und CSS-Code im Theme, auch nachdem sie deaktiviert wurden. Das passiert, weil Apps ihren Code direkt in theme.liquid oder in asset-Dateien injizieren – und bei Deinstallation oft nichts bereinigen."
+    },
+    {
+      "type": "tip",
+      "text": "Audit-Tipp: Öffne DevTools → Network → filtere nach JS/CSS und prüfe, welche Dateien von externen Domains geladen werden. Alles, was nicht aktiv genutzt wird, ist unnötiger Ballast."
+    },
+    {
+      "type": "heading",
+      "text": "2. Bilder optimieren: WebP, Lazy Loading, Responsive Sizes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bilder sind in den meisten Shopify-Shops die Hauptursache für schlechte LCP-Werte. Shopify liefert Bilder über sein eigenes CDN aus und unterstützt die image_url-Filter mit Größenangaben. Das solltest du konsequent nutzen."
+    },
+    {
+      "type": "code",
+      "language": "liquid",
+      "text": "{{ product.featured_image | image_url: width: 800 | image_tag:\n  loading: 'lazy',\n  widths: '400, 600, 800, 1200',\n  sizes: '(max-width: 768px) 100vw, 50vw'\n}}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Hero-Bild (Above the Fold) sollte dagegen immer loading='eager' haben und idealerweise per <link rel='preload'> im Head vorgeladen werden – sonst zerstört es den LCP-Wert."
+    },
+    {
+      "type": "heading",
+      "text": "3. JavaScript defer und async korrekt einsetzen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Render-blockierendes JavaScript ist einer der häufigsten Performance-Killer. In Shopify-Themes wird Script-Code oft direkt in section-Dateien oder in theme.liquid eingebunden – ohne defer oder async."
+    },
+    {
+      "type": "code",
+      "language": "liquid",
+      "text": "{{ 'my-component.js' | asset_url | script_tag }}\n\n// Besser:\n<script src=\"{{ 'my-component.js' | asset_url }}\" defer></script>"
+    },
+    {
+      "type": "tip",
+      "text": "Faustregel: Alles, was nicht zum initialen Rendering der Seite beiträgt, bekommt defer. Event-Listener, Slider, Tracking-Snippets – alles defer oder async."
+    },
+    {
+      "type": "heading",
+      "text": "4. Liquid-Templates aufräumen: Weniger forloop-Iterationen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify rendert Templates serverseitig – die Liquid-Ausführungszeit geht direkt in die Time To First Byte (TTFB) ein. Häufiges Problem: verschachtelte for-Schleifen über Collections, die auf einer Seite nichts zu suchen haben."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Vermeide for-Schleifen über alle Collections auf jeder Seite",
+        "Nutze paginate für große Produktlisten statt alles auf einmal zu laden",
+        "Verwende limit beim Zugriff auf Collections: collection.products | limit: 8",
+        "Lagere komplexe Logik in Snippets aus und nutze render statt include"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "5. CSS-Datenmenge reduzieren"
+    },
+    {
+      "type": "paragraph",
+      "text": "Viele Themes laden ihr gesamtes CSS als eine einzige große Datei – inklusive Styles für Seiten und Komponenten, die auf der aktuellen URL gar nicht vorkommen. Shopify Dawn und Themes auf OS 2.0-Basis laden CSS per Section – das ist der richtige Ansatz."
+    },
+    {
+      "type": "tip",
+      "text": "Nutze das Chrome Coverage-Tool (DevTools → Mehr Tools → Coverage), um herauszufinden, wie viel Prozent deines CSS tatsächlich verwendet wird. Werte über 70 % ungenutztem CSS sind kein Ausnahmefall."
+    },
+    {
+      "type": "heading",
+      "text": "6. Font-Loading optimieren"
+    },
+    {
+      "type": "paragraph",
+      "text": "Fonts sind ein häufig unterschätzter Performance-Faktor. Shopify liefert Theme-Fonts über sein eigenes CDN aus. Trotzdem gibt es einige Punkte, die du beachten solltest."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Nutze font-display: swap in @font-face Deklarationen",
+        "Lade maximal 2 unterschiedliche Schriften (Regular + Bold reicht meist)",
+        "Vermeide Google Fonts CDN-Requests – binde Fonts lokal ein",
+        "Preload den primären Font: <link rel='preload' as='font' type='font/woff2' crossorigin>"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "7. Above-the-Fold priorisieren – was der Browser zuerst braucht"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Browser rendert von oben nach unten. Alles, was der Nutzer beim ersten Seitenaufruf sieht (Above the Fold), sollte so schnell wie möglich gerendert werden. Alles andere kann warten."
+    },
+    {
+      "type": "ordered-list",
+      "items": [
+        "Critical CSS inline einbinden (nur die Styles, die für Above-the-Fold benötigt werden)",
+        "Hero-Bild preloaden (link rel='preload')",
+        "Sections unterhalb der Faltung per Intersection Observer lazy nachladen",
+        "Third-Party-Scripts (Chat, Analytics, Social Widgets) erst nach dem Load-Event initialisieren"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Performance-Optimierung ist kein einmaliger Vorgang, sondern ein kontinuierlicher Prozess. Tools wie Google PageSpeed Insights, WebPageTest und Shopifys eigenes Speed Score-Dashboard helfen dabei, den Überblick zu behalten. Wenn du Unterstützung bei einer technischen Analyse deines Shops benötigst – ich helfe gerne."
+    }
+  ],
+  "title_en": "Optimizing Shopify Theme Performance – 7 Measures That Work Immediately",
+  "description_en": "Load times under 3 seconds are no longer a luxury – they're a requirement. Here are 7 concrete measures to measurably improve your Shopify theme's performance.",
+  "content_en": [
+    {
+      "type": "paragraph",
+      "text": "A slow Shopify store doesn't just frustrate users – it costs conversions and rankings. Google uses Core Web Vitals as a ranking signal, and users abandon pages that take more than 3 seconds to load. The good news: most performance problems in Shopify themes are fixable. Here are 7 measures that deliver measurable results."
+    },
+    {
+      "type": "heading",
+      "text": "1. Defer Non-Critical JavaScript"
+    },
+    {
+      "type": "paragraph",
+      "text": "Many Shopify themes load all JavaScript in the <head> – blocking rendering until every script is parsed and executed. Move non-critical scripts to the bottom of <body> or use the defer and async attributes. This alone can reduce Time to Interactive by several seconds on mobile."
+    },
+    {
+      "type": "heading",
+      "text": "2. Optimize Images with Shopify's Image CDN"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify automatically delivers images via a global CDN – but only if you use the correct Liquid filters. Use image_url with size parameters and add loading='lazy' to all below-the-fold images. For hero images, use fetchpriority='high' to signal the browser to load them first."
+    },
+    {
+      "type": "tip",
+      "text": "Use the img_url filter with explicit width and height to avoid Cumulative Layout Shift (CLS) – one of the most common Core Web Vitals failures in Shopify stores."
+    },
+    {
+      "type": "heading",
+      "text": "3. Minimize App-Injected Scripts"
+    },
+    {
+      "type": "paragraph",
+      "text": "Every installed Shopify app can inject scripts into your storefront. Ten apps with scripts? That's potentially 10 additional network requests per page load. Audit your theme.liquid and check what each app actually loads. Disable or remove apps you no longer use – their scripts often remain even after uninstallation."
+    },
+    {
+      "type": "heading",
+      "text": "4. Reduce Render-Blocking CSS"
+    },
+    {
+      "type": "paragraph",
+      "text": "Critical CSS should be inlined in <head>. Everything else can be loaded asynchronously. Shopify's theme editor makes this tricky, but you can split your stylesheet into critical and non-critical chunks and load the non-critical parts with media='print' and an onload handler."
+    },
+    {
+      "type": "heading",
+      "text": "5. Use Section Rendering API for Dynamic Updates"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Shopify Section Rendering API lets you update parts of a page without a full reload. Instead of refreshing the entire page on cart updates or variant changes, re-render only the affected section. This dramatically improves perceived performance for interactive elements."
+    },
+    {
+      "type": "heading",
+      "text": "6. Implement Proper Font Loading Strategy"
+    },
+    {
+      "type": "paragraph",
+      "text": "Web fonts are notorious performance killers. Use font-display: swap to prevent invisible text during load. Preload your most critical fonts with <link rel='preload'>. Consider using system fonts for body text and only loading custom fonts for headings – the performance gain is often substantial."
+    },
+    {
+      "type": "heading",
+      "text": "7. Audit and Refactor Liquid Logic"
+    },
+    {
+      "type": "paragraph",
+      "text": "Complex Liquid templates with nested loops, heavy forloop logic, and redundant API calls all slow down server-side rendering. Profile your theme with Shopify's theme inspector (available via Shopify CLI) and look for templates that take more than 300ms to render."
+    },
+    {
+      "type": "heading",
+      "text": "Measuring Your Progress"
+    },
+    {
+      "type": "paragraph",
+      "text": "Before and after every optimization, measure with Google PageSpeed Insights, Shopify's online store speed report, and a tool like WebPageTest with throttling enabled. Focus on LCP (Largest Contentful Paint), FID (First Input Delay), and CLS (Cumulative Layout Shift) – these are the Core Web Vitals that matter most."
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Performance optimization isn't a one-time task – it's an ongoing discipline. With these 7 measures you have a solid starting point. The biggest gains usually come from JavaScript deferral and image optimization. Start there, measure the impact, and work through the list systematically."
+    }
+  ]
+}

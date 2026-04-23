@@ -1,0 +1,270 @@
+{
+  "slug": "shopify-2-migration-checkliste",
+  "title": "Shopify 2.0 Migration – Die vollständige Checkliste für Agenturen",
+  "description": "Von Legacy-Theme zu Online Store 2.0: Was du vor, während und nach der Migration prüfen musst – damit kein Umsatz auf der Strecke bleibt.",
+  "date": "2025-02-01",
+  "readTime": 11,
+  "tags": [
+    "Shopify 2.0",
+    "Migration",
+    "Liquid",
+    "Theme"
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Shopify Online Store 2.0 ist seit einigen Jahren der Standard. Trotzdem betreiben noch viele Shops Themes auf der alten Architektur – mit starren Layouts, fest codierten Inhalten und eingeschränkter Flexibilität für Merchandiser. Eine Migration ist komplex, aber kein Hexenwerk, wenn man strukturiert vorgeht."
+    },
+    {
+      "type": "heading",
+      "text": "Was ändert sich mit Shopify 2.0?"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Sections on every page: Sections sind nicht mehr auf die Startseite beschränkt",
+        "Blocks innerhalb von Sections: Flexible, konfigurierbare Inhaltsbausteine",
+        "JSON-Templates statt Liquid-Templates für Seiten",
+        "Metafields native im Admin: Keine App mehr für strukturierte Zusatzdaten nötig",
+        "App Blocks: Apps können gezielt in Sections und Layouts integriert werden"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Phase 1: Bestandsaufnahme (vor der Migration)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bevor eine einzige Zeile Code geschrieben wird, musst du wissen, was überhaupt migriert werden muss. Das klingt selbstverständlich, wird aber in der Praxis erstaunlich oft übersprungen."
+    },
+    {
+      "type": "ordered-list",
+      "items": [
+        "Alle aktiven Templates auflisten (products, collections, pages, blogs, articles)",
+        "Custom Liquid-Snippets und deren Verwendung dokumentieren",
+        "Alle aktiven Apps prüfen: Welche nutzen Script Tags? Welche nutzen Theme App Extensions?",
+        "Metafields und Custom Data identifizieren (was sind Pflichtfelder im Content?)",
+        "Alle gespeicherten Sections-Einstellungen im Theme-Customizer sichern (Screenshot oder JSON-Export)",
+        "SEO-relevante Seiten mit Rankings identifizieren – diese müssen besonders sorgfältig behandelt werden"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Erstelle ein einfaches Inventar-Spreadsheet: Template-Name, custom Logik, verwendete Snippets, SEO-Priorität. Das ist die Grundlage für die Migrations-Planung."
+    },
+    {
+      "type": "heading",
+      "text": "Phase 2: Das neue Theme aufbauen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Entscheide dich: Custom Theme von Grund auf, oder Anpassung eines OS 2.0-Basisthemes (Dawn, Impulse, etc.)? Für die meisten Projekte ist ein angepasstes Basistheme effizienter. Für hochspezifische Anforderungen ist ein Custom Build die sauberere Lösung."
+    },
+    {
+      "type": "subheading",
+      "text": "JSON-Templates verstehen"
+    },
+    {
+      "type": "paragraph",
+      "text": "In OS 2.0 sind Templates keine reinen Liquid-Dateien mehr, sondern JSON-Dateien, die definieren, welche Sections in welcher Reihenfolge gerendert werden. Eine product.json könnte so aussehen:"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "text": "{\n  \"sections\": {\n    \"main\": {\n      \"type\": \"main-product\",\n      \"settings\": {}\n    },\n    \"related\": {\n      \"type\": \"related-products\",\n      \"settings\": { \"products_to_show\": 4 }\n    }\n  },\n  \"order\": [\"main\", \"related\"]\n}"
+    },
+    {
+      "type": "subheading",
+      "text": "Sections mit Schema aufbauen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sections in OS 2.0 brauchen ein {% schema %}-Block, der die konfigurierbaren Einstellungen definiert. Dieser wird im Theme-Customizer als UI dargestellt. Plane die Schema-Struktur sorgfältig – nachträgliche Änderungen können gespeicherte Customizer-Einstellungen der Kunden überschreiben."
+    },
+    {
+      "type": "heading",
+      "text": "Phase 3: Metafields migrieren"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wenn das alte Theme Metafields über Apps (Metafields Guru, Metafield2, etc.) verwaltet hat, müssen diese Definitionen nativ in Shopify angelegt werden. Seit Shopify 2.0 ist das im Admin unter Einstellungen → Benutzerdefinierte Daten möglich – ohne App."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Alle vorhandenen Metafield-Namespaces und Keys aus der App exportieren",
+        "Native Metafield-Definitionen im Shopify Admin anlegen (gleiche Namespaces/Keys)",
+        "Daten per Shopify API oder CSV importieren",
+        "Liquid-Code updaten: statt metafield.value den nativen Zugriff product.metafields.namespace.key nutzen",
+        "App deinstallieren sobald Daten verifiziert sind"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Phase 4: Apps auf Theme App Extensions prüfen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Viele Apps haben ihre Script-Tag-basierten Integrationen auf Theme App Extensions (TAE) umgestellt. TAEs sind sauberer: Sie injizieren keinen Code in deine Theme-Dateien, sondern werden als App Block in Sections integriert. Prüfe für jede aktive App, ob eine TAE-Version verfügbar ist."
+    },
+    {
+      "type": "tip",
+      "text": "Apps, die noch Script Tags nutzen (statt TAE), sind der häufigste Grund für unerklärliche Performance-Einbrüche nach der Migration. Immer im Network-Tab prüfen."
+    },
+    {
+      "type": "heading",
+      "text": "Phase 5: Häufige Fehler bei der Migration"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Canonical URLs nicht geprüft: Stellt sicher, dass alle wichtigen Seiten nach dem Go-Live korrekte Canonical Tags haben",
+        "Redirect-Liste vergessen: Wenn sich URL-Strukturen ändern (z.B. durch neue Collection-Handles), müssen 301-Redirects eingerichtet werden",
+        "Theme-Customizer-Einstellungen verloren: Ohne Backup der Customizer-Daten beginnt jeder Abschnitt bei 0",
+        "App-Konflikte nicht getestet: Immer alle Apps im Staging testen, bevor das neue Theme live geht",
+        "Mobile nicht ausreichend getestet: Neue Section-Layouts brechen auf kleinen Screens oft anders als auf Desktop"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Phase 6: Testing-Checkliste vor Go-Live"
+    },
+    {
+      "type": "ordered-list",
+      "items": [
+        "Vollständiger Checkout-Test auf Desktop und Mobile (inkl. Payment, Shipping Rates)",
+        "Alle Produktseiten-Templates (Simple, Variable, Gift Card) testen",
+        "Collection-Filterung und Sortierung prüfen",
+        "Search-Funktionalität testen",
+        "Cart Drawer / Cart Page auf korrektes Verhalten prüfen",
+        "Alle Custom Pages und Blog-Artikel auf korrekte Darstellung prüfen",
+        "Google PageSpeed Insights auf Staging-URL messen",
+        "Alle Redirects mit einem Tool wie Screaming Frog verifizieren",
+        "Analytics und Conversion-Tracking im Debug-Modus überprüfen",
+        "Passwortschutz deaktivieren und sofort Sitemap an Google Search Console übermitteln"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Eine Shopify 2.0 Migration ist ein signifikantes Projekt – aber auch eine Chance, technische Schulden abzubauen, die Performance zu verbessern und dem Team mehr Flexibilität zu geben. Wenn du eine Agentur oder einen Shop betreibst und Unterstützung bei der Planung oder Umsetzung benötigst, stehe ich gerne zur Verfügung."
+    }
+  ],
+  "title_en": "Shopify 2.0 Migration – The Complete Checklist for Agencies",
+  "description_en": "From legacy theme to Online Store 2.0: What you need to check before, during, and after migration – so no revenue gets left behind.",
+  "content_en": [
+    {
+      "type": "paragraph",
+      "text": "Migrating from a legacy Shopify theme to Online Store 2.0 is one of the most impactful – and risky – technical projects in Shopify development. Done right, it unlocks sections everywhere, metafield-driven content, and a vastly improved merchant editing experience. Done wrong, it can cost rankings, revenue, and client trust. This checklist covers every phase."
+    },
+    {
+      "type": "heading",
+      "text": "Before the Migration"
+    },
+    {
+      "type": "subheading",
+      "text": "Technical Audit"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Document all customizations in the existing theme (Liquid overrides, custom sections, JS additions)",
+        "Identify all third-party app integrations that inject code into theme files",
+        "Export the complete metafield structure – all namespaces and keys currently in use",
+        "Audit redirect rules and URL structure – record all custom URL patterns",
+        "Screenshot all key pages: homepage, PLP, PDP, cart, checkout, collection pages"
+      ]
+    },
+    {
+      "type": "subheading",
+      "text": "SEO Baseline"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Crawl the entire store with Screaming Frog or Ahrefs and export all URLs, titles, descriptions, H1s",
+        "Record current Google Search Console performance as a baseline",
+        "Document all structured data (JSON-LD schema markup) in the current theme",
+        "Check canonical tags – ensure they're correctly set across all page types"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "During the Migration"
+    },
+    {
+      "type": "subheading",
+      "text": "Development Environment"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Use Shopify CLI 3.x with a dedicated development theme – never develop on the live theme",
+        "Set up a proper staging workflow: development theme → theme check → staging preview → merchant sign-off → go live",
+        "Use .shopifyignore to exclude development-only files from production deployments"
+      ]
+    },
+    {
+      "type": "subheading",
+      "text": "Theme Architecture"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Rebuild all custom sections as OS 2.0-compatible sections (settings_schema in section files, not settings_data.json)",
+        "Migrate hardcoded content to metafields or metaobjects for merchant editability",
+        "Implement app blocks for any apps that previously required theme code injections",
+        "Ensure all templates use the JSON template format (templates/*.json)"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "The most common OS 2.0 migration mistake: rebuilding the old theme exactly as it was, just with new section architecture. Use the migration as an opportunity to simplify and clean up the content model."
+    },
+    {
+      "type": "heading",
+      "text": "After the Migration"
+    },
+    {
+      "type": "subheading",
+      "text": "Quality Assurance"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Test on real devices: iPhone (Safari), Android (Chrome), Windows (Chrome/Edge), macOS (Safari)",
+        "Test with slow 3G throttling in Chrome DevTools – many issues only appear under constrained conditions",
+        "Verify checkout flow end-to-end: add to cart, cart page, checkout, confirmation",
+        "Test all discount codes, gift cards, and shipping calculators"
+      ]
+    },
+    {
+      "type": "subheading",
+      "text": "SEO Verification"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Re-crawl the store and compare URL structure – fix any unintended URL changes with 301 redirects",
+        "Verify all meta titles and descriptions are preserved (or intentionally improved)",
+        "Check structured data with Google's Rich Results Test",
+        "Monitor Google Search Console for crawl errors and ranking changes in the 4 weeks following launch"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Post-Launch Monitoring"
+    },
+    {
+      "type": "paragraph",
+      "text": "For the first 2–4 weeks after launch, monitor conversion rate, bounce rate, and organic traffic daily. A sudden drop in any of these is a signal that something needs attention. Have a rollback plan ready – keep the old theme published as a backup theme for at least 30 days."
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "A Shopify 2.0 migration is a significant project that requires careful planning, proper staging, and rigorous QA. Use this checklist as your project template and adapt it to your client's specific setup. The investment in proper process pays off in stable launches and happy clients."
+    }
+  ]
+}

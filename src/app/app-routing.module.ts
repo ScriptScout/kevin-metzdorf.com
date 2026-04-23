@@ -8,6 +8,11 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { AiPolicyComponent } from './ai-policy/ai-policy.component';
 import { TermsComponent } from './terms/terms.component';
+import { BlogOverviewComponent } from './blog/blog-overview/blog-overview.component';
+import { BlogPostComponent } from './blog/blog-post/blog-post.component';
+import { ContactComponent } from './contact/contact.component';
+import { WorkListComponent } from './work/work-list/work-list.component';
+import { WorkDetailComponent } from './work/work-detail/work-detail.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -16,11 +21,22 @@ const routes: Routes = [
   { path: 'datenschutz', component: PrivacyComponent },
   { path: 'privacy-policy', component: PrivacyComponent },
   { path: 'ki-richtlinie', component: AiPolicyComponent },
-  { path: 'agb', component: TermsComponent }
+  { path: 'ai-policy', component: AiPolicyComponent },
+  { path: 'agb', component: TermsComponent },
+  { path: 'terms-and-conditions', component: TermsComponent },
+  { path: 'kontakt', component: ContactComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'blog', component: BlogOverviewComponent },
+  { path: 'blog/:slug', component: BlogPostComponent },
+  { path: 'work', component: WorkListComponent },
+  { path: 'work/:slug', component: WorkDetailComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+  scrollPositionRestoration: 'top',
+  anchorScrolling: 'enabled'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

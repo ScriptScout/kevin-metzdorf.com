@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { SeoService } from '../seo.service';
 
 @Component({
     selector: 'app-imprint',
@@ -8,13 +8,13 @@ import { Meta, Title } from '@angular/platform-browser';
     standalone: false
 })
 export class ImprintComponent implements OnInit {
-    constructor(private title: Title, private meta: Meta) {}
+    constructor(private seo: SeoService) {}
 
     ngOnInit(): void {
-        this.title.setTitle('Impressum | Kevin Metzdorf – Shopify Freelancer Deutschland');
-        this.meta.updateTag({
-            name: 'description',
-            content: 'Impressum von Kevin Metzdorf, selbstständiger Shopify Freelancer aus Deutschland. Angaben gemäß §5 TMG.'
+        this.seo.update({
+            title: 'Impressum | Kevin Metzdorf – Shopify Developer',
+            description: 'Impressum von Kevin Metzdorf, Senior Shopify Developer. Angaben gemäß §5 DDG.',
+            canonical: 'https://kevin-metzdorf.com/impressum'
         });
     }
 }

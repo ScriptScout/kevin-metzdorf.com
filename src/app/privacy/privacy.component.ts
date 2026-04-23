@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { SeoService } from '../seo.service';
 
 @Component({
     selector: 'app-privacy',
@@ -8,13 +8,13 @@ import { Meta, Title } from '@angular/platform-browser';
     standalone: false
 })
 export class PrivacyComponent implements OnInit {
-    constructor(private title: Title, private meta: Meta) {}
+    constructor(private seo: SeoService) {}
 
     ngOnInit(): void {
-        this.title.setTitle('Datenschutzerklärung | Kevin Metzdorf – Shopify Freelancer');
-        this.meta.updateTag({
-            name: 'description',
-            content: 'Datenschutzerklärung von Kevin Metzdorf, Senior Shopify Freelancer. Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.'
+        this.seo.update({
+            title: 'Datenschutzerklärung | Kevin Metzdorf – Shopify Developer',
+            description: 'Datenschutzerklärung von Kevin Metzdorf, Senior Shopify Developer. Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.',
+            canonical: 'https://kevin-metzdorf.com/datenschutz'
         });
     }
 }

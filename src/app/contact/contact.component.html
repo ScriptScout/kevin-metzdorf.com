@@ -2,51 +2,51 @@
   <div class="max-width_container">
     <div class="headline_container">
       <div class="headline">
-        <div data-aos="fade-right" data-aos-once="true" class="line_headline"></div>
-        <h2>Kontakt</h2>
+        <h1>Kontakt</h1>
+        <p class="sub">Unverbindliches Erstgespräch oder Anfrage – ich melde mich i.d.R. innerhalb von 1–2 Werktagen.</p>
       </div>
     </div>
     <div class="contact_container">
       <div class="contact_contant">
         <span>Ready to Create?</span>
         <p>
-          Nutzen Sie <a href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink">
-          E-Mail senden</a>, um unsere Zusammenarbeit zu starten!
-          Egal, ob Sie ein konkretes Projekt im Sinn haben, Ideen besprechen oder einfach eine Frage stellen möchten – ich helfe Ihnen gerne weiter.
-          Ich freue mich auf Ihre Nachricht!
+          Use <a href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink">
+          the link to book a meeting</a> or send an email to start our collaboration!
+          Whether you have a specific project in mind, want to discuss ideas, or just have a question – I am here to help.
+          I look forward to hearing from you!
         </p>
       </div>
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="form_row">
-          <label for="supportTopic">Wobei kann ich dich unterstützen?</label>
+          <label for="supportTopic">How can I support you?</label>
           <select id="supportTopic" formControlName="supportTopic" required>
             <option value="Shopify Custom Development">Shopify Custom Development</option>
-            <option value="Performance / Stabilitätsprobleme">Performance / Stabilitätsprobleme</option>
-            <option value="Technical Rescue (bestehendes Projekt)">Technical Rescue (bestehendes Projekt)</option>
-            <option value="Beratung / Zweitmeinung">Beratung / Zweitmeinung</option>
-            <option value="Laufende Zusammenarbeit (Agentur / Unternehmen)">Laufende Zusammenarbeit (Agentur / Unternehmen)</option>
+            <option value="Performance & Stability Issues">Performance & Stability Issues</option>
+            <option value="Technical Rescue (Existing Project)">Technical Rescue (Existing Project)</option>
+            <option value="Consulting & Second Opinion">Consulting & Second Opinion</option>
+            <option value="Ongoing Collaboration (Agency / Brand)">Ongoing Collaboration (Agency / Brand)</option>
           </select>
         </div>
         <div class="form_row">
-          <label for="projectDescription">Kurzbeschreibung des Projekts oder Problems</label>
-          <textarea id="projectDescription" formControlName="projectDescription" required placeholder="z. B. bestehender Shopify-Shop mit Performance-Problemen, komplexe Produktlogik, Agenturprojekt mit engem Zeitplan …"></textarea>
+          <label for="projectDescription">Short description of the project or challenge</label>
+          <textarea id="projectDescription" formControlName="projectDescription" required placeholder="e.g., existing Shopify store with performance issues, complex product logic, agency project with tight deadline…"></textarea>
         </div>
         <div class="form_row">
-          <label for="projectStatus">Aktueller Stand</label>
+          <label for="projectStatus">Current Status</label>
           <select id="projectStatus" formControlName="projectStatus">
-            <option value="Neuer Shop / Konzeptphase">Neuer Shop / Konzeptphase</option>
-            <option value="Bestehender Shop">Bestehender Shop</option>
-            <option value="Projekt in Umsetzung">Projekt in Umsetzung</option>
-            <option value="Projekt in Schieflage / Übergabe">Projekt in Schieflage / Übergabe</option>
+            <option value="New Store / Concept Phase">New Store / Concept Phase</option>
+            <option value="Existing Store">Existing Store</option>
+            <option value="Project in Development">Project in Development</option>
+            <option value="Struggling Project / Handover">Struggling Project / Handover</option>
           </select>
         </div>
         <div class="form_row">
-          <label for="timeframe">Zeitrahmen</label>
+          <label for="timeframe">Timeframe</label>
           <select id="timeframe" formControlName="timeframe">
-            <option value="Kurzfristig (0–2 Wochen)">Kurzfristig (0–2 Wochen)</option>
-            <option value="Mittelfristig (2–6 Wochen)">Mittelfristig (2–6 Wochen)</option>
-            <option value="Langfristig / laufend">Langfristig / laufend</option>
-            <option value="Noch offen">Noch offen</option>
+            <option value="Short-term (0–2 weeks)">Short-term (0–2 weeks)</option>
+            <option value="Medium-term (2–6 weeks)">Medium-term (2–6 weeks)</option>
+            <option value="Long-term / Ongoing">Long-term / Ongoing</option>
+            <option value="To be defined">To be defined</option>
           </select>
         </div>
         <div class="form_row">
@@ -58,29 +58,20 @@
           <input id="email" type="email" formControlName="email" required>
         </div>
         <div class="form_row">
-          <label for="company">Firma / Agentur (optional)</label>
+          <label for="company">Company / Agency (optional)</label>
           <input id="company" type="text" formControlName="company">
         </div>
-        <div class="privacy-box form_row">
-          <div class="cbx">
-            <input id="privacy" type="checkbox" formControlName="privacy">
-            <label for="privacy"></label>
-            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
-              <path d="M4 10.5l4 4 8-9"></path>
-            </svg>
-          </div>
-          <span>Ich habe die <a routerLink="/privacy-policy">Datenschutzerklärung</a> gelesen.</span>
+        <div class="form_row checkbox_row">
+          <label for="privacy" class="checkbox_label">
+            <input id="privacy" type="checkbox" formControlName="privacy" required>
+            <span>I have read the <a routerLink="/privacy-policy">privacy policy</a>.</span>
+          </label>
         </div>
         <div class="btn_box">
           <button class="btn btn--primary" type="submit">{{ message }}</button>
         </div>
       </form>
     </div>
-    <p class="form_helper">Ich melde mich in der Regel innerhalb von 1–2 Werktagen zurück.</p>
+    <p class="form_helper">I usually get back to you within 1–2 business days.</p>
   </div>
-  <img class="blue_shadow" src="assets/img/blue_shadow.png" alt="blue shadow">
-  <img class="green_shadow" src="assets/img/green_shadow.png" alt="light blue shadow">
-  <a class="back_home_btn" href="#home"><img src="assets/img/go_up_button.png"
-                                             alt="logo of a arrow showing upwards"></a>
-
 </section>

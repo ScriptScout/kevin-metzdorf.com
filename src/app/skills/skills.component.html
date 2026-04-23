@@ -1,41 +1,39 @@
 <section id="skills">
-    <div class="max-width_container">
-        <div class="btn_mobile_container">
-            <div class="btn_box_mobile btn_box">
-                <a class="btn btn--secondary" href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" rel="noopener noreferrer">Kontakt</a>
-            </div>
-        </div>
-        <div class="skills_icon_container">
-            <div *ngFor="let icon of iconsArray"
-                 class="skill_badge"
-                 [ngClass]="'cat-' + icon.category"
-                 [attr.data-aos]="icon.animation"
-                 data-aos-delay="250"
-                 data-aos-once="true">
-                <div class="glint"></div>
-                <div class="badge_content">
-                  <img src="assets/img/icons/{{ icon.icon }}" alt="logo of {{ icon.name }}">
-                  <div class="text_stack">
-                    <span class="label">{{ icon.name }}</span>
-                    <span class="category">{{ icon.category }}</span>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="my_skills_container">
-            <div class="headline">
-                <h2>Skills</h2>
-                <div data-aos="fade-left" data-aos-once="true" class="line"></div>
-            </div>
-            <p> Ich bin ein erfahrener Webentwickler mit einem klaren Fokus auf E-Commerce und maßgeschneiderte Shopify-Lösungen. In den letzten Jahren habe ich zahlreiche Online-Shops optimiert und weiterentwickelt, stets mit einem hohen Anspruch an Code-Qualität, Performance und Benutzerfreundlichkeit. Mein Ansatz kombiniert agile Entwicklung mit praxisnahen Lösungen, die echten Mehrwert schaffen.</p>
-            <div class="btn_box">
-              <a
-                class="btn btn--primary"
-                href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" rel="noopener noreferrer">
-                Let's talk!
-              </a>
-            </div>
-        </div>
+  <div class="max-width_container">
+    <div class="btn_mobile_container">
+      <div class="btn_box_mobile btn_box">
+        <a class="btn btn--secondary" href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" rel="noopener noreferrer">{{ 'SKILLS.CONTACT_BTN' | translate }}</a>
+      </div>
     </div>
-    <img class="shadow_position" src="assets/img/green_shadow.png" alt="green shadow">
+    <div class="skills_icon_container">
+      <div *ngFor="let icon of iconsArray"
+           class="skill_badge reveal"
+           [ngClass]="'cat-' + icon.category"
+           appReveal>
+        <div class="glint"></div>
+        <div class="badge_content">
+          <img src="assets/img/icons/{{ icon.icon }}" alt="{{ icon.name }} logo">
+          <div class="text_stack">
+            <span class="label">{{ icon.name }}</span>
+            <span class="category">{{ icon.category }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my_skills_container">
+      <div class="headline">
+        <h2 class="reveal" appReveal>{{ 'SKILLS.HEADING' | translate }}</h2>
+        <div class="line reveal" appReveal></div>
+      </div>
+      <p>{{ 'SKILLS.TEXT' | translate }}</p>
+      <div class="btn_box">
+        <a
+          class="btn btn--primary"
+          href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" rel="noopener noreferrer">
+          {{ 'SKILLS.CTA_BTN' | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+  <img class="shadow_position" src="assets/img/green_shadow.png" alt="decorative shadow">
 </section>

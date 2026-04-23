@@ -1,0 +1,191 @@
+{
+  "slug": "shopify-metaobjects-erklaert",
+  "title": "Shopify Metaobjects 2026: Strukturierte Inhalte ohne App – so nutzt du sie richtig",
+  "description": "Metaobjects sind eines der unterschätztesten Features in Shopify 2.0. Sie ersetzen Custom-Apps für strukturierte Inhalte – und sind direkt in Liquid und der Storefront API verfügbar.",
+  "date": "2026-02-03",
+  "readTime": 8,
+  "tags": [
+    "Metaobjects",
+    "Shopify 2.0",
+    "Content",
+    "Liquid"
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Metafields gibt es in Shopify schon lange – aber sie haben eine Schwäche: Sie speichern einzelne Werte, keine strukturierten Objekte. Wer früher eine Liste von Teammitgliedern, einen FAQ-Block oder strukturierte Testimonials im Shop verwalten wollte, brauchte entweder eine App oder eine Menge Workarounds. Das hat sich mit Metaobjects geändert."
+    },
+    {
+      "type": "heading",
+      "text": "Was sind Metaobjects?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Metaobjects sind benutzerdefinierte Inhaltstypen in Shopify – vergleichbar mit Custom Post Types in WordPress. Du definierst eine Struktur (einen 'Type') mit eigenen Feldern, und kannst dann beliebig viele Einträge dieses Typs erstellen. Die Inhalte werden im Shopify Admin verwaltet, sind über Liquid zugänglich und vollständig in der Storefront API verfügbar."
+    },
+    {
+      "type": "subheading",
+      "text": "Beispiele für sinnvolle Metaobject-Typen"
+    },
+    {
+      "type": "list",
+      "items": [
+        "team_member: Name, Rolle, Foto, LinkedIn-URL, Biografie",
+        "faq_entry: Frage, Antwort, Kategorie",
+        "testimonial: Autor, Unternehmen, Bewertungstext, Sternebewertung, Produktreferenz",
+        "press_mention: Medium, Überschrift, Datum, Link, Logo",
+        "size_guide: Produktkategorie, Größentabelle als JSON, Maßanleitung als Rich Text",
+        "ingredient: Name, INCI-Bezeichnung, Herkunft, Beschreibung (für Beauty/Food-Shops)",
+        "store_location: Adresse, Öffnungszeiten, Google Maps Embed, Bild"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Metaobject-Typ anlegen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Metaobject-Typen werden im Shopify Admin unter Einstellungen → Benutzerdefinierte Daten → Metaobjects angelegt. Für jeden Typ definierst du einen Handle (z.B. testimonial), einen Anzeigenamen und die Felder mit ihren Datentypen."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Verfügbare Feldtypen: Text (einzeilig/mehrzeilig), Rich Text, Zahl, Datum, URL, Farbe, Boolean",
+        "Referenzen: Produkt, Collection, Metaobject (andere Typen referenzieren)",
+        "Medien: Bild, Video, Datei",
+        "JSON: Für komplexe strukturierte Daten (z.B. Größentabellen)"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Metaobjects in Liquid ausgeben"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nach dem Anlegen sind Metaobject-Einträge direkt in Liquid verfügbar – entweder über den globalen metaobjects-Accessor oder als Referenz in einem Metafield:"
+    },
+    {
+      "type": "code",
+      "language": "liquid",
+      "text": "{% comment %} Alle Testimonials ausgeben {% endcomment %}\n{% assign testimonials = shop.metaobjects.testimonial.values %}\n{% for entry in testimonials %}\n  <blockquote>\n    <p>{{ entry.fields.quote.value }}</p>\n    <footer>\n      <strong>{{ entry.fields.author_name.value }}</strong>\n      {% if entry.fields.company.value %}\n        – {{ entry.fields.company.value }}\n      {% endif %}\n    </footer>\n  </blockquote>\n{% endfor %}\n\n{% comment %} Referenz von einem Produkt-Metafield auf ein Metaobject {% endcomment %}\n{% assign guide = product.metafields.custom.size_guide.value %}\n{% if guide %}\n  <div class=\"size-guide\">\n    <h3>{{ guide.fields.title.value }}</h3>\n    {{ guide.fields.description.value }}\n  </div>\n{% endif %}"
+    },
+    {
+      "type": "heading",
+      "text": "Metaobjects in Sections: Volle Customizer-Integration"
+    },
+    {
+      "type": "paragraph",
+      "text": "Metaobject-Referenzen können auch direkt als Section-Setting-Typ verwendet werden. So können Merchandiser im Theme-Customizer Metaobject-Einträge auswählen, ohne Code zu berühren:"
+    },
+    {
+      "type": "code",
+      "language": "liquid",
+      "text": "{% schema %}\n{\n  \"name\": \"Testimonials\",\n  \"settings\": [\n    {\n      \"type\": \"text\",\n      \"id\": \"heading\",\n      \"label\": \"Überschrift\"\n    }\n  ],\n  \"blocks\": [\n    {\n      \"type\": \"testimonial\",\n      \"name\": \"Testimonial\",\n      \"settings\": [\n        {\n          \"type\": \"metaobject\",\n          \"id\": \"testimonial_ref\",\n          \"label\": \"Testimonial auswählen\",\n          \"metaobject_type\": \"testimonial\"\n        }\n      ]\n    }\n  ],\n  \"presets\": [{ \"name\": \"Testimonials\" }]\n}\n{% endschema %}"
+    },
+    {
+      "type": "heading",
+      "text": "Metaobjects vs. Metafields: Wann was nutzen?"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Metafields nutzen für: Einzelne Zusatzinformationen an einem Produkt/Collection (Herstellerland, Material, Pflegehinweis)",
+        "Metaobjects nutzen für: Wiederverwendbare, strukturierte Inhaltsbausteine, die mehrere Felder kombinieren und mehrfach eingesetzt werden",
+        "Metaobjects mit Metafield-Referenz kombinieren: Wenn ein Produkt auf ein Metaobject verweisen soll (z.B. Produkt → Size Guide)"
+      ]
+    },
+    {
+      "type": "tip",
+      "text": "Metaobjects sind vollständig in der Storefront API verfügbar – ideal für Hydrogen-Stores oder externe Frontends, die Shopify nur als Content-Backend nutzen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Wenn du Metaobjects für deinen Shop konzipieren, einrichten oder in ein bestehendes Theme integrieren willst, helfe ich gerne mit Architektur-Beratung und technischer Umsetzung."
+    }
+  ],
+  "title_en": "Shopify Metaobjects 2026: Structured Content Without an App – How to Use Them Right",
+  "description_en": "Metaobjects are one of the most underrated features in Shopify 2.0. They replace custom apps for structured content – and are directly available in Liquid and the Storefront API.",
+  "content_en": [
+    {
+      "type": "paragraph",
+      "text": "Before metaobjects, storing structured custom content in Shopify meant either cramming data into metafields (awkward for complex data) or building a custom app with its own database. Metaobjects change this fundamentally – they're Shopify-native structured content types, fully accessible in Liquid and the Storefront API."
+    },
+    {
+      "type": "heading",
+      "text": "What Are Metaobjects?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A metaobject is a custom content type you define in the Shopify admin. Think of it like a simple CMS content model: you define the fields (text, image, reference, etc.), and then create entries of that type. Classic use cases include: team members, press mentions, FAQs, recipe ingredients, store locations, certifications."
+    },
+    {
+      "type": "heading",
+      "text": "How to Define a Metaobject"
+    },
+    {
+      "type": "paragraph",
+      "text": "In the Shopify admin under Content → Metaobjects, click \"Add definition\". Give it a name (e.g. \"Team Member\"), add fields:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "name (single_line_text)",
+        "role (single_line_text)",
+        "bio (multi_line_text)",
+        "photo (file_reference → image)",
+        "linkedin_url (url)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Once defined, merchants can create as many \"Team Member\" entries as needed – fully managed in the admin without touching code."
+    },
+    {
+      "type": "heading",
+      "text": "Accessing Metaobjects in Liquid"
+    },
+    {
+      "type": "code",
+      "text": "{% assign team = shop.metaobjects.team_member.values %}\n{% for member in team %}\n  <div class=\"team-card\">\n    <img src=\"{{ member.photo | image_url: width: 400 }}\" alt=\"{{ member.name }}\">\n    <h3>{{ member.name }}</h3>\n    <p>{{ member.role }}</p>\n  </div>\n{% endfor %}"
+    },
+    {
+      "type": "tip",
+      "text": "Metaobject handle values are URL-safe slugs auto-generated from the entry name. You can also reference metaobjects from product metafields – for example, linking a product to its \"brand\" metaobject entry."
+    },
+    {
+      "type": "heading",
+      "text": "Metaobjects in Sections"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can create section settings that reference metaobject definitions – letting merchants connect content in the theme editor. This is powerful for landing pages where a merchant needs to pick specific team members or case studies to feature."
+    },
+    {
+      "type": "heading",
+      "text": "Storefront API Access"
+    },
+    {
+      "type": "paragraph",
+      "text": "Metaobjects are fully available via the Storefront API using GraphQL. This makes them excellent for headless setups where you need structured content that's managed in Shopify but rendered in a custom frontend."
+    },
+    {
+      "type": "heading",
+      "text": "Metaobjects vs. Metafields: When to Use Which"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Use metafields for properties of existing objects (product specs, collection descriptions, page-specific SEO fields)",
+        "Use metaobjects for standalone content entities that need to be created, listed, and managed independently (team members, FAQs, press mentions, locations)"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Metaobjects are one of the most impactful additions to the Shopify 2.0 platform. They replace what used to require custom apps, external CMSs, or awkward workarounds. If you're building content-heavy Shopify stores, metaobjects should be a core part of your architecture."
+    }
+  ]
+}

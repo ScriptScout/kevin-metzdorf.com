@@ -1,0 +1,232 @@
+.blog_post_section {
+  min-height: 100vh;
+  padding: 60px 150px 120px;
+
+  @media (max-width: 1150px) { padding: 60px 75px 120px; }
+  @media (max-width: 950px)  { padding: 40px 25px 100px; }
+}
+
+.max-width_container {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.back_btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 180ms ease;
+
+  &:hover { color: var(--primary); }
+}
+
+// ── Post Header ─────────────────────────────
+.post_header {
+  margin-bottom: 48px;
+
+  h1 {
+    font-size: clamp(1.9rem, 4.5vw, 3rem);
+    line-height: 1.18;
+    margin: 16px 0 14px;
+    color: var(--text);
+  }
+}
+
+.post_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(30, 227, 255, 0.1);
+  border: 1px solid rgba(30, 227, 255, 0.2);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.post_meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.dot { opacity: 0.5; }
+
+.post_lead {
+  font-size: 1.15rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.post_divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.12), transparent);
+  margin-top: 36px;
+}
+
+// ── Post Content ─────────────────────────────
+.post_content {
+  h2 {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    margin: 48px 0 16px;
+    color: var(--text);
+    border-left: 3px solid var(--primary);
+    padding-left: 16px;
+  }
+
+  h3 {
+    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    margin: 32px 0 12px;
+    color: var(--text);
+  }
+
+  p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin: 0 0 20px;
+    font-size: 1.02rem;
+  }
+
+  ul, ol {
+    color: var(--muted);
+    line-height: 1.8;
+    padding-left: 24px;
+    margin: 0 0 24px;
+
+    li { margin-bottom: 8px; }
+  }
+}
+
+.tip_box {
+  background: rgba(30, 227, 255, 0.07);
+  border: 1px solid rgba(30, 227, 255, 0.22);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 28px 0;
+
+  .tip_label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.97rem;
+  }
+}
+
+.code_block {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin: 24px 0;
+  overflow-x: auto;
+
+  code {
+    color: var(--primary);
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    white-space: pre;
+  }
+}
+
+// ── Post Footer ─────────────────────────────
+.post_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.author_box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.author_img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.author_info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  .author_name {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 0.95rem;
+  }
+
+  .author_role {
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+}
+
+// ── States ───────────────────────────────────
+.loading_state {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.loading_spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.not_found {
+  text-align: center;
+  padding: 80px 0;
+
+  h1 { color: var(--text); }
+  p  { color: var(--muted); }
+}
