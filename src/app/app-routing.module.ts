@@ -11,6 +11,7 @@ import { TermsComponent } from './terms/terms.component';
 import { BlogOverviewComponent } from './blog/blog-overview/blog-overview.component';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 import { ContactComponent } from './contact/contact.component';
+import { ContactModalComponent } from './contact/contact-modal.component';
 import { WorkListComponent } from './work/work-list/work-list.component';
 import { WorkDetailComponent } from './work/work-detail/work-detail.component';
 
@@ -24,8 +25,12 @@ const routes: Routes = [
   { path: 'ai-policy', component: AiPolicyComponent },
   { path: 'agb', component: TermsComponent },
   { path: 'terms-and-conditions', component: TermsComponent },
+  // Primary contact page (kept for SEO and direct access)
   { path: 'kontakt', component: ContactComponent },
   { path: 'contact', component: ContactComponent },
+  // Auxiliary outlet routes to show the contact modal on top of any page
+  { path: 'kontakt', component: ContactModalComponent, outlet: 'modal' },
+  { path: 'contact', component: ContactModalComponent, outlet: 'modal' },
   { path: 'blog', component: BlogOverviewComponent },
   { path: 'blog/:slug', component: BlogPostComponent },
   { path: 'work', component: WorkListComponent },

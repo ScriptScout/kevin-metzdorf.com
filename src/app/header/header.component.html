@@ -10,8 +10,8 @@
 
     <div class="nav_bar_desktop nav_right">
       <a class="nav_link hover_underline_animation" routerLink="/blog" routerLinkActive="active_link">{{ 'NAV.BLOG' | translate }}</a>
-      <a class="nav_link hover_underline_animation" routerLink="/kontakt" routerLinkActive="active_link">{{ 'NAV.CONTACT' | translate }}</a>
-      <a class="btn btn--primary nav_cta" routerLink="/kontakt" aria-label="Jetzt Termin buchen">Jetzt Termin buchen</a>
+      <a class="nav_link hover_underline_animation" [routerLink]="[{ outlets: { modal: 'kontakt' } }]" routerLinkActive="active_link">{{ 'NAV.CONTACT' | translate }}</a>
+      <a class="btn btn--primary nav_cta" [routerLink]="[{ outlets: { modal: 'kontakt' } }]" [queryParams]="{ tab: 'booking' }" aria-label="Jetzt Termin buchen">Jetzt Termin buchen</a>
       <button class="lang_switcher" (click)="langService.toggle()" [attr.aria-label]="'Sprache wechseln'">
         <span [class.active]="langService.currentLang === 'de'">DE</span>
         <span class="lang_divider">|</span>

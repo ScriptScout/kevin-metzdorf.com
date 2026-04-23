@@ -54,9 +54,10 @@ export class StickyCtaComponent implements OnInit, OnDestroy {
   }
 
   private updateVisibility(): void {
-    // Hide on contact route
+    // Hide on contact route or when modal outlet is open
     const onContact = this.currentUrl.includes('/kontakt') || this.currentUrl.includes('/contact');
-    if (onContact) {
+    const modalOpen = this.currentUrl.includes('(modal:');
+    if (onContact || modalOpen) {
       this.visible = false;
       return;
     }

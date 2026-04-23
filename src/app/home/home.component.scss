@@ -445,22 +445,35 @@
 .trust__sub { margin: 0 0 16px; color: var(--c-text-muted); }
 .logo-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  grid-template-columns: repeat(4, minmax(120px, 220px));
+  justify-content: center;
   gap: 12px;
   list-style: none;
   padding: 0;
   margin: 0;
-  @media (min-width: 680px) { grid-template-columns: repeat(4, minmax(120px, 1fr)); }
+  overflow-x: auto; /* keep a single row on small screens without breaking layout */
 }
 .logo-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 64px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
   border: 1px dashed var(--c-border);
   border-radius: var(--r-sm);
   color: var(--c-text-muted);
   background: var(--c-surface);
+  overflow: hidden;
+}
+
+/* Logos im Quadrat sauber einpassen */
+.logo-item img {
+  display: block;        /* entfernt Inline-Gaps */
+  max-width: 80%;        /* etwas Innenluft lassen */
+  max-height: 80%;       /* skaliert in beide Richtungen */
+  width: auto;           /* Seitenverhältnis wahren */
+  height: auto;          /* Seitenverhältnis wahren */
+  object-fit: contain;   /* sauber einpassen ohne Zuschnitt */
 }
 
 /* Services teaser */
