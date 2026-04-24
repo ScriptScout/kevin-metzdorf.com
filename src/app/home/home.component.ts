@@ -38,6 +38,9 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   private faqLogged = false;
   private finalCtaLogged = false;
 
+  // Expanded state per testimonial (index-based)
+  expandedTestimonials: boolean[] = [false, false, false];
+
   constructor(private analytics: AngularFireAnalytics) {}
 
   ngAfterViewInit(): void {
@@ -295,6 +298,16 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     this.analytics.logEvent('final_cta_click', {
       event_category: 'engagement',
       location: 'home_final_cta'
+    });
+  }
+
+  toggleTestimonial(index: number): void {
+    this.expandedTestimonials[index] = !this.expandedTestimonials[index];
+    this.analytics.logEvent('testimonial_toggle', {
+      event_category: 'engagement',
+      index,
+      state: this.expandedTestimonials[index] ? 'expand' : 'collapse',
+      location: 'home_testimonials'
     });
   }
 }
