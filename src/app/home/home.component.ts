@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
 import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
+import { LanguageService } from '../language.service';
 
 @Component({
     selector: 'app-home',
@@ -41,7 +42,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   // Expanded state per testimonial (index-based)
   expandedTestimonials: boolean[] = [false, false, false];
 
-  constructor(private analytics: AngularFireAnalytics) {}
+  constructor(private analytics: AngularFireAnalytics, public langService: LanguageService) {}
 
   ngAfterViewInit(): void {
     if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') return;

@@ -8,85 +8,25 @@
 >
   <div class="modal_dialog" role="document">
     <header class="modal_header">
-      <h2 id="contactModalTitle" class="modal_title">Kontakt</h2>
-      <button #closeBtn class="modal_close" (click)="close()" aria-label="Schließen">✕</button>
+      <h2 id="contactModalTitle" class="modal_title">{{ 'MODAL.TITLE' | translate }}</h2>
+      <button #closeBtn class="modal_close" (click)="close()" [attr.aria-label]="('MODAL.CLOSE' | translate)">✕</button>
     </header>
 
-    <nav class="modal_tabs" aria-label="Kontakt Optionen">
-      <button
-        class="tab_btn"
-        [class.active]="activeTab==='form'"
-        (click)="switchTab('form')"
-        aria-controls="tab-form"
-        [attr.aria-selected]="activeTab==='form'"
-        role="tab"
-      >Formular</button>
-      <button
-        class="tab_btn"
-        [class.active]="activeTab==='booking'"
-        (click)="switchTab('booking')"
-        aria-controls="tab-booking"
-        [attr.aria-selected]="activeTab==='booking'"
-        role="tab"
-      >Kostenloses Erstgespräch</button>
-    </nav>
 
+    <!--
+    Temporär deaktiviertes Formular (wird später wieder aktiviert).
+    Bitte hier nichts löschen – nur auskommentiert, damit das Pop‑Up aktuell ausschließlich Bookings zeigt.
     <section id="tab-form" class="tab_panel" [hidden]="activeTab!=='form'" role="tabpanel">
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact_form">
-        <div class="form_row">
-          <label for="supportTopic">How can I support you?</label>
-          <select id="supportTopic" formControlName="supportTopic" required>
-            <option value="Shopify Custom Development">Shopify Custom Development</option>
-            <option value="Performance & Stability Issues">Performance & Stability Issues</option>
-            <option value="Technical Rescue (Existing Project)">Technical Rescue (Existing Project)</option>
-            <option value="Consulting & Second Opinion">Consulting & Second Opinion</option>
-            <option value="Ongoing Collaboration (Agency / Brand)">Ongoing Collaboration (Agency / Brand)</option>
-          </select>
-        </div>
-        <div class="form_row">
-          <label for="projectDescription">Short description of the project or challenge</label>
-          <textarea id="projectDescription" formControlName="projectDescription" required placeholder="e.g., existing Shopify store with performance issues, complex product logic, agency project with tight deadline…"></textarea>
-        </div>
-        <div class="form_row">
-          <label for="projectStatus">Current Status</label>
-          <select id="projectStatus" formControlName="projectStatus">
-            <option value="New Store / Concept Phase">New Store / Concept Phase</option>
-            <option value="Existing Store">Existing Store</option>
-            <option value="Project in Development">Project in Development</option>
-            <option value="Struggling Project / Handover">Struggling Project / Handover</option>
-          </select>
-        </div>
-        <div class="form_grid">
-          <div class="form_row">
-            <label for="name">Name</label>
-            <input id="name" type="text" formControlName="name" required>
-          </div>
-          <div class="form_row">
-            <label for="email">E‑Mail</label>
-            <input id="email" type="email" formControlName="email" required>
-          </div>
-        </div>
-        <div class="form_row">
-          <label for="company">Company / Agency (optional)</label>
-          <input id="company" type="text" formControlName="company">
-        </div>
-        <div class="form_row checkbox_row">
-          <label for="privacy" class="checkbox_label">
-            <input id="privacy" type="checkbox" formControlName="privacy" required>
-            <span>Ich habe die <a routerLink="/privacy-policy">Datenschutzerklärung</a> gelesen.</span>
-          </label>
-        </div>
-        <div class="btn_box">
-          <button class="btn btn--primary" type="submit">{{ message }}</button>
-        </div>
-        <p class="helper_text">Ich melde mich i. d. R. innerhalb von 1–2 Werktagen.</p>
+        ...
       </form>
     </section>
+    -->
 
-    <section id="tab-booking" class="tab_panel" [hidden]="activeTab!=='booking'" role="tabpanel">
+    <section id="tab-booking" class="tab_panel" role="tabpanel">
       <div class="booking_embed">
         <iframe
-          title="Kostenloses Erstgespräch buchen"
+          [attr.title]="('MODAL.IFRAME_TITLE' | translate)"
           [src]="safeBookingUrl"
           width="100%"
           height="640"
@@ -94,7 +34,7 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <p class="helper_text">Ich melde mich i. d. R. innerhalb von 1–2 Werktagen.</p>
+      <p class="helper_text">{{ 'MODAL.HELP' | translate }}</p>
     </section>
 
   </div>

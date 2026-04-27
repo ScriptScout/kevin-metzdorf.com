@@ -1,29 +1,18 @@
 <section>
   <div class="imprintContainer">
-    <h1>Impressum</h1>
+    <h1>{{ 'IMPRINT.TITLE' | translate }}</h1>
 
-    <h2>Angaben gemäß § 5 DDG</h2>
+    <h2>{{ 'IMPRINT.S1' | translate }}</h2>
     <p>
-      <strong>Kevin Metzdorf Ltd</strong><br />
-      71-75 Shelton Street, Covent Garden<br />
-      London, WC2H 9JQ<br />
-      United Kingdom
+      <strong>Kevin Metzdorf</strong><br />
+      Turnierweg 103<br />
+      38259 Salzgitter<br />
+      Deutschland
     </p>
 
+    <h2>{{ 'IMPRINT.CONTACT' | translate }}</h2>
     <p>
-      <strong>Vertreten durch:</strong><br />
-      Kevin Metzdorf (Director)
-    </p>
-
-    <p>
-      <strong>Registereintrag:</strong><br />
-      Registriert in England und Wales<br />
-      Companies House Nummer: 16972608
-    </p>
-
-    <h2>Kontakt</h2>
-    <p>
-      Telefon: +44 20 8154 2364<br />
+      Telefon: +49 (0) 176 5597 9966<br />
       E-Mail:
       <a href="mailto:info@kevin-metzdorf.com">
         info&#64;kevin-metzdorf.com
@@ -31,19 +20,15 @@
       Website: <a href="https://kevin-metzdorf.com">kevin-metzdorf.com</a>
     </p>
 
-    <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+    <h2>{{ 'IMPRINT.RESPONSIBLE' | translate }}</h2>
     <p>
       Kevin Metzdorf<br />
-      71-75 Shelton Street, Covent Garden<br />
-      London, WC2H 9JQ<br />
-      United Kingdom
+      Turnierweg 103<br />
+      38259 Salzgitter<br />
+      Deutschland
     </p>
 
-    <h2>EU-Streitschlichtung</h2>
-    <p>
-      Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-      <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>.<br />
-      Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-    </p>
+    <h2>{{ 'IMPRINT.EU_ODR' | translate }}</h2>
+    <p [innerHTML]="('IMPRINT.EU_ODR_TEXT' | translate)"></p>
   </div>
 </section>

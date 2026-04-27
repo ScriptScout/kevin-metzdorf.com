@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
 import { filter, Subscription } from 'rxjs';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sticky-cta',
   templateUrl: './sticky-cta.component.html',
   styleUrls: ['./sticky-cta.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule]
+  imports: [CommonModule, RouterModule, TranslateModule]
 })
 export class StickyCtaComponent implements OnInit, OnDestroy {
   visible = false;

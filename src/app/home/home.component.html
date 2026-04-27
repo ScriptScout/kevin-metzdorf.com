@@ -1,33 +1,33 @@
 <section id="home" class="editorial-hero" role="region" aria-label="Einstiegsbereich">
   <div class="editorial-hero__container">
     <header class="editorial-hero__content">
-      <h1 class="editorial-hero__title">Shopify am Limit. Ohne Headless-Overhead.</h1>
-      <p class="editorial-hero__subline">Ich entwickle Custom-Features, komplexe Logiken und App-like Frontends direkt im nativen Shopify. Für E-Commerce-Erlebnisse, bei denen andere sagen: „Das geht nur Headless.“</p>
+      <h1 class="editorial-hero__title">{{ 'HERO.TITLE' | translate }}</h1>
+      <p class="editorial-hero__subline">{{ 'HERO.SUB' | translate }}</p>
       <div class="editorial-hero__ctas">
-        <a class="btn btn--primary" routerLink="/kontakt" (click)="heroPrimaryClick()" aria-label="Kostenloses Erstgespräch buchen">Kostenloses Erstgespräch</a>
-        <a class="btn btn--secondary" routerLink="/work" (click)="heroSecondaryClick()" aria-label="Case Studies ansehen">Case Studies ansehen</a>
+        <a class="btn btn--primary" [routerLink]="[{ outlets: { modal: 'kontakt' } }]" [queryParams]="{ tab: 'booking' }" (click)="heroPrimaryClick()" [attr.aria-label]="('HERO.PRIMARY_CTA' | translate)">{{ 'HERO.PRIMARY_CTA' | translate }}</a>
+        <a class="btn btn--secondary" routerLink="/work" (click)="heroSecondaryClick()" [attr.aria-label]="('HERO.SECONDARY_CTA' | translate)">{{ 'HERO.SECONDARY_CTA' | translate }}</a>
       </div>
-      <ul class="kpi-list" #kpiList aria-label="Ergebnisse in Zahlen">
-        <li><span class="badge badge--positive">Native Performance</span></li>
-        <li><span class="badge badge--positive">Keine API-Abhängigkeit</span></li>
-        <li><span class="badge badge--neutral">App-Ökosystem bleibt</span></li>
+      <ul class="kpi-list" #kpiList [attr.aria-label]="('HERO.KPI_ARIA' | translate)">
+        <li><span class="badge badge--positive">{{ 'HERO.KPI_NATIVE' | translate }}</span></li>
+        <li><span class="badge badge--positive">{{ 'HERO.KPI_NO_API' | translate }}</span></li>
+        <li><span class="badge badge--neutral">{{ 'HERO.KPI_APPS' | translate }}</span></li>
       </ul>
     </header>
     <figure class="editorial-hero__figure">
       <img
         src="assets/img/Gro%C3%9F%20(Profilbild-Kevin-Metzdorf-Gross).png"
-        alt="Kevin Metzdorf – Senior Shopify Developer"
+        [attr.alt]="('HERO.IMG_ALT' | translate)"
         width="480" height="600"
         loading="eager" decoding="async" fetchpriority="high" />
     </figure>
   </div>
 </section>
 
-<section class="trust" aria-label="Vertrauen & Partnerschaften">
+<section class="trust" [attr.aria-label]="('TRUST.SECTION_ARIA' | translate)">
   <div class="trust__container">
-    <h2 class="trust__title">Vertrauen</h2>
-    <p class="trust__sub">Ausgewählte Marken & Partner</p>
-    <ul class="logo-list" aria-label="Markenlogos">
+    <h2 class="trust__title">{{ 'TRUST.TITLE' | translate }}</h2>
+    <p class="trust__sub">{{ 'TRUST.SUB' | translate }}</p>
+    <ul class="logo-list" [attr.aria-label]="('TRUST.LOGOS_ARIA' | translate)">
       <li class="logo-item" aria-label="Micasa"><img src="assets/img/project_img/micasa_logo.avif" alt="Micasa Logo" loading="lazy" decoding="async"></li>
       <li class="logo-item" aria-label="Einfach Backen"><img src="assets/img/project_img/einfach-backen.webp" alt="Einfach Backen Logo" loading="lazy" decoding="async"></li>
       <li class="logo-item" aria-label="Natural Elements"><img src="assets/img/project_img/natural_elements_logo.svg" alt="Natural Elements Logo" loading="lazy" decoding="async"></li>
@@ -38,38 +38,38 @@
 
 <section class="services-teaser" aria-labelledby="services-title">
   <div class="services-teaser__container">
-    <h2 id="services-title" class="services-teaser__title">Leistungen</h2>
-    <p class="services-teaser__sub">Maximale Custom-Entwicklung – zu 100 % im Shopify-Standard verankert.</p>
+    <h2 id="services-title" class="services-teaser__title">{{ 'SERVICES.TITLE' | translate }}</h2>
+    <p class="services-teaser__sub">{{ 'SERVICES.SUB' | translate }}</p>
     <div class="services-grid">
       <article class="service-card">
-        <h3>Custom UI & App-like Experiences</h3>
-        <p>Interaktive Produkt-Konfiguratoren, dynamische Quizzes und komplexe UI-Komponenten (Vanilla JS/TS) – direkt ins Theme integriert.</p>
-        <a class="service-card__link" routerLink="/kontakt" (click)="serviceCardClick('Custom UI')" aria-label="Leistung anfragen: Custom UI">Anfragen</a>
+        <h3>{{ 'SERVICES.CARDS.CUSTOM_UI.TITLE' | translate }}</h3>
+        <p>{{ 'SERVICES.CARDS.CUSTOM_UI.TEXT' | translate }}</p>
+        <a class="service-card__link" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" (click)="serviceCardClick('Custom UI')" [attr.aria-label]="('SERVICES.CARDS.CUSTOM_UI.ARIA' | translate)">{{ 'SERVICES.REQUEST' | translate }}</a>
       </article>
       <article class="service-card">
-        <h3>Checkout Extensibility</h3>
-        <p>Maßgeschneiderte Checkout-Flows, B2B-Logiken und Upsells über Shopify Functions und UI Extensions – stabil und update-sicher.</p>
-        <a class="service-card__link" routerLink="/kontakt" (click)="serviceCardClick('Checkout Extensibility')" aria-label="Leistung anfragen: Checkout Extensibility">Anfragen</a>
+        <h3>{{ 'SERVICES.CARDS.CHECKOUT.TITLE' | translate }}</h3>
+        <p>{{ 'SERVICES.CARDS.CHECKOUT.TEXT' | translate }}</p>
+        <a class="service-card__link" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" (click)="serviceCardClick('Checkout Extensibility')" [attr.aria-label]="('SERVICES.CARDS.CHECKOUT.ARIA' | translate)">{{ 'SERVICES.REQUEST' | translate }}</a>
       </article>
       <article class="service-card">
-        <h3>Metaobjects & Datenarchitektur</h3>
-        <p>Aufbau hochkomplexer Datenmodelle im Shop. Perfekt für Brand-Pages, komplexe Filter oder B2B-Anforderungen ohne externe PIM-Systeme.</p>
-        <a class="service-card__link" routerLink="/kontakt" (click)="serviceCardClick('Metaobjects')" aria-label="Leistung anfragen: Metaobjects">Anfragen</a>
+        <h3>{{ 'SERVICES.CARDS.METAOBJECTS.TITLE' | translate }}</h3>
+        <p>{{ 'SERVICES.CARDS.METAOBJECTS.TEXT' | translate }}</p>
+        <a class="service-card__link" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" (click)="serviceCardClick('Metaobjects')" [attr.aria-label]="('SERVICES.CARDS.METAOBJECTS.ARIA' | translate)">{{ 'SERVICES.REQUEST' | translate }}</a>
       </article>
       <article class="service-card">
-        <h3>Technical Rescue (Plus/Enterprise)</h3>
-        <p>Wenn das Projekt feststeckt: Code-Refactoring, Beseitigung historischer Schulden und Performance-Rettung für hochfrequentierte Stores.</p>
-        <a class="service-card__link" routerLink="/kontakt" (click)="serviceCardClick('Technical Rescue')" aria-label="Leistung anfragen: Technical Rescue">Anfragen</a>
+        <h3>{{ 'SERVICES.CARDS.RESCUE.TITLE' | translate }}</h3>
+        <p>{{ 'SERVICES.CARDS.RESCUE.TEXT' | translate }}</p>
+        <a class="service-card__link" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" (click)="serviceCardClick('Technical Rescue')" [attr.aria-label]="('SERVICES.CARDS.RESCUE.ARIA' | translate)">{{ 'SERVICES.REQUEST' | translate }}</a>
       </article>
       <article class="service-card">
-        <h3>Liquid/JS Performance Mastery</h3>
-        <p>Core Web Vitals am Limit. Konsequentes Aufräumen von App-Leichen, sauberes Lazy-Loading und rasante Ladezeiten ohne Vercel & Co.</p>
-        <a class="service-card__link" routerLink="/kontakt" (click)="serviceCardClick('Performance')" aria-label="Leistung anfragen: Performance">Anfragen</a>
+        <h3>{{ 'SERVICES.CARDS.PERFORMANCE.TITLE' | translate }}</h3>
+        <p>{{ 'SERVICES.CARDS.PERFORMANCE.TEXT' | translate }}</p>
+        <a class="service-card__link" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" (click)="serviceCardClick('Performance')" [attr.aria-label]="('SERVICES.CARDS.PERFORMANCE.ARIA' | translate)">{{ 'SERVICES.REQUEST' | translate }}</a>
       </article>
       <article class="service-card">
-        <h3>De-Heading (Migration to Native)</h3>
-        <p>Ihr Headless-Setup frisst Budgets? Ich migriere komplexe Frontends zurück in ein rasantes, leicht wartbares Shopify OS 2.0 Theme.</p>
-        <a class="service-card__link" routerLink="/kontakt" (click)="serviceCardClick('De-Heading')" aria-label="Leistung anfragen: De-Heading">Anfragen</a>
+        <h3>{{ 'SERVICES.CARDS.DEHEADING.TITLE' | translate }}</h3>
+        <p>{{ 'SERVICES.CARDS.DEHEADING.TEXT' | translate }}</p>
+        <a class="service-card__link" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" (click)="serviceCardClick('De-Heading')" [attr.aria-label]="('SERVICES.CARDS.DEHEADING.ARIA' | translate)">{{ 'SERVICES.REQUEST' | translate }}</a>
       </article>
     </div>
   </div>
@@ -77,35 +77,35 @@
 
 <section class="outcomes" aria-labelledby="outcomes-title" #outcomesRef>
   <div class="outcomes__container">
-    <h2 id="outcomes-title" class="outcomes__title">Ergebnisse, die zählen</h2>
-    <p class="outcomes__sub">Konkrete Verbesserungen durch sauberes Shopify‑Engineering.</p>
+    <h2 id="outcomes-title" class="outcomes__title">{{ 'OUTCOMES.TITLE' | translate }}</h2>
+    <p class="outcomes__sub">{{ 'OUTCOMES.SUB' | translate }}</p>
     <div class="outcomes-grid">
       <article class="outcome-card">
-        <h3>Geschwindigkeit</h3>
-        <p>Schnellere Ladezeiten und stabile Core Web Vitals.</p>
+        <h3>{{ 'OUTCOMES.CARDS.SPEED.TITLE' | translate }}</h3>
+        <p>{{ 'OUTCOMES.CARDS.SPEED.TEXT' | translate }}</p>
         <ul class="kpis">
-          <li><span class="badge badge--positive">−38% LCP</span></li>
-          <li><span class="badge badge--neutral">CLS < 0.05</span></li>
+          <li><span class="badge badge--positive">{{ 'OUTCOMES.CARDS.SPEED.KPI1' | translate }}</span></li>
+          <li><span class="badge badge--neutral">{{ 'OUTCOMES.CARDS.SPEED.KPI2' | translate }}</span></li>
         </ul>
-        <a class="outcome-card__link" routerLink="/kontakt" (click)="outcomeCardClick('Geschwindigkeit')" aria-label="Ergebnis anfragen: Geschwindigkeit">Anfragen</a>
+        <a class="outcome-card__link" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" (click)="outcomeCardClick('Geschwindigkeit')" [attr.aria-label]="('OUTCOMES.CARDS.SPEED.ARIA' | translate)">{{ 'OUTCOMES.REQUEST' | translate }}</a>
       </article>
       <article class="outcome-card">
-        <h3>Conversion</h3>
-        <p>Optimierte UX und Checkout‑Erlebnisse für mehr Umsatz.</p>
+        <h3>{{ 'OUTCOMES.CARDS.CONVERSION.TITLE' | translate }}</h3>
+        <p>{{ 'OUTCOMES.CARDS.CONVERSION.TEXT' | translate }}</p>
         <ul class="kpis">
-          <li><span class="badge badge--positive">+18% CR</span></li>
-          <li><span class="badge badge--neutral">+12% AOV</span></li>
+          <li><span class="badge badge--positive">{{ 'OUTCOMES.CARDS.CONVERSION.KPI1' | translate }}</span></li>
+          <li><span class="badge badge--neutral">{{ 'OUTCOMES.CARDS.CONVERSION.KPI2' | translate }}</span></li>
         </ul>
-        <a class="outcome-card__link" routerLink="/kontakt" (click)="outcomeCardClick('Conversion')" aria-label="Ergebnis anfragen: Conversion">Anfragen</a>
+        <a class="outcome-card__link" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" (click)="outcomeCardClick('Conversion')" [attr.aria-label]="('OUTCOMES.CARDS.CONVERSION.ARIA' | translate)">{{ 'OUTCOMES.REQUEST' | translate }}</a>
       </article>
       <article class="outcome-card">
-        <h3>Skalierbarkeit</h3>
-        <p>Robuste Architektur und wartbarer Code für Wachstum.</p>
+        <h3>{{ 'OUTCOMES.CARDS.SCALABILITY.TITLE' | translate }}</h3>
+        <p>{{ 'OUTCOMES.CARDS.SCALABILITY.TEXT' | translate }}</p>
         <ul class="kpis">
-          <li><span class="badge badge--neutral">Zero‑Downtime Deploys</span></li>
-          <li><span class="badge badge--neutral">Saubere Code‑Basis</span></li>
+          <li><span class="badge badge--neutral">{{ 'OUTCOMES.CARDS.SCALABILITY.KPI1' | translate }}</span></li>
+          <li><span class="badge badge--neutral">{{ 'OUTCOMES.CARDS.SCALABILITY.KPI2' | translate }}</span></li>
         </ul>
-        <a class="outcome-card__link" routerLink="/kontakt" (click)="outcomeCardClick('Skalierbarkeit')" aria-label="Ergebnis anfragen: Skalierbarkeit">Anfragen</a>
+        <a class="outcome-card__link" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" (click)="outcomeCardClick('Skalierbarkeit')" [attr.aria-label]="('OUTCOMES.CARDS.SCALABILITY.ARIA' | translate)">{{ 'OUTCOMES.REQUEST' | translate }}</a>
       </article>
     </div>
   </div>
@@ -113,8 +113,8 @@
 
 <section class="case-teaser" aria-labelledby="case-teaser-title" #caseTeaserRef>
   <div class="case-teaser__container">
-    <h2 id="case-teaser-title" class="case-teaser__title">Case Studies</h2>
-    <p class="case-teaser__sub">Ausgewählte Projekte – Herausforderungen & messbare Resultate.</p>
+    <h2 id="case-teaser-title" class="case-teaser__title">{{ 'CASE_TEASER.TITLE' | translate }}</h2>
+    <p class="case-teaser__sub">{{ 'CASE_TEASER.SUB' | translate }}</p>
     <div class="case-grid">
       <article class="case-card">
         <header>
@@ -127,7 +127,7 @@
           <li><span class="badge badge--positive">+18% CR</span></li>
           <li><span class="badge badge--neutral">+12% AOV</span></li>
         </ul>
-        <a class="btn btn--secondary" routerLink="/work" (click)="caseTeaserClick('Migration 2.0')" aria-label="Fallstudie lesen: Migration 2.0">Fallstudie lesen</a>
+        <a class="btn btn--secondary" routerLink="/work" (click)="caseTeaserClick('Migration 2.0')" [attr.aria-label]="('CASE_TEASER.BUTTON' | translate)">{{ 'CASE_TEASER.BUTTON' | translate }}</a>
       </article>
       <article class="case-card">
         <header>
@@ -139,7 +139,7 @@
           <li><span class="badge badge--positive">−32% LCP</span></li>
           <li><span class="badge badge--neutral">CLS < 0.05</span></li>
         </ul>
-        <a class="btn btn--secondary" routerLink="/work" (click)="caseTeaserClick('Performance Sprint')" aria-label="Fallstudie lesen: Performance Sprint">Fallstudie lesen</a>
+        <a class="btn btn--secondary" routerLink="/work" (click)="caseTeaserClick('Performance Sprint')" [attr.aria-label]="('CASE_TEASER.BUTTON' | translate)">{{ 'CASE_TEASER.BUTTON' | translate }}</a>
       </article>
       <article class="case-card">
         <header>
@@ -151,7 +151,7 @@
           <li><span class="badge badge--neutral">+Uptime</span></li>
           <li><span class="badge badge--positive">+CR</span></li>
         </ul>
-        <a class="btn btn--secondary" routerLink="/work" (click)="caseTeaserClick('Checkout Fix')" aria-label="Fallstudie lesen: Checkout Fix">Fallstudie lesen</a>
+        <a class="btn btn--secondary" routerLink="/work" (click)="caseTeaserClick('Checkout Fix')" [attr.aria-label]="('CASE_TEASER.BUTTON' | translate)">{{ 'CASE_TEASER.BUTTON' | translate }}</a>
       </article>
     </div>
   </div>
@@ -159,28 +159,28 @@
 
 <section class="process" aria-labelledby="process-title" #processRef>
   <div class="process__container">
-    <h2 id="process-title" class="process__title">Ablauf: Transparent und zielgerichtet</h2>
-    <p class="process__sub">So arbeiten wir zusammen – klar strukturiert von der Analyse bis zum Erfolg.</p>
+    <h2 id="process-title" class="process__title">{{ 'PROCESS.TITLE' | translate }}</h2>
+    <p class="process__sub">{{ 'PROCESS.SUB' | translate }}</p>
     <div class="process-grid">
       <article class="process-step" (click)="processStepClick('Discover')" tabindex="0">
         <div class="step-index" aria-hidden="true">01</div>
-        <h3>Discover</h3>
-        <p>Kurz‑Audit & Scope. Ziele, Risiken und Quick‑Wins identifizieren.</p>
+        <h3>{{ 'PROCESS.STEPS.DISCOVER.TITLE' | translate }}</h3>
+        <p>{{ 'PROCESS.STEPS.DISCOVER.TEXT' | translate }}</p>
       </article>
       <article class="process-step" (click)="processStepClick('Plan')" tabindex="0">
         <div class="step-index" aria-hidden="true">02</div>
-        <h3>Plan</h3>
-        <p>Backlog & Roadmap. Meilensteine, Verantwortlichkeiten und Messgrößen definieren.</p>
+        <h3>{{ 'PROCESS.STEPS.PLAN.TITLE' | translate }}</h3>
+        <p>{{ 'PROCESS.STEPS.PLAN.TEXT' | translate }}</p>
       </article>
       <article class="process-step" (click)="processStepClick('Build')" tabindex="0">
         <div class="step-index" aria-hidden="true">03</div>
-        <h3>Build</h3>
-        <p>Entwicklung & Tests. Sauberer Code, Pull-Requests und Staging‑Demos.</p>
+        <h3>{{ 'PROCESS.STEPS.BUILD.TITLE' | translate }}</h3>
+        <p>{{ 'PROCESS.STEPS.BUILD.TEXT' | translate }}</p>
       </article>
       <article class="process-step" (click)="processStepClick('Grow')" tabindex="0">
         <div class="step-index" aria-hidden="true">04</div>
-        <h3>Grow</h3>
-        <p>Rollout, Monitoring & Iteration. KPI‑basiertes Optimieren im Live-Betrieb.</p>
+        <h3>{{ 'PROCESS.STEPS.GROW.TITLE' | translate }}</h3>
+        <p>{{ 'PROCESS.STEPS.GROW.TEXT' | translate }}</p>
       </article>
     </div>
   </div>
@@ -188,78 +188,73 @@
 
 <section class="tech-stack" aria-labelledby="tech-stack-title" #techStackRef>
   <div class="tech-stack__container">
-    <h2 id="tech-stack-title" class="tech-stack__title">Tech‑Stack</h2>
-    <p class="tech-stack__sub">Bewährte Werkzeuge für performante Shopify‑Stores.</p>
-    <ul class="tech-list" aria-label="Technologien">
-      <li class="tech-chip" aria-label="Shopify Liquid">Liquid</li>
-      <li class="tech-chip" aria-label="Theme App Extensions">Theme App Extensions</li>
-      <li class="tech-chip" aria-label="Shopify Functions">Shopify Functions</li>
-      <li class="tech-chip" aria-label="JavaScript / TypeScript">JavaScript / TypeScript</li>
-      <li class="tech-chip" aria-label="GraphQL">GraphQL</li>
-      <li class="tech-chip" aria-label="GA4 / GTM">GA4 / GTM</li>
+    <h2 id="tech-stack-title" class="tech-stack__title">{{ 'TECH.TITLE' | translate }}</h2>
+    <p class="tech-stack__sub">{{ 'TECH.SUB' | translate }}</p>
+    <ul class="tech-list" [attr.aria-label]="('TECH.LIST_ARIA' | translate)">
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.LIQUID.ARIA' | translate)">Liquid</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.TAE.ARIA' | translate)">Theme App Extensions</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.FUNCTIONS.ARIA' | translate)">Shopify Functions</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.JSTS.ARIA' | translate)">JavaScript / TypeScript</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.GRAPHQL.ARIA' | translate)">GraphQL</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.GA4GTM.ARIA' | translate)">GA4 / GTM</li>
     </ul>
   </div>
 </section>
 
 <section class="testimonials" aria-labelledby="testimonials-title" #testimonialsRef>
   <div class="testimonials__container">
-    <h2 id="testimonials-title" class="testimonials__title">Stimmen</h2>
-    <p class="testimonials__sub">Was Kunden und Partner über die Zusammenarbeit sagen.</p>
+    <h2 id="testimonials-title" class="testimonials__title">{{ 'TESTIMONIALS.TITLE' | translate }}</h2>
+    <p class="testimonials__sub">{{ 'TESTIMONIALS.SUB' | translate }}</p>
 
-    <div class="testimonial-carousel" role="group" aria-roledescription="carousel" aria-label="Kundenstimmen">
+    <div class="testimonial-carousel" role="group" aria-roledescription="carousel" [attr.aria-label]="('TESTIMONIALS.CAROUSEL_ARIA' | translate)">
       <article class="testimonial" tabindex="0">
         <blockquote>
-          <p class="testimonial__text" id="tst-0" [class.is-expanded]="expandedTestimonials[0]">„Kevin ist ein absoluter Profi im Shopify-Ökosystem. Die Zusammenarbeit war extrem unkompliziert, professionell und termintreu.
-            Er hat ein scharfes Auge für Design und Funktionalität.
-            Wer seinen Shopify-Shop auf das nächste Level heben will, sollte Kevin Metzdorf unbedingt in sein Team holen!“</p>
+          <p class="testimonial__text" id="tst-0" [class.is-expanded]="expandedTestimonials[0]">{{ 'TESTIMONIALS.T1.TEXT' | translate }}</p>
         </blockquote>
         <div class="testimonial__actions">
           <button type="button" class="btn btn--secondary"
                   (click)="toggleTestimonial(0)"
                   [attr.aria-expanded]="expandedTestimonials[0]"
                   [attr.aria-controls]="'tst-0'">
-            {{ expandedTestimonials[0] ? 'Weniger anzeigen' : 'Weiterlesen' }}
+            {{ expandedTestimonials[0] ? ('TESTIMONIALS.LESS' | translate) : ('TESTIMONIALS.MORE' | translate) }}
           </button>
         </div>
         <footer>
-          <cite>Jan Laußmann – CEO Latori GmbH / Shopify Platinum Agentur</cite>
+          <cite>{{ 'TESTIMONIALS.T1.CITE' | translate }}</cite>
         </footer>
       </article>
 
       <article class="testimonial" tabindex="0">
         <blockquote>
-          <p class="testimonial__text" id="tst-1" [class.is-expanded]="expandedTestimonials[1]">„Zuverlässiger Shopify-Experte & Webpartner. Kevin Metzdorf betreut zuverlässig unsere sieben Shopify-Shops, darunter
-            die Influencer-Shops von Amira Aly und Steffi Biedermann. Die Zusammenarbeit ist effizient, transparent und
-            lösungsorientiert. Besonders schätzen wir sein proaktives Vorgehen, schnelle Reaktionen und das jederzeit einsehbare
-            Zeittracking. Klare Empfehlung!</p>
+          <p class="testimonial__text" id="tst-1" [class.is-expanded]="expandedTestimonials[1]">{{ 'TESTIMONIALS.T2.TEXT' | translate }}</p>
         </blockquote>
         <div class="testimonial__actions">
           <button type="button" class="btn btn--secondary"
                   (click)="toggleTestimonial(1)"
                   [attr.aria-expanded]="expandedTestimonials[1]"
                   [attr.aria-controls]="'tst-1'">
-            {{ expandedTestimonials[1] ? 'Weniger anzeigen' : 'Weiterlesen' }}
+            {{ expandedTestimonials[1] ? ('TESTIMONIALS.LESS' | translate) : ('TESTIMONIALS.MORE' | translate) }}
           </button>
         </div>
         <footer>
-          <cite>Ralf Pressler – Director Marketing & Digital Dekoback GmbH</cite>
+          <cite>{{ 'TESTIMONIALS.T2.CITE' | translate }}</cite>
         </footer>
       </article>
 
       <article class="testimonial" tabindex="0">
         <blockquote>
-          <p class="testimonial__text" id="tst-2" [class.is-expanded]="expandedTestimonials[2]">„Ich kann Kevin uneingeschränkt als Senior Shopify Entwickler empfehlen. Besonders zu Beginn meiner Zeit im Team war er eine enorme Stütze. Trotz seiner eigenen Projekte hat er sich immer die Zeit genommen, mir neue Sachen geduldig zu erklären und das hat mir den Einstieg massiv erleichtert. Man merkt in jedem Gespräch seine tiefgreifende Erfahrung im Shopify-Ökosystem. Er hat auf fast jede technische Herausforderung eine fundierte Antwort. Was Kevin jedoch besonders auszeichnet, ist die Kombination aus technischem Können auf höchstem Niveau und seiner extrem angenehmen Art. Selbst in stressigen Phasen oder kurz vor knappen Deadlines bleibt er der absolute Ruhepol im Team, behält den Überblick und strahlt eine enorme Sicherheit aus. Er ist ein echter Teamplayer, mit dem die Zusammenarbeit fachlich wie menschlich einfach Spaß macht.“</p>
+          <p class="testimonial__text" id="tst-2" [class.is-expanded]="expandedTestimonials[2]">{{ 'TESTIMONIALS.T3.TEXT' | translate }}</p>
         </blockquote>
         <div class="testimonial__actions">
           <button type="button" class="btn btn--secondary"
                   (click)="toggleTestimonial(2)"
                   [attr.aria-expanded]="expandedTestimonials[2]"
                   [attr.aria-controls]="'tst-2'">
-            {{ expandedTestimonials[2] ? 'Weniger anzeigen' : 'Weiterlesen' }}
+            {{ expandedTestimonials[2] ? ('TESTIMONIALS.LESS' | translate) : ('TESTIMONIALS.MORE' | translate) }}
           </button>
         </div>
         <footer>
-          <cite>Normann Blum – Frontend Developer</cite>
+          <cite>{{ 'TESTIMONIALS.T3.CITE' | translate }}</cite>
         </footer>
       </article>
     </div>
@@ -268,23 +263,23 @@
 
 <section class="blog-teaser" aria-labelledby="blog-teaser-title" #blogTeaserRef>
   <div class="blog-teaser__container">
-    <h2 id="blog-teaser-title" class="blog-teaser__title">Aus dem Blog</h2>
-    <p class="blog-teaser__sub">Aktuelle Beiträge zu Shopify‑Entwicklung und Performance. (Platzhalter)</p>
+    <h2 id="blog-teaser-title" class="blog-teaser__title">{{ 'BLOG.TITLE' | translate }}</h2>
+    <p class="blog-teaser__sub">{{ 'BLOG.SUB' | translate }}</p>
     <div class="blog-grid">
       <article class="blog-card">
-        <h3>Shopify Theme Performance optimieren</h3>
-        <p>Core Web Vitals verbessern: Bildstrategie, Lazy Loading, Liquid/JS‑Cleanup.</p>
-        <a class="blog-card__link" [routerLink]="['/blog', 'shopify-theme-performance-optimieren']" (click)="blogCardClick('Theme Performance')" aria-label="Zum Blog: Theme Performance">Lesen</a>
+        <h3>{{ 'BLOG.CARDS.T1.TITLE' | translate }}</h3>
+        <p>{{ 'BLOG.CARDS.T1.TEXT' | translate }}</p>
+        <a class="blog-card__link" [routerLink]="['/blog', 'shopify-theme-performance-optimieren']" (click)="blogCardClick('Theme Performance')" [attr.aria-label]="('BLOG.CARDS.T1.ARIA' | translate)">{{ 'BLOG.READ' | translate }}</a>
       </article>
       <article class="blog-card">
-        <h3>Shopify 2.0 Migration – Checkliste</h3>
-        <p>Von 1.0/WooCommerce zu OS 2.0: Daten, Themes, Apps, SEO.</p>
-        <a class="blog-card__link" [routerLink]="['/blog', 'shopify-2-migration-checkliste']" (click)="blogCardClick('2.0 Migration Checkliste')" aria-label="Zum Blog: 2.0 Migration Checkliste">Lesen</a>
+        <h3>{{ 'BLOG.CARDS.T2.TITLE' | translate }}</h3>
+        <p>{{ 'BLOG.CARDS.T2.TEXT' | translate }}</p>
+        <a class="blog-card__link" [routerLink]="['/blog', 'shopify-2-migration-checkliste']" (click)="blogCardClick('2.0 Migration Checkliste')" [attr.aria-label]="('BLOG.CARDS.T2.ARIA' | translate)">{{ 'BLOG.READ' | translate }}</a>
       </article>
       <article class="blog-card">
-        <h3>Technical Rescue: Stabiler Checkout</h3>
-        <p>Fehler finden, Risiken mindern, Releases absichern.</p>
-        <a class="blog-card__link" [routerLink]="['/blog', 'shopify-technical-rescue']" (click)="blogCardClick('Technical Rescue Checkout')" aria-label="Zum Blog: Technical Rescue Checkout">Lesen</a>
+        <h3>{{ 'BLOG.CARDS.T3.TITLE' | translate }}</h3>
+        <p>{{ 'BLOG.CARDS.T3.TEXT' | translate }}</p>
+        <a class="blog-card__link" [routerLink]="['/blog', 'shopify-technical-rescue']" (click)="blogCardClick('Technical Rescue Checkout')" [attr.aria-label]="('BLOG.CARDS.T3.ARIA' | translate)">{{ 'BLOG.READ' | translate }}</a>
       </article>
     </div>
   </div>
@@ -292,48 +287,48 @@
 
 <section class="faq" aria-labelledby="faq-title" #faqRef itemscope itemtype="https://schema.org/FAQPage">
   <div class="faq__container">
-    <h2 id="faq-title" class="faq__title">FAQ</h2>
-    <p class="faq__sub">Häufige Fragen – kurz beantwortet.</p>
+    <h2 id="faq-title" class="faq__title">{{ 'FAQ.TITLE' | translate }}</h2>
+    <p class="faq__sub">{{ 'FAQ.SUB' | translate }}</p>
 
-    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('Wie schnell können wir starten?', $event)">
-      <summary><h3 itemprop="name">Wie schnell können wir starten?</h3></summary>
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('FAQ.Q1', $event)">
+      <summary><h3 itemprop="name">{{ 'FAQ.Q1' | translate }}</h3></summary>
       <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">In der Regel benötige ich etwa 1 bis 2 Wochen Vorlaufzeit für ein sauberes Onboarding. Wenn bei Ihnen allerdings kritische Systeme ausfallen (Stichwort: Technical Rescue oder Live-Bugs), schaufle ich nach Absprache auch kurzfristig Kapazitäten für einen Notfall-Sprint frei.</p>
+        <p itemprop="text">{{ 'FAQ.A1' | translate }}</p>
       </div>
     </details>
 
-    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('Wie läuft die Zusammenarbeit ab?', $event)">
-      <summary><h3 itemprop="name">Wie läuft die Zusammenarbeit ab?</h3></summary>
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('FAQ.Q2', $event)">
+      <summary><h3 itemprop="name">{{ 'FAQ.Q2' | translate }}</h3></summary>
       <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Kein Blindflug, kein Micromanagement. Wir starten immer mit einem klar definierten Scope. Danach entwickle ich in iterativen Sprints. Das bedeutet für Sie: Sie erhalten regelmäßige, transparente Updates, wir haben feste Check-ins und arbeiten anhand messbarer Meilensteine. Sie wissen zu jeder Zeit genau, wo das Projekt steht.</p>
+        <p itemprop="text">{{ 'FAQ.A2' | translate }}</p>
       </div>
     </details>
 
-    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('Gibt es Projektfestpreise oder Retainer?', $event)">
-      <summary><h3 itemprop="name">Gibt es Projektfestpreise oder Retainer?</h3></summary>
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('FAQ.Q3', $event)">
+      <summary><h3 itemprop="name">{{ 'FAQ.Q3' | translate }}</h3></summary>
       <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Das hängt ganz von Ihrem Setup ab. Für klar abgegrenzte Projekte mit festem Scope biete ich Projektfestpreise an – das gibt Ihnen volle Planungssicherheit. Bei fortlaufender Betreuung, komplexen Code-Refactorings oder der Skalierung von Multi-Store-Setups arbeite ich in der Regel mit einem festen monatlichen Retainer oder auf Basis von Sprints. Details dazu besprechen wir am besten direkt im ersten Call.</p>
+        <p itemprop="text">{{ 'FAQ.A3' | translate }}</p>
       </div>
     </details>
 
-    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('Bieten Sie ausschließlich Shopify an?', $event)">
-      <summary><h3 itemprop="name">Bieten Sie ausschließlich Shopify an?</h3></summary>
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('FAQ.Q4', $event)">
+      <summary><h3 itemprop="name">{{ 'FAQ.Q4' | translate }}</h3></summary>
       <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Nein. Meine Kernexpertise liegt im modernen Frontend Engineering (JavaScript, TypeScript, React). Ich habe zwar jahrelange Enterprise-Erfahrung mit Shopify und E-Commerce, entwickle aber ebenso maßgeschneiderte Konfiguratoren, interaktive UI-Komponenten oder performante Web-Apps. Die Technologie ist für mich das Werkzeug – am Ende zählt der Business-Value für Ihr Unternehmen.</p>
+        <p itemprop="text">{{ 'FAQ.A4' | translate }}</p>
       </div>
     </details>
 
-    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle(&quot;Übernehmen Sie auch bestehende 'Chaos-Projekte'?&quot;, $event)">
-      <summary><h3 itemprop="name">Übernehmen Sie auch bestehende 'Chaos-Projekte'?</h3></summary>
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('FAQ.Q5', $event)">
+      <summary><h3 itemprop="name">{{ 'FAQ.Q5' | translate }}</h3></summary>
       <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Absolut. Eines meiner Spezialgebiete ist die 'Technical Rescue'. Wenn Ihr Projekt feststeckt, die Ladezeiten kritisch sind oder der Code historisch verwuchert ist, räume ich auf. Ich analysiere die Bottlenecks, refactore die Architektur und bringe das Projekt strukturiert über die Ziellinie.</p>
+        <p itemprop="text">{{ 'FAQ.A5' | translate }}</p>
       </div>
     </details>
 
-    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('Arbeiten Sie auch White-Label für Agenturen?', $event)">
-      <summary><h3 itemprop="name">Arbeiten Sie auch White-Label für Agenturen?</h3></summary>
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('FAQ.Q6', $event)">
+      <summary><h3 itemprop="name">{{ 'FAQ.Q6' | translate }}</h3></summary>
       <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <p itemprop="text">Ja, sehr gerne. Ich unterstütze regelmäßig Agenturen (z.B. Shopify Platinum Partner) bei Kapazitätsengpässen oder wenn besonders tiefes technisches Know-how bei komplexen Enterprise-Features gefragt ist. Ich integriere mich dabei nahtlos in Ihre bestehenden GitHub-Workflows und CI/CD-Prozesse.</p>
+        <p itemprop="text">{{ 'FAQ.A6' | translate }}</p>
       </div>
     </details>
   </div>
@@ -341,8 +336,8 @@
 
 <section class="final-cta" aria-labelledby="final-cta-title" #finalCtaRef>
   <div class="final-cta__container">
-    <h2 id="final-cta-title" class="final-cta__title">Bereit für das nächste Level Ihres Shopify-Stores?</h2>
-    <p class="final-cta__sub">Lassen Sie uns sprechen – vereinbaren Sie jetzt Ihr unverbindliches Erstgespräch.</p>
-    <a class="btn btn--primary" routerLink="/kontakt" (click)="finalCtaClick()" aria-label="Kostenloses Erstgespräch über Kontakt starten">Kostenloses Erstgespräch</a>
+    <h2 id="final-cta-title" class="final-cta__title">{{ 'FINAL_CTA.TITLE' | translate }}</h2>
+    <p class="final-cta__sub">{{ 'FINAL_CTA.SUB' | translate }}</p>
+    <a class="btn btn--primary" [routerLink]="[{ outlets: { modal: 'kontakt' } }]" [queryParams]="{ tab: 'booking' }" (click)="finalCtaClick()" [attr.aria-label]="('FINAL_CTA.ARIA' | translate)">{{ 'FINAL_CTA.BUTTON' | translate }}</a>
   </div>
 </section>

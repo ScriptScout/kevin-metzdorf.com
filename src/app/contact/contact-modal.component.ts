@@ -4,11 +4,12 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-modal',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule, TranslateModule],
   templateUrl: './contact-modal.component.html',
   styleUrls: ['./contact-modal.component.scss']
 })
@@ -16,7 +17,7 @@ export class ContactModalComponent implements OnInit, OnDestroy {
   @ViewChild('dialogRef') dialogRef?: ElementRef<HTMLElement>;
   @ViewChild('closeBtn') closeBtn?: ElementRef<HTMLButtonElement>;
 
-  activeTab: 'form' | 'booking' = 'form';
+  activeTab: 'form' | 'booking' = 'booking';
   contactForm: FormGroup;
   message = 'Senden';
   private lastFocused: HTMLElement | null = null;

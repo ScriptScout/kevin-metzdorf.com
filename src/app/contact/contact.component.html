@@ -2,72 +2,68 @@
   <div class="max-width_container">
     <div class="headline_container">
       <div class="headline">
-        <h1>Kontakt</h1>
+        <h1>{{ 'CONTACT.TITLE' | translate }}</h1>
       </div>
     </div>
     <div class="contact_container">
       <div class="contact_contant">
-        <span>Lassen Sie uns gemeinsam starten!</span>
-        <p>
-          Nutzen Sie <a href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink">
-          diesen Link, um direkt ein Erstgespräch zu buchen</a>, oder schreiben Sie mir eine Nachricht, um unsere Zusammenarbeit zu beginnen!
-          Ganz gleich, ob es um ein komplexes Refactoring, Custom-Features am Limit des nativen Shopify oder strategische Architektur-Beratung geht.<br>Ich bin gerne für Sie da und freue mich darauf, von Ihnen zu hören!
-        </p>
+        <span>{{ 'CONTACT.INTRO_HEAD' | translate }}</span>
+        <p [innerHTML]="('CONTACT.INTRO_P1' | translate)"></p>
       </div>
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="form_row">
-          <label for="supportTopic">Wie kann ich Sie unterstützen?</label>
+          <label for="supportTopic">{{ 'CONTACT.LABEL_SUPPORT' | translate }}</label>
           <select id="supportTopic" formControlName="supportTopic" required>
-            <option value="Custom UI & App-like Experiences">Custom UI & App-like Experiences</option>
-            <option value="Checkout Extensibility & Functions">Checkout Extensibility & B2B-Logiken</option>
-            <option value="Technical Rescue & Refactoring">Technical Rescue (Projekt-Rettung & Refactoring)</option>
-            <option value="Performance & Core Web Vitals">Performance-Audit & Core Web Vitals</option>
-            <option value="De-Heading (Migration to Native)">De-Heading (Migration von Headless auf Nativ)</option>
-            <option value="Ongoing Collaboration (Agency / Brand)">Laufende Zusammenarbeit (Agentur / Brand)</option>
+            <option value="Custom UI & App-like Experiences">{{ 'CONTACT.OPT.CUSTOM_UI' | translate }}</option>
+            <option value="Checkout Extensibility & Functions">{{ 'CONTACT.OPT.CHECKOUT' | translate }}</option>
+            <option value="Technical Rescue & Refactoring">{{ 'CONTACT.OPT.RESCUE' | translate }}</option>
+            <option value="Performance & Core Web Vitals">{{ 'CONTACT.OPT.PERFORMANCE' | translate }}</option>
+            <option value="De-Heading (Migration to Native)">{{ 'CONTACT.OPT.DEHEADING' | translate }}</option>
+            <option value="Ongoing Collaboration (Agency / Brand)">{{ 'CONTACT.OPT.ONGOING' | translate }}</option>
           </select>
         </div>
         <div class="form_row">
-          <label for="projectDescription">Kurze Beschreibung des Projekts oder der Herausforderung</label>
-          <textarea id="projectDescription" formControlName="projectDescription" required placeholder="z. B. komplexe B2B-Rabattlogik, individuelle Checkout-Anpassungen, Migration von Headless zu Nativ, Agenturprojekt mit knapper Deadline…"></textarea>
+          <label for="projectDescription">{{ 'CONTACT.LABEL_DESC' | translate }}</label>
+          <textarea id="projectDescription" formControlName="projectDescription" required [attr.placeholder]="('CONTACT.PH_DESC' | translate)"></textarea>
         </div>
         <div class="form_row">
-          <label for="projectStatus">Aktueller Status</label>
+          <label for="projectStatus">{{ 'CONTACT.LABEL_STATUS' | translate }}</label>
           <select id="projectStatus" formControlName="projectStatus">
-            <option value="New Store / Concept Phase">Neuer Store / Konzeptphase</option>
-            <option value="Existing Store">Bestehender Store</option>
-            <option value="Project in Development">Projekt in der Entwicklung</option>
-            <option value="Struggling Project / Handover">Projekt in Schieflage / Übergabe</option>
+            <option value="New Store / Concept Phase">{{ 'CONTACT.STATUS.NEW' | translate }}</option>
+            <option value="Existing Store">{{ 'CONTACT.STATUS.EXISTING' | translate }}</option>
+            <option value="Project in Development">{{ 'CONTACT.STATUS.DEV' | translate }}</option>
+            <option value="Struggling Project / Handover">{{ 'CONTACT.STATUS.STRUGGLING' | translate }}</option>
           </select>
         </div>
         <div class="form_row">
-          <label for="timeframe">Zeitrahmen</label>
+          <label for="timeframe">{{ 'CONTACT.LABEL_TIME' | translate }}</label>
           <select id="timeframe" formControlName="timeframe">
-            <option value="Short-term (0–2 weeks)">Kurzfristig (0–2 Wochen)</option>
-            <option value="Medium-term (2–6 weeks)">Mittelfristig (2–6 Wochen)</option>
-            <option value="Long-term / Ongoing">Langfristig / Fortlaufend</option>
-            <option value="To be defined">Noch offen</option>
+            <option value="Short-term (0–2 weeks)">{{ 'CONTACT.TIME.SHORT' | translate }}</option>
+            <option value="Medium-term (2–6 weeks)">{{ 'CONTACT.TIME.MEDIUM' | translate }}</option>
+            <option value="Long-term / Ongoing">{{ 'CONTACT.TIME.LONG' | translate }}</option>
+            <option value="To be defined">{{ 'CONTACT.TIME.TBD' | translate }}</option>
           </select>
         </div>
         <div class="form_row">
-          <label for="name">Name</label>
+          <label for="name">{{ 'CONTACT.LABEL_NAME' | translate }}</label>
           <input id="name" type="text" formControlName="name" required>
         </div>
         <div class="form_row">
-          <label for="email">E-Mail</label>
+          <label for="email">{{ 'CONTACT.LABEL_EMAIL' | translate }}</label>
           <input id="email" type="email" formControlName="email" required>
         </div>
         <div class="form_row">
-          <label for="company">Unternehmen / Agentur (optional)</label>
+          <label for="company">{{ 'CONTACT.LABEL_COMPANY' | translate }}</label>
           <input id="company" type="text" formControlName="company">
         </div>
         <div class="form_row checkbox_row">
           <label for="privacy" class="checkbox_label">
             <input id="privacy" type="checkbox" formControlName="privacy" required>
-            <span> Ich habe die <a routerLink="/privacy-policy">Datenschutzerklärung</a> gelesen und zur Kenntnis genommen.</span>
+            <span [innerHTML]="('CONTACT.LABEL_PRIVACY' | translate)"></span>
           </label>
         </div>
         <div class="btn_box">
-          <button class="btn btn--primary" type="submit">{{ message }}</button>
+          <button class="btn btn--primary" type="submit">{{ 'CONTACT.SEND' | translate }}</button>
         </div>
       </form>
     </div>

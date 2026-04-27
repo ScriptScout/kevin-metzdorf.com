@@ -1,10 +1,10 @@
-<div class="sticky-cta" [class.is-visible]="visible" role="region" aria-label="Schnellzugriff: Kostenloses Erstgespräch">
+<div class="sticky-cta" [class.is-visible]="visible" role="region" [attr.aria-label]="('STICKY.ARIA' | translate)">
   <div class="sticky-cta__inner">
-    <a class="sticky-cta__button" [routerLink]="[{ outlets: { modal: 'kontakt' } }]" [queryParams]="{ tab: 'booking' }" (click)="onClick()" aria-label="Zum Kontakt – Kostenloses Erstgespräch">
+    <a class="sticky-cta__button" [routerLink]="[{ outlets: { modal: 'kontakt' } }]" [queryParams]="{ tab: 'booking' }" (click)="onClick()" [attr.aria-label]="('STICKY.ARIA' | translate)">
       <svg class="sticky-cta__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <path fill="currentColor" d="M7 2h10a2 2 0 0 1 2 2v3H5V4a2 2 0 0 1 2-2zm12 7H5v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9zM7 0a1 1 0 0 1 1 1v2H6V1a1 1 0 0 1 1-1zm10 0a1 1 0 0 1 1 1v2h-2V1a1 1 0 0 1 1-1z"/>
       </svg>
-      <span class="sticky-cta__label">Kostenloses Erstgespräch</span>
+      <span class="sticky-cta__label">{{ 'STICKY.LABEL' | translate }}</span>
     </a>
   </div>
 </div>
