@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
 import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
+import { LanguageService } from '../language.service';
 
 @Component({
     selector: 'app-home',
@@ -38,7 +39,10 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   private faqLogged = false;
   private finalCtaLogged = false;
 
-  constructor(private analytics: AngularFireAnalytics) {}
+  // Expanded state per testimonial (index-based)
+  expandedTestimonials: boolean[] = [false, false, false];
+
+  constructor(private analytics: AngularFireAnalytics, public langService: LanguageService) {}
 
   ngAfterViewInit(): void {
     if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') return;
@@ -295,6 +299,16 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     this.analytics.logEvent('final_cta_click', {
       event_category: 'engagement',
       location: 'home_final_cta'
+    });
+  }
+
+  toggleTestimonial(index: number): void {
+    this.expandedTestimonials[index] = !this.expandedTestimonials[index];
+    this.analytics.logEvent('testimonial_toggle', {
+      event_category: 'engagement',
+      index,
+      state: this.expandedTestimonials[index] ? 'expand' : 'collapse',
+      location: 'home_testimonials'
     });
   }
 }

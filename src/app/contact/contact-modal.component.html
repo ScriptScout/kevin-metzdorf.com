@@ -1,0 +1,41 @@
+<div
+  class="modal_backdrop"
+  #dialogRef
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="contactModalTitle"
+  (mousedown)="onBackdropClick($event.target)"
+>
+  <div class="modal_dialog" role="document">
+    <header class="modal_header">
+      <h2 id="contactModalTitle" class="modal_title">{{ 'MODAL.TITLE' | translate }}</h2>
+      <button #closeBtn class="modal_close" (click)="close()" [attr.aria-label]="('MODAL.CLOSE' | translate)">✕</button>
+    </header>
+
+
+    <!--
+    Temporär deaktiviertes Formular (wird später wieder aktiviert).
+    Bitte hier nichts löschen – nur auskommentiert, damit das Pop‑Up aktuell ausschließlich Bookings zeigt.
+    <section id="tab-form" class="tab_panel" [hidden]="activeTab!=='form'" role="tabpanel">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact_form">
+        ...
+      </form>
+    </section>
+    -->
+
+    <section id="tab-booking" class="tab_panel" role="tabpanel">
+      <div class="booking_embed">
+        <iframe
+          [attr.title]="('MODAL.IFRAME_TITLE' | translate)"
+          [src]="safeBookingUrl"
+          width="100%"
+          height="640"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <p class="helper_text">{{ 'MODAL.HELP' | translate }}</p>
+    </section>
+
+  </div>
+</div>

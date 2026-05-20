@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
 import { filter, Subscription } from 'rxjs';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sticky-cta',
   templateUrl: './sticky-cta.component.html',
   styleUrls: ['./sticky-cta.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule]
+  imports: [CommonModule, RouterModule, TranslateModule]
 })
 export class StickyCtaComponent implements OnInit, OnDestroy {
   visible = false;
@@ -54,9 +55,10 @@ export class StickyCtaComponent implements OnInit, OnDestroy {
   }
 
   private updateVisibility(): void {
-    // Hide on contact route
+    // Hide on contact route or when modal outlet is open
     const onContact = this.currentUrl.includes('/kontakt') || this.currentUrl.includes('/contact');
-    if (onContact) {
+    const modalOpen = this.currentUrl.includes('(modal:');
+    if (onContact || modalOpen) {
       this.visible = false;
       return;
     }

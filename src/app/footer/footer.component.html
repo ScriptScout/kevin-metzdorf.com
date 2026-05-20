@@ -3,7 +3,7 @@
     <div class="logo_imprint_box">
       <div class="info-box" aria-label="Footer Navigation">
         <a class="hover_underline_animation" routerLink="/blog">{{ 'NAV.BLOG' | translate }}</a>
-        <a class="hover_underline_animation" routerLink="/kontakt">{{ 'NAV.CONTACT' | translate }}</a>
+        <a class="hover_underline_animation" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener">{{ 'NAV.CONTACT' | translate }}</a>
         <a class="hover_underline_animation" routerLink="/work">{{ 'NAV.WORK' | translate }}</a>
         <a class="hover_underline_animation" routerLink="/imprint">{{ 'FOOTER.IMPRINT' | translate }}</a>
         <a class="hover_underline_animation" routerLink="/privacy-policy">{{ 'FOOTER.PRIVACY' | translate }}</a>
@@ -11,12 +11,12 @@
         <a class="hover_underline_animation" routerLink="/terms-and-conditions">{{ 'FOOTER.TERMS' | translate }}</a>
       </div>
     </div>
-    <span>© Kevin Metzdorf Ltd 2026</span>
+    <span>© Kevin Metzdorf 2026</span>
     <div class="social_icons_container">
-      <a class="link_hover" href="https://github.com/kevin-metzdorf" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile of Kevin Metzdorf in a new tab"><img
+      <a class="link_hover" href="https://github.com/kevin-metzdorf" target="_blank" rel="noopener noreferrer" [attr.aria-label]="('FOOTER.ARIA.GITHUB' | translate)"><img
         src="assets/img/github.png" alt="GitHub Logo"></a>
-      <a class="link_hover" href="https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink" aria-label="Send an email to Kevin Metzdorf"><img src="assets/img/email.png" alt="E-Mail Logo"></a>
-      <a class="link_hover" href="https://www.linkedin.com/in/kevin-metzdorf-581895263/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile of Kevin Metzdorf in a new tab"><img
+      <a class="link_hover" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" [attr.aria-label]="('FOOTER.ARIA.EMAIL' | translate)"><img src="assets/img/email.png" alt="E-Mail Logo"></a>
+      <a class="link_hover" href="https://www.linkedin.com/in/kevin-metzdorf-581895263/" target="_blank" rel="noopener noreferrer" [attr.aria-label]="('FOOTER.ARIA.LINKEDIN' | translate)"><img
         src="assets/img/linkedin.png" alt="LinkedIn Logo"></a>
     </div>
   </div>

@@ -4,15 +4,15 @@
 
     </nav>
 
-    <a class="logo_link" [routerLink]="'/'" [fragment]="'home'" aria-label="Zur Startseite">
-      <img class="logo" src="assets/img/logo_website.png" alt="Kevin Metzdorf Ltd Logo">
+    <a class="logo_link" [routerLink]="'/'" [fragment]="'home'" [attr.aria-label]="('HEADER.ARIA_HOME' | translate)">
+      <img class="logo" src="assets/img/logo_website.png" alt="Kevin Metzdorf Logo">
     </a>
 
     <div class="nav_bar_desktop nav_right">
       <a class="nav_link hover_underline_animation" routerLink="/blog" routerLinkActive="active_link">{{ 'NAV.BLOG' | translate }}</a>
-      <a class="nav_link hover_underline_animation" routerLink="/kontakt" routerLinkActive="active_link">{{ 'NAV.CONTACT' | translate }}</a>
-      <a class="btn btn--primary nav_cta" routerLink="/kontakt" aria-label="Jetzt Termin buchen">Jetzt Termin buchen</a>
-      <button class="lang_switcher" (click)="langService.toggle()" [attr.aria-label]="'Sprache wechseln'">
+      <a class="nav_link hover_underline_animation" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener">{{ 'NAV.CONTACT' | translate }}</a>
+      <a class="btn btn--primary nav_cta" [routerLink]="[{ outlets: { modal: 'kontakt' } }]" [queryParams]="{ tab: 'booking' }" [attr.aria-label]="('HEADER.ARIA_BOOK' | translate)">{{ 'HEADER.BOOK_NOW' | translate }}</a>
+      <button class="lang_switcher" (click)="langService.toggle()" [attr.aria-label]="('SHARED.LANG_TOGGLE' | translate)">
         <span [class.active]="langService.currentLang === 'de'">DE</span>
         <span class="lang_divider">|</span>
         <span [class.active]="langService.currentLang === 'en'">EN</span>
@@ -20,7 +20,7 @@
     </div>
 
     <div class="header_right_mobile">
-      <button class="lang_switcher lang_switcher--mobile" (click)="langService.toggle()" [attr.aria-label]="'Sprache wechseln'">
+      <button class="lang_switcher lang_switcher--mobile" (click)="langService.toggle()" [attr.aria-label]="('SHARED.LANG_TOGGLE' | translate)">
         <span [class.active]="langService.currentLang === 'de'">DE</span>
         <span class="lang_divider">|</span>
         <span [class.active]="langService.currentLang === 'en'">EN</span>

@@ -4,11 +4,14 @@ import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { WorkCaseItem, WorkService } from '../work.service';
 import { SeoService } from '../../seo.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LanguageService } from '../../language.service';
+import { Subject, switchMap, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-work-detail',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslateModule],
   templateUrl: './work-detail.component.html',
   styleUrls: ['./work-detail.component.scss']
 })
@@ -18,32 +21,37 @@ export class WorkDetailComponent implements OnInit, OnDestroy {
   @ViewChild('headerRef') headerRef?: ElementRef<HTMLElement>;
   private headerObserver?: IntersectionObserver;
   private jsonLdEl?: HTMLScriptElement;
+  private destroy$ = new Subject<void>();
 
   constructor(
     private route: ActivatedRoute,
     private work: WorkService,
     private seo: SeoService,
     private analytics: AngularFireAnalytics,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    private langService: LanguageService,
+    private translate: TranslateService
   ) {}
 
   ngOnInit(): void {
-    const slug = this.route.snapshot.paramMap.get('slug') || '';
-    this.work.getBySlug(slug).subscribe(item => {
+    this.langService.lang$.pipe(
+      takeUntil(this.destroy$),
+      switchMap(() => {
+        const slug = this.route.snapshot.paramMap.get('slug') || '';
+        return this.work.getBySlug(slug);
+      })
+    ).subscribe(item => {
       if (!item) {
         this.notFound = true;
-        this.seo.update({
-          title: 'Fallstudie nicht gefunden | Arbeiten | Kevin Metzdorf',
-          description: 'Diese Fallstudie existiert nicht (mehr).',
-          canonical: `https://kevin-metzdorf.com/work/${slug}`
-        });
+        this.updateSeoForNotFound();
         return;
       }
 
       this.data = item;
+      this.notFound = false;
       this.seo.update({
         title: `${item.title} | Arbeiten | Kevin Metzdorf`,
-        description: item.summary || 'Fallstudie – Platzhalter',
+        description: item.summary || 'Fallstudie – Kevin Metzdorf',
         canonical: `https://kevin-metzdorf.com/work/${item.slug}`
       });
       this.injectBreadcrumbJsonLd(item);
@@ -52,8 +60,21 @@ export class WorkDetailComponent implements OnInit, OnDestroy {
     });
   }
 
+  private updateSeoForNotFound(): void {
+    const slug = this.route.snapshot.paramMap.get('slug') || '';
+    this.translate.get(['WORK.NOT_FOUND', 'WORK.NOT_FOUND_DESC']).subscribe(t => {
+      this.seo.update({
+        title: `${t['WORK.NOT_FOUND'] || 'Not found'} | Arbeiten | Kevin Metzdorf`,
+        description: t['WORK.NOT_FOUND_DESC'] || 'This case study does not exist.',
+        canonical: `https://kevin-metzdorf.com/work/${slug}`
+      });
+    });
+  }
+
   ngOnDestroy(): void {
     this.headerObserver?.disconnect();
+    this.destroy$.next();
+    this.destroy$.complete();
     if (this.jsonLdEl) {
       this.document.head.removeChild(this.jsonLdEl);
     }
@@ -79,6 +100,9 @@ export class WorkDetailComponent implements OnInit, OnDestroy {
   }
 
   private injectBreadcrumbJsonLd(item: WorkCaseItem): void {
+    if (this.jsonLdEl) {
+      this.document.head.removeChild(this.jsonLdEl);
+    }
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -86,13 +110,13 @@ export class WorkDetailComponent implements OnInit, OnDestroy {
         {
           '@type': 'ListItem',
           'position': 1,
-          'name': 'Startseite',
+          'name': this.langService.currentLang === 'de' ? 'Startseite' : 'Home',
           'item': 'https://kevin-metzdorf.com/'
         },
         {
           '@type': 'ListItem',
           'position': 2,
-          'name': 'Arbeiten',
+          'name': this.langService.currentLang === 'de' ? 'Arbeiten' : 'Work',
           'item': 'https://kevin-metzdorf.com/work'
         },
         {

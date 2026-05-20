@@ -1,0 +1,147 @@
+[
+  {
+    "slug": "enterprise-transformation",
+    "title": "Mast-Jägermeister SE – Enterprise Transformation",
+    "summary": "Technical collaboration on an international Shopify Enterprise project with a focus on migrating a complex headless/Contentful setup back to a native, maintainable Shopify theme. Additionally, support in the development of a custom Shopify app for automated content sync between the master shop and international country shops.",
+    "kpis": [
+      "Shopify Plus",
+      "Theme Architecture",
+      "Custom Shopify App",
+      "Contentful Migration",
+      "CI/CD & Git Workflows"
+    ],
+    "industry": "Beverage",
+    "region": "Global",
+    "heroImage": "assets/img/project_img/JM.png",
+    "sections": [
+      {
+        "type": "context",
+        "text": "The existing Shopify setup was based on a complex headless architecture with Contentful integration and international commerce structures. The goal was to technically simplify the system landscape and return to a high-performance and long-term maintainable native Shopify theme within an international enterprise environment."
+      },
+      {
+        "type": "approach",
+        "text": "Collaborated on the conception and implementation of scalable Shopify theme structures using Liquid, JavaScript/TypeScript, and Shopify APIs. Supported the development of a custom Shopify app for automated content sync between the master shop and country shops. Additionally, provided technical evaluation and implementation of complex features such as interactive storefront elements, label/engraving editors, and integrations of external systems like SAP and Salesforce."
+      },
+      {
+        "type": "results",
+        "text": "Creation of a maintainable, high-performance, and scalable Shopify architecture with professional CI/CD workflows, a clean deployment structure, and optimized international content processes. Improved technical maintainability and a stable foundation for the long-term further development of the global Shopify ecosystem."
+      }
+    ]
+  },
+  {
+    "slug": "multi-store-setup",
+    "title": "Dekoback GmbH – Multi-Store Setup & technical development",
+    "summary": "Long-term technical support and further development of a grown Shopify multi-store setup with several Shopify stores and complementary WordPress structures. Focus on theme development, performance optimization, tracking integrations, and technical stabilization of existing systems.",
+    "kpis": [
+      "Multi-Store Setup",
+      "Theme Development",
+      "Performance Optimization",
+      "GA4 & Klaviyo",
+      "TypeScript"
+    ],
+    "industry": "Food",
+    "region": "DE",
+    "heroImage": "assets/img/project_img/decocino-logo.png",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Supporting an extensive multi-store setup with several Shopify stores and complementary WordPress structures in the food commerce environment. The existing infrastructure required continuous technical development, performance optimization, and stable processes for content, tracking, and shop management."
+      },
+      {
+        "type": "approach",
+        "text": "Development and adjustment of individual Shopify theme functions with Liquid, HTML, CSS, and TypeScript/JavaScript. Implementation of new sections, landing pages, and conversion-oriented shop adjustments. Integration and configuration of external systems like GA4, GTM, Klaviyo, and GitHub, as well as technical quality assurance, debugging, and performance optimization of existing theme structures."
+      },
+      {
+        "type": "results",
+        "text": "Stable and scalable multi-store infrastructure with improved loading times, optimized Core Web Vitals, and more efficient technical processes. Long-term technical support ensured a reliable further development of the existing commerce and content landscape."
+      }
+    ]
+  },
+  {
+    "slug": "checkout-fix",
+    "title": "Overkill Shop – Technical Checkout Rescue",
+    "summary": "Analysis and stabilization of business-critical checkout and payment processes within a high-traffic Shopify store. Focus on technical error analysis, stability during peak traffic, and optimization of conversion-relevant storefront processes.",
+    "kpis": [
+      "Checkout Stabilization",
+      "Technical Debugging",
+      "Performance Optimization",
+      "High Traffic Handling",
+      "Conversion Optimization"
+    ],
+    "industry": "Fashion",
+    "region": "DE",
+    "heroImage": "assets/img/project_img/overkill-sneakershop-logo.svg",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Within a heavily frequented Shopify store, technical problems occurred in the checkout and payment process, especially during high traffic spikes during exclusive product releases. The goal was the technical stabilization of critical purchase processes and ensuring a reliable user experience."
+      },
+      {
+        "type": "approach",
+        "text": "Analysis of existing Shopify theme and storefront processes as well as identification of technical error sources within checkout-relevant workflows. Optimization of technical structures, stabilization of payment and frontend logic, and improvement of UX-relevant user flows within the purchase process."
+      },
+      {
+        "type": "results",
+        "text": "Improved stability and reliability of the checkout process even under high load. Reduction of technical errors and stabilization of conversion-critical shop areas to ensure a reliable ordering process with high visitor numbers."
+      }
+    ]
+  },
+  {
+    "slug": "einfach-backen-storefront",
+    "title": "Einfach Backen – Custom Shopify Storefront",
+    "summary": "Frontend development of an individual Shopify webshop in the food commerce and publishing environment. Implementation of responsive and performant storefront components based on existing design specifications as well as integration of external systems and APIs.",
+    "kpis": [
+      "Custom Theme Development",
+      "Responsive Web Design",
+      "API Integration",
+      "Performance Optimization",
+      "Liquid & JavaScript"
+    ],
+    "industry": "Food & Publishing",
+    "region": "DE",
+    "heroImage": "assets/img/project_img/einfach-backen.webp",
+    "sections": [
+      {
+        "type": "context",
+        "text": "For the Shopify shop 'Einfach Backen', a custom and brand-consistent storefront was to be developed in the food commerce environment. In addition to responsive frontend development, the focus was on stable technical integrations and a high-performance user experience."
+      },
+      {
+        "type": "approach",
+        "text": "Implementation of pixel-perfect layouts and Shopify templates based on existing Figma designs with Liquid, HTML, CSS, and JavaScript. Development and expansion of individual sections, theme components, and responsive frontend elements. Integration of external payment, shipping, and tracking systems as well as technical quality assurance and performance optimization."
+      },
+      {
+        "type": "results",
+        "text": "High-performance and responsive Shopify storefront with stable integrations and a clean technical basis for live operation. Improved user guidance and brand-consistent presentation within a high-reach publishing and commerce environment."
+      }
+    ]
+  },
+  {
+    "slug": "enterprise-frontend-development",
+    "title": "Latori GmbH – Enterprise Shopify Frontend Development",
+    "summary": "Development of demanding Shopify frontend features for enterprise and premium customer projects within professional Shopify partner structures. Focus on high-performance storefront development, reusable theme components, and clean GitHub workflows.",
+    "kpis": [
+      "Enterprise Shopify",
+      "PDP & PLP Development",
+      "Theme Components",
+      "TypeScript",
+      "GitHub Workflows"
+    ],
+    "industry": "Retail & Consumer Brands",
+    "region": "DACH",
+    "heroImage": "assets/img/project_img/latori_logo.png",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Implementation of complex Shopify frontend functionalities for enterprise and premium brand projects within a Shopify Plus agency environment. The projects required high-performance frontend structures, clean development processes, and high technical quality standards."
+      },
+      {
+        "type": "approach",
+        "text": "Development of high-performance storefront components such as PDPs, PLPs, cart drawers, and account areas based on pixel-perfect Figma designs. Implementation of reusable theme sections and custom features with Liquid, JavaScript/TypeScript, HTML, and CSS. Working in professional GitHub workflows with feature branches, code reviews, and controlled deployments."
+      },
+      {
+        "type": "results",
+        "text": "Scalable and maintainable frontend architectures for high-traffic Shopify projects with optimized performance, stable development processes, and clearly structured theme components for long-term further development."
+      }
+    ]
+  }
+]

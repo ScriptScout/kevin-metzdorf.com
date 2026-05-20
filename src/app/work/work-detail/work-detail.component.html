@@ -26,8 +26,8 @@
     </div>
 
     <div class="work-detail__cta">
-      <a class="btn btn--primary" routerLink="/kontakt" aria-label="Kostenloses Erstgespräch">Kostenloses Erstgespräch</a>
-    </div>
+      <a class="btn btn--primary" [routerLink]="[{ outlets: { modal: 'kontakt' } }]" [queryParams]="{ tab: 'booking' }" aria-label="Kostenloses Erstgespräch">Kostenloses Erstgespräch</a>
+      </div>
   </div>
 
   <ng-template #notFoundTpl>
