@@ -16,89 +16,89 @@
     }
   },
   "HEADER": {
-    "BOOK_NOW": "Jetzt Termin buchen",
+    "BOOK_NOW": "Projekt besprechen",
     "ARIA_HOME": "Zur Startseite",
-    "ARIA_BOOK": "Jetzt Termin buchen"
+    "ARIA_BOOK": "Projekt besprechen"
   },
   "HERO": {
-    "TITLE": "Shopify am Limit. Ohne Headless‑Overhead.",
-    "SUB": "Ich entwickle Custom‑Features, komplexe Logiken und App‑like Frontends direkt im nativen Shopify. Für E‑Commerce‑Erlebnisse, bei denen andere sagen: „Das geht nur Headless.“",
-    "PRIMARY_CTA": "Kostenloses Erstgespräch",
-    "SECONDARY_CTA": "Case Studies ansehen",
+    "TITLE": "Shopify am Limit. Aber ohne Headless-Kopfschmerzen.",
+    "SUB": "Du willst Custom-Features, komplexe B2B-Logiken und rasante Performance – aber keinen aufgeblähten Tech-Stack? Ich baue dir Enterprise-Erlebnisse direkt ins native Shopify. Code, der skaliert, ganz entspannt umgesetzt.",
+    "PRIMARY_CTA": "Kaffee & Code (Virtuell)",
+    "SECONDARY_CTA": "Meine Case Studies",
     "KPI_ARIA": "Ergebnisse in Zahlen",
     "KPI_NATIVE": "Native Performance",
-    "KPI_NO_API": "Keine API‑Abhängigkeit",
-    "KPI_APPS": "App‑Ökosystem bleibt",
+    "KPI_NO_API": "Kein App-Chaos",
+    "KPI_APPS": "Sauberer Code",
     "IMG_ALT": "Kevin Metzdorf – Senior Shopify Developer"
   },
   "TRUST": {
-    "SECTION_ARIA": "Vertrauen & Partnerschaften",
-    "TITLE": "Vertrauen",
-    "SUB": "Ausgewählte Marken & Partner",
-    "LOGOS_ARIA": "Markenlogos"
+    "SECTION_ARIA": "Vertrauen und Partner-Referenzen",
+    "TITLE": "Trusted by Brands.",
+    "SUB": "Gebucht von Top-Agenturen.",
+    "LOGOS_ARIA": "Logos von Mast-Jägermeister, Latori GmbH, ooia und Heskamp Medien"
   },
   "SERVICES": {
-    "TITLE": "Leistungen",
-    "SUB": "Maximale Custom‑Entwicklung – zu 100 % im Shopify‑Standard verankert.",
-    "REQUEST": "Anfragen",
+    "TITLE": "Das kann ich für dich tun.",
+    "SUB": "Maximale Custom‑Entwicklung – zu 100 % im Shopify‑Standard verankert. Ohne Kopfschmerzen.",
+    "REQUEST": "Projekt anfragen",
     "CARDS": {
       "CUSTOM_UI": {
         "TITLE": "Custom UI & App-like Experiences",
-        "TEXT": "Interaktive Produkt‑Konfiguratoren, dynamische Quizzes und komplexe UI‑Komponenten (Vanilla JS/TS) – direkt ins Theme integriert.",
-        "ARIA": "Leistung anfragen: Custom UI"
+        "TEXT": "Du willst interaktive Produkt‑Konfiguratoren, dynamische Quizzes oder komplexe UI‑Elemente (Vanilla JS/TS)? Ich baue sie dir direkt ins Theme. Flüssig zu bedienen und pixelgenau nach deiner Figma-Vorlage.",
+        "ARIA": "Leistung anfragen: Custom UI & App-like Experiences"
       },
       "CHECKOUT": {
-        "TITLE": "Checkout Extensibility",
-        "TEXT": "Maßgeschneiderte Checkout‑Flows, B2B‑Logiken und Upsells über Shopify Functions und UI Extensions – stabil und update‑sicher.",
+        "TITLE": "Checkout Extensibility & B2B",
+        "TEXT": "Schluss mit starren Prozessen. Ich entwickle maßgeschneiderte Checkout‑Flows, komplexe B2B‑Logiken und smarte Upsells über Shopify Functions und UI Extensions – absolut stabil, performant und update‑sicher.",
         "ARIA": "Leistung anfragen: Checkout Extensibility"
       },
       "METAOBJECTS": {
         "TITLE": "Metaobjects & Datenarchitektur",
-        "TEXT": "Aufbau hochkomplexer Datenmodelle im Shop. Perfekt für Brand‑Pages, komplexe Filter oder B2B‑Anforderungen ohne externe PIM‑Systeme.",
-        "ARIA": "Leistung anfragen: Metaobjects"
+        "TEXT": "Schluss mit dem Chaos im Backend. Ich konzipiere und baue hochkomplexe Datenmodelle über Metafields und Metaobjects. Perfekt für strukturierte Brand‑Pages, clevere Filter oder B2B‑Kataloge ohne teure, externe PIM‑Systeme.",
+        "ARIA": "Leistung anfragen: Metaobjects & Datenarchitektur"
       },
       "RESCUE": {
         "TITLE": "Technical Rescue (Plus/Enterprise)",
-        "TEXT": "Wenn das Projekt feststeckt: Code‑Refactoring, Beseitigung historischer Schulden und Performance‑Rettung für hochfrequentierte Stores.",
+        "TEXT": "Das Projekt steckt fest oder der vorherige Entwickler ist abgetaucht? Keine Panik. Ich steige tief in den Code ein, räume historische Schulden auf, refactore die Architektur und rette die Performance deines hochfrequentierten Stores.",
         "ARIA": "Leistung anfragen: Technical Rescue"
       },
       "PERFORMANCE": {
         "TITLE": "Liquid/JS Performance Mastery",
-        "TEXT": "Core Web Vitals am Limit. Konsequentes Aufräumen von App‑Leichen, sauberes Lazy‑Loading und rasante Ladezeiten ohne Vercel & Co.",
-        "ARIA": "Leistung anfragen: Performance"
+        "TEXT": "Core Web Vitals am Limit. Ich jage deine Ladezeiten nach unten, indem ich App‑Leichen konsequent kille, sauberes Lazy‑Loading aufsetze und das Frontend optimiere. Rasante Geschwindigkeit ganz ohne den Overhead von Vercel & Co.",
+        "ARIA": "Leistung anfragen: Performance Mastery"
       },
       "DEHEADING": {
-        "TITLE": "De-Heading (Migration to Native)",
-        "TEXT": "Ihr Headless‑Setup frisst Budgets? Ich migriere komplexe Frontends zurück in ein rasantes, leicht wartbares Shopify OS 2.0 Theme.",
+        "TITLE": "De-Heading (Zurück zum Standard)",
+        "TEXT": "Dein Headless‑Setup frisst mehr Budget als es einbringt? Ich hole dich da raus. Ich migriere komplexe Frontends und Headless-Strukturen zurück in ein rasantes, extrem leicht wartbares, natives Shopify OS 2.0 Theme.",
         "ARIA": "Leistung anfragen: De‑Heading"
       }
     }
   },
   "OUTCOMES": {
-    "TITLE": "Ergebnisse, die zählen",
-    "SUB": "Konkrete Verbesserungen durch sauberes Shopify‑Engineering.",
-    "REQUEST": "Anfragen",
+    "TITLE": "Engineering, das sich auszahlt.",
+    "SUB": "Keine fiktiven Traumzahlen, sondern messbare Qualität für dein E-Commerce-Business.",
+    "REQUEST": "Projekt anfragen",
     "CARDS": {
       "SPEED": {
-        "TITLE": "Geschwindigkeit",
-        "TEXT": "Schnellere Ladezeiten und stabile Core Web Vitals.",
-        "KPI1": "−38% LCP",
-        "KPI2": "CLS < 0.05",
-        "ARIA": "Ergebnis anfragen: Geschwindigkeit"
+        "TITLE": "Performance-Optimierung nach Core Web Vitals",
+        "TEXT": "Träge Shops verlieren Kunden. Ich analysiere dein Setup mit Lighthouse, kille App-Leichen und optimiere dein Liquid-Frontend für maximale Ladezeiten[cite: 238, 342]. Das freut deine Conversion-Rate und den Google-Bot.",
+        "KPI1": "Lighthouse Audit",
+        "KPI2": "Green Score Focus",
+        "ARIA": "Ergebnis anfragen: Performance & Core Web Vitals"
       },
-      "CONVERSION": {
-        "TITLE": "Conversion",
-        "TEXT": "Optimierte UX und Checkout‑Erlebnisse für mehr Umsatz.",
-        "KPI1": "+18% CR",
-        "KPI2": "+12% AOV",
-        "ARIA": "Ergebnis anfragen: Conversion"
+      "AUTOMATION": {
+        "TITLE": "Automatisierte Daten- & ERP-Prozesse",
+        "TEXT": "Schluss mit manuellem Daten-Chaos. Ich entwickle automatisierte Workflows für deinen Produktimport, synchronisiere Lagerbestände [cite: 258] und binde ERP-Systeme wie Xentral nahtlos an deinen Shopify-Store an[cite: 206].",
+        "KPI1": "Fehlerfreie Syncs",
+        "KPI2": "ERP & CSV Workflows",
+        "ARIA": "Ergebnis anfragen: Prozess-Automatisierung & ERP"
       },
       "SCALABILITY": {
-        "TITLE": "Skalierbarkeit",
-        "TEXT": "Robuste Architektur und wartbarer Code für Wachstum.",
-        "KPI1": "Zero‑Downtime Deploys",
-        "KPI2": "Saubere Code‑Basis",
-        "ARIA": "Ergebnis anfragen: Skalierbarkeit"
+        "TITLE": "Sicherer Code durch Agentur-Standards",
+        "TEXT": "Deine Infrastruktur wächst mit dir. Ich arbeite ausschließlich mit professionellen GitHub-Workflows, CI/CD-Pipelines und Feature-Branches. Das bedeutet für dich: Updates und neue Features ohne Live-Ausfälle.",
+        "KPI1": "Git & CI/CD Workflows",
+        "KPI2": "Zero-Downtime Focus",
+        "ARIA": "Ergebnis anfragen: Skalierbarkeit & Git-Infrastruktur"
       }
     }
   },
@@ -108,14 +108,14 @@
     "BUTTON": "Fallstudie lesen"
   },
   "FINAL_CTA": {
-    "TITLE": "Bereit für das nächste Level Ihres Shopify‑Stores?",
-    "SUB": "Lassen Sie uns sprechen – vereinbaren Sie jetzt Ihr unverbindliches Erstgespräch.",
-    "BUTTON": "Kostenloses Erstgespräch",
-    "ARIA": "Kostenloses Erstgespräch über Kontakt starten"
+    "TITLE": "Bereit, dein Shopify-Setup auf ein neues Level zu bringen?",
+    "SUB": "Lass uns ganz unverbindlich über dein Projekt quatschen und schauen, wie wir deinen Store technisch wasserdicht aufstellen.",
+    "BUTTON": "Projekt besprechen",
+    "ARIA": "Unverbindliches Gespräch über dein Shopify-Projekt anfragen"
   },
   "STICKY": {
-    "LABEL": "Kostenloses Erstgespräch",
-    "ARIA": "Zum Kontakt – Kostenloses Erstgespräch"
+    "LABEL": "Projekt besprechen",
+    "ARIA": "Zum Kontaktbereich – Shopify-Projekt besprechen"
   },
   "CONTACT": {
     "TITLE": "Kontakt",
@@ -172,45 +172,52 @@
     "LANG_TOGGLE": "Sprache wechseln"
   },
   "PROCESS": {
-    "TITLE": "Ablauf: Transparent und zielgerichtet",
-    "SUB": "So arbeiten wir zusammen – klar strukturiert von der Analyse bis zum Erfolg.",
+    "TITLE": "So läuft die Zusammenarbeit",
+    "SUB": "Kein Chaos, kein Rätselraten – sondern ein strukturierter Tech-Workflow von der Analyse bis zum stabilen Live-Betrieb.",
     "STEPS": {
-      "DISCOVER": { "TITLE": "Discover", "TEXT": "Kurz‑Audit & Scope. Ziele, Risiken und Quick‑Wins identifizieren." },
-      "PLAN": { "TITLE": "Plan", "TEXT": "Backlog & Roadmap. Meilensteine, Verantwortlichkeiten und Messgrößen definieren." },
-      "BUILD": { "TITLE": "Build", "TEXT": "Entwicklung & Tests. Sauberer Code, Pull‑Requests und Staging‑Demos." },
-      "GROW": { "TITLE": "Grow", "TEXT": "Rollout, Monitoring & Iteration. KPI‑basiertes Optimieren im Live‑Betrieb." }
+      "DISCOVER": { "TITLE": "Scope & Tech-Audit", "TEXT": "Wir werfen einen Blick unter die Haube. Ich analysiere deine bestehende Theme-Architektur, checke die Code-Qualität und wir definieren die genauen Anforderungen – ohne Overhead, direkt auf den Punkt." },
+      "PLAN": { "TITLE": "Infrastruktur & Plan", "TEXT": "Bevor die erste Zeile Code fließt, steht das Fundament. Ich richte die Entwicklungsumgebung ein, binde deine GitHub-Repositorys an und definiere die Datenarchitektur über Metaobjects oder APIs." },
+      "BUILD": { "TITLE": "Clean Coding & Staging", "TEXT": "Ich entwickle deine Features mit Liquid, TypeScript oder Shopify Functions. Gearbeitet wird nach höchsten Standards in Feature-Branches und mit sauberen Pull-Requests – Demos gibt es verlässlich auf der Staging-Umgebung." },
+      "GROW": { "TITLE": "Go-Live & Monitoring", "TEXT": "Das Deployment erfolgt kontrolliert und ohne böse Überraschungen im Live-Betrieb. Nach dem Launch behalte ich die Performance und die Logs im Auge, damit alles absolut stabil, schnell und fehlerfrei läuft." }
     }
   },
   "TECH": {
-    "TITLE": "Tech‑Stack",
-    "SUB": "Bewährte Werkzeuge für performante Shopify‑Stores.",
-    "LIST_ARIA": "Technologien",
+    "TITLE": "Mein Tech‑Stack",
+    "SUB": "Kein Schnickschnack, sondern moderne Werkzeuge für saubere, performante Shopify‑Stores.",
+    "LIST_ARIA": "Technologische Kompetenzen und Entwicklungswerkzeuge",
     "CHIPS": {
-      "LIQUID": { "ARIA": "Shopify Liquid" },
+      "LIQUID": { "ARIA": "Shopify Liquid & Theme Architecture" },
+      "JSTS": { "ARIA": "JavaScript / TypeScript (Vanilla)" },
+      "FUNCTIONS": { "ARIA": "Shopify Functions & UI Extensions" },
+      "META": { "ARIA": "Metafields & Metaobjects" },
+      "CLI_GIT": { "ARIA": "Shopify CLI, GitHub & CI/CD Workflows" },
+      "GRAPHQL": { "ARIA": "Shopify Admin & Storefront APIs (GraphQL)" },
       "TAE": { "ARIA": "Theme App Extensions" },
-      "FUNCTIONS": { "ARIA": "Shopify Functions" },
-      "JSTS": { "ARIA": "JavaScript / TypeScript" },
-      "GRAPHQL": { "ARIA": "GraphQL" },
-      "GA4GTM": { "ARIA": "GA4 / GTM" }
+      "ERP_INTEGRATION": { "ARIA": "ERP & Schnittstellen (z.B. Xentral)" },
+      "ANALYTICS": { "ARIA": "Tracking & Analytics (GA4 / GTM / Klaviyo)" },
+      "PERFORMANCE": { "ARIA": "Performance & Core Web Vitals (Lighthouse)" }
     }
   },
   "TESTIMONIALS": {
-    "TITLE": "Stimmen",
-    "SUB": "Was Kunden und Partner über die Zusammenarbeit sagen.",
-    "CAROUSEL_ARIA": "Kundenstimmen",
+    "TITLE": "Feedback von der Dev‑Front.",
+    "SUB": "Was Kunden und Partner über die Zusammenarbeit sagen – ganz ohne Filter.",
+    "CAROUSEL_ARIA": "Kundenstimmen und Referenzen",
     "MORE": "Weiterlesen",
     "LESS": "Weniger anzeigen",
     "T1": {
       "TEXT": "Kevin ist ein absoluter Profi im Shopify‑Ökosystem. Die Zusammenarbeit war extrem unkompliziert, professionell und termintreu. Er hat ein scharfes Auge für Design und Funktionalität. Wer seinen Shopify‑Shop auf das nächste Level heben will, sollte Kevin Metzdorf unbedingt in sein Team holen!",
-      "CITE": "Jan Laußmann – CEO Latori GmbH / Shopify Platinum Agentur"
+      "NAME_ROLE": "Jan Laußmann – CEO",
+      "COMPANY": "Latori GmbH / Shopify Platinum Agentur"
     },
     "T2": {
       "TEXT": "Zuverlässiger Shopify‑Experte & Webpartner. Kevin Metzdorf betreut zuverlässig unsere sieben Shopify‑Shops, darunter die Influencer‑Shops von Amira Aly und Steffi Biedermann. Die Zusammenarbeit ist effizient, transparent und lösungsorientiert. Besonders schätzen wir sein proaktives Vorgehen, schnelle Reaktionen und das jederzeit einsehbare Zeittracking. Klare Empfehlung!",
-      "CITE": "Ralf Pressler – Director Marketing & Digital Dekoback GmbH"
+      "NAME_ROLE": "Ralf Pressler – Director Marketing & Digital",
+      "COMPANY": "Dekoback GmbH"
     },
     "T3": {
       "TEXT": "Ich kann Kevin uneingeschränkt als Senior Shopify Entwickler empfehlen. Besonders zu Beginn meiner Zeit im Team war er eine enorme Stütze. Trotz seiner eigenen Projekte hat er sich immer die Zeit genommen, mir neue Sachen geduldig zu erklären – das hat mir den Einstieg massiv erleichtert. Man merkt in jedem Gespräch seine tiefgreifende Erfahrung im Shopify‑Ökosystem. Er hat auf fast jede technische Herausforderung eine fundierte Antwort. Was Kevin jedoch besonders auszeichnet, ist die Kombination aus technischem Können auf höchstem Niveau und seiner extrem angenehmen Art. Selbst in stressigen Phasen oder kurz vor knappen Deadlines bleibt er der absolute Ruhepol im Team, behält den Überblick und strahlt eine enorme Sicherheit aus. Ein echter Teamplayer – fachlich wie menschlich.",
-      "CITE": "Normann Blum – Frontend Developer"
+      "NAME_ROLE": "Normann Blum – Frontend Developer",
+      "COMPANY": "E-Commerce Projektumfeld"
     }
   },
   "BLOG": {

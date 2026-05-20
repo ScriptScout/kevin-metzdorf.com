@@ -28,10 +28,26 @@
     <h2 class="trust__title">{{ 'TRUST.TITLE' | translate }}</h2>
     <p class="trust__sub">{{ 'TRUST.SUB' | translate }}</p>
     <ul class="logo-list" [attr.aria-label]="('TRUST.LOGOS_ARIA' | translate)">
-      <li class="logo-item" aria-label="Micasa"><img src="assets/img/project_img/micasa_logo.avif" alt="Micasa Logo" loading="lazy" decoding="async"></li>
-      <li class="logo-item" aria-label="Einfach Backen"><img src="assets/img/project_img/einfach-backen.webp" alt="Einfach Backen Logo" loading="lazy" decoding="async"></li>
-      <li class="logo-item" aria-label="Natural Elements"><img src="assets/img/project_img/natural_elements_logo.svg" alt="Natural Elements Logo" loading="lazy" decoding="async"></li>
-      <li class="logo-item" aria-label="Decocino"><img src="assets/img/project_img/decocino-logo.png" alt="Decocino Logo" loading="lazy" decoding="async"></li>
+      <li class="logo-item">
+        <a href="https://www.jagermeister.com/" target="_blank" rel="noopener" aria-label="Mast-Jägermeister">
+          <img src="assets/img/project_img/JM.png" alt="Jägermeister Logo" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="logo-item">
+        <a href="https://www.latori.com/" target="_blank" rel="noopener" aria-label="Latori GmbH">
+          <img src="assets/img/project_img/latori_logo.png" alt="Latori Logo" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="logo-item">
+        <a href="https://ooia.de/" target="_blank" rel="noopener" aria-label="Ooia">
+          <img src="assets/img/project_img/ooia_logo.png" alt="Ooias Logo" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="logo-item">
+        <a href="https://heskamp-medien.de/" target="_blank" rel="noopener" aria-label="Heskamp Medien">
+          <img src="assets/img/project_img/HM_Bildmarke-1.png" alt="Heskamp Medien Logo" loading="lazy" decoding="async">
+        </a>
+      </li>
     </ul>
   </div>
 </section>
@@ -90,11 +106,11 @@
         <a class="outcome-card__link" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" (click)="outcomeCardClick('Geschwindigkeit')" [attr.aria-label]="('OUTCOMES.CARDS.SPEED.ARIA' | translate)">{{ 'OUTCOMES.REQUEST' | translate }}</a>
       </article>
       <article class="outcome-card">
-        <h3>{{ 'OUTCOMES.CARDS.CONVERSION.TITLE' | translate }}</h3>
-        <p>{{ 'OUTCOMES.CARDS.CONVERSION.TEXT' | translate }}</p>
+        <h3>{{ 'OUTCOMES.CARDS.AUTOMATION.TITLE' | translate }}</h3>
+        <p>{{ 'OUTCOMES.CARDS.AUTOMATION.TEXT' | translate }}</p>
         <ul class="kpis">
-          <li><span class="badge badge--positive">{{ 'OUTCOMES.CARDS.CONVERSION.KPI1' | translate }}</span></li>
-          <li><span class="badge badge--neutral">{{ 'OUTCOMES.CARDS.CONVERSION.KPI2' | translate }}</span></li>
+          <li><span class="badge badge--positive">{{ 'OUTCOMES.CARDS.AUTOMATION.KPI1' | translate }}</span></li>
+          <li><span class="badge badge--neutral">{{ 'OUTCOMES.CARDS.AUTOMATION.KPI2' | translate }}</span></li>
         </ul>
         <a class="outcome-card__link" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" (click)="outcomeCardClick('Conversion')" [attr.aria-label]="('OUTCOMES.CARDS.CONVERSION.ARIA' | translate)">{{ 'OUTCOMES.REQUEST' | translate }}</a>
       </article>
@@ -118,38 +134,40 @@
     <div class="case-grid">
       <article class="case-card">
         <header>
-          <figure class="case-media"><img src="assets/img/project_img/rimoco_logo.svg" alt="Rimoco Logo" loading="lazy" decoding="async"></figure>
-          <h3>Migration auf Shopify 2.0 – +18% Conversion</h3>
+          <figure class="case-media"><img src="assets/img/project_img/JM.png" alt="Jägermeister Logo" loading="lazy" decoding="async"></figure>
+          <h3>Mast-Jägermeister SE – Enterprise Transformation</h3>
         </header>
-        <p>Von Shopware zu Shopify: Performance, UX und Checkout optimiert.</p>
+        <p>Umbau eines komplexen Headless-Setups zurück zu einem nativen, hochperformanten Shopify-Theme inklusive Custom-App für globalen Content-Sync.</p>
         <ul class="kpis">
-          <li><span class="badge badge--positive">−38% LCP</span></li>
-          <li><span class="badge badge--positive">+18% CR</span></li>
-          <li><span class="badge badge--neutral">+12% AOV</span></li>
+          <li><span class="badge badge--positive">Shopify Plus</span></li>
+          <li><span class="badge badge--positive">Theme Architectur</span></li>
+          <li><span class="badge badge--neutral">Custom App & APIs</span></li>
         </ul>
         <a class="btn btn--secondary" routerLink="/work" (click)="caseTeaserClick('Migration 2.0')" [attr.aria-label]="('CASE_TEASER.BUTTON' | translate)">{{ 'CASE_TEASER.BUTTON' | translate }}</a>
       </article>
       <article class="case-card">
         <header>
-          <figure class="case-media"><img src="assets/img/project_img/happylamps.png" alt="HappyLamps Logo" loading="lazy" decoding="async"></figure>
-          <h3>Performance‑Sprint – −32% LCP</h3>
+          <figure class="case-media"><img src="assets/img/project_img/decocino-logo.png" alt="Decocino Logo" loading="lazy" decoding="async"></figure>
+          <h3>Dekoback GmbH – Multi-Store-Setup & Betreuung</h3>
         </header>
-        <p>Bildstrategie, Liquid/JS‑Cleanup, Theme‑Optimierungen.</p>
+        <p>Langfristige technische Betreuung und Performance-Optimierung einer gewachsenen Infrastruktur mit mehreren Shopify-Shops (u.a. Decocino, Amiras Zauber) und automatisierten Daten-Schnittstellen.</p>
         <ul class="kpis">
-          <li><span class="badge badge--positive">−32% LCP</span></li>
-          <li><span class="badge badge--neutral">CLS < 0.05</span></li>
+          <li><span class="badge badge--positive">Multi-Store Setup</span></li>
+          <li><span class="badge badge--positive">TypeScript & Core Web Vitals</span></li>
+          <li><span class="badge badge--neutral">App-Integrations</span></li>
         </ul>
         <a class="btn btn--secondary" routerLink="/work" (click)="caseTeaserClick('Performance Sprint')" [attr.aria-label]="('CASE_TEASER.BUTTON' | translate)">{{ 'CASE_TEASER.BUTTON' | translate }}</a>
       </article>
       <article class="case-card">
         <header>
           <figure class="case-media"><img src="assets/img/project_img/overkill-sneakershop-logo.svg" alt="Overkill Logo" loading="lazy" decoding="async"></figure>
-          <h3>Checkout‑Fix – Mehr Umsatz durch Stabilität</h3>
+          <h3>Overkill Shop – Technical Checkout Rescue</h3>
         </header>
-        <p>Technical Rescue für kritische Checkout‑Probleme.</p>
+        <p>Analyse und Behebung geschäftskritischer Fehler im Checkout-Prozess. Stabilisierung der Bestell- und Zahlungslogiken bei extrem hohem Traffic-Aufkommen (z.B. während exklusiver Releases).</p>
         <ul class="kpis">
-          <li><span class="badge badge--neutral">+Uptime</span></li>
-          <li><span class="badge badge--positive">+CR</span></li>
+          <li><span class="badge badge--positive">Checkout Fix</span></li>
+          <li><span class="badge badge--positive">Technical Rescue</span></li>
+          <li><span class="badge badge--neutral">Uptime & Conversion Secure</span></li>
         </ul>
         <a class="btn btn--secondary" routerLink="/work" (click)="caseTeaserClick('Checkout Fix')" [attr.aria-label]="('CASE_TEASER.BUTTON' | translate)">{{ 'CASE_TEASER.BUTTON' | translate }}</a>
       </article>
@@ -191,12 +209,16 @@
     <h2 id="tech-stack-title" class="tech-stack__title">{{ 'TECH.TITLE' | translate }}</h2>
     <p class="tech-stack__sub">{{ 'TECH.SUB' | translate }}</p>
     <ul class="tech-list" [attr.aria-label]="('TECH.LIST_ARIA' | translate)">
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.LIQUID.ARIA' | translate)">Liquid</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.TAE.ARIA' | translate)">Theme App Extensions</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.FUNCTIONS.ARIA' | translate)">Shopify Functions</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.LIQUID.ARIA' | translate)">Liquid & Theme Architecture</li>
       <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.JSTS.ARIA' | translate)">JavaScript / TypeScript</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.GRAPHQL.ARIA' | translate)">GraphQL</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.GA4GTM.ARIA' | translate)">GA4 / GTM</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.FUNCTIONS.ARIA' | translate)">Shopify Functions & UI Extensions</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.META.ARIA' | translate)">Metafields & Metaobjects</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.CLI_GIT.ARIA' | translate)">Shopify CLI, GitHub & CI/CD</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.GRAPHQL.ARIA' | translate)">GraphQL APIs</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.TAE.ARIA' | translate)">Theme App Extensions</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.ERP_INTEGRATION.ARIA' | translate)">ERP & Xentral-Integrationen</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.ANALYTICS.ARIA' | translate)">GA4, GTM & Klaviyo</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.PERFORMANCE.ARIA' | translate)">Performance & Core Web Vitals</li>
     </ul>
   </div>
 </section>
@@ -207,6 +229,7 @@
     <p class="testimonials__sub">{{ 'TESTIMONIALS.SUB' | translate }}</p>
 
     <div class="testimonial-carousel" role="group" aria-roledescription="carousel" [attr.aria-label]="('TESTIMONIALS.CAROUSEL_ARIA' | translate)">
+
       <article class="testimonial" tabindex="0">
         <blockquote>
           <p class="testimonial__text" id="tst-0" [class.is-expanded]="expandedTestimonials[0]">{{ 'TESTIMONIALS.T1.TEXT' | translate }}</p>
@@ -219,8 +242,10 @@
             {{ expandedTestimonials[0] ? ('TESTIMONIALS.LESS' | translate) : ('TESTIMONIALS.MORE' | translate) }}
           </button>
         </div>
-        <footer>
-          <cite>{{ 'TESTIMONIALS.T1.CITE' | translate }}</cite>
+        <footer class="testimonial__meta">
+          <cite>
+            <span class="badge badge--author-chip">{{ 'TESTIMONIALS.T1.NAME_ROLE' | translate }}</span>
+          </cite>
         </footer>
       </article>
 
@@ -236,8 +261,10 @@
             {{ expandedTestimonials[1] ? ('TESTIMONIALS.LESS' | translate) : ('TESTIMONIALS.MORE' | translate) }}
           </button>
         </div>
-        <footer>
-          <cite>{{ 'TESTIMONIALS.T2.CITE' | translate }}</cite>
+        <footer class="testimonial__meta">
+          <cite>
+            <span class="badge badge--author-chip">{{ 'TESTIMONIALS.T2.NAME_ROLE' | translate }}</span>
+          </cite>
         </footer>
       </article>
 
@@ -253,10 +280,13 @@
             {{ expandedTestimonials[2] ? ('TESTIMONIALS.LESS' | translate) : ('TESTIMONIALS.MORE' | translate) }}
           </button>
         </div>
-        <footer>
-          <cite>{{ 'TESTIMONIALS.T3.CITE' | translate }}</cite>
+        <footer class="testimonial__meta">
+          <cite>
+            <span class="badge badge--author-chip">{{ 'TESTIMONIALS.T3.NAME_ROLE' | translate }}</span>
+          </cite>
         </footer>
       </article>
+
     </div>
   </div>
 </section>

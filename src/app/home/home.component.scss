@@ -465,6 +465,22 @@
   color: var(--c-text-muted);
   background: var(--c-surface);
   overflow: hidden;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+
+  &:hover, &:focus-within {
+    border-color: var(--c-text);
+    box-shadow: 0 1px 0 0 var(--c-text);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 /* Logos im Quadrat sauber einpassen */
@@ -475,6 +491,11 @@
   width: auto;           /* Seitenverhältnis wahren */
   height: auto;          /* Seitenverhältnis wahren */
   object-fit: contain;   /* sauber einpassen ohne Zuschnitt */
+  transition: transform 180ms ease;
+}
+
+.logo-item:hover img {
+  transform: scale(1.05);
 }
 
 /* Services teaser */
