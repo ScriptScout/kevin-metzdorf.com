@@ -1,25 +1,24 @@
 <section class="work-list" aria-labelledby="work-title">
   <div class="work-list__container">
     <header class="work-list__header">
-      <h1 id="work-title" class="work-list__title">Projekte & Cases</h1>
-      <p class="work-list__sub">Ein Blick unter die Haube: Echte Herausforderungen, sauberer Code und gelöste Probleme.</p>
+      <h1 id="work-title" class="work-list__title">{{ 'CASE_TEASER.TITLE' | translate }}</h1>
+      <p class="work-list__sub">{{ 'CASE_TEASER.SUB' | translate }}</p>
     </header>
 
-    <div class="work-grid" #listRef>
-      <article class="work-card reveal" appReveal *ngFor="let c of cases">
-        <header class="work-card__header">
-          <h2 class="work-card__title">{{ c.title }}</h2>
-          <p class="work-card__summary">{{ c.summary }}</p>
+    <div class="case-grid" #listRef>
+      <article class="case-card reveal" appReveal *ngFor="let c of cases">
+        <header>
+          <figure class="case-media" *ngIf="c.heroImage">
+            <img [src]="c.heroImage" [alt]="c.title" loading="lazy" decoding="async">
+          </figure>
+          <h3>{{ c.title }}</h3>
         </header>
-        <ul class="work-card__kpis" *ngIf="c.kpis?.length">
+        <p>{{ c.summary }}</p>
+        <ul class="kpis" *ngIf="c.kpis?.length">
           <li *ngFor="let k of c.kpis"><span class="badge badge--neutral">{{ k }}</span></li>
         </ul>
-        <div class="work-card__meta" *ngIf="c.industry || c.region">
-          <span class="meta">{{ c.industry }}</span>
-          <span class="meta" *ngIf="c.region">• {{ c.region }}</span>
-        </div>
         <div class="work-card__actions">
-          <button class="btn btn--secondary" (click)="openCase(c.slug)" aria-label="Fallstudie öffnen">So lief das Projekt</button>
+          <button class="btn btn--secondary" (click)="openCase(c.slug)" [attr.aria-label]="('CASE_TEASER.BUTTON' | translate)">{{ 'CASE_TEASER.BUTTON' | translate }}</button>
         </div>
       </article>
     </div>

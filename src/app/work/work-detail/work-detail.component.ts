@@ -4,11 +4,12 @@ import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { WorkCaseItem, WorkService } from '../work.service';
 import { SeoService } from '../../seo.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-work-detail',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslateModule],
   templateUrl: './work-detail.component.html',
   styleUrls: ['./work-detail.component.scss']
 })

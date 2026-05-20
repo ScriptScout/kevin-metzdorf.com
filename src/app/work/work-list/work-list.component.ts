@@ -5,11 +5,12 @@ import { WorkCaseItem, WorkService } from '../work.service';
 import { SeoService } from '../../seo.service';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { RevealDirective } from '../../shared/reveal.directive';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-work-list',
   standalone: true,
-  imports: [CommonModule, RevealDirective],
+  imports: [CommonModule, RevealDirective, TranslateModule],
   templateUrl: './work-list.component.html',
   styleUrls: ['./work-list.component.scss']
 })
