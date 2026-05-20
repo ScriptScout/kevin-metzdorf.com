@@ -19,7 +19,7 @@
     <div class="work-detail__content">
       <section class="case-section" *ngFor="let s of d.sections">
         <h2 class="case-section__title" [attr.data-type]="s.type">
-          {{ s.type === 'context' ? 'Kontext' : s.type === 'approach' ? 'Ansatz' : s.type === 'implementation' ? 'Umsetzung' : s.type === 'results' ? 'Ergebnisse' : s.type === 'learnings' ? 'Learnings' : s.type }}
+          {{ 'WORK.SECTIONS.' + s.type.toUpperCase() | translate }}
         </h2>
         <p class="case-section__text">{{ s.text }}</p>
       </section>

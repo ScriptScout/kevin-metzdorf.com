@@ -2,13 +2,13 @@
   {
     "slug": "enterprise-transformation",
     "title": "Mast-Jägermeister SE – Enterprise Transformation",
-    "summary": "Technische Mitarbeit an einem internationalen Shopify-Enterprise-Projekt mit Fokus auf den Umbau eines komplexen Headless-/Contentful-Setups zurück zu einem nativen, wartbaren Shopify-Theme. Zusätzlich Unterstützung bei der Entwicklung einer individuellen Shopify-App für automatisierten Content-Sync zwischen Master-Shop und internationalen Ländershops.",
+    "summary": "Shopify Enterprise Transformation. Umbau eines Headless-/Contentful-Setups in ein natives Shopify-Theme. Entwicklung einer Custom App für automatisierten Content-Sync zwischen Master- und Ländershops. Custom Features wie Label-/Gravur-Editor. CI/CD- & Git-Workflows im internationalen Enterprise-Umfeld.",
     "kpis": [
       "Shopify Plus",
       "Theme Architecture",
       "Custom Shopify App",
       "Contentful Migration",
-      "CI/CD & Git Workflows"
+      "TypeScript"
     ],
     "industry": "Beverage",
     "region": "Global",
@@ -30,14 +30,14 @@
   },
   {
     "slug": "multi-store-setup",
-    "title": "Dekoback GmbH – Multi-Store-Setup & technische Weiterentwicklung",
-    "summary": "Langfristige technische Betreuung und Weiterentwicklung eines gewachsenen Shopify-Multi-Store-Setups mit mehreren Shopify-Shops und ergänzenden WordPress-Strukturen. Fokus auf Theme-Entwicklung, Performance-Optimierung, Tracking-Integrationen und technische Stabilisierung bestehender Systeme.",
+    "title": "Dekoback GmbH – Multi-Store-Setup & technische Beratung",
+    "summary": "Langfristige Betreuung eines Multi-Store-Setups und WordPress-Strukturen. Frontend-Entwicklung eines individuellen Themes für den 'Einfach Backen'-Shop. Integration von GA4, GTM, Klaviyo und App-Konfigurationen. Performance-Optimierung.",
     "kpis": [
       "Multi-Store Setup",
       "Theme Development",
       "Performance Optimization",
       "GA4 & Klaviyo",
-      "TypeScript"
+      "Liquid"
     ],
     "industry": "Food",
     "region": "DE",
@@ -65,8 +65,7 @@
       "Checkout Stabilization",
       "Technical Debugging",
       "Performance Optimization",
-      "High Traffic Handling",
-      "Conversion Optimization"
+      "High Traffic Handling"
     ],
     "industry": "Fashion",
     "region": "DE",
@@ -87,38 +86,64 @@
     ]
   },
   {
-    "slug": "einfach-backen-storefront",
-    "title": "Einfach Backen – Individuelle Shopify Storefront",
-    "summary": "Frontend-Entwicklung eines individuellen Shopify-Webshops im Food-Commerce- und Publishing-Umfeld. Umsetzung responsiver und performanter Storefront-Komponenten auf Basis vorhandener Designvorgaben sowie Integration externer Systeme und APIs.",
+    "slug": "fedu-relaunch",
+    "title": "FeDu Werkstatttechnik – Store Relaunch & B2B-Integration",
+    "summary": "Strukturierter Relaunch mit dem Horizon Theme. Aufbau einer Metafeld-Architektur zur Verknüpfung produktbezogener Daten. Konfiguration von Shopify Search & Discovery, Filter-Logiken und B2B-Katalogen.",
     "kpis": [
-      "Custom Theme Development",
-      "Responsive Webdesign",
-      "API Integration",
-      "Performance Optimization",
-      "Liquid & JavaScript"
+      "B2B Integration",
+      "Horizon Theme",
+      "Metafields",
+      "Filter-Logik",
+      "Store Relaunch"
     ],
-    "industry": "Food & Publishing",
+    "industry": "Automotive / B2B",
     "region": "DE",
-    "heroImage": "assets/img/project_img/einfach-backen.webp",
     "sections": [
       {
         "type": "context",
-        "text": "Für den Shopify-Shop „Einfach Backen“ sollte eine individuelle und markengerechte Storefront im Food-Commerce-Umfeld entwickelt werden. Neben responsivem Frontend-Development standen stabile technische Integrationen sowie eine performante Nutzererfahrung im Fokus."
+        "text": "Relaunch des Shopify-Stores mit Fokus auf B2B-Funktionalitäten und eine verbesserte Produktdatenstruktur für technische Artikel."
       },
       {
         "type": "approach",
-        "text": "Umsetzung pixelgenauer Layouts und Shopify-Templates auf Basis vorhandener Figma-Designs mit Liquid, HTML, CSS und JavaScript. Entwicklung und Erweiterung individueller Sections, Theme-Komponenten und responsiver Frontend-Elemente. Integration externer Zahlungs-, Versand- und Tracking-Systeme sowie technische Qualitätssicherung und Performance-Optimierung."
+        "text": "Aufbau einer Metafeld-Architektur zur effizienten Verknüpfung produktbezogener Daten. Konfiguration von Shopify Search & Discovery sowie individueller Filter-Logiken auf Basis des Horizon Themes."
       },
       {
         "type": "results",
-        "text": "Performante und responsive Shopify-Storefront mit stabilen Integrationen und sauberer technischer Basis für den Produktivbetrieb. Verbesserte Nutzerführung und markengerechte Darstellung innerhalb eines reichweitenstarken Publishing- und Commerce-Umfelds."
+        "text": "Ein leistungsfähiger B2B-Store mit optimierter Suchfunktion und klar strukturierten Produktkatalogen, die den Anforderungen professioneller Kunden gerecht werden."
+      }
+    ]
+  },
+  {
+    "slug": "rocketcommerce-configurators",
+    "title": "Rocketcommerce.io – Custom Solutions & Produktkonfiguratoren",
+    "summary": "Entwicklung technisch anspruchsvoller Produktkonfiguratoren für diverse Agenturkunden (u. a. MyVoltaics, Zauntastisch). Umsetzung komplexer Preislogiken, Variantenstrukturen und Auswahlprozesse.",
+    "kpis": [
+      "Custom Solutions",
+      "Produktkonfiguratoren",
+      "Variable Preislogiken",
+      "Theme Customization"
+    ],
+    "industry": "E-Commerce Agency",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Umsetzung individueller E-Commerce-Features für Agenturkunden, die über den Standard-Funktionsumfang von Shopify hinausgehen."
+      },
+      {
+        "type": "approach",
+        "text": "Entwicklung komplexer Produktkonfiguratoren mit JavaScript und Liquid. Implementierung variabler Preislogiken und dynamischer Variantenstrukturen für Produkte wie Solaranlagen und Zaunsysteme."
+      },
+      {
+        "type": "results",
+        "text": "Hochgradig individualisierte Storefront-Tools, die komplexe Kaufentscheidungen vereinfachen und die Conversion-Rate steigern."
       }
     ]
   },
   {
     "slug": "enterprise-frontend-development",
-    "title": "Latori GmbH – Enterprise Shopify Frontend Development",
-    "summary": "Entwicklung anspruchsvoller Shopify-Frontend-Features für Enterprise- und Premium-Kundenprojekte innerhalb professioneller Shopify-Partnerstrukturen. Fokus auf performante Storefront-Entwicklung, wiederverwendbare Theme-Komponenten und saubere GitHub-Workflows.",
+    "title": "Latori GmbH – Enterprise Shopify projects",
+    "summary": "Senior Shopify Frontend Developer für Enterprise Shopify Projekte. Entwicklung anspruchsvoller Frontend-Features (PDP, PLP, Cart Drawer) für Premium-Marken (u. a. micasa, Delica, ooia). Arbeit in professionellen GitHub-Workflows.",
     "kpis": [
       "Enterprise Shopify",
       "PDP & PLP Development",
@@ -128,19 +153,210 @@
     ],
     "industry": "Retail & Consumer Brands",
     "region": "DACH",
-    "heroImage": "assets/img/project_img/latori_logo.png",
     "sections": [
       {
         "type": "context",
-        "text": "Umsetzung komplexer Shopify-Frontend-Funktionalitäten für Enterprise- und Premium-Markenprojekte innerhalb eines Shopify-Plus-Agenturumfelds. Die Projekte erforderten performante Frontend-Strukturen, saubere Entwicklungsprozesse und hohe technische Qualitätsstandards."
+        "text": "Umsetzung komplexer Shopify-Frontend-Funktionalitäten für Enterprise- und Premium-Markenprojekte innerhalb eines Shopify-Plus-Agenturumfelds."
       },
       {
         "type": "approach",
-        "text": "Entwicklung performanter Storefront-Komponenten wie PDPs, PLPs, Cart Drawer und Account-Bereiche auf Basis pixelgenauer Figma-Designs. Umsetzung wiederverwendbarer Theme-Sections und Custom Features mit Liquid, JavaScript/TypeScript, HTML und CSS. Arbeit in professionellen GitHub-Workflows mit Feature-Branches, Code Reviews und kontrollierten Deployments."
+        "text": "Entwicklung performanter Storefront-Komponenten wie PDPs, PLPs und Cart Drawer auf Basis pixelgenauer Designs. Einsatz von TypeScript und modernen GitHub-Workflows inklusive Code Reviews."
       },
       {
         "type": "results",
-        "text": "Skalierbare und wartbare Frontend-Architekturen für hochfrequentierte Shopify-Projekte mit optimierter Performance, stabilen Entwicklungsprozessen und sauber strukturierten Theme-Komponenten für langfristige Weiterentwicklung."
+        "text": "Skalierbare und wartbare Frontend-Architekturen für hochfrequentierte Shopify-Projekte mit höchsten Qualitätsstandards."
+      }
+    ]
+  },
+  {
+    "slug": "heskamp-medien-consulting",
+    "title": "Heskamp Medien GmbH – Technical Consulting",
+    "summary": "Technische Unterstützung und Beratung für Web- und E-Commerce-Projekte im Agenturumfeld. App-Konfigurationen, Checkout-Optimierung und Anbindung von Marktplätzen (Amazon Seller Central).",
+    "kpis": [
+      "Technical Consulting",
+      "App Integration",
+      "E-Commerce Workflows",
+      "Frontend Optimizations"
+    ],
+    "industry": "Agency / Media",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Technische Beratung für diverse Kundenprojekte mit Schwerpunkt auf Prozessoptimierung und Systemanbindung."
+      },
+      {
+        "type": "approach",
+        "text": "Konfiguration komplexer App-Setups, Optimierung des Checkouts zur Steigerung der Conversion und Anbindung externer Marktplätze wie Amazon."
+      },
+      {
+        "type": "results",
+        "text": "Optimierte technische Prozesse und verbesserte Anbindung an Drittsysteme, was zu effizienteren E-Commerce-Abläufen führt."
+      }
+    ]
+  },
+  {
+    "slug": "natsana-recruiting-consulting",
+    "title": "Natsana GmbH – Technical Interviewer & Assessment",
+    "summary": "Unterstützung im Recruiting-Prozess für eine Shopify-Developer-Position. Durchführung technischer Assessments und fachliche Bewertung der Kandidaten bezüglich Frontend-Kompetenz und Shopify-Erfahrung.",
+    "kpis": [
+      "Technical Assessment",
+      "Candidate Screening",
+      "Tech Recruiting",
+      "Consulting"
+    ],
+    "industry": "Health & Wellness",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Qualitative Unterstützung bei der Auswahl neuer technischer Teammitglieder für das Shopify-Development."
+      },
+      {
+        "type": "approach",
+        "text": "Durchführung von tiefgehenden technischen Interviews und Evaluierung der Kandidaten hinsichtlich ihrer Shopify- und Frontend-Expertise."
+      },
+      {
+        "type": "results",
+        "text": "Erfolgreiche Besetzung technischer Vakanzen durch fachlich fundierte Assessments und fundierte Entscheidungsgrundlagen für das Management."
+      }
+    ]
+  },
+  {
+    "slug": "coberi-tracking-consulting",
+    "title": "Coberi GmbH – Technical E-Commerce Consultant",
+    "summary": "Beratung mit Fokus auf Tracking und Marketing-Integrationen. Setup von GA4, GTM, Google Ads Conversion Tracking (Consent Mode) und Klaviyo-Flows. Aufbau eines Looker-Studio-Dashboards.",
+    "kpis": [
+      "Shopware 5",
+      "E-Commerce Tracking",
+      "GA4 & GTM",
+      "Klaviyo Automation",
+      "Consent Mode"
+    ],
+    "industry": "Agency / Tracking",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Sicherstellung einer sauberen Datenbasis für Marketing-Entscheidungen in einem Shopware-Umfeld."
+      },
+      {
+        "type": "approach",
+        "text": "Implementierung eines umfassenden Tracking-Setups inklusive Consent Mode und GTM. Automatisierung von Marketing-Flows in Klaviyo."
+      },
+      {
+        "type": "results",
+        "text": "Transparente Erfolgsmessung über Looker-Studio-Dashboards und effizientere Marketing-Kampagnen durch präzises Tracking."
+      }
+    ]
+  },
+  {
+    "slug": "xentral-erp-integration",
+    "title": "ERP-Integration – Shopify & Xentral",
+    "summary": "Technische Anbindung von Xentral ERP an einen Shopify-Store. Konfiguration von Artikelstammdaten, Varianten, Bildern, Metafeldern sowie Lager- und Versandprozessen.",
+    "kpis": [
+      "Xentral ERP",
+      "ERP-Integration",
+      "Produktdatenmanagement",
+      "Logistik-Prozesse"
+    ],
+    "industry": "Operations / Logistics",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Zusammenführung von E-Commerce und ERP zur Automatisierung operativer Prozesse."
+      },
+      {
+        "type": "approach",
+        "text": "Konfiguration der Schnittstelle zwischen Shopify und Xentral. Mapping von Produktdaten, Varianten und Metafeldern sowie Definition der Lager-Workflows."
+      },
+      {
+        "type": "results",
+        "text": "Synchronisierte Datenbestände und automatisierte Bestellabwicklung, was die manuelle Aufwand deutlich reduziert."
+      }
+    ]
+  },
+  {
+    "slug": "travel-tiger-performance",
+    "title": "travel tiger – Performance & Theme Optimization",
+    "summary": "Technische Optimierung eines Outdoor-Webshops. Performance-Analyse mit Lighthouse zur Verbesserung der Core Web Vitals. Durchführung automatisierter Tests mit Selenium.",
+    "kpis": [
+      "Performance Optimization",
+      "Core Web Vitals",
+      "Lighthouse",
+      "Automated Testing (Selenium)"
+    ],
+    "industry": "Outdoor / Travel",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Verbesserung der technischen Performance eines reichweitenstarken Outdoor-Shops zur Steigerung der organischen Sichtbarkeit."
+      },
+      {
+        "type": "approach",
+        "text": "Gezielte Optimierung der Core Web Vitals auf Basis von Lighthouse-Audits. Einführung von Selenium-Tests zur Qualitätssicherung."
+      },
+      {
+        "type": "results",
+        "text": "Schnellere Ladezeiten und eine stabilere Storefront, was sich positiv auf das Google-Ranking und die User Experience auswirkt."
+      }
+    ]
+  },
+  {
+    "slug": "derdak-saitta-automation",
+    "title": "Derdak und Saitta – Datenintegration & Automatisierung",
+    "summary": "Automatisierter Produktdatenimport und Bestandsabgleich für ein Dropshipping-Setup. Mapping und Transformation von CSV-Großhändlerdaten via Matrixify und EasyCSV.",
+    "kpis": [
+      "Data Mapping",
+      "Automation",
+      "Matrixify",
+      "Dropshipping Setup",
+      "Inventory Sync"
+    ],
+    "industry": "E-Commerce / Dropshipping",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Automatisierung komplexer Lieferanten-Feeds für ein Dropshipping-Business."
+      },
+      {
+        "type": "approach",
+        "text": "Einsatz von Tools wie Matrixify und EasyCSV zur Transformation und zum Import von CSV-Daten. Aufbau eines regelmäßigen Bestandsabgleichs."
+      },
+      {
+        "type": "results",
+        "text": "Ein weitestgehend automatisiertes System zur Produktpflege und Bestandsverwaltung ohne manuelles Eingreifen."
+      }
+    ]
+  },
+  {
+    "slug": "bundeswehr-it-development",
+    "title": "IT-Dienstleister der Bundeswehr – Software Development",
+    "summary": "Mitarbeit in einem agilen Team zur Feature-Entwicklung und Fehlerbehebung in einem sicherheitskritischen Enterprise-IT-System. Hohe Anforderungen an Dokumentation und Qualitätssicherung.",
+    "kpis": [
+      "Agile Software Development",
+      "JavaScript Enterprise",
+      "CI/CD",
+      "Technical Documentation",
+      "Docker"
+    ],
+    "industry": "Public Sector / IT",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Entwicklung von Enterprise-Anwendungen in einem hochregulierten und sicherheitskritischen Umfeld."
+      },
+      {
+        "type": "approach",
+        "text": "JavaScript-basierte Feature-Entwicklung innerhalb agiler Sprints. Fokus auf vollständige Dokumentation und CI/CD-Prozesse."
+      },
+      {
+        "type": "results",
+        "text": "Zuverlässige Softwarelösungen, die den strengen Qualitäts- und Sicherheitsvorgaben des öffentlichen Sektors entsprechen."
       }
     ]
   }

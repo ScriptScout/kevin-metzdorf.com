@@ -105,7 +105,7 @@
   "CASE_TEASER": {
     "TITLE": "Fallstudien",
     "SUB": "Ausgewählte Projekte – Herausforderungen & messbare Resultate.",
-    "BUTTON": "Fallstudie lesen",
+    "BUTTON": "Mehr Erfahren",
     "PROJECTS": {
       "JAEGERMEISTER": {
         "TITLE": "Mast-Jägermeister SE – Enterprise Transformation",
@@ -132,7 +132,14 @@
   },
   "WORK": {
     "NOT_FOUND": "Fallstudie nicht gefunden",
-    "NOT_FOUND_DESC": "Diese Fallstudie existiert nicht (mehr)."
+    "NOT_FOUND_DESC": "Diese Fallstudie existiert nicht (mehr).",
+    "SECTIONS": {
+      "CONTEXT": "Kontext",
+      "APPROACH": "Ansatz",
+      "IMPLEMENTATION": "Umsetzung",
+      "RESULTS": "Ergebnisse",
+      "LEARNINGS": "Learnings"
+    }
   },
   "FINAL_CTA": {
     "TITLE": "Bereit, dein Shopify-Setup auf ein neues Level zu bringen?",
@@ -158,7 +165,7 @@
       "ONGOING": "Laufende Zusammenarbeit (Agentur / Brand)"
     },
     "LABEL_DESC": "Kurze Beschreibung des Projekts oder der Herausforderung",
-    "PH_DESC": "z. B. komplexe B2B‑Rabattlogik, individuelle Checkout‑Anpassungen, Migration von Headless zu Nativ, Agenturprojekt mit knapper Deadline…",
+    "PH_DESC": "z.B. komplexe B2B‑Rabattlogik, individuelle Checkout‑Anpassungen, Migration von Headless zu Nativ, Agenturprojekt mit knapper Deadline…",
     "LABEL_STATUS": "Aktueller Status",
     "STATUS": {
       "NEW": "Neuer Store / Konzeptphase",

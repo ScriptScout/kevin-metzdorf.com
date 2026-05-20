@@ -132,7 +132,14 @@
   },
   "WORK": {
     "NOT_FOUND": "Case study not found",
-    "NOT_FOUND_DESC": "This case study does not exist (anymore)."
+    "NOT_FOUND_DESC": "This case study does not exist (anymore).",
+    "SECTIONS": {
+      "CONTEXT": "Context",
+      "APPROACH": "Approach",
+      "IMPLEMENTATION": "Implementation",
+      "RESULTS": "Results",
+      "LEARNINGS": "Learnings"
+    }
   },
   "FINAL_CTA": {
     "TITLE": "Ready to take your Shopify setup to the next level?",

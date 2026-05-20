@@ -2,13 +2,13 @@
   {
     "slug": "enterprise-transformation",
     "title": "Mast-Jägermeister SE – Enterprise Transformation",
-    "summary": "Technical collaboration on an international Shopify Enterprise project with a focus on migrating a complex headless/Contentful setup back to a native, maintainable Shopify theme. Additionally, support in the development of a custom Shopify app for automated content sync between the master shop and international country shops.",
+    "summary": "Shopify Enterprise Transformation. Migration of a headless/Contentful setup to a native Shopify theme. Development of a custom app for automated content sync between master and country shops. Custom features like label/engraving editor. CI/CD & Git workflows in an international enterprise environment.",
     "kpis": [
       "Shopify Plus",
       "Theme Architecture",
       "Custom Shopify App",
       "Contentful Migration",
-      "CI/CD & Git Workflows"
+      "TypeScript"
     ],
     "industry": "Beverage",
     "region": "Global",
@@ -30,14 +30,14 @@
   },
   {
     "slug": "multi-store-setup",
-    "title": "Dekoback GmbH – Multi-Store Setup & technical development",
-    "summary": "Long-term technical support and further development of a grown Shopify multi-store setup with several Shopify stores and complementary WordPress structures. Focus on theme development, performance optimization, tracking integrations, and technical stabilization of existing systems.",
+    "title": "Dekoback GmbH – Multi-Store Setup & Technical Consulting",
+    "summary": "Long-term support of a multi-store setup and WordPress structures. Frontend development of a custom theme for the 'Einfach Backen' shop. Integration of GA4, GTM, Klaviyo, and app configurations. Performance optimization.",
     "kpis": [
       "Multi-Store Setup",
       "Theme Development",
       "Performance Optimization",
       "GA4 & Klaviyo",
-      "TypeScript"
+      "Liquid"
     ],
     "industry": "Food",
     "region": "DE",
@@ -65,8 +65,7 @@
       "Checkout Stabilization",
       "Technical Debugging",
       "Performance Optimization",
-      "High Traffic Handling",
-      "Conversion Optimization"
+      "High Traffic Handling"
     ],
     "industry": "Fashion",
     "region": "DE",
@@ -87,38 +86,64 @@
     ]
   },
   {
-    "slug": "einfach-backen-storefront",
-    "title": "Einfach Backen – Custom Shopify Storefront",
-    "summary": "Frontend development of an individual Shopify webshop in the food commerce and publishing environment. Implementation of responsive and performant storefront components based on existing design specifications as well as integration of external systems and APIs.",
+    "slug": "fedu-relaunch",
+    "title": "FeDu Werkstatttechnik – Store Relaunch & B2B Integration",
+    "summary": "Structured relaunch using the Horizon theme. Setup of a metafield architecture for linking product-related data. Configuration of Shopify Search & Discovery, filter logic, and B2B catalogs.",
     "kpis": [
-      "Custom Theme Development",
-      "Responsive Web Design",
-      "API Integration",
-      "Performance Optimization",
-      "Liquid & JavaScript"
+      "B2B Integration",
+      "Horizon Theme",
+      "Metafields",
+      "Filter Logic",
+      "Store Relaunch"
     ],
-    "industry": "Food & Publishing",
+    "industry": "Automotive / B2B",
     "region": "DE",
-    "heroImage": "assets/img/project_img/einfach-backen.webp",
     "sections": [
       {
         "type": "context",
-        "text": "For the Shopify shop 'Einfach Backen', a custom and brand-consistent storefront was to be developed in the food commerce environment. In addition to responsive frontend development, the focus was on stable technical integrations and a high-performance user experience."
+        "text": "Relaunch of the Shopify store focusing on B2B functionalities and an improved product data structure for technical items."
       },
       {
         "type": "approach",
-        "text": "Implementation of pixel-perfect layouts and Shopify templates based on existing Figma designs with Liquid, HTML, CSS, and JavaScript. Development and expansion of individual sections, theme components, and responsive frontend elements. Integration of external payment, shipping, and tracking systems as well as technical quality assurance and performance optimization."
+        "text": "Setup of a metafield architecture for efficient linking of product-related data. Configuration of Shopify Search & Discovery and individual filter logic based on the Horizon theme."
       },
       {
         "type": "results",
-        "text": "High-performance and responsive Shopify storefront with stable integrations and a clean technical basis for live operation. Improved user guidance and brand-consistent presentation within a high-reach publishing and commerce environment."
+        "text": "A powerful B2B store with optimized search functionality and clearly structured product catalogs that meet the requirements of professional customers."
+      }
+    ]
+  },
+  {
+    "slug": "rocketcommerce-configurators",
+    "title": "Rocketcommerce.io – Custom Solutions & Product Configurators",
+    "summary": "Development of technically demanding product configurators for various agency clients (e.g., MyVoltaics, Zauntastisch). Implementation of complex pricing logic, variant structures, and selection processes.",
+    "kpis": [
+      "Custom Solutions",
+      "Product Configurators",
+      "Variable Price Logic",
+      "Theme Customization"
+    ],
+    "industry": "E-Commerce Agency",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Implementation of individual e-commerce features for agency clients that go beyond the standard range of functions of Shopify."
+      },
+      {
+        "type": "approach",
+        "text": "Development of complex product configurators with JavaScript and Liquid. Implementation of variable pricing logic and dynamic variant structures for products such as solar systems and fence systems."
+      },
+      {
+        "type": "results",
+        "text": "Highly individualized storefront tools that simplify complex purchasing decisions and increase the conversion rate."
       }
     ]
   },
   {
     "slug": "enterprise-frontend-development",
-    "title": "Latori GmbH – Enterprise Shopify Frontend Development",
-    "summary": "Development of demanding Shopify frontend features for enterprise and premium customer projects within professional Shopify partner structures. Focus on high-performance storefront development, reusable theme components, and clean GitHub workflows.",
+    "title": "Latori GmbH – Enterprise Shopify projects",
+    "summary": "Senior Shopify Frontend Developer for Enterprise Shopify projects. Development of demanding frontend features (PDP, PLP, Cart Drawer) for premium brands (e.g., micasa, Delica, ooia). Work in professional GitHub workflows.",
     "kpis": [
       "Enterprise Shopify",
       "PDP & PLP Development",
@@ -132,15 +157,207 @@
     "sections": [
       {
         "type": "context",
-        "text": "Implementation of complex Shopify frontend functionalities for enterprise and premium brand projects within a Shopify Plus agency environment. The projects required high-performance frontend structures, clean development processes, and high technical quality standards."
+        "text": "Implementation of complex Shopify frontend functionalities for enterprise and premium brand projects within a Shopify Plus agency environment."
       },
       {
         "type": "approach",
-        "text": "Development of high-performance storefront components such as PDPs, PLPs, cart drawers, and account areas based on pixel-perfect Figma designs. Implementation of reusable theme sections and custom features with Liquid, JavaScript/TypeScript, HTML, and CSS. Working in professional GitHub workflows with feature branches, code reviews, and controlled deployments."
+        "text": "Development of high-performance storefront components such as PDPs, PLPs, and cart drawers based on pixel-perfect designs. Use of TypeScript and modern GitHub workflows including code reviews."
       },
       {
         "type": "results",
-        "text": "Scalable and maintainable frontend architectures for high-traffic Shopify projects with optimized performance, stable development processes, and clearly structured theme components for long-term further development."
+        "text": "Scalable and maintainable frontend architectures for high-traffic Shopify projects with highest quality standards."
+      }
+    ]
+  },
+  {
+    "slug": "heskamp-medien-consulting",
+    "title": "Heskamp Medien GmbH – Technical Consulting",
+    "summary": "Technical support and consulting for web and e-commerce projects in an agency environment. App configurations, checkout optimization, and connection of marketplaces (Amazon Seller Central).",
+    "kpis": [
+      "Technical Consulting",
+      "App Integration",
+      "E-Commerce Workflows",
+      "Frontend Optimizations"
+    ],
+    "industry": "Agency / Media",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Technical consulting for various customer projects with a focus on process optimization and system connection."
+      },
+      {
+        "type": "approach",
+        "text": "Configuration of complex app setups, optimization of the checkout to increase conversion, and connection of external marketplaces like Amazon."
+      },
+      {
+        "type": "results",
+        "text": "Optimized technical processes and improved connection to third-party systems, leading to more efficient e-commerce workflows."
+      }
+    ]
+  },
+  {
+    "slug": "natsana-recruiting-consulting",
+    "title": "Natsana GmbH – Technical Interviewer & Assessment",
+    "summary": "Support in the recruiting process for a Shopify developer position. Conducting technical assessments and technical evaluation of candidates regarding frontend competence and Shopify experience.",
+    "kpis": [
+      "Technical Assessment",
+      "Candidate Screening",
+      "Tech Recruiting",
+      "Consulting"
+    ],
+    "industry": "Health & Wellness",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Qualitative support in selecting new technical team members for Shopify development."
+      },
+      {
+        "type": "approach",
+        "text": "Conducting in-depth technical interviews and evaluating candidates regarding their Shopify and frontend expertise."
+      },
+      {
+        "type": "results",
+        "text": "Successful filling of technical vacancies through technically sound assessments and well-founded decision bases for management."
+      }
+    ]
+  },
+  {
+    "slug": "coberi-tracking-consulting",
+    "title": "Coberi GmbH – Technical E-Commerce Consultant",
+    "summary": "Consulting with a focus on tracking and marketing integrations. Setup of GA4, GTM, Google Ads conversion tracking (Consent Mode), and Klaviyo flows. Construction of a Looker Studio dashboard.",
+    "kpis": [
+      "Shopware 5",
+      "E-Commerce Tracking",
+      "GA4 & GTM",
+      "Klaviyo Automation",
+      "Consent Mode"
+    ],
+    "industry": "Agency / Tracking",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Ensuring a clean data basis for marketing decisions in a Shopware environment."
+      },
+      {
+        "type": "approach",
+        "text": "Implementation of a comprehensive tracking setup including Consent Mode and GTM. Automation of marketing flows in Klaviyo."
+      },
+      {
+        "type": "results",
+        "text": "Transparent success measurement via Looker Studio dashboards and more efficient marketing campaigns through precise tracking."
+      }
+    ]
+  },
+  {
+    "slug": "xentral-erp-integration",
+    "title": "ERP Integration – Shopify & Xentral",
+    "summary": "Technical connection of Xentral ERP to a Shopify store. Configuration of article master data, variants, images, metafields, as well as warehouse and shipping processes.",
+    "kpis": [
+      "Xentral ERP",
+      "ERP Integration",
+      "Product Data Management",
+      "Logistics Processes"
+    ],
+    "industry": "Operations / Logistics",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Merging e-commerce and ERP to automate operational processes."
+      },
+      {
+        "type": "approach",
+        "text": "Configuration of the interface between Shopify and Xentral. Mapping of product data, variants, and metafields, as well as definition of warehouse workflows."
+      },
+      {
+        "type": "results",
+        "text": "Synchronized data stocks and automated order processing, which significantly reduces manual effort."
+      }
+    ]
+  },
+  {
+    "slug": "travel-tiger-performance",
+    "title": "travel tiger – Performance & Theme Optimization",
+    "summary": "Technical optimization of an outdoor webshop. Performance analysis with Lighthouse to improve Core Web Vitals. Conducting automated tests with Selenium.",
+    "kpis": [
+      "Performance Optimization",
+      "Core Web Vitals",
+      "Lighthouse",
+      "Automated Testing (Selenium)"
+    ],
+    "industry": "Outdoor / Travel",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Improving the technical performance of a high-reach outdoor shop to increase organic visibility."
+      },
+      {
+        "type": "approach",
+        "text": "Targeted optimization of Core Web Vitals based on Lighthouse audits. Introduction of Selenium tests for quality assurance."
+      },
+      {
+        "type": "results",
+        "text": "Faster loading times and a more stable storefront, which has a positive effect on Google ranking and user experience."
+      }
+    ]
+  },
+  {
+    "slug": "derdak-saitta-automation",
+    "title": "Derdak und Saitta – Data Integration & Automation",
+    "summary": "Automated product data import and inventory synchronization for a dropshipping setup. Mapping and transformation of CSV wholesaler data via Matrixify and EasyCSV.",
+    "kpis": [
+      "Data Mapping",
+      "Automation",
+      "Matrixify",
+      "Dropshipping Setup",
+      "Inventory Sync"
+    ],
+    "industry": "E-Commerce / Dropshipping",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Automation of complex supplier feeds for a dropshipping business."
+      },
+      {
+        "type": "approach",
+        "text": "Use of tools like Matrixify and EasyCSV for the transformation and import of CSV data. Setup of a regular inventory sync."
+      },
+      {
+        "type": "results",
+        "text": "A largely automated system for product maintenance and inventory management without manual intervention."
+      }
+    ]
+  },
+  {
+    "slug": "bundeswehr-it-development",
+    "title": "IT Service Provider of the Bundeswehr – Software Development",
+    "summary": "Collaboration in an agile team for feature development and bug fixing in a security-critical enterprise IT system. High requirements for documentation and quality assurance.",
+    "kpis": [
+      "Agile Software Development",
+      "JavaScript Enterprise",
+      "CI/CD",
+      "Technical Documentation",
+      "Docker"
+    ],
+    "industry": "Public Sector / IT",
+    "region": "DE",
+    "sections": [
+      {
+        "type": "context",
+        "text": "Development of enterprise applications in a highly regulated and security-critical environment."
+      },
+      {
+        "type": "approach",
+        "text": "JavaScript-based feature development within agile sprints. Focus on complete documentation and CI/CD processes."
+      },
+      {
+        "type": "results",
+        "text": "Reliable software solutions that meet the strict quality and security requirements of the public sector."
       }
     ]
   }
