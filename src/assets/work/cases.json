@@ -99,7 +99,7 @@
     ],
     "industry": "Food & Publishing",
     "region": "DE",
-    "heroImage": "assets/img/project_img/einfach-backen.png",
+    "heroImage": "assets/img/project_img/einfach-backen.webp",
     "sections": [
       {
         "type": "context",
@@ -128,7 +128,7 @@
     ],
     "industry": "Retail & Consumer Brands",
     "region": "DACH",
-    "heroImage": "assets/img/project_img/latori.png",
+    "heroImage": "assets/img/project_img/latori_logo.png",
     "sections": [
       {
         "type": "context",

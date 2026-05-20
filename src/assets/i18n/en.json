@@ -16,147 +16,147 @@
     }
   },
   "HEADER": {
-    "BOOK_NOW": "Book a call now",
+    "BOOK_NOW": "Discuss project",
     "ARIA_HOME": "Go to home page",
-    "ARIA_BOOK": "Book a call now"
+    "ARIA_BOOK": "Discuss project"
   },
   "HERO": {
-    "TITLE": "Shopify at the limit. Without headless overhead.",
-    "SUB": "I build custom features, complex logic and app‑like frontends directly in native Shopify. For e‑commerce experiences where others say: \"That only works headless.\"",
-    "PRIMARY_CTA": "Free intro call",
-    "SECONDARY_CTA": "View case studies",
+    "TITLE": "Shopify at the limit. Without headless headaches.",
+    "SUB": "You want custom features, complex B2B logic, and blazing performance – but no bloated tech stack? I build enterprise experiences directly in native Shopify. Code that scales, implemented with ease.",
+    "PRIMARY_CTA": "Coffee & Code (Virtual)",
+    "SECONDARY_CTA": "My Case Studies",
     "KPI_ARIA": "Results in numbers",
-    "KPI_NATIVE": "Native performance",
-    "KPI_NO_API": "No API dependency",
-    "KPI_APPS": "App ecosystem remains",
+    "KPI_NATIVE": "Native Performance",
+    "KPI_NO_API": "No App Chaos",
+    "KPI_APPS": "Clean Code",
     "IMG_ALT": "Kevin Metzdorf – Senior Shopify Developer"
   },
   "TRUST": {
-    "SECTION_ARIA": "Trust & partnerships",
-    "TITLE": "Trust",
-    "SUB": "Selected brands & partners",
-    "LOGOS_ARIA": "Brand logos"
+    "SECTION_ARIA": "Trust and partner references",
+    "TITLE": "Trusted by Brands.",
+    "SUB": "Booked by top agencies.",
+    "LOGOS_ARIA": "Logos of Mast-Jägermeister, Latori GmbH, ooia and Heskamp Medien"
   },
   "SERVICES": {
-    "TITLE": "Services",
-    "SUB": "Maximum custom development – 100% anchored in Shopify standards.",
-    "REQUEST": "Request",
+    "TITLE": "What I can do for you.",
+    "SUB": "Maximum custom development – 100% anchored in Shopify standards. Without the headache.",
+    "REQUEST": "Request project",
     "CARDS": {
       "CUSTOM_UI": {
         "TITLE": "Custom UI & App-like Experiences",
-        "TEXT": "Interactive product configurators, dynamic quizzes and complex UI components (Vanilla JS/TS) – integrated directly into the theme.",
-        "ARIA": "Request service: Custom UI"
+        "TEXT": "You want interactive product configurators, dynamic quizzes, or complex UI elements (Vanilla JS/TS)? I build them directly into the theme. Smooth to use and pixel-perfect according to your Figma design.",
+        "ARIA": "Request service: Custom UI & App-like Experiences"
       },
       "CHECKOUT": {
-        "TITLE": "Checkout Extensibility",
-        "TEXT": "Tailored checkout flows, B2B logic and upsells via Shopify Functions and UI Extensions – stable and update‑safe.",
+        "TITLE": "Checkout Extensibility & B2B",
+        "TEXT": "No more rigid processes. I develop tailored checkout flows, complex B2B logic, and smart upsells via Shopify Functions and UI Extensions – absolutely stable, performant, and update-safe.",
         "ARIA": "Request service: Checkout Extensibility"
       },
       "METAOBJECTS": {
         "TITLE": "Metaobjects & Data Architecture",
-        "TEXT": "Build highly complex data models in the shop. Perfect for brand pages, complex filters or B2B requirements without external PIM systems.",
-        "ARIA": "Request service: Metaobjects"
+        "TEXT": "No more chaos in the backend. I design and build highly complex data models via Metafields and Metaobjects. Perfect for structured brand pages, clever filters, or B2B catalogs without expensive external PIM systems.",
+        "ARIA": "Request service: Metaobjects & Data Architecture"
       },
       "RESCUE": {
         "TITLE": "Technical Rescue (Plus/Enterprise)",
-        "TEXT": "When the project is stuck: code refactoring, removing technical debt and performance recovery for high‑traffic stores.",
+        "TEXT": "Is the project stuck or has the previous developer disappeared? Don't panic. I dive deep into the code, clean up technical debt, refactor the architecture, and save the performance of your high-traffic store.",
         "ARIA": "Request service: Technical Rescue"
       },
       "PERFORMANCE": {
         "TITLE": "Liquid/JS Performance Mastery",
-        "TEXT": "Core Web Vitals at the limit. Clean up app leftovers, proper lazy loading and blazing speeds without Vercel & co.",
-        "ARIA": "Request service: Performance"
+        "TEXT": "Core Web Vitals at the limit. I drive your loading times down by consistently killing app leftovers, setting up clean lazy loading, and optimizing the frontend. Blazing speed without the overhead of Vercel & Co.",
+        "ARIA": "Request service: Performance Mastery"
       },
       "DEHEADING": {
-        "TITLE": "De-Heading (Migration to Native)",
-        "TEXT": "Your headless setup burns budget? I migrate complex frontends back into a fast, easy‑to‑maintain Shopify OS 2.0 theme.",
-        "ARIA": "Request service: De‑Heading"
+        "TITLE": "De-Heading (Back to Standard)",
+        "TEXT": "Is your headless setup eating more budget than it brings in? I'll get you out of there. I migrate complex frontends and headless structures back into a fast, extremely easy-to-maintain, native Shopify OS 2.0 theme.",
+        "ARIA": "Request service: De-Heading"
       }
     }
   },
   "OUTCOMES": {
-    "TITLE": "Outcomes that matter",
-    "SUB": "Tangible improvements through solid Shopify engineering.",
-    "REQUEST": "Request",
+    "TITLE": "Engineering that pays off.",
+    "SUB": "No fictional dream numbers, but measurable quality for your e-commerce business.",
+    "REQUEST": "Request project",
     "CARDS": {
       "SPEED": {
-        "TITLE": "Speed",
-        "TEXT": "Faster load times and stable Core Web Vitals.",
-        "KPI1": "−38% LCP",
-        "KPI2": "CLS < 0.05",
-        "ARIA": "Request outcome: Speed"
+        "TITLE": "Performance Optimization according to Core Web Vitals",
+        "TEXT": "Slow shops lose customers. I analyze your setup with Lighthouse, kill app leftovers, and optimize your Liquid frontend for maximum loading times [cite: 238, 342]. This benefits your conversion rate and the Google bot.",
+        "KPI1": "Lighthouse Audit",
+        "KPI2": "Green Score Focus",
+        "ARIA": "Request result: Performance & Core Web Vitals"
       },
-      "CONVERSION": {
-        "TITLE": "Conversion",
-        "TEXT": "Optimized UX and checkout experiences for more revenue.",
-        "KPI1": "+18% CR",
-        "KPI2": "+12% AOV",
-        "ARIA": "Request outcome: Conversion"
+      "AUTOMATION": {
+        "TITLE": "Automated Data & ERP Processes",
+        "TEXT": "No more manual data chaos. I develop automated workflows for your product imports, synchronize inventory levels [cite: 258], and seamlessly integrate ERP systems like Xentral into your Shopify store [cite: 206].",
+        "KPI1": "Flawless Syncs",
+        "KPI2": "ERP & CSV Workflows",
+        "ARIA": "Request result: Process Automation & ERP"
       },
       "SCALABILITY": {
-        "TITLE": "Scalability",
-        "TEXT": "Robust architecture and maintainable code for growth.",
-        "KPI1": "Zero‑downtime deploys",
-        "KPI2": "Clean code base",
-        "ARIA": "Request outcome: Scalability"
+        "TITLE": "Secure Code through Agency Standards",
+        "TEXT": "Your infrastructure grows with you. I work exclusively with professional GitHub workflows, CI/CD pipelines, and feature branches. This means for you: updates and new features without live downtime.",
+        "KPI1": "Git & CI/CD Workflows",
+        "KPI2": "Zero-Downtime Focus",
+        "ARIA": "Request result: Scalability & Git Infrastructure"
       }
     }
   },
   "CASE_TEASER": {
-    "TITLE": "Case studies",
+    "TITLE": "Case Studies",
     "SUB": "Selected projects – challenges & measurable results.",
     "BUTTON": "Read case study"
   },
   "FINAL_CTA": {
-    "TITLE": "Ready for the next level of your Shopify store?",
-    "SUB": "Let's talk – book your free intro call now.",
-    "BUTTON": "Free intro call",
-    "ARIA": "Start free intro call via contact"
+    "TITLE": "Ready to take your Shopify setup to the next level?",
+    "SUB": "Let's talk about your project without obligation and see how we can set up your store to be technically robust.",
+    "BUTTON": "Discuss project",
+    "ARIA": "Request a non-binding discussion about your Shopify project"
   },
   "STICKY": {
-    "LABEL": "Free intro call",
-    "ARIA": "Go to contact – free intro call"
+    "LABEL": "Discuss project",
+    "ARIA": "To contact area – discuss Shopify project"
   },
   "CONTACT": {
     "TITLE": "Contact",
     "INTRO_HEAD": "Let's get started together!",
-    "INTRO_P1": "Use <a href=\"https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink\">this link to book an intro call directly</a>, or send me a message to kick off our collaboration! Whether it's complex refactoring, custom features at the limits of native Shopify, or strategic architecture consulting – I'm happy to help and look forward to hearing from you!",
+    "INTRO_P1": "Use <a href=\"https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink\">this link to book an initial consultation directly</a>, or write me a message to start our collaboration! Whether it's complex refactoring, custom features at the limit of native Shopify, or strategic architecture consulting.<br>I am happy to help and look forward to hearing from you!",
     "LABEL_SUPPORT": "How can I support you?",
     "OPT": {
       "CUSTOM_UI": "Custom UI & App-like Experiences",
-      "CHECKOUT": "Checkout Extensibility & B2B logic",
-      "RESCUE": "Technical Rescue (Project rescue & refactoring)",
-      "PERFORMANCE": "Performance audit & Core Web Vitals",
-      "DEHEADING": "De‑Heading (Migration from headless to native)",
-      "ONGOING": "Ongoing collaboration (Agency / Brand)"
+      "CHECKOUT": "Checkout Extensibility & B2B Logic",
+      "RESCUE": "Technical Rescue (Project Rescue & Refactoring)",
+      "PERFORMANCE": "Performance Audit & Core Web Vitals",
+      "DEHEADING": "De-Heading (Migration from Headless to Native)",
+      "ONGOING": "Ongoing Collaboration (Agency / Brand)"
     },
     "LABEL_DESC": "Brief description of the project or challenge",
-    "PH_DESC": "e.g. complex B2B discount logic, custom checkout adjustments, migration from headless to native, agency project with tight deadline…",
-    "LABEL_STATUS": "Current status",
+    "PH_DESC": "e.g., complex B2B discount logic, individual checkout adjustments, migration from headless to native, agency project with tight deadline...",
+    "LABEL_STATUS": "Current Status",
     "STATUS": {
-      "NEW": "New store / concept phase",
-      "EXISTING": "Existing store",
-      "DEV": "Project in development",
-      "STRUGGLING": "Struggling project / handover"
+      "NEW": "New Store / Concept Phase",
+      "EXISTING": "Existing Store",
+      "DEV": "Project in Development",
+      "STRUGGLING": "Struggling Project / Handover"
     },
     "LABEL_TIME": "Timeframe",
     "TIME": {
-      "SHORT": "Short‑term (0–2 weeks)",
-      "MEDIUM": "Medium‑term (2–6 weeks)",
-      "LONG": "Long‑term / ongoing",
-      "TBD": "To be defined"
+      "SHORT": "Short-term (0–2 weeks)",
+      "MEDIUM": "Medium-term (2–6 weeks)",
+      "LONG": "Long-term / Ongoing",
+      "TBD": "Still open"
     },
     "LABEL_NAME": "Name",
     "LABEL_EMAIL": "Email",
     "LABEL_COMPANY": "Company / Agency (optional)",
-    "LABEL_PRIVACY": "I have read and acknowledge the <a href=\"/privacy-policy\">privacy policy</a>.",
+    "LABEL_PRIVACY": "I have read and acknowledged the <a href=\"/privacy-policy\">privacy policy</a>.",
     "SEND": "Send",
     "SENT": "Sent"
   },
   "MODAL": {
     "TITLE": "Contact",
     "CLOSE": "Close",
-    "IFRAME_TITLE": "Book a free intro call",
+    "IFRAME_TITLE": "Book a free initial consultation",
     "HELP": "I usually reply within 1–2 business days."
   },
   "MAILTO": {
@@ -165,101 +165,139 @@
   },
   "SEO": {
     "CONTACT_TITLE": "Contact | Kevin Metzdorf – Shopify Developer",
-    "CONTACT_DESC": "Contact Kevin Metzdorf – Senior Shopify Developer. Free intro call or request for Shopify development, performance & technical rescue.",
+    "CONTACT_DESC": "Contact Kevin Metzdorf – Senior Shopify Developer. Non-binding initial consultation or inquiry for Shopify development, performance & technical rescue.",
     "CONTACT_CANONICAL": "https://kevin-metzdorf.com/contact"
   },
   "SHARED": {
     "LANG_TOGGLE": "Switch language"
   },
   "PROCESS": {
-    "TITLE": "Process: Transparent and goal‑oriented",
-    "SUB": "How we work together – clearly structured from analysis to success.",
+    "TITLE": "How the collaboration works",
+    "SUB": "No chaos, no guesswork – but a structured tech workflow from analysis to stable live operation.",
     "STEPS": {
-      "DISCOVER": { "TITLE": "Discover", "TEXT": "Quick audit & scope. Identify goals, risks and quick wins." },
-      "PLAN": { "TITLE": "Plan", "TEXT": "Backlog & roadmap. Define milestones, ownership and metrics." },
-      "BUILD": { "TITLE": "Build", "TEXT": "Development & testing. Clean code, pull requests and staging demos." },
-      "GROW": { "TITLE": "Grow", "TEXT": "Rollout, monitoring & iteration. KPI‑driven optimization in production." }
+      "DISCOVER": { "TITLE": "Scope & Tech Audit", "TEXT": "We take a look under the hood. I analyze your existing theme architecture, check the code quality, and we define the exact requirements – without overhead, straight to the point." },
+      "PLAN": { "TITLE": "Infrastructure & Plan", "TEXT": "Before the first line of code flows, the foundation is set. I set up the development environment, connect your GitHub repositories, and define the data architecture via Metaobjects or APIs." },
+      "BUILD": { "TITLE": "Clean Coding & Staging", "TEXT": "I develop your features with Liquid, TypeScript, or Shopify Functions. Work is done according to the highest standards in feature branches and with clean pull requests – demos are reliably available on the staging environment." },
+      "GROW": { "TITLE": "Go-Live & Monitoring", "TEXT": "Deployment is controlled and without nasty surprises in live operation. After launch, I keep an eye on performance and logs so that everything runs absolutely stably, quickly, and error-free." }
     }
   },
   "TECH": {
-    "TITLE": "Tech stack",
-    "SUB": "Battle‑tested tools for high‑performance Shopify stores.",
-    "LIST_ARIA": "Technologies",
+    "TITLE": "My Tech Stack",
+    "SUB": "No frills, but modern tools for clean, high-performance Shopify stores.",
+    "LIST_ARIA": "Technological competencies and development tools",
     "CHIPS": {
-      "LIQUID": { "ARIA": "Shopify Liquid" },
+      "LIQUID": { "ARIA": "Shopify Liquid & Theme Architecture" },
+      "JSTS": { "ARIA": "JavaScript / TypeScript (Vanilla)" },
+      "FUNCTIONS": { "ARIA": "Shopify Functions & UI Extensions" },
+      "META": { "ARIA": "Metafields & Metaobjects" },
+      "CLI_GIT": { "ARIA": "Shopify CLI, GitHub & CI/CD Workflows" },
+      "GRAPHQL": { "ARIA": "Shopify Admin & Storefront APIs (GraphQL)" },
       "TAE": { "ARIA": "Theme App Extensions" },
-      "FUNCTIONS": { "ARIA": "Shopify Functions" },
-      "JSTS": { "ARIA": "JavaScript / TypeScript" },
-      "GRAPHQL": { "ARIA": "GraphQL" },
-      "GA4GTM": { "ARIA": "GA4 / GTM" }
+      "ERP_INTEGRATION": { "ARIA": "ERP & Interfaces (e.g., Xentral)" },
+      "ANALYTICS": { "ARIA": "Tracking & Analytics (GA4 / GTM / Klaviyo)" },
+      "PERFORMANCE": { "ARIA": "Performance & Core Web Vitals (Lighthouse)" }
     }
   },
   "TESTIMONIALS": {
-    "TITLE": "Testimonials",
-    "SUB": "What clients and partners say about working together.",
-    "CAROUSEL_ARIA": "Client testimonials",
+    "TITLE": "Feedback from the dev front.",
+    "SUB": "What customers and partners say about the collaboration – without any filters.",
+    "CAROUSEL_ARIA": "Customer voices and references",
     "MORE": "Read more",
     "LESS": "Show less",
     "T1": {
-      "TEXT": "Kevin is an absolute professional in the Shopify ecosystem. Collaboration was extremely straightforward, professional and on time. He has a sharp eye for design and functionality. If you want to take your Shopify store to the next level, you should definitely get Kevin Metzdorf on your team!",
-      "CITE": "Jan Laußmann – CEO Latori GmbH / Shopify Platinum Agency"
+      "TEXT": "Kevin is an absolute professional in the Shopify ecosystem. The collaboration was extremely straightforward, professional, and on time. He has a sharp eye for design and functionality. Anyone who wants to take their Shopify store to the next level should definitely get Kevin Metzdorf on their team!",
+      "NAME_ROLE": "Jan Laußmann – CEO",
+      "COMPANY": "Latori GmbH / Shopify Platinum Agency"
     },
     "T2": {
-      "TEXT": "Reliable Shopify expert & web partner. Kevin reliably manages our seven Shopify stores, including the influencer shops of Amira Aly and Steffi Biedermann. Collaboration is efficient, transparent and solution‑oriented. We particularly value his proactive approach, quick responses and always‑visible time tracking. Clear recommendation!",
-      "CITE": "Ralf Pressler – Director Marketing & Digital Dekoback GmbH"
+      "TEXT": "Reliable Shopify expert & web partner. Kevin Metzdorf reliably supports our seven Shopify stores, including the influencer shops of Amira Aly and Steffi Biedermann. The collaboration is efficient, transparent, and solution-oriented. We particularly appreciate his proactive approach, fast reactions, and the time tracking that can be viewed at any time. Clear recommendation!",
+      "NAME_ROLE": "Ralf Pressler – Director Marketing & Digital",
+      "COMPANY": "Dekoback GmbH"
     },
     "T3": {
-      "TEXT": "I can recommend Kevin without reservation as a Senior Shopify Developer. Especially at the beginning of my time in the team he was an enormous support. Despite his own projects, he always took the time to explain new things patiently, which made onboarding much easier. You can feel his deep experience in the Shopify ecosystem in every conversation. He has a well‑founded answer to almost every technical challenge. What makes Kevin special is the combination of top‑level technical skills and his extremely pleasant manner. Even in stressful phases or just before tight deadlines, he remains the calming influence in the team, keeps the overview and radiates great confidence. A real team player – working with him is simply a pleasure.",
-      "CITE": "Normann Blum – Frontend Developer"
+      "TEXT": "I can unreservedly recommend Kevin as a Senior Shopify Developer. Especially at the beginning of my time on the team, he was an enormous support. Despite his own projects, he always took the time to patiently explain new things to me – that made my start much easier. You notice his deep experience in the Shopify ecosystem in every conversation. He has a well-founded answer to almost every technical challenge. What sets Kevin apart, however, is the combination of technical skill at the highest level and his extremely pleasant manner. Even in stressful phases or shortly before tight deadlines, he remains the absolute pillar of calm in the team, keeps the overview, and radiates enormous security. A true team player – professionally and personally.",
+      "NAME_ROLE": "Normann Blum – Frontend Developer",
+      "COMPANY": "E-Commerce Project Environment"
     }
   },
   "BLOG": {
     "EYEBROW": "Blog",
     "HEADING": "Blog",
-    "TITLE": "From the blog",
+    "TITLE": "From the Blog",
     "SUB": "Latest posts on Shopify development and performance. (Placeholder)",
-    "SUBTITLE": "Articles on Shopify development, performance and architecture.",
+    "SUBTITLE": "Posts on Shopify development, performance, and architecture.",
     "EMPTY": "No posts published yet.",
     "READ_TIME": "min read",
     "CARDS": {
-      "T1": { "TITLE": "Optimize Shopify theme performance", "TEXT": "Improve Core Web Vitals: image strategy, lazy loading, Liquid/JS cleanup.", "ARIA": "To blog: theme performance" },
-      "T2": { "TITLE": "Shopify 2.0 migration – checklist", "TEXT": "From 1.0/WooCommerce to OS 2.0: data, themes, apps, SEO.", "ARIA": "To blog: 2.0 migration checklist" },
-      "T3": { "TITLE": "Technical rescue: stable checkout", "TEXT": "Find issues, reduce risk, secure releases.", "ARIA": "To blog: technical rescue checkout" }
+      "T1": { "TITLE": "Optimize Shopify Theme Performance", "TEXT": "Improve Core Web Vitals: image strategy, lazy loading, Liquid/JS cleanup.", "ARIA": "To blog: Theme Performance" },
+      "T2": { "TITLE": "Shopify 2.0 Migration – Checklist", "TEXT": "From 1.0/WooCommerce to OS 2.0: data, themes, apps, SEO.", "ARIA": "To blog: 2.0 Migration Checklist" },
+      "T3": { "TITLE": "Technical Rescue: Stable Checkout", "TEXT": "Find errors, mitigate risks, secure releases.", "ARIA": "To blog: Technical Rescue Checkout" }
     },
     "READ": "Read",
-    "DISCUSS": "Book a call now",
-    "BACK": "Back to blog"
+    "DISCUSS": "Book an appointment now",
+    "BACK": "Back to Blog"
   },
   "FAQ": {
     "TITLE": "FAQ",
-    "SUB": "Frequently asked questions – quick answers.",
+    "SUB": "Frequently asked questions – briefly answered.",
     "Q1": "How quickly can we start?",
-    "A1": "Typically I need about 1–2 weeks lead time for proper onboarding. If critical systems are down (technical rescue or live bugs), I can free up capacity for an emergency sprint at short notice.",
-    "Q2": "What does collaboration look like?",
-    "A2": "No guesswork, no micromanagement. We always start with a clearly defined scope. Then I develop in iterative sprints. That means: regular transparent updates, fixed check‑ins and measurable milestones. You always know exactly where the project stands.",
-    "Q3": "Do you offer fixed‑price projects or retainers?",
-    "A3": "It depends on your setup. For well‑defined projects with a fixed scope I offer fixed prices. For ongoing work, complex refactorings or scaling multi‑store setups I usually work on a retainer or sprint basis.",
-    "Q4": "Do you work exclusively with Shopify?",
-    "A4": "No. My core expertise is modern frontend engineering (JavaScript, TypeScript, React). Besides Shopify I also build configurators, interactive UI components and high‑performance web apps.",
-    "Q5": "Do you take over existing 'chaos projects'?",
-    "A5": "Absolutely. Technical rescue is one of my specialties: analyze bottlenecks, refactor the architecture and get the project across the finish line in a structured way.",
-    "Q6": "Do you work white‑label for agencies?",
-    "A6": "Yes. I regularly support agencies (e.g. Shopify Platinum Partners) during capacity crunches or on complex enterprise features – integrating seamlessly into existing GitHub and CI/CD processes."
+    "A1": "As a rule, I need about 1 to 2 weeks lead time for a clean onboarding. However, if your critical systems fail (keyword: Technical Rescue or live bugs), I can also free up capacity for an emergency sprint at short notice by arrangement.",
+    "Q2": "How does the collaboration work?",
+    "A2": "No blind flight, no micromanagement. We always start with a clearly defined scope. After that, I develop in iterative sprints. For you, this means: regular, transparent updates, fixed check-ins, and measurable milestones. You know exactly where the project stands at all times.",
+    "Q3": "Are there fixed project prices or retainers?",
+    "A3": "For clearly defined projects with a fixed scope, I offer fixed project prices. For ongoing support, complex refactorings, or multi-store setups, I usually work with a retainer or sprint model.",
+    "Q4": "Do you offer Shopify exclusively?",
+    "A4": "No. Core expertise: modern frontend engineering (JavaScript, TypeScript, React). In addition to Shopify, I also develop configurators, interactive UI components, and high-performance web apps.",
+    "Q5": "Do you also take over existing 'chaos projects'?",
+    "A5": "Absolutely. Technical Rescue is one of my specialties: analyze bottlenecks, refactor architecture, and bring the project cleanly across the finish line.",
+    "Q6": "Do you also work white-label for agencies?",
+    "A6": "Yes. I regularly support agencies (e.g., Shopify Platinum Partners) with bottlenecks or enterprise features – seamlessly integrated into existing GitHub and CI/CD processes."
   },
   "AI_POLICY": {
     "TITLE": "AI Policy",
-    "P1": "This policy describes how I use AI‑powered tools in my workflow to support the creation of concepts, copy, design and code.",
-    "S1": "1. Use of artificial intelligence",
-    "S1_P1": "AI‑based systems are used solely as assistive tools for brainstorming, analysis, structuring and general efficiency. There is explicitly no automated decision‑making.",
-    "S1_P2": "The final review, evaluation and approval of all content, concepts and technical implementations is always carried out by me personally as the responsible director.",
-    "S2": "2. Data protection & security",
-    "S2_P1": "Only data that is strictly necessary for the respective task is used for AI‑assisted processes. Personal, confidential or security‑critical customer data (such as API keys, sensitive database dumps or trade secrets) is never entered into public or uncontrolled AI systems.",
-    "S3": "3. Quality assurance",
-    "S3_P1": "Every AI‑generated or AI‑assisted output is professionally reviewed, manually refined and evaluated for technical accuracy, clarity, consistency and alignment with the defined project goals before it is implemented or delivered to the client.",
+    "P1": "This policy describes how I use AI-assisted tools in my workflow to support the creation of concepts, texts, designs, and code.",
+    "S1": "1. Use of Artificial Intelligence",
+    "S1_P1": "AI-based systems are used by me exclusively as assistant tools for brainstorming, analysis, structuring, and general efficiency increase. There is explicitly no automated decision-making.",
+    "S1_P2": "The final review, evaluation, and approval of all content, concepts, and technical implementations is always carried out by me personally as the responsible Director.",
+    "S2": "2. Data Protection & Security",
+    "S2_P1": "Only data that is strictly necessary for the respective task is used for AI-assisted processes. Personal, confidential, or security-critical customer data (such as API keys, sensitive database dumps, or trade secrets) are under no circumstances entered into public or uncontrollable AI systems.",
+    "S3": "3. Quality Assurance",
+    "S3_P1": "Every AI-generated or -assisted content is professionally reviewed, manually revised, and evaluated for technical accuracy, clarity, consistency, and compliance with the defined project goals before it is implemented or delivered to the customer.",
     "S4": "4. Transparency",
-    "S4_P1": "I value open communication. On request, I will transparently disclose the nature and extent of AI usage within a specific client project at any time.",
+    "S4_P1": "I attach great importance to open communication. On request, I will transparently provide information about the nature and extent of AI use within a specific customer project at any time.",
     "S5": "5. Contact",
-    "S5_P1": "If you have questions about the use of artificial intelligence in our collaboration, feel free to contact me at <a href=\"mailto:info@kevin-metzdorf.com\">info@kevin-metzdorf.com</a>.",
+    "S5_P1": "If you have questions about the use of Artificial Intelligence in our collaboration, you can contact me at any time at <a href=\"mailto:info@kevin-metzdorf.com\">info@kevin-metzdorf.com</a>.",
     "UPDATED": "Last updated: April 2026"
+  },
+  "TERMS": {
+    "TITLE": "General Terms and Conditions (GTC)",
+    "UPDATED": "Last updated: April 2026"
+  },
+  "IMPRINT": {
+    "TITLE": "Imprint",
+    "S1": "Information according to § 5 DDG",
+    "CONTACT": "Contact",
+    "RESPONSIBLE": "Responsible for the content according to § 18 Abs. 2 MStV",
+    "EU_ODR": "EU Dispute Resolution",
+    "EU_ODR_TEXT": "The European Commission provides a platform for online dispute resolution (OS): <a href=\"https://ec.europa.eu/consumers/odr/\" target=\"_blank\" rel=\"noopener noreferrer\">https://ec.europa.eu/consumers/odr/</a>.<br />I am not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
+  },
+  "PRIVACY": {
+    "TITLE": "Privacy Policy",
+    "UPDATED": "Last updated: April 2026",
+    "H2_1": "General Information",
+    "H2_2": "Controller",
+    "H2_3": "Access Data (Server Log Files)",
+    "H2_4": "Contacting Us",
+    "H2_5": "Booking Appointments via Microsoft Bookings",
+    "H2_6": "Hosting (Google Firebase)",
+    "H2_7": "Web Analysis (Google Analytics)",
+    "H2_8": "Integration of External Plugins (GitHub & LinkedIn)",
+    "H2_9": "Web Fonts (Manrope / Google Fonts)",
+    "H2_10": "Legal Basis for Processing",
+    "H2_11": "Storage Duration",
+    "H2_12": "Your Rights",
+    "H2_13": "Right to Lodge a Complaint",
+    "H2_14": "SSL/TLS Encryption",
+    "H2_15": "Changes to this Privacy Policy"
   }
 }
