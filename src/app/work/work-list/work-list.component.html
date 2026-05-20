@@ -18,7 +18,7 @@
           <li *ngFor="let k of c.kpis"><span class="badge badge--neutral">{{ k }}</span></li>
         </ul>
         <div class="work-card__actions">
-          <button class="btn btn--secondary" (click)="openCase(c.slug)" [attr.aria-label]="('CASE_TEASER.BUTTON' | translate)">{{ 'CASE_TEASER.BUTTON' | translate }}</button>
+          <a class="btn btn--secondary" [routerLink]="['/work', c.slug]" (click)="openCase(c.slug)" [attr.aria-label]="('CASE_TEASER.BUTTON' | translate)">{{ 'CASE_TEASER.BUTTON' | translate }}</a>
         </div>
       </article>
     </div>

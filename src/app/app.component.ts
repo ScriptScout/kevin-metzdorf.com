@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import AOS from 'aos';
 import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
 import { LanguageService } from './language.service';
 
@@ -13,14 +14,16 @@ export class AppComponent implements OnInit {
 
   constructor(
     private analytics: AngularFireAnalytics,
-    private langService: LanguageService  // eager init ensures translate.use() runs before any child ngOnInit
+    private langService: LanguageService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit() {
-    AOS.init();
-
-    // Analytics nach DOM-Init
-    this.initializeAnalytics();
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init();
+      // Analytics nach DOM-Init
+      this.initializeAnalytics();
+    }
   }
 
   private async initializeAnalytics() {

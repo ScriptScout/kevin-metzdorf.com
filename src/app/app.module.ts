@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -78,7 +78,8 @@ const firebaseConfig = {
     StickyCtaComponent
   ],
   providers: [
-    ...provideTranslateHttpLoader()  // provides TRANSLATE_HTTP_LOADER_CONFIG token + TranslateLoader
+    ...provideTranslateHttpLoader(),
+    provideClientHydration(withEventReplay())  // provides TRANSLATE_HTTP_LOADER_CONFIG token + TranslateLoader
   ],
   bootstrap: [AppComponent]
 })
