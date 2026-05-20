@@ -135,39 +135,39 @@
       <article class="case-card">
         <header>
           <figure class="case-media"><img src="assets/img/project_img/JM.png" alt="Jägermeister Logo" loading="lazy" decoding="async"></figure>
-          <h3>Mast-Jägermeister SE – Enterprise Transformation</h3>
+          <h3>{{ 'CASE_TEASER.PROJECTS.JAEGERMEISTER.TITLE' | translate }}</h3>
         </header>
-        <p>Umbau eines komplexen Headless-Setups zurück zu einem nativen, hochperformanten Shopify-Theme inklusive Custom-App für globalen Content-Sync.</p>
+        <p>{{ 'CASE_TEASER.PROJECTS.JAEGERMEISTER.DESCRIPTION' | translate }}</p>
         <ul class="kpis">
-          <li><span class="badge badge--positive">Shopify Plus</span></li>
-          <li><span class="badge badge--positive">Theme Architectur</span></li>
-          <li><span class="badge badge--neutral">Custom App & APIs</span></li>
+          <li><span class="badge badge--positive">{{ 'CASE_TEASER.PROJECTS.JAEGERMEISTER.BADGE1' | translate }}</span></li>
+          <li><span class="badge badge--positive">{{ 'CASE_TEASER.PROJECTS.JAEGERMEISTER.BADGE2' | translate }}</span></li>
+          <li><span class="badge badge--neutral">{{ 'CASE_TEASER.PROJECTS.JAEGERMEISTER.BADGE3' | translate }}</span></li>
         </ul>
         <a class="btn btn--secondary" routerLink="/work" (click)="caseTeaserClick('Migration 2.0')" [attr.aria-label]="('CASE_TEASER.BUTTON' | translate)">{{ 'CASE_TEASER.BUTTON' | translate }}</a>
       </article>
       <article class="case-card">
         <header>
           <figure class="case-media"><img src="assets/img/project_img/decocino-logo.png" alt="Decocino Logo" loading="lazy" decoding="async"></figure>
-          <h3>Dekoback GmbH – Multi-Store-Setup & Betreuung</h3>
+          <h3>{{ 'CASE_TEASER.PROJECTS.DECOBACK.TITLE' | translate }}</h3>
         </header>
-        <p>Langfristige technische Betreuung und Performance-Optimierung einer gewachsenen Infrastruktur mit mehreren Shopify-Shops (u.a. Decocino, Amiras Zauber) und automatisierten Daten-Schnittstellen.</p>
+        <p>{{ 'CASE_TEASER.PROJECTS.DECOBACK.DESCRIPTION' | translate }}</p>
         <ul class="kpis">
-          <li><span class="badge badge--positive">Multi-Store Setup</span></li>
-          <li><span class="badge badge--positive">TypeScript & Core Web Vitals</span></li>
-          <li><span class="badge badge--neutral">App-Integrations</span></li>
+          <li><span class="badge badge--positive">{{ 'CASE_TEASER.PROJECTS.DECOBACK.BADGE1' | translate }}</span></li>
+          <li><span class="badge badge--positive">{{ 'CASE_TEASER.PROJECTS.DECOBACK.BADGE2' | translate }}</span></li>
+          <li><span class="badge badge--neutral">{{ 'CASE_TEASER.PROJECTS.DECOBACK.BADGE3' | translate }}</span></li>
         </ul>
         <a class="btn btn--secondary" routerLink="/work" (click)="caseTeaserClick('Performance Sprint')" [attr.aria-label]="('CASE_TEASER.BUTTON' | translate)">{{ 'CASE_TEASER.BUTTON' | translate }}</a>
       </article>
       <article class="case-card">
         <header>
           <figure class="case-media"><img src="assets/img/project_img/overkill-sneakershop-logo.svg" alt="Overkill Logo" loading="lazy" decoding="async"></figure>
-          <h3>Overkill Shop – Technical Checkout Rescue</h3>
+          <h3>{{ 'CASE_TEASER.PROJECTS.OVERKILL.TITLE' | translate }}</h3>
         </header>
-        <p>Analyse und Behebung geschäftskritischer Fehler im Checkout-Prozess. Stabilisierung der Bestell- und Zahlungslogiken bei extrem hohem Traffic-Aufkommen (z.B. während exklusiver Releases).</p>
+        <p>{{ 'CASE_TEASER.PROJECTS.OVERKILL.DESCRIPTION' | translate }}</p>
         <ul class="kpis">
-          <li><span class="badge badge--positive">Checkout Fix</span></li>
-          <li><span class="badge badge--positive">Technical Rescue</span></li>
-          <li><span class="badge badge--neutral">Uptime & Conversion Secure</span></li>
+          <li><span class="badge badge--positive">{{ 'CASE_TEASER.PROJECTS.OVERKILL.BADGE1' | translate }}</span></li>
+          <li><span class="badge badge--positive">{{ 'CASE_TEASER.PROJECTS.OVERKILL.BADGE2' | translate }}</span></li>
+          <li><span class="badge badge--neutral">{{ 'CASE_TEASER.PROJECTS.OVERKILL.BADGE3' | translate }}</span></li>
         </ul>
         <a class="btn btn--secondary" routerLink="/work" (click)="caseTeaserClick('Checkout Fix')" [attr.aria-label]="('CASE_TEASER.BUTTON' | translate)">{{ 'CASE_TEASER.BUTTON' | translate }}</a>
       </article>
@@ -209,16 +209,16 @@
     <h2 id="tech-stack-title" class="tech-stack__title">{{ 'TECH.TITLE' | translate }}</h2>
     <p class="tech-stack__sub">{{ 'TECH.SUB' | translate }}</p>
     <ul class="tech-list" [attr.aria-label]="('TECH.LIST_ARIA' | translate)">
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.LIQUID.ARIA' | translate)">Liquid & Theme Architecture</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.JSTS.ARIA' | translate)">JavaScript / TypeScript</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.FUNCTIONS.ARIA' | translate)">Shopify Functions & UI Extensions</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.META.ARIA' | translate)">Metafields & Metaobjects</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.CLI_GIT.ARIA' | translate)">Shopify CLI, GitHub & CI/CD</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.GRAPHQL.ARIA' | translate)">GraphQL APIs</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.TAE.ARIA' | translate)">Theme App Extensions</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.ERP_INTEGRATION.ARIA' | translate)">ERP & Xentral-Integrationen</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.ANALYTICS.ARIA' | translate)">GA4, GTM & Klaviyo</li>
-      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.PERFORMANCE.ARIA' | translate)">Performance & Core Web Vitals</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.LIQUID.ARIA' | translate)">{{ 'TECH.CHIPS.LIQUID.TEXT' | translate }}</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.JSTS.ARIA' | translate)">{{ 'TECH.CHIPS.JSTS.TEXT' | translate }}</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.FUNCTIONS.ARIA' | translate)">{{ 'TECH.CHIPS.FUNCTIONS.TEXT' | translate }}</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.META.ARIA' | translate)">{{ 'TECH.CHIPS.META.TEXT' | translate }}</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.CLI_GIT.ARIA' | translate)">{{ 'TECH.CHIPS.CLI_GIT.TEXT' | translate }}</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.GRAPHQL.ARIA' | translate)">{{ 'TECH.CHIPS.GRAPHQL.TEXT' | translate }}</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.TAE.ARIA' | translate)">{{ 'TECH.CHIPS.TAE.TEXT' | translate }}</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.ERP_INTEGRATION.ARIA' | translate)">{{ 'TECH.CHIPS.ERP_INTEGRATION.TEXT' | translate }}</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.ANALYTICS.ARIA' | translate)">{{ 'TECH.CHIPS.ANALYTICS.TEXT' | translate }}</li>
+      <li class="tech-chip" [attr.aria-label]="('TECH.CHIPS.PERFORMANCE.ARIA' | translate)">{{ 'TECH.CHIPS.PERFORMANCE.TEXT' | translate }}</li>
     </ul>
   </div>
 </section>

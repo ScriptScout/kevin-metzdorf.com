@@ -105,7 +105,34 @@
   "CASE_TEASER": {
     "TITLE": "Fallstudien",
     "SUB": "Ausgewählte Projekte – Herausforderungen & messbare Resultate.",
-    "BUTTON": "Fallstudie lesen"
+    "BUTTON": "Fallstudie lesen",
+    "PROJECTS": {
+      "JAEGERMEISTER": {
+        "TITLE": "Mast-Jägermeister SE – Enterprise Transformation",
+        "DESCRIPTION": "Umbau eines komplexen Headless-Setups zurück zu einem nativen, hochperformanten Shopify-Theme inklusive Custom-App für globalen Content-Sync.",
+        "BADGE1": "Shopify Plus",
+        "BADGE2": "Theme Architektur",
+        "BADGE3": "Custom App & APIs"
+      },
+      "DECOBACK": {
+        "TITLE": "Dekoback GmbH – Multi-Store-Setup & Betreuung",
+        "DESCRIPTION": "Langfristige technische Betreuung und Performance-Optimierung einer gewachsenen Infrastruktur mit mehreren Shopify-Shops (u.a. Decocino, Amiras Zauber) and automatisierten Daten-Schnittstellen.",
+        "BADGE1": "Multi-Store Setup",
+        "BADGE2": "TypeScript & Core Web Vitals",
+        "BADGE3": "App-Integrations"
+      },
+      "OVERKILL": {
+        "TITLE": "Overkill Shop – Technical Checkout Rescue",
+        "DESCRIPTION": "Analyse und Behebung geschäftskritischer Fehler im Checkout-Prozess. Stabilisierung der Bestell- und Zahlungslogiken bei extrem hohem Traffic-Aufkommen (z.B. während exklusiver Releases).",
+        "BADGE1": "Checkout Fix",
+        "BADGE2": "Technical Rescue",
+        "BADGE3": "Uptime & Conversion Secure"
+      }
+    }
+  },
+  "WORK": {
+    "NOT_FOUND": "Fallstudie nicht gefunden",
+    "NOT_FOUND_DESC": "Diese Fallstudie existiert nicht (mehr)."
   },
   "FINAL_CTA": {
     "TITLE": "Bereit, dein Shopify-Setup auf ein neues Level zu bringen?",
@@ -186,16 +213,16 @@
     "SUB": "Kein Schnickschnack, sondern moderne Werkzeuge für saubere, performante Shopify‑Stores.",
     "LIST_ARIA": "Technologische Kompetenzen und Entwicklungswerkzeuge",
     "CHIPS": {
-      "LIQUID": { "ARIA": "Shopify Liquid & Theme Architecture" },
-      "JSTS": { "ARIA": "JavaScript / TypeScript (Vanilla)" },
-      "FUNCTIONS": { "ARIA": "Shopify Functions & UI Extensions" },
-      "META": { "ARIA": "Metafields & Metaobjects" },
-      "CLI_GIT": { "ARIA": "Shopify CLI, GitHub & CI/CD Workflows" },
-      "GRAPHQL": { "ARIA": "Shopify Admin & Storefront APIs (GraphQL)" },
-      "TAE": { "ARIA": "Theme App Extensions" },
-      "ERP_INTEGRATION": { "ARIA": "ERP & Schnittstellen (z.B. Xentral)" },
-      "ANALYTICS": { "ARIA": "Tracking & Analytics (GA4 / GTM / Klaviyo)" },
-      "PERFORMANCE": { "ARIA": "Performance & Core Web Vitals (Lighthouse)" }
+      "LIQUID": { "TEXT": "Liquid & Theme Architektur", "ARIA": "Shopify Liquid & Theme Architecture" },
+      "JSTS": { "TEXT": "JavaScript / TypeScript", "ARIA": "JavaScript / TypeScript (Vanilla)" },
+      "FUNCTIONS": { "TEXT": "Shopify Functions & UI Extensions", "ARIA": "Shopify Functions & UI Extensions" },
+      "META": { "TEXT": "Metafields & Metaobjects", "ARIA": "Metafields & Metaobjects" },
+      "CLI_GIT": { "TEXT": "Shopify CLI, GitHub & CI/CD", "ARIA": "Shopify CLI, GitHub & CI/CD Workflows" },
+      "GRAPHQL": { "TEXT": "GraphQL APIs", "ARIA": "Shopify Admin & Storefront APIs (GraphQL)" },
+      "TAE": { "TEXT": "Theme App Extensions", "ARIA": "Theme App Extensions" },
+      "ERP_INTEGRATION": { "TEXT": "ERP & Xentral-Integrationen", "ARIA": "ERP & Schnittstellen (z.B. Xentral)" },
+      "ANALYTICS": { "TEXT": "GA4, GTM & Klaviyo", "ARIA": "Tracking & Analytics (GA4 / GTM / Klaviyo)" },
+      "PERFORMANCE": { "TEXT": "Performance & Core Web Vitals", "ARIA": "Performance & Core Web Vitals (Lighthouse)" }
     }
   },
   "TESTIMONIALS": {

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
+import { LanguageService } from '../language.service';
 
 export interface WorkCaseSection {
   type: 'context' | 'approach' | 'implementation' | 'results' | 'learnings' | string;
@@ -20,12 +21,14 @@ export interface WorkCaseItem {
 
 @Injectable({ providedIn: 'root' })
 export class WorkService {
-  private readonly url = 'assets/work/cases.json';
-
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private langService: LanguageService
+  ) {}
 
   list(): Observable<WorkCaseItem[]> {
-    return this.http.get<WorkCaseItem[]>(this.url);
+    const url = `assets/work/cases-${this.langService.currentLang}.json`;
+    return this.http.get<WorkCaseItem[]>(url);
   }
 
   getBySlug(slug: string): Observable<WorkCaseItem | undefined> {

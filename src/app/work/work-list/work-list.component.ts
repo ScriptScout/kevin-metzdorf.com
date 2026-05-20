@@ -5,7 +5,9 @@ import { WorkCaseItem, WorkService } from '../work.service';
 import { SeoService } from '../../seo.service';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { RevealDirective } from '../../shared/reveal.directive';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LanguageService } from '../../language.service';
+import { Subject, switchMap, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-work-list',
@@ -20,23 +22,46 @@ export class WorkListComponent implements OnInit, AfterViewInit, OnDestroy {
   private listObserver?: IntersectionObserver;
   private listLogged = false;
   private jsonLdEl?: HTMLScriptElement;
+  private destroy$ = new Subject<void>();
 
   constructor(
     private work: WorkService,
     private seo: SeoService,
     private analytics: AngularFireAnalytics,
     private router: Router,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    private langService: LanguageService,
+    private translate: TranslateService
   ) {}
 
   ngOnInit(): void {
-    this.seo.update({
-      title: 'Arbeiten | Kevin Metzdorf – Shopify Developer',
-      description: 'Ausgewählte Shopify‑Projekte: Migration, Performance‑Sprints, Technical Rescue. (Platzhalter)',
-      canonical: 'https://kevin-metzdorf.com/work'
-    });
+    this.langService.lang$.pipe(
+      takeUntil(this.destroy$),
+      switchMap(() => {
+        this.updateSeoAndBreadcrumbs();
+        return this.work.list();
+      })
+    ).subscribe(items => this.cases = items);
+  }
 
-    // Inject BreadcrumbList JSON-LD (Home → Arbeiten)
+  private updateSeoAndBreadcrumbs(): void {
+    this.translate.get(['NAV.WORK', 'CASE_TEASER.SUB']).subscribe(t => {
+      const workTitle = t['NAV.WORK'];
+      this.seo.update({
+        title: `${workTitle} | Kevin Metzdorf – Shopify Developer`,
+        description: t['CASE_TEASER.SUB'],
+        canonical: 'https://kevin-metzdorf.com/work'
+      });
+
+      this.injectBreadcrumbJsonLd(workTitle);
+    });
+  }
+
+  private injectBreadcrumbJsonLd(workTitle: string): void {
+    if (this.jsonLdEl) {
+      this.document.head.removeChild(this.jsonLdEl);
+    }
+
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -44,24 +69,23 @@ export class WorkListComponent implements OnInit, AfterViewInit, OnDestroy {
         {
           '@type': 'ListItem',
           'position': 1,
-          'name': 'Startseite',
+          'name': this.langService.currentLang === 'de' ? 'Startseite' : 'Home',
           'item': 'https://kevin-metzdorf.com/'
         },
         {
           '@type': 'ListItem',
           'position': 2,
-          'name': 'Arbeiten',
+          'name': workTitle,
           'item': 'https://kevin-metzdorf.com/work'
         }
       ]
-    } as const;
+    };
+
     const script = this.document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify(jsonLd);
     this.document.head.appendChild(script);
     this.jsonLdEl = script;
-
-    this.work.list().subscribe(items => this.cases = items);
   }
 
   ngAfterViewInit(): void {
@@ -82,6 +106,8 @@ export class WorkListComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.listObserver?.disconnect();
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   openCase(slug: string): void {
