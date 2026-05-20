@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, AfterViewInit, ElementRef, ViewChild, Inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AngularFireAnalytics } from '@angular/fire/compat/analytics';
 import { WorkCaseItem, WorkService } from '../work.service';
 import { SeoService } from '../../seo.service';
@@ -12,7 +12,7 @@ import { Subject, switchMap, takeUntil } from 'rxjs';
 @Component({
   selector: 'app-work-list',
   standalone: true,
-  imports: [CommonModule, RevealDirective, TranslateModule],
+  imports: [CommonModule, RevealDirective, TranslateModule, RouterModule],
   templateUrl: './work-list.component.html',
   styleUrls: ['./work-list.component.scss']
 })
