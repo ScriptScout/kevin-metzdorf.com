@@ -30,6 +30,7 @@ import { StickyCtaComponent } from './sticky-cta/sticky-cta.component';
 import { RevealDirective } from './shared/reveal.directive';
 import { WorkListComponent } from './work/work-list/work-list.component';
 import { WorkDetailComponent } from './work/work-detail/work-detail.component';
+import { ShopifyMaintenanceComponent } from './shopify-maintenance/shopify-maintenance.component';
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -75,7 +76,8 @@ const firebaseConfig = {
     AngularFirestoreModule,
     AngularFireAnalyticsModule,
     RevealDirective,
-    StickyCtaComponent
+    StickyCtaComponent,
+    ShopifyMaintenanceComponent
   ],
   providers: [
     ...provideTranslateHttpLoader(),

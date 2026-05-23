@@ -1,0 +1,261 @@
+<section class="editorial-hero" role="region" aria-label="Einstiegsbereich">
+  <div class="editorial-hero__container">
+    <header class="editorial-hero__content">
+      <h1 class="editorial-hero__title">{{ 'MAINTENANCE.HERO.TITLE' | translate }}</h1>
+      <p class="editorial-hero__subline">{{ 'MAINTENANCE.HERO.SUB' | translate }}</p>
+      <div class="editorial-hero__ctas">
+        <a class="btn btn--primary" [routerLink]="[{ outlets: { modal: 'kontakt' } }]" [queryParams]="{ tab: 'booking' }" (click)="heroPrimaryClick()">{{ 'MAINTENANCE.HERO.PRIMARY_CTA' | translate }}</a>
+        <button class="btn btn--secondary" (click)="heroSecondaryClick()">{{ 'MAINTENANCE.HERO.SECONDARY_CTA' | translate }}</button>
+      </div>
+      <ul class="kpi-list">
+        <li><span class="badge badge--positive">{{ 'MAINTENANCE.HERO.KPI_NATIVE' | translate }}</span></li>
+        <li><span class="badge badge--positive">{{ 'MAINTENANCE.HERO.KPI_NO_API' | translate }}</span></li>
+        <li><span class="badge badge--neutral">{{ 'MAINTENANCE.HERO.KPI_APPS' | translate }}</span></li>
+      </ul>
+    </header>
+    <figure class="editorial-hero__figure">
+      <img
+        src="assets/img/Gro%C3%9F%20(Profilbild-Kevin-Metzdorf-Gross).png"
+        [attr.alt]="('HERO.IMG_ALT' | translate)"
+        width="480" height="600"
+        loading="eager" decoding="async" fetchpriority="high" />
+    </figure>
+  </div>
+</section>
+
+<section class="trust" [attr.aria-label]="('TRUST.SECTION_ARIA' | translate)">
+  <div class="trust__container">
+    <h2 class="trust__title">{{ 'TRUST.TITLE' | translate }}</h2>
+    <p class="trust__sub">{{ 'TRUST.SUB' | translate }}</p>
+    <ul class="logo-list">
+      <li class="logo-item">
+        <a href="https://www.jagermeister.com/" target="_blank" rel="noopener" aria-label="Mast-Jägermeister">
+          <img src="assets/img/project_img/JM.png" alt="Jägermeister Logo" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="logo-item">
+        <a href="https://www.latori.com/" target="_blank" rel="noopener" aria-label="Latori GmbH">
+          <img src="assets/img/project_img/latori_logo.png" alt="Latori Logo" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="logo-item">
+        <a href="https://ooia.de/" target="_blank" rel="noopener" aria-label="Ooia">
+          <img src="assets/img/project_img/ooia_logo.png" alt="Ooias Logo" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li class="logo-item">
+        <a href="https://heskamp-medien.de/" target="_blank" rel="noopener" aria-label="Heskamp Medien">
+          <img src="assets/img/project_img/HM_Bildmarke-1.png" alt="Heskamp Medien Logo" loading="lazy" decoding="async">
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="services" class="services-teaser" aria-labelledby="services-title">
+  <div class="services-teaser__container">
+    <h2 id="services-title" class="services-teaser__title">{{ 'MAINTENANCE.SERVICES.TITLE' | translate }}</h2>
+    <p class="services-teaser__sub">{{ 'MAINTENANCE.SERVICES.SUB' | translate }}</p>
+    <div class="services-grid">
+      <article class="service-card">
+        <h3>{{ 'MAINTENANCE.SERVICES.CARDS.SUPPORT.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.SERVICES.CARDS.SUPPORT.TEXT' | translate }}</p>
+      </article>
+      <article class="service-card">
+        <h3>{{ 'MAINTENANCE.SERVICES.CARDS.ESTIMATION.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.SERVICES.CARDS.ESTIMATION.TEXT' | translate }}</p>
+      </article>
+      <article class="service-card">
+        <h3>{{ 'MAINTENANCE.SERVICES.CARDS.THEME.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.SERVICES.CARDS.THEME.TEXT' | translate }}</p>
+      </article>
+      <article class="service-card">
+        <h3>{{ 'MAINTENANCE.SERVICES.CARDS.APPS.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.SERVICES.CARDS.APPS.TEXT' | translate }}</p>
+      </article>
+      <article class="service-card">
+        <h3>{{ 'MAINTENANCE.SERVICES.CARDS.ADJUSTMENTS.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.SERVICES.CARDS.ADJUSTMENTS.TEXT' | translate }}</p>
+      </article>
+      <article class="service-card">
+        <h3>{{ 'MAINTENANCE.SERVICES.CARDS.COMMUNICATION.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.SERVICES.CARDS.COMMUNICATION.TEXT' | translate }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="outcomes" aria-labelledby="not-included-title">
+  <div class="outcomes__container">
+    <h2 id="not-included-title" class="outcomes__title">{{ 'MAINTENANCE.NOT_INCLUDED.TITLE' | translate }}</h2>
+    <p class="outcomes__sub">{{ 'MAINTENANCE.NOT_INCLUDED.SUB' | translate }}</p>
+    <div class="outcomes-grid">
+      <article class="outcome-card">
+        <h3>{{ 'MAINTENANCE.NOT_INCLUDED.CARDS.NEW_DEV.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.NOT_INCLUDED.CARDS.NEW_DEV.TEXT' | translate }}</p>
+      </article>
+      <article class="outcome-card">
+        <h3>{{ 'MAINTENANCE.NOT_INCLUDED.CARDS.IMMEDIATE.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.NOT_INCLUDED.CARDS.IMMEDIATE.TEXT' | translate }}</p>
+      </article>
+      <article class="outcome-card">
+        <h3>{{ 'MAINTENANCE.NOT_INCLUDED.CARDS.AVAILABILITY.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.NOT_INCLUDED.CARDS.AVAILABILITY.TEXT' | translate }}</p>
+      </article>
+      <article class="outcome-card">
+        <h3>{{ 'MAINTENANCE.NOT_INCLUDED.CARDS.PROJECTS.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.NOT_INCLUDED.CARDS.PROJECTS.TEXT' | translate }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="process" aria-labelledby="process-title">
+  <div class="process__container">
+    <h2 id="process-title" class="process__title">{{ 'MAINTENANCE.PROCESS.TITLE' | translate }}</h2>
+    <p class="process__sub">{{ 'MAINTENANCE.PROCESS.SUB' | translate }}</p>
+    <div class="process-grid">
+      <article class="process-step" (click)="processStepClick('Call')" tabindex="0">
+        <div class="step-index" aria-hidden="true">01</div>
+        <h3>{{ 'MAINTENANCE.PROCESS.STEPS.CALL.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.PROCESS.STEPS.CALL.TEXT' | translate }}</p>
+      </article>
+      <article class="process-step" (click)="processStepClick('Assessment')" tabindex="0">
+        <div class="step-index" aria-hidden="true">02</div>
+        <h3>{{ 'MAINTENANCE.PROCESS.STEPS.ASSESSMENT.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.PROCESS.STEPS.ASSESSMENT.TEXT' | translate }}</p>
+      </article>
+      <article class="process-step" (click)="processStepClick('Onboarding')" tabindex="0">
+        <div class="step-index" aria-hidden="true">03</div>
+        <h3>{{ 'MAINTENANCE.PROCESS.STEPS.ONBOARDING.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.PROCESS.STEPS.ONBOARDING.TEXT' | translate }}</p>
+      </article>
+      <article class="process-step" (click)="processStepClick('Maintenance')" tabindex="0">
+        <div class="step-index" aria-hidden="true">04</div>
+        <h3>{{ 'MAINTENANCE.PROCESS.STEPS.MAINTENANCE.TITLE' | translate }}</h3>
+        <p>{{ 'MAINTENANCE.PROCESS.STEPS.MAINTENANCE.TEXT' | translate }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta pricing" aria-labelledby="pricing-title">
+  <div class="final-cta__container">
+    <h2 id="pricing-title" class="final-cta__title">{{ 'MAINTENANCE.PRICING.TITLE' | translate }}</h2>
+    <p class="final-cta__sub">{{ 'MAINTENANCE.PRICING.SUB' | translate }}</p>
+
+    <div class="pricing-card">
+      <div class="pricing-card__price">{{ 'MAINTENANCE.PRICING.MONTHLY' | translate }}</div>
+      <div class="pricing-card__onboarding">{{ 'MAINTENANCE.PRICING.ONBOARDING' | translate }}</div>
+      <a class="btn btn--primary" [routerLink]="[{ outlets: { modal: 'kontakt' } }]" [queryParams]="{ tab: 'booking' }">{{ 'MAINTENANCE.PRICING.CTA' | translate }}</a>
+      <p class="pricing-card__info">{{ 'MAINTENANCE.PRICING.INFO' | translate }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" aria-labelledby="testimonials-title">
+  <div class="testimonials__container">
+    <h2 id="testimonials-title" class="testimonials__title">{{ 'TESTIMONIALS.TITLE' | translate }}</h2>
+    <p class="testimonials__sub">{{ 'TESTIMONIALS.SUB' | translate }}</p>
+
+    <div class="testimonial-carousel" role="group" aria-roledescription="carousel">
+      <article class="testimonial" tabindex="0">
+        <blockquote>
+          <p class="testimonial__text" id="tst-0" [class.is-expanded]="expandedTestimonials[0]">{{ 'TESTIMONIALS.T1.TEXT' | translate }}</p>
+        </blockquote>
+        <div class="testimonial__actions">
+          <button type="button" class="btn btn--secondary" (click)="toggleTestimonial(0)">
+            {{ expandedTestimonials[0] ? ('TESTIMONIALS.LESS' | translate) : ('TESTIMONIALS.MORE' | translate) }}
+          </button>
+        </div>
+        <footer class="testimonial__meta">
+          <cite><span class="badge badge--author-chip">{{ 'TESTIMONIALS.T1.NAME_ROLE' | translate }}</span></cite>
+        </footer>
+      </article>
+      <article class="testimonial" tabindex="0">
+        <blockquote>
+          <p class="testimonial__text" id="tst-1" [class.is-expanded]="expandedTestimonials[1]">{{ 'TESTIMONIALS.T2.TEXT' | translate }}</p>
+        </blockquote>
+        <div class="testimonial__actions">
+          <button type="button" class="btn btn--secondary" (click)="toggleTestimonial(1)">
+            {{ expandedTestimonials[1] ? ('TESTIMONIALS.LESS' | translate) : ('TESTIMONIALS.MORE' | translate) }}
+          </button>
+        </div>
+        <footer class="testimonial__meta">
+          <cite><span class="badge badge--author-chip">{{ 'TESTIMONIALS.T2.NAME_ROLE' | translate }}</span></cite>
+        </footer>
+      </article>
+      <article class="testimonial" tabindex="0">
+        <blockquote>
+          <p class="testimonial__text" id="tst-2" [class.is-expanded]="expandedTestimonials[2]">{{ 'TESTIMONIALS.T3.TEXT' | translate }}</p>
+        </blockquote>
+        <div class="testimonial__actions">
+          <button type="button" class="btn btn--secondary" (click)="toggleTestimonial(2)">
+            {{ expandedTestimonials[2] ? ('TESTIMONIALS.LESS' | translate) : ('TESTIMONIALS.MORE' | translate) }}
+          </button>
+        </div>
+        <footer class="testimonial__meta">
+          <cite><span class="badge badge--author-chip">{{ 'TESTIMONIALS.T3.NAME_ROLE' | translate }}</span></cite>
+        </footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="faq-title" itemscope itemtype="https://schema.org/FAQPage">
+  <div class="faq__container">
+    <h2 id="faq-title" class="faq__title">{{ 'MAINTENANCE.FAQ.TITLE' | translate }}</h2>
+    <p class="faq__sub">{{ 'MAINTENANCE.FAQ.SUB' | translate }}</p>
+
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('MAINTENANCE.FAQ.Q1', $event)">
+      <summary><h3 itemprop="name">{{ 'MAINTENANCE.FAQ.Q1' | translate }}</h3></summary>
+      <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">{{ 'MAINTENANCE.FAQ.A1' | translate }}</p>
+      </div>
+    </details>
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('MAINTENANCE.FAQ.Q2', $event)">
+      <summary><h3 itemprop="name">{{ 'MAINTENANCE.FAQ.Q2' | translate }}</h3></summary>
+      <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">{{ 'MAINTENANCE.FAQ.A2' | translate }}</p>
+      </div>
+    </details>
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('MAINTENANCE.FAQ.Q3', $event)">
+      <summary><h3 itemprop="name">{{ 'MAINTENANCE.FAQ.Q3' | translate }}</h3></summary>
+      <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">{{ 'MAINTENANCE.FAQ.A3' | translate }}</p>
+      </div>
+    </details>
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('MAINTENANCE.FAQ.Q4', $event)">
+      <summary><h3 itemprop="name">{{ 'MAINTENANCE.FAQ.Q4' | translate }}</h3></summary>
+      <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">{{ 'MAINTENANCE.FAQ.A4' | translate }}</p>
+      </div>
+    </details>
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('MAINTENANCE.FAQ.Q5', $event)">
+      <summary><h3 itemprop="name">{{ 'MAINTENANCE.FAQ.Q5' | translate }}</h3></summary>
+      <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">{{ 'MAINTENANCE.FAQ.A5' | translate }}</p>
+      </div>
+    </details>
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('MAINTENANCE.FAQ.Q6', $event)">
+      <summary><h3 itemprop="name">{{ 'MAINTENANCE.FAQ.Q6' | translate }}</h3></summary>
+      <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">{{ 'MAINTENANCE.FAQ.A6' | translate }}</p>
+      </div>
+    </details>
+    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" (toggle)="faqToggle('MAINTENANCE.FAQ.Q7', $event)">
+      <summary><h3 itemprop="name">{{ 'MAINTENANCE.FAQ.Q7' | translate }}</h3></summary>
+      <div class="faq-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">{{ 'MAINTENANCE.FAQ.A7' | translate }}</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="final-cta" aria-labelledby="final-cta-title">
+  <div class="final-cta__container">
+    <h2 id="final-cta-title" class="final-cta__title">{{ 'MAINTENANCE.FINAL_CTA.TITLE' | translate }}</h2>
+    <p class="final-cta__sub">{{ 'MAINTENANCE.FINAL_CTA.SUB' | translate }}</p>
+    <a class="btn btn--primary" [routerLink]="[{ outlets: { modal: 'kontakt' } }]" [queryParams]="{ tab: 'booking' }">{{ 'MAINTENANCE.FINAL_CTA.BUTTON' | translate }}</a>
+  </div>
+</section>

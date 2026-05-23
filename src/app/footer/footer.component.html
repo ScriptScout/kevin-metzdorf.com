@@ -3,8 +3,9 @@
     <div class="logo_imprint_box">
       <div class="info-box" aria-label="Footer Navigation">
         <a class="hover_underline_animation" routerLink="/blog">{{ 'NAV.BLOG' | translate }}</a>
-        <a class="hover_underline_animation" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener">{{ 'NAV.CONTACT' | translate }}</a>
+        <a class="hover_underline_animation" href="https://calendly.com/kevinmetzdorf/shopify-onboarding" target="_blank" rel="noopener noreferrer">{{ 'NAV.CONTACT' | translate }}</a>
         <a class="hover_underline_animation" routerLink="/work">{{ 'NAV.WORK' | translate }}</a>
+        <a class="hover_underline_animation" routerLink="/shopify-betreuung">{{ 'NAV.MAINTENANCE' | translate }}</a>
         <a class="hover_underline_animation" routerLink="/imprint">{{ 'FOOTER.IMPRINT' | translate }}</a>
         <a class="hover_underline_animation" routerLink="/privacy-policy">{{ 'FOOTER.PRIVACY' | translate }}</a>
         <a class="hover_underline_animation" routerLink="/ai-policy">{{ 'FOOTER.AI_POLICY' | translate }}</a>
@@ -15,7 +16,7 @@
     <div class="social_icons_container">
       <a class="link_hover" href="https://github.com/kevin-metzdorf" target="_blank" rel="noopener noreferrer" [attr.aria-label]="('FOOTER.ARIA.GITHUB' | translate)"><img
         src="assets/img/github.png" alt="GitHub Logo"></a>
-      <a class="link_hover" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener" [attr.aria-label]="('FOOTER.ARIA.EMAIL' | translate)"><img src="assets/img/email.png" alt="E-Mail Logo"></a>
+      <a class="link_hover" href="https://calendly.com/kevinmetzdorf/shopify-onboarding" target="_blank" rel="noopener noreferrer" [attr.aria-label]="('FOOTER.ARIA.EMAIL' | translate)"><img src="assets/img/email.png" alt="E-Mail Logo"></a>
       <a class="link_hover" href="https://www.linkedin.com/in/kevin-metzdorf-581895263/" target="_blank" rel="noopener noreferrer" [attr.aria-label]="('FOOTER.ARIA.LINKEDIN' | translate)"><img
         src="assets/img/linkedin.png" alt="LinkedIn Logo"></a>
     </div>

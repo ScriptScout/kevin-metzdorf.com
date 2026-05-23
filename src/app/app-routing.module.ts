@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactModalComponent } from './contact/contact-modal.component';
 import { WorkListComponent } from './work/work-list/work-list.component';
 import { WorkDetailComponent } from './work/work-detail/work-detail.component';
+import { ShopifyMaintenanceComponent } from './shopify-maintenance/shopify-maintenance.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -34,7 +35,8 @@ const routes: Routes = [
   { path: 'blog', component: BlogOverviewComponent },
   { path: 'blog/:slug', component: BlogPostComponent },
   { path: 'work', component: WorkListComponent },
-  { path: 'work/:slug', component: WorkDetailComponent }
+  { path: 'work/:slug', component: WorkDetailComponent },
+  { path: 'shopify-betreuung', component: ShopifyMaintenanceComponent }
 ];
 
 @NgModule({

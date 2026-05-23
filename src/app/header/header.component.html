@@ -11,7 +11,7 @@
     <div class="nav_bar_desktop nav_right">
       <a class="nav_link hover_underline_animation" routerLink="/work" routerLinkActive="active_link">{{ 'NAV.WORK' | translate }}</a>
       <a class="nav_link hover_underline_animation" routerLink="/blog" routerLinkActive="active_link">{{ 'NAV.BLOG' | translate }}</a>
-      <a class="nav_link hover_underline_animation" [href]="langService.currentLang==='de' ? 'mailto:info@kevin-metzdorf.com?subject=Projektanfrage%20x%20Kevin%20Metzdorf' : 'mailto:info@kevin-metzdorf.com?subject=Project%20inquiry%20x%20Kevin%20Metzdorf'" rel="nofollow noopener">{{ 'NAV.CONTACT' | translate }}</a>
+      <a class="nav_link hover_underline_animation" href="https://calendly.com/kevinmetzdorf/shopify-onboarding" target="_blank" rel="noopener noreferrer">{{ 'NAV.CONTACT' | translate }}</a>
       <a class="btn btn--primary nav_cta" [routerLink]="[{ outlets: { modal: 'kontakt' } }]" [queryParams]="{ tab: 'booking' }" [attr.aria-label]="('HEADER.ARIA_BOOK' | translate)">{{ 'HEADER.BOOK_NOW' | translate }}</a>
       <button class="lang_switcher" (click)="langService.toggle()" [attr.aria-label]="('SHARED.LANG_TOGGLE' | translate)">
         <span [class.active]="langService.currentLang === 'de'">DE</span>

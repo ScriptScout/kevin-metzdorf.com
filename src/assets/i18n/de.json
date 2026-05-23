@@ -2,7 +2,8 @@
   "NAV": {
     "BLOG": "Blog",
     "CONTACT": "Kontakt",
-    "WORK": "Work"
+    "WORK": "Work",
+    "MAINTENANCE": "Shopify Betreuung"
   },
   "FOOTER": {
     "IMPRINT": "Impressum",
@@ -154,7 +155,7 @@
   "CONTACT": {
     "TITLE": "Kontakt",
     "INTRO_HEAD": "Lassen Sie uns gemeinsam starten!",
-    "INTRO_P1": "Nutzen Sie <a href=\"https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink\">diesen Link, um direkt ein Erstgespräch zu buchen</a>, oder schreiben Sie mir eine Nachricht, um unsere Zusammenarbeit zu beginnen! Ganz gleich, ob es um ein komplexes Refactoring, Custom‑Features am Limit des nativen Shopify oder strategische Architektur‑Beratung geht.<br>Ich bin gerne für Sie da und freue mich darauf, von Ihnen zu hören!",
+    "INTRO_P1": "Nutzen Sie <a href=\"https://calendly.com/kevinmetzdorf/shopify-onboarding\">diesen Link, um direkt ein Erstgespräch zu buchen</a>, oder schreiben Sie mir eine Nachricht, um unsere Zusammenarbeit zu beginnen! Ganz gleich, ob es um ein komplexes Refactoring, Custom‑Features am Limit des nativen Shopify oder strategische Architektur‑Beratung geht.<br>Ich bin gerne für Sie da und freue mich darauf, von Ihnen zu hören!",
     "LABEL_SUPPORT": "Wie kann ich Sie unterstützen?",
     "OPT": {
       "CUSTOM_UI": "Custom UI & App-like Experiences",
@@ -285,7 +286,7 @@
     "Q5": "Übernehmen Sie auch bestehende 'Chaos‑Projekte'?",
     "A5": "Absolut. Technical Rescue ist eines meiner Spezialgebiete: Bottlenecks analysieren, Architektur refactoren und das Projekt sauber über die Ziellinie bringen.",
     "Q6": "Arbeiten Sie auch White‑Label für Agenturen?",
-    "A6": "Ja. Ich unterstütze regelmäßig Agenturen (z. B. Shopify Platinum Partner) bei Engpässen oder Enterprise‑Features – nahtlos integriert in bestehende GitHub‑ und CI/CD‑Prozesse."
+    "A6": "Ja. Ich unterstütze regelmäßig Agenturen (z.B. Shopify Platinum Partner) bei Engpässen oder Enterprise‑Features – nahtlos integriert in bestehende GitHub‑ und CI/CD‑Prozesse."
     },
     "AI_POLICY": {
     "TITLE": "KI-Richtlinie (AI Policy)",
@@ -300,7 +301,7 @@
     "S4": "4. Transparenz",
     "S4_P1": "Ich lege großen Wert auf eine offene Kommunikation. Auf Anfrage gebe ich jederzeit transparent Auskunft über die Art und den Umfang der KI-Nutzung im Rahmen eines spezifischen Kundenprojekts.",
     "S5": "5. Kontakt",
-    "S5_P1": "Bei Fragen zur Nutzung von Künstlicher Intelligenz in unserer Zusammenarbeit können Sie sich jederzeit gerne unter <a href=\"mailto:info@kevin-metzdorf.com\">info@kevin-metzdorf.com</a> an mich wenden.",
+    "S5_P1": "Bei Fragen zur Nutzung von Künstlicher Intelligenz in unserer Zusammenarbeit können Sie sich jederzeit gerne <a href=\"https://calendly.com/kevinmetzdorf/shopify-onboarding\">über diesen Link direkt an mich wenden</a>.",
     "UPDATED": "Zuletzt aktualisiert: April 2026"
   },
   "TERMS": {
@@ -322,7 +323,7 @@
     "H2_2": "Verantwortlicher",
     "H2_3": "Zugriffsdaten (Server-Logfiles)",
     "H2_4": "Kontaktaufnahme",
-    "H2_5": "Terminbuchung via Microsoft Bookings",
+    "H2_5": "Terminbuchung via Calendly",
     "H2_6": "Hosting (Google Firebase)",
     "H2_7": "Webanalyse (Google Analytics)",
     "H2_8": "Einbindung von externen Plugins (GitHub & LinkedIn)",
@@ -333,5 +334,121 @@
     "H2_13": "Beschwerderecht",
     "H2_14": "SSL-/TLS-Verschlüsselung",
     "H2_15": "Änderungen dieser Datenschutzerklärung"
+  },
+  "MAINTENANCE": {
+    "HERO": {
+      "TITLE": "Strukturierte Shopify Betreuung. Ohne Sales-Druck.",
+      "SUB": "Ein fester technischer Ansprechpartner für deinen Shopify Shop. Unterstützung bei technischen Fragen, Einschätzungen und gezielten Anpassungen im bestehenden Shopify Setup.",
+      "PRIMARY_CTA": "Kennenlerngespräch buchen",
+      "SECONDARY_CTA": "Leistungsumfang ansehen",
+      "KPI_NATIVE": "Fester technischer Ansprechpartner",
+      "KPI_NO_API": "Strukturierte technische Unterstützung",
+      "KPI_APPS": "Einschätzung & Umsetzung aus einer Hand"
+    },
+    "SERVICES": {
+      "TITLE": "Technische Unterstützung, wenn du sie brauchst.",
+      "SUB": "Keine unbegrenzte Flatrate, sondern kompetente Betreuung mit klaren Grenzen und hoher Qualität.",
+      "CARDS": {
+        "SUPPORT": {
+          "TITLE": "Technische Shopify Unterstützung",
+          "TEXT": "Ein erfahrener Shopify Entwickler, der deinen Shop kennt und bei technischen Fragen unterstützt."
+        },
+        "ESTIMATION": {
+          "TITLE": "Einschätzung von Anforderungen",
+          "TEXT": "Du hast eine Idee für ein neues Feature? Ich bewerte die technische Machbarkeit und den Aufwand neutral und ehrlich."
+        },
+        "THEME": {
+          "TITLE": "Shopify Theme Unterstützung",
+          "TEXT": "Unterstützung bei Theme-Anpassungen, visuellen Problemen und bestehenden Shopify-Sektionen."
+        },
+        "APPS": {
+          "TITLE": "App- & Integrationsbewertung",
+          "TEXT": "Bevor du eine App installierst, prüfe ich, ob sie dein System verlangsamt oder ob es bessere Alternativen gibt."
+        },
+        "ADJUSTMENTS": {
+          "TITLE": "Gezielte Unterstützung",
+          "TEXT": "Gezielte Unterstützung bei kleineren technischen Anpassungen innerhalb bestehender Shopify- und Theme-Möglichkeiten."
+        },
+        "COMMUNICATION": {
+          "TITLE": "Strukturierte Kommunikation",
+          "TEXT": "Strukturierte Kommunikation ohne unnötige Abstimmungsschleifen per E-Mail."
+        }
+      }
+    },
+    "NOT_INCLUDED": {
+      "TITLE": "Was nicht enthalten ist.",
+      "SUB": "Transparenz ist die Basis für eine gute Zusammenarbeit. Folgende Punkte sind nicht Teil der monatlichen Betreuung:",
+      "CARDS": {
+        "NEW_DEV": {
+          "TITLE": "Keine komplette Neuentwicklung",
+          "TEXT": "Der Aufbau neuer Shops oder umfangreiche Re-Designs werden als separate Projekte geplant und umgesetzt."
+        },
+        "IMMEDIATE": {
+          "TITLE": "Keine garantierten Sofortlösungen",
+          "TEXT": "Ich antworte zeitnah, biete aber keinen 24/7-Support oder garantierte Problembehebung innerhalb von Minuten."
+        },
+        "AVAILABILITY": {
+          "TITLE": "Keine permanente Erreichbarkeit",
+          "TEXT": "Wir arbeiten strukturiert. Es gibt keine Rufbereitschaft an Wochenenden oder außerhalb der Kernarbeitszeiten."
+        },
+        "PROJECTS": {
+          "TITLE": "Größere Projekte separat",
+          "TEXT": "Größere Entwicklungen oder umfangreiche Anforderungen werden separat geplant und angeboten."
+        }
+      }
+    },
+    "PROCESS": {
+      "TITLE": "In 4 Schritten zum reibungslosen Betrieb.",
+      "SUB": "So starten wir unsere Zusammenarbeit.",
+      "STEPS": {
+        "CALL": {
+          "TITLE": "Kennenlerngespräch",
+          "TEXT": "Wir besprechen deinen Shop, deine aktuellen Herausforderungen und ob wir menschlich sowie fachlich zusammenpassen."
+        },
+        "ASSESSMENT": {
+          "TITLE": "Technische Einschätzung",
+          "TEXT": "Ich werfe einen Blick in dein Theme und dein Backend, um den IST-Zustand und potenzielle Baustellen zu verstehen."
+        },
+        "ONBOARDING": {
+          "TITLE": "Onboarding",
+          "TEXT": "Wir richten die Kommunikationswege ein und ich mache mich mit deiner spezifischen Infrastruktur vertraut."
+        },
+        "MAINTENANCE": {
+          "TITLE": "Laufende Betreuung",
+          "TEXT": "Ab jetzt unterstütze ich dich als technischer Ansprechpartner bei laufenden Anforderungen, Einschätzungen und kleineren Anpassungen."
+        }
+      }
+    },
+    "PRICING": {
+      "TITLE": "Klare Konditionen.",
+      "SUB": "Keine versteckten Kosten. Einfach und transparent.",
+      "MONTHLY": "199 € / Monat*",
+      "ONBOARDING": "299 € Onboarding (einmalig)",
+      "INFO": "* Geeignet für bestehende Shopify Shops mit regelmäßigem technischem Unterstützungsbedarf. (Mindestlaufzeit 3 Monate). Keine Entwicklungs-Flatrate. Größere Anforderungen werden separat eingeplant.",
+      "CTA": "Kennenlerngespräch buchen"
+    },
+    "FAQ": {
+      "TITLE": "Häufige Fragen.",
+      "SUB": "Alles, was du über die Shopify Betreuung wissen musst.",
+      "Q1": "Für welche Shops ist das geeignet?",
+      "A1": "Das Angebot richtet sich an bestehende Shopify-Händler, die bereits Umsätze erzielen und regelmäßige technische Unterstützung oder kleinere Anpassungen benötigen, aber keinen Vollzeit-Entwickler einstellen wollen.",
+      "Q2": "Wie läuft die Kommunikation ab?",
+      "A2": "Wir kommunizieren per E-Mail für strukturierte Anforderungen. So bleibt alles dokumentiert und nachvollziehbar.",
+      "Q3": "Was passiert bei größeren Anforderungen?",
+      "A3": "Wenn eine Anforderung den Rahmen der laufenden Betreuung sprengt (z.B. ein komplett neues Seiten-Template), erstelle ich dir dafür ein separates Angebot mit Festpreis.",
+      "Q4": "Wie schnell erfolgt eine Rückmeldung?",
+      "A4": "In der Regel antworte ich innerhalb von 24 Stunden an Werktagen. Ziel ist eine zeitnahe Unterstützung ohne den Stress einer 24/7-Verfügbarkeit.",
+      "Q5": "Ist das eine Entwicklungs-Flatrate?",
+      "A5": "Nein. Es handelt sich um eine kontinuierliche Betreuung und Beratung. Das bedeutet, dass wir Aufgaben priorisieren und strukturiert abarbeiten, statt unbegrenzte Mengen an Arbeit in kürzester Zeit zu versprechen.",
+      "Q6": "Gibt es eine Mindestlaufzeit?",
+      "A6": "Ja. Die Mindestlaufzeit beträgt 3 Monate. Danach ist die Betreuung monatlich mit 30 Tagen Frist zum Monatsende kündbar. So bleibt genug Zeit für Onboarding, technische Einarbeitung und eine sinnvolle Zusammenarbeit.",
+      "Q7": "Sind Entwicklungsleistungen enthalten?",
+      "A7": "Kleinere technische Anpassungen und gezielte Eingriffe sind innerhalb der Betreuung möglich. Umfangreichere Entwicklungen oder größere Features werden separat geplant und angeboten."
+    },
+    "FINAL_CTA": {
+      "TITLE": "Lasst uns euren Shopify Shop strukturiert betreuen.",
+      "SUB": "Langfristige technische Unterstützung für bestehende Shopify Shops.",
+      "BUTTON": "Kennenlerngespräch buchen"
+    }
   }
 }
