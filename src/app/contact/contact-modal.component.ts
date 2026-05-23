@@ -22,8 +22,8 @@ export class ContactModalComponent implements OnInit, OnDestroy {
   message = 'Senden';
   private lastFocused: HTMLElement | null = null;
 
-  // Outlook Bookings URL (same as used across the site)
-  bookingUrl = 'https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink';
+  // Calendly Booking URL
+  bookingUrl = 'https://calendly.com/kevinmetzdorf/shopify-onboarding';
   safeBookingUrl!: SafeResourceUrl;
 
   constructor(

@@ -154,7 +154,7 @@
   "CONTACT": {
     "TITLE": "Contact",
     "INTRO_HEAD": "Let's get started together!",
-    "INTRO_P1": "Use <a href=\"https://outlook.office.com/bookwithme/user/d3f7cf3b05804831b053b897c120a8a1@kevin-metzdorf.com/meetingtype/rDRl5SD-10Ki_xOLWuY-Tw2?anonymous&ismsaljsauthenabled&ep=mlink\">this link to book an initial consultation directly</a>, or write me a message to start our collaboration! Whether it's complex refactoring, custom features at the limit of native Shopify, or strategic architecture consulting.<br>I am happy to help and look forward to hearing from you!",
+    "INTRO_P1": "Use <a href=\"https://calendly.com/kevinmetzdorf/shopify-onboarding\">this link to book an initial consultation directly</a>, or write me a message to start our collaboration! Whether it's complex refactoring, custom features at the limit of native Shopify, or strategic architecture consulting.<br>I am happy to help and look forward to hearing from you!",
     "LABEL_SUPPORT": "How can I support you?",
     "OPT": {
       "CUSTOM_UI": "Custom UI & App-like Experiences",
@@ -300,7 +300,7 @@
     "S4": "4. Transparency",
     "S4_P1": "I attach great importance to open communication. On request, I will transparently provide information about the nature and extent of AI use within a specific customer project at any time.",
     "S5": "5. Contact",
-    "S5_P1": "If you have questions about the use of Artificial Intelligence in our collaboration, you can contact me at any time at <a href=\"mailto:info@kevin-metzdorf.com\">info@kevin-metzdorf.com</a>.",
+    "S5_P1": "If you have questions about the use of Artificial Intelligence in our collaboration, you can <a href=\"https://calendly.com/kevinmetzdorf/shopify-onboarding\">contact me directly via this link</a> at any time.",
     "UPDATED": "Last updated: April 2026"
   },
   "TERMS": {
@@ -322,7 +322,7 @@
     "H2_2": "Controller",
     "H2_3": "Access Data (Server Log Files)",
     "H2_4": "Contacting Us",
-    "H2_5": "Booking Appointments via Microsoft Bookings",
+    "H2_5": "Booking Appointments via Calendly",
     "H2_6": "Hosting (Google Firebase)",
     "H2_7": "Web Analysis (Google Analytics)",
     "H2_8": "Integration of External Plugins (GitHub & LinkedIn)",
